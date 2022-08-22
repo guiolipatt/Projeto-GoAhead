@@ -27,6 +27,13 @@
     - [5.8. Rules Engine](#58-rules-engine)
     - [5.9. Message Broker (MB)](#59-message-broker-mb)
   - [6. Camada de Mensageria](#6-camada-de-mensageria)
+  - [7. Arquitetura Orientada a Serviço (SOA)](#7-arquitetura-orientada-a-serviço-soa)
+  - [8. Simple Object Access Protocol (SOAP)](#8-simple-object-access-protocol-soap)
+    - [8.1. Segurança de serviços web (WS-Security)](#81-segurança-de-serviços-web-ws-security)
+    - [8.2. WS-ReliableMessaging](#82-ws-reliablemessaging)
+    - [8.3. Endereçamento de serviços web (WS-Adressing)](#83-endereçamento-de-serviços-web-ws-adressing)
+    - [8.4. Linguagem de descrição de serviços web (WSDL)](#84-linguagem-de-descrição-de-serviços-web-wsdl)
+  - [9. SoapUI](#9-soapui)
 
 ## 1. O que é?
 
@@ -253,5 +260,89 @@ As vantagens da camada de mensageria incluem:
 Dentro das desvantagens podemos destacar:
 - É necessário um componente adicional de **message broker** ou **transfer agent** para assegurar que a mensagem foi recebida, o que pode afetar tanto a performance quanto a confiabilidade.
 
+- [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+***
+
+## 7. Arquitetura Orientada a Serviço (SOA)
+
+A Arquitetura Orientada a Serviço (SOA) é um tipo de design de software que torna os componentes reutilizáveis usando interfaces de serviços com uma linguagem de comunicação comum em uma rede.
+
+Um serviço é uma unidade ou conjunto de funcionalidades de software independente, que foi desenvolvido para concluir uma tarefa específica. Ele contém as integrações de dados e o código necessários para executar uma função de negócios completa e discreta. Esses serviços podem ser acessados remotamente e é possível interagir e atualizá-los de maneira independente.
+
+Em comparação com as arquiteturas que a precederam, a SOA oferece benefíios significativos tais quais:
+
+- A eficiência de montar aplicativos a partir de interfaces de serviço reutilizáveis, em vez de reescrever e reintegrar a cada novo projeto de desenvolvimento, possibilita que sejam desenvolvidos aplicativos muito mais rapidamente em resposta às novas oportunidades de negócio.
+
+- Quando bem elaborada a SOA possibilita que os desenvolvedores facilmente escalem ou ampliem o uso de uma funcionalidade para plataformas ou ambientes novos.
+
+- Como todos os serviços são autossuficientes e independentes, é possível modificá-los e atualizá-los conforme a necessidade, sem afetar os outros serviços.
+
+- A SOA permite executar serviços usando várias plataformas, linguagens de programação e até mesmo serviços diferentes. ALém disso, a SOA usa um protocolo de comunicação padronizado, o que permite às empresas reduzir a interação entre clientes e serviços, tornando possível escalar aplicações com menos urgência e aborrecimentos.
+
+- Por ser mais fácil fazer o debug de serviços menores do que um grande código, é possível criar aplicações ou a utilizar recursos que estão disponíveis para todos.
+
+Na Arquitetura orientada a serviços (SOA), a comunicação entre os serviços é realizada por um sistema de "baixo acoplamento". Essa é uma maneira de interconectar componentes, também chamados de "elementos", em um sistema ou rede para que transmitam informações ou coordenem processos empresariais e reduzam as dependências entre eles, criando uma nova aplicação.
+
+Pode se dizer que sua base é consituída de três funções:
+
+1. Provedor de serviços:
+
+    Cria serviços web e os oferece para um registro de serviços. Ele é responsável pelos termos de uso desse serviço.
+
+2. Broker ou registro de serviços:
+
+    É responsável por oferecer informações solicitadas sobre o serviço. O broker pode ser público ou privado.
+
+3. Solicitante ou cliente de serviços:
+
+    Encontra um serviço no broker ou no registro de serviços. Então, conecta-se ao provedor de serviços para recebê-lo.
+
+- [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+***
+
+## 8. Simple Object Access Protocol (SOAP)
+
+SOAP é um protocolo padrão projetado originalmente para possibilitar a comunicação entre aplicações desenvolvidas em diferentes linguagens e plataformas. Como se trata de um protocolo, ele impõe regras integradas que aumentam sua complexidade e sobrecarga, desacelerando o tempo de carregamento das páginas. No entanto, esses padrões também proporcionam conformidade integrada, fazendo com que SOAP seja uma opção recomendada para casos empresariais.
+
+Quando uma solicitação de dados é enviada a uma API SOAP, ela pode ser processada por meio de qualquer protocolo de camada da aplicação. No entanto, depois que a solicitação é recebida, as mensagens SOAP precisam ser retornadas como documentos **XML**. Um navegador não pode armazenar em cache uma solicitação concluída a uma API SOAP. Por isso, não é possível acessá-la depois sem fazer o reenvio à API. 
+
+As especificações de serviço web comuns são:
+
+### 8.1. Segurança de serviços web (WS-Security)
+
+Padroniza como as mensagens são protegidas e transferidas por meio de identificadores exclusivos chamados de tokens.
+
+### 8.2. WS-ReliableMessaging
+  
+Padroniza o processamento de erros entre as mensagens transferidas por uma infraestrutura de TI não confiável.
+
+### 8.3. Endereçamento de serviços web (WS-Adressing)
+
+Empacota informações de roteamento como metadados em cabeçalhos SOAP, em vez de armazená-las em camadas mais a fundo na rede.
+
+### 8.4. Linguagem de descrição de serviços web (WSDL)
+
+Descreve a atividade de um serviço web e onde é iniciado e finalizado.
+
+- [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+***
+
+## 9. SoapUI
+
+É uma ferramenta open source escrita em Java cuja principal função é consumir e testar Web Services. 
+
+Web service é uma tecnologia baseada em **XML** e **HTTP** que disponibiliza serviços interativos na WEB que podem ser acessados (ou consumidos) por qualquer outra aplicação indenpendente da linguagem ou plataforma em que a aplicação foi construída. Neste contexto, o SoapUI facilita todo o processo de criação e depuração dos testes por meio de uma interface gráfica visual e intuitiva.
+
+Dentre suas principais características se destacam:
+
+- Importação e geração automática das requisições descritas no **Web Service Description Language (WSDL)**.
+- Capacidade de gerenciar um número ilimitado de requisições para cada operação.
+- Gerenciamento de múltiplos endpoints para cada Web Service.
+- Validação das requisições e respostas contra as suas definições no **WSDL**.
+- Testes funcionais, carga e stress.
+- Execução de diversos testes em paralelo.
+- Editores com *syntax highlight* e formatação automática.
+- Suporte a expressões **XPATH** e de criação de testes complexos utilizando scripts **Groovy**.
+  
 - [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
 ***
