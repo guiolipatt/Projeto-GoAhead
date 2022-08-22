@@ -170,7 +170,7 @@ Quando o usuário esquece sua senha há uma maneira de resetá-las. WSO2 Identit
 ### **Trava de Conta através de um administrador**
 
 - **Configurando**
-1. CLique em **Manage > Login Attempts Security**
+1. Clique em **Manage > Login Attempts Security**
 2. Selecione a caixa **Lock user accounts**
 
 ![10](https://user-images.githubusercontent.com/110742899/186028931-f10cdb0e-4070-4556-bae1-9bdd896da9e0.png)
@@ -191,7 +191,7 @@ Quando o usuário esquece sua senha há uma maneira de resetá-las. WSO2 Identit
 5. Vá ao **user portal** e tente logar com o usuário bloqueado
 6. A tentativa de login deve falhar
 
-### Travamento de Conta baseado em falhas em tentativas de login
+### Travamento de Conta baseado em falhas nas tentativas de login
 
 - **Configurando**
 
