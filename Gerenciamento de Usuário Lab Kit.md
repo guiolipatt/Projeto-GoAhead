@@ -11,7 +11,7 @@
 
 Nesse tutorial, nós vamos testar o Usuário, Role e Gerenciamento de Grupo in WSO2 Identity Server. Usuário, *Role* e Gerenciamento de Grupo envolve gerenciamento de usuário, *roles* de usuários, grupos de usuário, permissões associadas com *roles*, atribuindo *roles* em grupos e usuários em *roles*. Essas tarefas de gerenciamento de usuário podem ser performadas de várias maneiras incluindo o uso do *Console Management*, utilizando *APIs* ou *User Portal*.
 
-- [Tabela de Conteúdos](#gerenciamento-de-usuário-lab-kit)
+[Tabela de Conteúdos](#gerenciamento-de-usuário-lab-kit)
 ***
 
 ## Lab 01: Gerenciamento de Usuário via *Management Console*
@@ -106,7 +106,7 @@ Nesse tutorial, nós vamos testar o Usuário, Role e Gerenciamento de Grupo in W
 
   - Clique em **Save**
 
-- [Tabela de Conteúdos](#gerenciamento-de-usuário-lab-kit)
+[Tabela de Conteúdos](#gerenciamento-de-usuário-lab-kit)
 ***
 
 ## Lab 02: Auto Registro de Usuário via User Portal
@@ -157,7 +157,7 @@ Teste:
 - Vá ao portal do usuário e logue utilizando credenciais de usuários criados
 - Assim estará apto a logar
 
-- [Tabela de Conteúdos](#gerenciamento-de-usuário-lab-kit)
+[Tabela de Conteúdos](#gerenciamento-de-usuário-lab-kit)
 ***
 
 ## Lab 03: Configurando uma Secudanry User Store
@@ -200,5 +200,5 @@ Teste:
 - Agora um usuário foi adicionado ao *secundary user store*
 - Então examine a tabela **UM_USER** no banco de dados MySql, reparando que o novo usuário foi criado
 
-- [Tabela de Conteúdos](#gerenciamento-de-usuário-lab-kit)
+[Tabela de Conteúdos](#gerenciamento-de-usuário-lab-kit)
 ***
