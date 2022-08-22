@@ -132,7 +132,7 @@ Nesse tutorial, nós vamos testar o Usuário, Role e Gerenciamento de Grupo in W
 5. Habilite o auto registro de usuário no *resident identity provider*
    - Logue no *management console* e insira tanto o "admin" quanto o nome de usuário
    - Na seção **Manage**, clique em **User Onboarding**
-   - Marque a caixa para **User self registration** sob **Self User Registration**
+   - Marque a caixa para **User self registration** sob **Self Registration**
   
       ![8](https://user-images.githubusercontent.com/110742899/185950917-ed9e2a75-384b-46ae-9158-eaf2b11de567.png)
 
@@ -193,7 +193,8 @@ Teste:
 - No *Management Console*, clique em **Manage > Users > New User**
 - Selecione o *Userstore* do *secondary user store* criado
 
-    ![Image 12]()
+    ![12](https://user-images.githubusercontent.com/110742899/185954059-a6850844-61bd-42b6-808b-92b5fc0bf53a.png)
+
 - Especifique os valores requeridos para criar um novo usuário
 - Clique em **Next > Next > Finish**
 - Agora um usuário foi adicionado ao *secundary user store*
