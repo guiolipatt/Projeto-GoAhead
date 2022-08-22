@@ -77,7 +77,8 @@ Nesse tutorial, nós vamos testar o Usuário, Role e Gerenciamento de Grupo in W
   - Clique em **Roles** e clique em **Assign Role**
   - Selecione os *roles* da lista de *roles*
   
-    ![5](https://user-images.githubusercontent.com/110742899/185950779-a2dd6cfa-ed33-424b-80e0-a922b60df330.png)
+    ![5](https://user-images.githubusercontent.com/110742899/185953019-f71efc93-1d3e-408c-b86c-b054967bf7bf.png)
+
 
   - Clique em **Save**
 
