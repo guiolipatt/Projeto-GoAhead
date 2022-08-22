@@ -88,7 +88,8 @@ Nesse tutorial, nós vamos testar o Usuário, Role e Gerenciamento de Grupo in W
   - Clique em **New User**
   - Especifique os valores requeridos para criar um novo usuário
 
-    ![6](https://user-images.githubusercontent.com/110742899/185950819-6c18366d-74d5-413d-9a0e-ca9610903cd3.png)
+    ![6](https://user-images.githubusercontent.com/110742899/185952880-c1e9151e-813e-4e21-94b0-0c33bc13b835.png)
+
 
 - Clique em **Next > Next > Finish**
   
