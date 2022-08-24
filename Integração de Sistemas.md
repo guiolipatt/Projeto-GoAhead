@@ -34,6 +34,38 @@
     - [8.3. Endereçamento de serviços web (WS-Adressing)](#83-endereçamento-de-serviços-web-ws-adressing)
     - [8.4. Linguagem de descrição de serviços web (WSDL)](#84-linguagem-de-descrição-de-serviços-web-wsdl)
   - [9. SoapUI](#9-soapui)
+  - [10. O que é uma API?](#10-o-que-é-uma-api)
+    - [10.1. Como APIs funcionam?](#101-como-apis-funcionam)
+      - [10.1.1 APIs SOAP](#1011-apis-soap)
+      - [10.1.2 APIs RPC](#1012-apis-rpc)
+      - [10.1.3 APIs WebSocket](#1013-apis-websocket)
+      - [10.1.4. APIs REST](#1014-apis-rest)
+    - [10.2. Diferentes tipos de APIs](#102-diferentes-tipos-de-apis)
+      - [10.2.1. APIs privadas](#1021-apis-privadas)
+      - [10.2.2. APIs públicas](#1022-apis-públicas)
+      - [10.2.3. APIs de parceiros](#1023-apis-de-parceiros)
+      - [10.2.4. APIs compostas](#1024-apis-compostas)
+  - [11. O que é Swagger?](#11-o-que-é-swagger)
+    - [11.1. Como funciona?](#111-como-funciona)
+  - [12. Microsserviços](#12-microsserviços)
+    - [12.1. Características dos microsserviços](#121-características-dos-microsserviços)
+    - [12.2. Benefícios dos microsserviços](#122-benefícios-dos-microsserviços)
+  - [13. Protocolo HTTP](#13-protocolo-http)
+    - [13.1. Erros HTTP](#131-erros-http)
+  - [14. Protocolo REST](#14-protocolo-rest)
+    - [14.1. Client-Server](#141-client-server)
+    - [14.2. Stateless](#142-stateless)
+    - [14.3. Cacheable](#143-cacheable)
+    - [14.4. Uniform interface](#144-uniform-interface)
+    - [14.5. Layered system](#145-layered-system)
+  - [15. cUrl](#15-curl)
+  - [16. Postman](#16-postman)
+    - [16.1. Benefícios](#161-benefícios)
+    - [16.2. Funcionamento](#162-funcionamento)
+    - [16.2. Requisição GET](#162-requisição-get)
+    - [16.3. Requisição POST](#163-requisição-post)
+    - [16.4. Parâmetros de dados](#164-parâmetros-de-dados)
+    - [16.5. Postman Tests](#165-postman-tests)
 
 ## 1. O que é?
 
@@ -344,5 +376,628 @@ Dentre suas principais características se destacam:
 - Editores com *syntax highlight* e formatação automática.
 - Suporte a expressões **XPATH** e de criação de testes complexos utilizando scripts **Groovy**.
   
+- [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+***
+
+## 10. O que é uma API?
+
+API significa Application Programming Interface. No contexto de APIs, a palavra Aplicação refere-se a qualquer software com uma função distinta. A interface pode ser pensada como um contrato de serviço entre duas aplicações. Esse contrato define como as duas se comunicam usando solicitações e respostas. A documentação de suas respectivas APIs contém informações sobre como os desenvolvedores devem estruturar essas solicitações e respostas.
+
+APIs são mecanismos que permitem que dois componentes de software se comuniquem usando um conjunto de definições e protocolos. A arquitetura da API geralmente é explicada em termos de **cliente e servidor**. A aplicação que envia a solicitação é chamada de cliente e a aplicação que envia a resposta é chamada de servidor.
+
+
+### 10.1. Como APIs funcionam?
+
+Existem quatro maneiras diferentes pelas quais as APIs podem funcionar, dependendo de quando e por que elas foram criadas:
+
+#### 10.1.1 APIs SOAP
+
+  Essas APIs usam o **Simple Object Access Protocol**. Cliente e servidor trocam mensagens usando **XML**. Esta é uma API menos flexível que era mais popular no passado.
+
+#### 10.1.2 APIs RPC
+
+  Essas APIs são conhecidas como **Remote Procedure Calls**. O cliente conclui uma função (ou um procedimento) no servidor e o servidor envia a saída de volta ao cliente.
+
+#### 10.1.3 APIs WebSocket
+  
+  API Websocket é outro desenvolvimento de API da Web moderno que usa objetos **JSON** para passar dados. Uma API WebSocket oferece suporte à comunicação bidirecional entre aplicativos cliente e o servidor. O servidor pode enviar mensagens de retorno de chamada a clientes conectados, tornando-o mais eficiente que a API REST.
+
+#### 10.1.4. APIs REST
+  
+  Essas são as APIs mais populares e flexíveis encontradas na Web atualmente. O cliente envia solicitações ao servidor como dados. O servidor usa essa entrada do cliente para iniciar funções internas e retorna os dados de saída ao cliente.
+
+### 10.2. Diferentes tipos de APIs
+
+As APIs são classificadas de acordo com sua arquitetura e escopo de uso, podendo ser elas:
+
+#### 10.2.1. APIs privadas
+  
+  Elas são internas a uma empresa e são usadas apenas para conectar sistemas e dados dentro da empresa.
+
+#### 10.2.2. APIs públicas
+  
+  Estas são abertas ao público e podem ser usadas por qualquer pessoa. Pode ou não haver alguma autorização e custo associado a esses tipos de APIs.
+
+#### 10.2.3. APIs de parceiros
+  
+  Estas são acessíveias apenas por desenvolvedores externos autorizados para auxiliar parcerias entre empresas.
+
+#### 10.2.4. APIs compostas
+  
+  Estas combinam duas ou mais APIs distintas para atender a requuisitos ou comportamentos complexos do sistema.
+
+
+- [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+***
+
+## 11. O que é Swagger?
+
+Trata-se de uma aplicação open source que auxilia desenvolvedores nos processos de definir, criar, documentar e consumir APIs REST. EM suma, o **Swagger** visa padronizar este tipo de integração, descrevendo os recursos que uma API deve possuir, como *endpoints*, dados recebidos, dados retornados, códigos HTTP e métodos de autenticação, entre outros.
+
+Ele simplifica o processo de escrever APIs, especificando os padrões e fornecendo as ferramentas necessárias para escrever APIs seguras, com alto desempenho e escaláveis.
+
+A principal contribuição do Swagger é garantir a padronização das interfaces de integração. Com isso, sempre que preciso, qualquer desenvolvedor pode ter acesso aos parâmetros necessários para a correta integração com seu sistema.
+
+Os benefícios da utilização do Swagger são:
+
+- **É compreensível para desenvolvedores e não desenvolvedores** 
+  
+  Gerentes de produto, parceiros e até clientes em potencial podem contribuir com o design de uma API, pois podem vê-la claramente mapeada nesta interface amigável.
+
+- **É legível por humanos e por máquinas** 
+  
+  Isso significa que não apenas a documentação pode ser compartilhada com uma equipe internamente, mas também usada para automatizar processos dependentes de API.
+
+- **É facilmente ajustável** 
+  
+  O que o torna perfeito para testar e depurar problemas relacionados às APIs.
+
+### 11.1. Como funciona?
+
+Quando o desenvolvedor trabalha com uma API existente, ele precisa conhecer as funcionalidades disponíveis e detalhes de como invocá-las: recursos, métodos, content-types e outras informações.
+
+Para criar uma nova API REST, os profissionais da área de desenvolvimento se deparam com outras duas preocupações comuns: como modelar e documentar?
+
+O Swagger é a melhor resposta. Ele simplifica algumas tarefas como:
+
+- Modelagem da integração;
+- Geração de documentação (legível);
+-  Geração de códigos do cliente e do servidor, com suporte a várias linguagens de programação.
+
+Além disso, o Swagger traz um ecossistema formado por várias ferramentas para criação e manipulação de especificação de APIs. Veja, no quadro a seguir, algumas delas.
+Nome | Descrição
+:---: |  :---:
+Swagger Codegen | Ferramenta em linha de comando usada para o desenho de “esqueletos” de Servidores em mais de 10 tecnologias e Clientes em mais de 25 tecnologias diferentes.
+Swagger UI | Interface gráfica para explorar as definições de APIs baseadas em Swagger. É aplicado na publicação da documentação.
+Swagger Editor | Editor usado para a criação do contrato com definições YAML ou JSON.
+Swagger JS | Conjunto de bibliotecas javascript usado para o consumo de APIs especificadas com o Swagger, que podem ser utilizadas com aplicações clientes e node.js.
+Swagger Node | Módulo Swagger para Node.js.
+Swagger Socket | Expõe e invoca definições de APIs feitas com Swagger em WebSockets.
+Swagger Parser | Biblioteca independente para parsing de Java.
+
+- [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+***
+
+## 12. Microsserviços
+
+Com as arquiteturas monolíticas, todos os processos são altamente acoplados e executam como um único serviço. Isso significa que se um processo do aplicativo apresentar um pico de demanda, toda a arquitetura deverá ser escalada. A complexidade da adição ou do aprimoramento de recursos de aplicativos monolíticos aumenta com o crescimento da base de código. Essa complexidade limita a experimentação e dificulta a implementação de novas ideias. As arquiteturas monolíticas aumentam o risco de disponibilidade de aplicativos, pois muitos processos dependentes e altamente acoplados aumentam o impacto da falha de um único processo.
+
+Com uma arquitetura de microsserviços, um aplicativo é criado como componentes independentes que executam cada processo do aplicativo como um serviço. Esses serviços se comunicam por meio de uma interface bem definida usando APIs leves. Os serviços são criados para recursos empresariais e cada serviço realiza uma única função. Como são executados de forma independente, cada serviço pode ser atualizado, implantado e escalado para atender a demanda de funções específicas de um aplicativo.
+
+Portanto, microsserviços são uma abordagem arquitetônica e organizacional do desenvolvimento de software na qual o software consiste em pequenos serviços independentes que se comunicam usando APIs bem definidas. Esses serviços pertencem a pequenas equipes autossuficientes.
+
+As arquiteturas de microsserviços facilitam a escalabilidade e agilizam o desenvolvimento de aplicativos, habilitando a inovação e acelerando o tempo de introdução de novos recursos no mercado.
+
+### 12.1. Características dos microsserviços
+
+- **Autônomos**
+  
+  Cada serviço do componente de uma arquitetura de microsserviços pode ser desenvolvido, implantado, operado e escalado sem afetar o funcionamento de outros serviços. Os serviços não precisam compartilhar nenhum código ou implementação com os outros serviços. Todas as comunicações entre componentes individuais ocorrem por meio de APIs bem definidas.
+
+- **Especializados**
+  
+  Cada serviço é projetado para ter um conjunto de recursos e é dedicado à solução de um problema específico. Se os desenvolvedores acrescentarem mais código a um serviço ao longo do tempo, aumentando sua complexidade, ele poderá ser dividido em serviços menores.
+
+### 12.2. Benefícios dos microsserviços
+
+- **Agilidade**
+  Os microsserviços promovem uma organização de equipes pequenas e independentes que são proprietárias de seus serviços. As equipes atuam dentro de um contexto pequeno e claramente compreendido e têm autonomia para trabalhar de forma mais independente e rápida. O resultado é a aceleração dos ciclos de desenvolvimento. Você obtém benefícios significativos do throughput agregado da organização.
+
+- **Escalabilidade flexível**
+  
+  Os microsserviços permitem que cada serviço seja escalado de forma independente para atender à demanda do recurso de aplicativo oferecido por esse serviço. Isso permite que as equipes dimensionem corretamente as necessidades de infraestrutura, meçam com precisão o custo de um recurso e mantenham a disponibilidade quando um serviço experimenta um pico de demanda.
+
+- **Fácil implantação**
+ 
+  Os microsserviços permitem a integração e a entrega contínuas, o que facilita o teste de novas ideias e sua reversão caso algo não funcione corretamente. O baixo custo de falha permite a experimentação, facilita a atualização do código e acelera o tempo de introdução de novos recursos no mercado.
+
+- **Liberdade tecnológica**
+
+  As arquiteturas de microsserviços não seguem uma abordagem generalista. As equipes são livres para escolher a melhor ferramenta para resolver problemas específicos. O resultado é que as equipes que criam microsserviços podem optar pela melhor ferramenta para cada tarefa.
+
+- **Código reutilizável**
+  
+  A divisão do software em módulos pequenos e bem definidos permite que as equipes usem funções para várias finalidades. Um serviço criado para uma determinada função pode ser usado como componente básico para outro recurso. Isso permite que os aplicativos sejam reutilizados, pois os desenvolvedores podem criar recursos sem precisar escrever código.
+
+- **Resiliência**
+
+  A independência do serviço aumenta a resistência a falhas do aplicativo. Em uma arquitetura monolítica, a falha de um único componente poderá causar a falha de todo o aplicativo. Com os microsserviços, os aplicativos lidam com a falha total do serviço degradando a funcionalidade, sem interromper todo o aplicativo.
+
+- [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+***
+
+## 13. Protocolo HTTP
+
+HTTP - *Hypertext Transfer Protocol* - é um protocolo de transferência que possibilita que as pessoas que inserem a URL do seu site na Web possam ver os conteúdos e dados que nele existem. Esse sistema é a base da comunicação que existe em toda a Internet em que os sites e conteúdos que tragam hiperlinks possam ser encontrados mais facilmente pelo público por meio de um clique do mouse ou um toque na tela.
+
+Qualquer servidor escolhido para hospedar o site de uma empresa tem um programa projetado para receber solicitações HTTP. Portanto, o navegador é um cliente HTTP que envia solicitações constantemente ao servidor. Assim, quando um usuário acessa ou digita a URL de um site, o navegador cria uma solicitação HTTP na web e a envia ao endereço de IP indicado pela URL. Dessa forma, o servidor recebe essa solicitação e envia os arquivos associados que, nada mais são, do que os sites acessados na Internet.
+
+HTTP é um protocolo baseado em texto sem conexão. Isso significa que as pessoas que acessam o site da uma empresa enviam solicitações a servidores que as exibem na forma do site em formato de texto, imagens, e outros tipos de mídia. Depois que a solicitação é atendida por um servidor, a conexão entre o usuário e o servidor é desconectada. Uma nova conexão deve ser feita para cada solicitação, isto é, cada vez que alguém acessa um site. 
+
+Em suma, quando alguém digita uma URL de site em um navegador, é isto que acontece:
+
+1. Se a URL pertencer a um domínio próprio, o navegador primeiro se conecta a um servidor e recuperará o endereço IP correspondente ao servidor;
+
+2. O navegador se conecta ao servidor e envia uma solicitação HTTP para a página da web desejada;;
+
+3. O servidor recebe a solicitação e verifica a página desejada. Se a página existir, o servidor a mostrará. Se o servidor não conseguir encontrar a página solicitada, ele enviará uma mensagem de erro HTTP 404, ou seja, página não encontrada;
+
+4. O navegador, então, recebe a página de volta e a conexão é fechada;
+
+5. Caso a página exista, o navegador a analisa e procura outros elementos necessários para concluir a sua exibição, o que inclui seus textos, imagens e afins;
+
+6. Para cada um desses elementos, o navegador faz conexões adicionais e solicitações HTTP para o servidor para cada elemento;
+
+7. Quando o navegador terminar de carregar todos os elementos, a página será carregada na janela do navegador.
+  
+### 13.1. Erros HTTP
+
+Error HTTP são os códigos HTTP que referem-se a erros de cliente e servidor, respectivamente, e impedem o carregamento de um site. Os códigos HTTP Error são sempre começados pelos números 4 ou 5, que são respectivamente falhas do cliente (navegador) ou do servidor.
+
+Quando um site é visitado, o navegador faz uma solicitação ao servidor, e o servidor responde o navegador com um código, os códigos HTTP. São esses códigos que informam o que o servidor e navegador estão conversando entre si.
+
+Os principais códigos de erros HTTP são:
+
+- **Error 403**
+
+  O Erro 403 – Forbidden significa que o servidor entendeu a solicitação do navegador mas se recusa a fazê-lo, pois o navegador não possui autorização para isso.
+
+  Ao enviar este erro, o servidor comunica “You don’t have permission to access on this server”, isso quer dizer que o acesso foi negado.
+
+- **Error 404**
+
+  Quando uma URL é digitada e emite a mensagem ERROR 404 – PAGE NOT FOUND quer dizer que esta URL não leva a lugar nenhum. Os motivos podem ser significar que a página não existe mais, a URL deste site mudou ou foi digitada a URL errada.
+
+- **Error 500**
+
+  Erro 500 significa que algum script ou solicitação não foi compreendida – o que nem sempre indica um problema com o servidor. Os motivos podem ser arquivos **.htaccess** corrompidos, permissões de arquivo incorreto, tempo limite de script, versão do PHP incompatível, etc.
+
+- **Error 503**
+
+  O status ERRO 503 significa serviço temporariamente indisponível. Há pelo menos cinco possíveis causas:
+
+  1. Plugins e temas bugados;
+  1. Um mau comportamento de um script PHP customizado;
+  2. Servidores com recursos insuficientes;
+  3. Problemas de servidor;
+  4. Ataques maliciosos, como o infame Ataque Distribuído por Negação de Serviço (DDoS).
+
+- [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+***
+
+## 14. Protocolo REST
+
+REST, ou *Representational State Transfer*, é um estilo arquitetônico aplicado para fornecer padrões entre sistemas de computador na web, facilitando a comunicação entre eles. Os sistemas em conformidade com REST, muitas vezes conhecidos como sistemas RESTful, são reconhecidos pelo jeito como separam as preocupações do cliente e do servidor. A utilização do estilo de arquitetura REST é fundamental para o estabelecimento de um ambiente favorável à realização das ações necessárias para manter um website em bom funcionamento.
+
+No estilo REST, a implementação do cliente e do servidor pode ser feita de forma independente, sem que cada um conheça o outro. Isso significa que o código do lado do cliente pode ser alterado a qualquer momento, sem afetar a operação do servidor, e o contrário também é válido.
+
+Ao utilizar uma interface REST, clientes diferentes atingem os mesmos pontos finais REST, executam ações iguais e recebem as mesmas respostas. Como os sistemas REST interagem por meio de operações padrão sobre recursos, eles não dependem da implementação de interfaces.
+
+Essas restrições ajudam as aplicações RESTful a alcançar maior nível de confiabilidade, além de possibilitar um desempenho rápido e escalável. Todos os componentes podem ser gerenciados, atualizados e reutilizados sem afetar o sistema como um todo, mesmo durante a operação.
+
+Um benefício principal do uso desse estilo, tanto do ponto de vista do cliente quanto do servidor, é que as interações baseadas em REST acontecem usando estruturas que são familiares a qualquer um que esteja acostumado a usar o HTTP da Internet. Um exemplo desse arranjo são as interações baseadas em REST — todas comunicam seu status usando códigos de status HTTP padrão.
+
+Detalhes como a criptografia e a integridade do transporte de dados são resolvidos não adicionando novas estruturas ou tecnologias, mas confiando nos conhecidos sistemas de criptografia **Secure Sockets Layer** (SSL) e **Transport Layer Security** (TLS). Assim, toda a arquitetura REST é construída sobre conceitos com os quais a maioria dos desenvolvedores já está familiarizada.
+
+REST é, também, um estilo arquitetônico independente do idioma. Aplicações baseadas nesse estilo podem ser escritas usando qualquer linguagem, seja Java, seja Kotlin, .NET, AngularJS ou JavaScript. Desde que uma linguagem de programação possa fazer solicitações baseadas na web usando HTTP, é possível que essa linguagem seja usada para ativar uma API ou serviço web RESTful.
+
+
+### 14.1. Client-Server
+
+  A separação das preocupações é o princípio por trás das restrições relacionadas à relação cliente-servidor. Desde que cada parte saiba o formato das mensagens a serem enviadas à outra, elas podem ser mantidas modulares e separadas.
+
+  Separando as preocupações da interface do usuário daquelas do armazenamento de dados, é possível otimizar a flexibilidade da interface em todas as plataformas e melhorar a escalabilidade, tornando mais simples os elementos do servidor. Além disso, a separação permite a cada elemento a capacidade de evoluir de forma independente.
+
+### 14.2. Stateless
+  
+  Os sistemas que seguem o paradigma REST são stateless, o que pode ser traduzido livremente como “sem estado”. Isso significa que o servidor não precisa saber nada sobre o estado em que o cliente se encontra e vice-versa.
+
+  Dessa forma, tanto o servidor quanto o cliente podem compreender qualquer mensagem recebida, mesmo sem ver as anteriores. Isso acontece porque o sistema não utiliza comandos, mas os substantivos da Web, que descrevem qualquer arquivo que você precise armazenar ou utilizar.
+
+### 14.3. Cacheable
+
+  As restrições de cache requerem que as informações contidas em uma resposta a uma solicitação sejam, diretamente ou não, definidas como cacheáveis ou não cacheáveis. Caso uma resposta seja armazenável em cache, então, é dado ao cliente o direito de utilizar novamente esses dados para atividades similares no futuro.
+
+  A vantagem de acrescentar restrições de cache é que elas têm o potencial de eliminar parcial ou completamente algumas interações, melhorando a eficiência, a escalabilidade e o desempenho percebido pelo usuário. Isso torna a experiência muito mais fluida e eficiente. 
+
+### 14.4. Uniform interface
+
+  O principal elemento que distingue o REST de outras opções com base na rede é o seu foco em uma interface uniforme entre os componentes. O princípio de generalidade, característica da engenharia de software, quando aplicado à interface de componentes, simplifica a arquitetura do sistema e torna as interações mais visíveis.
+
+  A fim de obter uniformidade na interface, são necessárias múltiplas restrições para orientar o comportamento dos componentes. REST é definido por quatro fatores:
+
+  1. Identificação de recursos;
+  2. Gerenciamento de recursos por meio de representações;
+  3. Mensagens auto-descritivas;
+  4. Hipermídia.
+
+### 14.5. Layered system
+
+  Para melhorar ainda mais o desempenho para as atuais e crescentes exigências da Internet, é possível acrescentar restrições de sistema por camadas. Assim, a arquitetura é constituída por camadas que seguem uma ordem hierárquica. Isso restringe o comportamento dos elementos, de modo que cada um deles só possa “enxergar” a camada com que estão interagindo no momento.
+
+- [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+***
+
+## 15. cUrl
+
+O cURL, ou "URL do cliente" é uma ferramenta de linha de comando que possibilita que desenvolvedores e usuários de serviços de hospedagem façam solicitações HTTP a partir do shell e protocolos como HTTPS, FTP, FTPS, IMAP, IMAPS, POP3, POP3S, SMTP e SMTP. Como é um projeto de código aberto, pode ser incrementado por uma comunidade de desenvolvedores, o que contribui constantemente para novas características e funcionalidades.
+
+Algumas de suas funcionalidades são:
+
+- **Testar uma API**
+  
+  Para testar o funcionamento de uma API, é preciso enviar argumentos por meio do método POST ou JSON com alguns parâmetros específicos. A simulação do comportamento de um formulário HTML por meio do comando cURL pode ser feito a partir de argumentos como:
+
+      curl --data "name=joao&surname=emanuel" https://www.seudominio.com
+
+  Nesse caso, a ramificação --data tem a mesma funcionalidade do-d. Com ele, o método mudará para POST automaticamente. No entanto, o usuário pode usar um -X e adicionar a requisição para especificar o método que deve ser chamado entre aspas antes do -d, como mostrado a seguir:
+
+      curl -X "POST" -d "name=joao&surname=emanuel" https://www.seudominio.com
+
+- **Fazer o download de um documento**
+  
+  Para fazer o download de um documento,você pode usar o cURL com:
+
+  - -O: salva o arquivo no diretório de trabalho atual com o mesmo nome do local remoto;
+  - -o: permite que você especifique um nome de arquivo e um local diferente do de origem. Veja os exemplos de comandos abaixo:
+  
+        $ curl -O https://seudominio.com/seuarquivo.tar.gz # Save as seuarquivo.tar.gz
+
+        $ curl -o novonome.tar.gz https://seudominio.com/seuarquivo.tar.gz # Save as novonome.tar.gz
+
+- **Reiniciar um download interrompido**
+
+  Se um download for interrompido por alguma razão (Ctrl + c, por exemplo), você pode reiniciá-lo por meio do -C. Essa ramificação dentro do comando cURL orienta o reinício do download a partir do momento em que ele parou.
+
+      $ curl -C - -O https://seudominio.com/seuarquivo.tar.gz
+  ![cUrl 1](https://www.tecmint.com/wp-content/uploads/2018/08/Download-File-Using-Curl-Command.png)
+
+- **Fazer o download de múltiplos arquivos**
+
+  Com o comando cURL e a ramificação -O, o usuário também pode executar o download de mais arquivos simultaneamente.
+
+      $ curl -O https://seudominio.com/info.html -O https://outrodominio.com/about.html 
+
+- **Baixar URLs de um arquivo**
+
+  Se o usuário combina o comando cURL com xargs, consegue fazer o download de todas as URLs presentes em um arquivo de uma vez. Esse processo pode ser bem útil na análise e visualização de dados.
+
+      $ xargs -n 1 curl -O < listurls.txt
+
+  ![cUrl2](https://www.tecmint.com/wp-content/uploads/2018/08/Download-Multiple-Files-with-Curl.png)
+
+- **Usar um proxy com ou sem autenticação**
+
+  Para encontrar um servidor proxy na porta 8080, o usuário pode usar o seguinte comando:
+
+      $ curl -x proxy.seudominio.com:8080 -U usuario:senha -O https://seudominio.com/seuarquivo.tar.gz
+  
+  Caso o proxy não exija autenticação, basta eliminar o “usuário:senha” do código.
+
+- **Consultar cabeçalhos HTTP**
+
+  Os cabeçalhos HTTP permitem ao servidor enviar informações adicionais sobre o site, como detalhes sobre a execução da solicitação, que podem ser interessantes para o usuário.
+
+  Apesar de essas informações ficarem disponíveis nas ferramentas de desenvolvedor dos navegadores, por meio do cURL o acesso também é rápido: basta escrever junto ao comando cURL a ramificação -I e o endereço do site pelo qual você deseja visualizar os dados:
+
+      $ curl -I www.seudominio.com
+
+- **Download ou upload de arquivos de um servidor FTP com ou sem autenticação**
+
+  O download dos arquivos em um servidor FTP remoto também pode ser realizado por meio do cURL. Digite a ramificação -u para informar o usuário e a senha de acesso ao servidor (caso eles sejam exigidos), a ramificação -vsc nnnO e o diretório onde o arquivo foi armazenado no banco de dados (MySQL, por exemplo). Esse comando fará o download do arquivo requisitado no diretório de trabalho atual.
+
+      $ curl -u usuario:senha -O ftp://seuservidorftp/seuarquivo.tar.gz 
+
+  Já o upload pode ser executado a partir da ramificação -T, seguido pelo nome do arquivo e diretório FTP do servidor:
+
+      $ curl -u usuario:senha -T seuarquivolocal.tar.gz ftp://seuservidorftp
+
+- **Descobrir os cookies armazenados durante um acesso**
+
+  Caso o usuário queira visualizar quais cookies foram armazenados em seu equipamento durante um acesso a um site, o cURL também consegue exibir essas informações. Suponha que você tenha navegado pelo site <https://www.cnn.com> para ler algumas notícias:
+
+  A ramificação --cookie-jar seguida do nome como o arquivo será salvo em .txt, da URL do site que você deseja analisar e da ramificação -O salva as informações em seu diretório:
+
+      $ curl --cookie-jar cnncookies.txt https://www.cnn.com/index.html -O
+
+  Já a ramificação ~]$ cat seguida do nome em que o arquivo foi salvo em .txt retorna os dados requisitados:
+
+  ![cUrl3](https://www.tecmint.com/wp-content/uploads/2018/08/Curl-Store-Cookies.png)
+
+  Para enviar os cookies recuperados em solicitações subsequentes para o mesmo site de origem, basta usar a ramificação --cookie:
+
+      $ curl --cookie cnncookies.txt https://www.cnn.com
+
+  Alguns comandos, como--location-trusted, semelhante ao -L, permitem o envio de usuário e senha para todos os hosts para os quais o site redireciona. Isso poderá criar uma vulnerabilidade relacionada à segurança e, por isso, é importante usar certificados de segurança como o SSL e o TLS no seu site.
+
+  Desenvolvedores podem solicitar o cURL a partir de qualquer terminal, uma vez que conseguem fazer o download por meio do apt-get no Linux. Apesar disso, a ferramenta já vem pré-instalada em sistemas operacionais baseados em Linux.
+
+- [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+***
+
+## 16. Postman
+
+O Postman é uma ferramenta que dá suporte à documentação das requisições feitas pela API. Ele possui ambiente para a documentação, execução de testes de APIs e requisições em geral.
+
+Ao utilizá-lo, você passará a trabalhar com APIs de modo mais eficiente, construindo solicitações rapidamente e, ainda, poderá guardá-las para uso posterior, além de conseguir analisar as respostas enviadas pela API.
+
+Um bom motivo para usar essa ferramenta é que, por meio dela, é possível reduzir drasticamente o tempo necessário para testar e desenvolver APIs.
+
+Em um exemplo prático, imagine que você queira fazer uma solicitação GET para procurar certas informações no nome da empresa.
+
+Se fosse o caso de testar uma solicitação GET sem usar o Postman, você precisaria escrever todo um código para executar a requisição, além de uma interface visual para interagir com essa rotina.
+
+Se fosse concedido, provavelmente você precisaria escrever tudo isso para criar um aplicativo funcional usando essa API, mas todo esse trabalho seria simplesmente para testar a sua funcionalidade, o que de fato, nesse formato, é tedioso e demorado.
+
+Já com o Postman, esse teste é muito mais otimizado. Tudo o que precisa ser feito é:
+
+1. Obter a conexão da rota à barra de endereços;
+2. Selecionar o método de resposta GET na caixa suspensa à esquerda;
+3. Digitar a chave da API na seção "Headers";
+4. Especificar o formato da resposta, que poderia ser em JSON, por exemplo, e;
+5. Clicar em enviar.
+
+Em seguida, será obtido os dados de resposta em **JSON** (simples e fácil de ler) acompanhado do código de status 200, que confirma que a solicitação GET foi bem-sucedida.
+
+### 16.1. Benefícios
+
+Além de ser um aplicativo gratuito e fácil de aprender, com pouco tempo você já estará enviando seus primeiros requests (solicitações/requisições). No mais, trata-se de uma ferramenta com um amplo suporte para todas as APIs e Schemas.
+
+Entre as principais vantagens em se usar o Postman, podemos destacar:
+
+- **Possibilita qualquer tipo de chamada de API —  REST, SOAP ou HTTP;**
+
+- **Oferece suporte para formatos de dados populares, como OpenAPI GraphQL e RAML;**
+
+- **Fácil acessibilidade**: 
+  
+  Para usar o Postman, basta fazer login em sua conta, facilitando o acesso a arquivos a qualquer momento, em qualquer lugar, desde que um aplicativo Postman esteja instalado no computador;
+
+- **Uso de Coleções**: 
+  
+  O Postman permite que os usuários criem coleções para suas chamadas de API. Cada coleção pode criar subpastas e várias solicitações. Isso ajuda a organizar suas suítes de teste;
+
+- **Colaboração (Collaboration)**: 
+  
+  Coleções e ambientes podem ser importados ou exportados, facilitando o compartilhamento de arquivos. Um link direto também pode ser usado para compartilhar coleções;
+
+- **Criar ambientes**: 
+  
+  Ter vários ambientes ajuda a ter menos repetições de testes, pois é possível usar a mesma coleção, mas em um ambiente diferente;
+
+- **Elaborar testes**: 
+  
+  Pontos de verificação de teste, como a verificação do status de resposta HTTP bem-sucedido, podem ser adicionados a cada chamada de API, o que ajuda a garantir a cobertura do teste;
+
+- **Teste de automação**: 
+  
+  Com o uso do **Collection Runner** ou **Newman**, os testes podem ser executados em várias iterações, economizando tempo para testes repetitivos;
+
+- **Depuração**: 
+  
+  O console do Postman ajuda a verificar quais dados foram recuperados, facilitando a depuração de testes;
+
+- **Integração Contínua**: 
+  
+  A partir da sua capacidade de oferecer suporte à integração contínua, são mantidas práticas de desenvolvimento.
+
+### 16.2. Funcionamento
+
+Já na página principal do aplicativos, temos muitas informações e, para esclarecer o modus operandi da  ferramenta, precisaremos dar uma passada rápida nas opções disponíveis na interface.
+
+![postman1](https://enotas.com.br/blog/wp-content/uploads/2020/06/interface-1024x388.png)
+
+- **New**: 
+  
+  É aqui que você criará uma nova solicitação, coleção ou ambiente.
+
+- **Import**: 
+  
+  É usado para importar uma coleção ou ambiente. Existem opções como importar arquivo, pasta, vincular ou colar texto não processado.
+
+- **Runner**: 
+  
+  Os testes de automação podem ser executados através do Collection Runner. Isso será discutido mais adiante.
+
+- **Open New**: 
+  
+  Permite abrir uma nova guia, Postman Window ou Runner Window.
+
+- **My Workspace**: 
+  
+  Você pode criar um novo espaço de trabalho individualmente ou em equipe.
+
+- **Invite**: 
+
+  Permite convidar membros da equipe.
+
+- **History**: 
+  
+  As solicitações anteriores que você enviou serão exibidas no Histórico. Isso facilita o rastreamento das ações realizadas.
+
+- **Collections**: 
+  
+  Permite criar coleções. Cada coleção pode ter subpastas e várias solicitações. Uma solicitação ou pasta também pode ser duplicada.
+
+- **Request tab**: 
+  
+  Exibe o título da solicitação em que você está trabalhando.
+
+- **HTTP Request**: 
+  
+  Clicar nesse botão exibirá uma lista suspensa de solicitações diferentes, como GET, POST, COPY, DELETE etc. Nos testes, as solicitações mais usadas são GET e POST.
+
+- **Request URL**: 
+  
+  Também conhecido como “endpoint”, é aqui que você identificará o link para o qual a API se comunicará.
+
+- **Save**: 
+  
+  Serve para salvar novas alterações.
+
+- **Params**: 
+  
+  É aqui que você escreverá os parâmetros necessários para uma solicitação, como valores-chave.
+
+- **Authorization**: 
+  
+  Para acessar APIs, é necessária uma autorização adequada. Pode ser na forma de nome de usuário e senha, token de portador, entre outros.
+
+- **Headers**: 
+  
+  Você poderá definir cabeçalhos, como o tipo de conteúdo JSON, por exemplo.
+
+- **Body**: 
+  
+  Este botão possibilita personalizar detalhes em uma solicitação comumente usada na solicitação POST.
+
+- **Pre-request Script**: 
+  
+  São scripts que serão executados antes da solicitação. Geralmente, os scripts de pré-solicitação para o ambiente de configuração são usados ​​para garantir que os testes sejam executados no ambiente correto.
+
+- **Tests**: 
+  
+  São scripts executados durante a solicitação. É importante ter testes, pois configura pontos de verificação para analisar se o status da resposta está de acordo, ou se os dados recuperados estão conforme o esperado, por exemplo.
+
+### 16.2. Requisição GET
+
+As requisições GET são usadas para recuperar informações da URL fornecida e não realizam alterações feitas nos endpoints.
+
+Para realizar uma requisição GET é muito simples. Na área de trabalho do aplicativo, faça o seguinte:
+
+1. Defina sua solicitação HTTP como GET.
+2. No campo URL da solicitação, coloque o link de entrada.
+3. Clique em Enviar.
+4. Você verá na aba “Status” a mensagem “200 OK”.
+![postamn3](https://enotas.com.br/blog/wp-content/uploads/2020/06/10.png)
+
+Pode haver casos em que a requisição GET não tenha êxito. Isto pode acontecer devido a uma URL de solicitação ser inválida ou porque a autenticação é necessária.
+
+### 16.3. Requisição POST
+
+Pode-se dizer que a grande diferença entre um GET e um POST é que, no caso de um POST, existe a manipulação de dados, com o usuário adicionando informações ao endpoint. 
+
+Para demonstrar isso na prática — usando os mesmos dados do exemplo anterior —, agora vamos adicionar nosso próprio usuário.
+
+Para efetuar um Post Request você deverá seguir os 5 seguintes passos:
+
+1. Clique em uma nova guia para criar uma nova solicitação.
+2. Na nova guia, siga os seguintes caminhos:
+
+   - Defina sua solicitação HTTP para POST.
+   - Insira o mesmo link no URL da solicitação
+   - Selecione a aba “Body”
+![postman4](https://enotas.com.br/blog/wp-content/uploads/2020/06/2.png)
+
+3. Agora, na aba “Body”, clique em “raw” e selecione JSON.
+
+    ![postman5](https://enotas.com.br/blog/wp-content/uploads/2020/06/3.png)
+
+4. O Post Request deve ter o formato correto para garantir que os dados solicitados serão criados. É uma boa prática usar o GET primeiro para verificar o formato JSON da solicitação. Copie e cole apenas o resultado de um usuário do GET, como segue exemplo abaixo.
+   
+   ![postman6](https://enotas.com.br/blog/wp-content/uploads/2020/06/5.png)
+
+A partir daí, verifique se o código foi copiado corretamente com chaves e colchetes emparelhados. E então, altere os campos “id” para 11 e o “name” para qualquer nome desejado. Você também pode alterar outros detalhes, como o endereço, por exemplo.
+
+5. Por fim, clique em Enviar (Send).
+   
+   ![postman7](https://enotas.com.br/blog/wp-content/uploads/2020/06/4.png)
+
+### 16.4. Parâmetros de dados
+
+A parametrização de dados é um dos recursos mais úteis do Postman. Em vez de criar as mesmas solicitações com dados diferentes, você pode usar variáveis ​​com parâmetros. 
+
+Essas informações podem ser de um arquivo de dados ou de uma variável de ambiente. Vale lembrar que a parametrização ajuda a evitar a repetição dos mesmos testes e iterações podem ser usadas para testes de automação.
+
+Esses parâmetros são criados por meio do uso de colchetes duplos: {{sample}}.
+
+![postman7](https://enotas.com.br/blog/wp-content/uploads/2020/06/7.png)
+
+- **Criando uma Parâmetro GET**
+  
+1. Defina sua solicitação HTTP como **GET**.
+2. Insira o link da URL. Substitua a primeira parte do link por um parâmetro como {{url}}. A URL de solicitação agora deve ser “{{url}}/users”.
+3. Clique em enviar (Send).
+4. Você deverá receber uma mensagem dizendo que não houve resposta (“could not get any response”), isso pois ainda não definimos a fonte do nosso parâmetro.
+   
+   ![postman8](https://enotas.com.br/blog/wp-content/uploads/2020/06/any-response.png)
+
+5. Para usar o parâmetro, você precisa definir o ambiente.
+6. Clique no ícone com o desenho de um “olho”, localizado no canto superior direito.
+7. Clique em “edit” para definir a variável para um ambiente global que pode ser usado em todas as coleções.
+   
+    ![postman9](https://enotas.com.br/blog/wp-content/uploads/2020/06/eye-icon.png)
+
+8. Na aba “Variable”, defina o nome para o URL desejado.
+9. Clique em "Save" (Salvar).
+   
+   ![postman10](https://enotas.com.br/blog/wp-content/uploads/2020/06/vari%C3%A1vel.png)
+
+10. Se após isso surgir uma janela, como abaixo, basta fechá-la.
+   
+    ![postman11](https://enotas.com.br/blog/wp-content/uploads/2020/06/screen.png)
+
+11. Volte para ao seu GET e clique em Enviar (Send). A partir de agora já deve haver resultados para sua solicitação.
+
+Uma boa prática nesse quesito é sempre verificar se seus parâmetros possuem uma fonte, como uma variável de ambiente ou arquivo de dados, para evitar erros.
+
+### 16.5. Postman Tests
+
+Os Postman Tests são códigos JavaScript adicionados às solicitações, que ajudam a verificar resultados como status bem-sucedido ou com falha, além de poder fazer a comparação de resultados esperados, entre outras funcionalidades.
+
+De regra, você verá que esse comando começará com "pm.tes". Abaixo, alguns testes básicos para as solicitações parametrizadas do tópico anterior:
+
+1. Acesse seu GET de usuário.
+
+2. Alterne para a guia “Tests”. No lado direito, aparecerá uma seção de códigos snippets.
+   
+3. Nesta seção, clique em "Status Code: code is 200".
+   
+4. O painel será preenchido automaticamente.
+   
+   ![postman12](https://enotas.com.br/blog/wp-content/uploads/2020/06/11.png)
+
+5. Clique em Enviar (Send). O resultado do teste deve ser exibido.
+   
+   ![postman13](https://enotas.com.br/blog/wp-content/uploads/2020/06/9.png)
+
+6. Volte para a guia “Tests” e vamos adicionar outro teste. Desta vez, será comparado o resultado esperado com o resultado real.
+
+7. Na seção de snippets, clique em "Response body:JSON value check". Verificaremos aqui se “Rafael” possui o ID do usuário 1.
+
+    ![postman14](https://enotas.com.br/blog/wp-content/uploads/2020/06/8.png)
+
+8. Substitua "Your Test Name" do código por "Check if user with id1 is Rafael" para que o nome do teste especifique exatamente o que queremos testar.
+
+9. Substitua jsonData.value por jsonData [0].name. Para obter o caminho, verifique também o “Body” no GET anterior. 
+
+10. Se você deseja obter um segundo resultado, use jsonData [1] e assim por diante para obter resultados futuros.
+
+11. No eql, insira "Rafael".
+  
+    ![postman15](https://enotas.com.br/blog/wp-content/uploads/2020/06/12.png)
+
+12. Clique em Enviar (Send). A partir de agora deve haver dois resultados de teste aprovados para sua solicitação.
+
 - [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
 ***
