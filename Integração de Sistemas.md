@@ -51,7 +51,7 @@
     - [12.1. Características dos microsserviços](#121-características-dos-microsserviços)
     - [12.2. Benefícios dos microsserviços](#122-benefícios-dos-microsserviços)
   - [13. Protocolo HTTP](#13-protocolo-http)
-    - [13.1. Erros HTTP](#131-erros-http)
+    - [13.1. Status HTTP](#131-status-http)
   - [14. Protocolo REST](#14-protocolo-rest)
     - [14.1. Client-Server](#141-client-server)
     - [14.2. Stateless](#142-stateless)
@@ -66,6 +66,11 @@
     - [16.3. Requisição POST](#163-requisição-post)
     - [16.4. Parâmetros de dados](#164-parâmetros-de-dados)
     - [16.5. Postman Tests](#165-postman-tests)
+  - [17. Containers](#17-containers)
+  - [18. Docker](#18-docker)
+  - [19. Docker Compose](#19-docker-compose)
+  - [20. Continuous Integration (CI)](#20-continuous-integration-ci)
+  - [21. Continuous Delivery (CD)](#21-continuous-delivery-cd)
 
 ## 1. O que é?
 
@@ -550,13 +555,33 @@ Em suma, quando alguém digita uma URL de site em um navegador, é isto que acon
 
 7. Quando o navegador terminar de carregar todos os elementos, a página será carregada na janela do navegador.
   
-### 13.1. Erros HTTP
+### 13.1. Status HTTP
+
+Os códigos de status das respostas HTTP indicam se uma requisição HTTP foi corretamente concluída. As respostas são agrupadas em cinco classes:
+
+1. Respostas de informação (100-199),
+2. Respostas de sucesso (200-299),
+3. Redirecionamentos (300-399)
+4. Erros do cliente (400-499)
+5. Erros do servidor (500-599)
 
 Error HTTP são os códigos HTTP que referem-se a erros de cliente e servidor, respectivamente, e impedem o carregamento de um site. Os códigos HTTP Error são sempre começados pelos números 4 ou 5, que são respectivamente falhas do cliente (navegador) ou do servidor.
 
-Quando um site é visitado, o navegador faz uma solicitação ao servidor, e o servidor responde o navegador com um código, os códigos HTTP. São esses códigos que informam o que o servidor e navegador estão conversando entre si.
+Quando um site é visitado, o navegador faz uma solicitação ao servidor, e o servidor responde o navegador com um código, os códigos HTTP. São esses códigos que informam o que o servidor e navegador estão conversando entre si. Os códigos podem ser divididos entre:
 
-Os principais códigos de erros HTTP são:
+Os principais códigos de status HTTP são:
+
+- **200 OK**
+
+  Esta requisição foi bem sucedida. O significado do sucesso varia de acordo com o método HTTP.
+
+- **201 Created**
+
+  A requisição foi bem sucedida e um novo recurso foi criado como resultado. Esta é uma tipica resposta enviada após uma requisição POST.
+
+- **204 No Content**]
+  
+  Não há conteúdo para enviar para esta solicitação, mas os cabeçalhos podem ser úteis. O user-agent pode atualizar seus cabeçalhos em cache para este recurso com os novos.
 
 - **Error 403**
 
@@ -577,10 +602,10 @@ Os principais códigos de erros HTTP são:
   O status ERRO 503 significa serviço temporariamente indisponível. Há pelo menos cinco possíveis causas:
 
   1. Plugins e temas bugados;
-  1. Um mau comportamento de um script PHP customizado;
-  2. Servidores com recursos insuficientes;
-  3. Problemas de servidor;
-  4. Ataques maliciosos, como o infame Ataque Distribuído por Negação de Serviço (DDoS).
+  2. Um mau comportamento de um script PHP customizado;
+  3. Servidores com recursos insuficientes;
+  4. Problemas de servidor;
+  5. Ataques maliciosos, como o infame Ataque Distribuído por Negação de Serviço (DDoS).
 
 - [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
 ***
@@ -998,6 +1023,118 @@ De regra, você verá que esse comando começará com "pm.tes". Abaixo, alguns t
     ![postman15](https://enotas.com.br/blog/wp-content/uploads/2020/06/12.png)
 
 12. Clique em Enviar (Send). A partir de agora deve haver dois resultados de teste aprovados para sua solicitação.
+
+- [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+***
+
+## 17. Containers
+
+Um container é um ambiente isolado utilizado para empacotar aplicações. Containers têm o objetivo de segregar e facilitar a portabilidade de aplicações em diferentes ambientes.
+
+Um container contém um conjunto de processos que são executados a partir de uma imagem, imagem esta que fornece todos os arquivos necessários. Os containers compartilham o mesmo **kernel** e isolam os processos da aplicação do restante do sistema operacional.
+
+A ideia é que cada container assuma apenas uma responsabilidade. Nos containers, você divide a responsabilidade isolando os processos de cada aplicação, garantindo assim que nenhum processo possa influenciar no funcionamento dos demais processos.
+
+Um agrupamento de containers também é conhecido como **cluster**. Um cluster consegue compartilhar recursos como armazenamento, tornando possível a execução de dezenas e até centenas de containers de maneira simultânea a partir do mesmo ambiente.
+
+Os containers são muito práticos em ambiente de desenvolvimento. Sua aplicabilidade serve como base para o modelo DevOps e auxilia as áreas de Operações e Desenvolvimento. Na área de desenvolvimento, os containers empacotam aplicações com todas as suas dependências, a fim de serem acessíveis e compartilhadas, ao mesmo tempo em que ficam agnósticas a características do ambiente, como sistema operacional. Já em operações, são processos de aplicações rodando em um kernel compartilhado, mais simples que máquinas virtuais.
+
+Embora seja algo parecido, um container não é uma **máquina virtual**. A diferença entre um container e uma máquina virtual é que os containers conseguem compartilhar o mesmo kernel do sistema operacional.
+
+As **Máquinas Virtuais** (VMs) têm muitos benefícios. Entre eles, a capacidade de executar diferentes sistemas operacionais no mesmo servidor, o uso mais eficiente e econômico de recursos físicos e provisionamento de servidor mais rápido. Por outro lado, cada VM contém uma imagem de SO, bibliotecas, aplicativos e muito mais. Portanto, podem ser bem grandes.
+
+![vms](https://azurecomcdn.azureedge.net/cvt-0747fe673b2e8ca5993409bc08d252e543aa7f50e5fa3d6409c621fbdd48b5c7/images/page/resources/cloud-computing-dictionary/what-is-a-container/valprop1.svg)
+
+O contêiner virtualiza o SO subjacente e faz com que o aplicativo em contêiner detecte que o SO (incluindo CPU, memória, armazenamento de arquivos e conexões de rede) está totalmente à sua disposição. Como as diferenças no SO subjacente e na infraestrutura são abstraídas, enquanto a imagem base for consistente, o contêiner poderá ser implantado e executado em qualquer local. Para os desenvolvedores, isso é muito atrativo.
+
+Como os contêineres compartilham o SO hospedado, não precisam inicializar um SO ou carregar bibliotecas. Por isso, os contêineres são muito mais eficientes e leves. Os aplicativos em contêineres podem ser inicializados em questão de segundos e muito mais instâncias do aplicativo podem se ajustar à máquina em comparação com um cenário de VM. A abordagem de SO compartilhado tem o benefício adicional de reduzir a sobrecarga no que diz respeito à manutenção, como a aplicação de patches e as atualizações.
+
+![container](https://azurecomcdn.azureedge.net/cvt-0747fe673b2e8ca5993409bc08d252e543aa7f50e5fa3d6409c621fbdd48b5c7/images/page/resources/cloud-computing-dictionary/what-is-a-container/valprop2.svg)
+
+- [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+***
+
+## 18. Docker
+
+O Docker é uma plataforma open source que facilita a criação e administração de ambientes isolados. Ele possibilita o empacotamento de uma aplicação ou ambiente dentro de um container, se tornando portátil para qualquer outro host que contenha o Docker instalado. Então, você consegue criar, implantar, copiar e migrar de um ambiente para outro com maior flexibilidade. A ideia do Docker é subir apenas uma máquina, ao invés de várias. E, nessa única máquina, você pode rodar várias aplicações sem que haja conflitos entre elas.
+
+O Docker é algo parecido com uma máquina virtual extremamente leve, mas não se trata de fato de uma máquina virtual. O Docker utiliza containers que possuem uma arquitetura diferente, permitindo maior portabilidade e eficiência. O container exclui a virtualização e muda o processo para o Docker. Então, não podemos dizer que o Docker é uma máquina virtual.
+
+![docker1](https://dkrn4sk0rn31v.cloudfront.net/2018/09/28135438/virtualization-vs-containers.jpg)
+
+Na virtualização, há um maior consumo de recursos, uma vez que para cada aplicação é preciso carregar um sistema operacional. Já no Docker, não existe essa necessidade de múltiplos sistemas operacionais convidados.
+
+- [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+***
+
+## 19. Docker Compose
+![dockercompose1](https://static.imasters.com.br/wp-content/uploads/2017/12/CSD.jpg)
+
+Docker Compose é o orquestrador de containers da Docker. Ele rege através do arquivo chamado docker-compose, semelhante ao Dockerfile, escrito em **YAML** (acrônimo recursivo para YAML Ain’t Markup Language) que é um formato de codificação de dados legíveis por humanos, o que torna fácil de ler e entender o que um Compose faz.
+
+Um exemplo prático de como funciona o Docker Compose é: imagine que temos uma aplicação Java ou PHP e que essa aplicação depende de um banco de dados MySQL e, para disponibilizar essa aplicação na internet, queremos utilizar um proxy na frente. O cenário é bem típico e um cara de infraestrutura configura esse ambiente fácil em menos de um dia.
+
+Agora imagina que para cada cliente, precisamos realizar esse setup pelo menos umas três vezes: um para Desenvolvimento, Homologação e outro para Produção.
+
+Outro detalhe, se esses ambientes estão em cloud e existe uma Instância/VM para cada aplicação, isso pode gerar muito custo, recurso desperdiçado e tempo desnecessário gasto, sem contar o trabalho que dá para montar essa infra toda vez que surge um projeto novo. E no mundo de hoje, precisamos ser ágeis para entregar valor ao cliente.
+
+Outra grande desvantagem desse processo é que ele é altamente manual, logo existe uma possibilidade de acontecer um erro humano.
+
+- [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+***
+
+## 20. Continuous Integration (CI)
+
+Integração contínua (CI) é uma prática de automatizar a integração de alterações de código de vários contribuidores em um único projeto de software. É uma prática primária de DevOps, permitindo que os desenvolvedores mesclem com frequência as alterações de código em um repositório central onde builds e testes são executados. Ferramentas automatizadas são usadas para afirmar a correção do novo código antes da integração.
+
+Um sistema de controle de versão de código-fonte é o ponto crucial do processo de integração contínua. O sistema de controle de versão também é complementado com outras verificações, como testes de qualidade de código automatizados, ferramentas de análise do estilo da sintaxe e muito mais.
+
+A CI ajuda a dimensionar a contagem de pessoas e a entrega de resultado das equipes de engenharia. A introdução da IC no cenário mencionado acima permite que os desenvolvedores de software trabalhem com autonomia nos recursos em paralelo. Quando estão prontos para mesclar esses recursos em um produto final, podem fazer isso com rapidez e autonomia. A IC é uma prática valiosa e bem estabelecida em organizações modernas de engenharia de software de alto desempenho.
+
+Um dos principais benefícios de adotar a CI é que ela economiza tempo durante seu ciclo de desenvolvimento, identificando e abordando conflitos com antecedência. Também é uma ótima maneira de reduzir o tempo gasto na atualização de segurança e regressão dando mais ênfase a ter um bom conjunto de testes. Por fim, ajuda a compartilhar um melhor entendimento da base de código e dos recursos que você está desenvolvendo para seus clientes.
+
+- **Testes unitários** 
+  
+  Têm um escopo restrito e no geral verificam o comportamento de métodos ou funções individuais.
+
+- **Testes de integração**
+ 
+  Garantem que vários componentes se comportem bem juntos. Isso pode envolver diversas classes, bem como teste da integração com outros serviços.
+
+- **Testes de aceitação**
+ 
+  São semelhantes aos testes de integração, mas se concentram nos casos de negócios em vez dos próprios componentes.
+
+- **Testes de interface do usuário**
+
+  Garantem que o aplicativo funcione bem desde a perspectiva do usuário.
+
+  ![CI1](https://wac-cdn.atlassian.com/dam/jcr:af3ed106-66b2-4f9e-a58c-c3370c9fb5aa/TestingTriangle.png?cdnVersion=495)
+
+- [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+***
+
+## 21. Continuous Delivery (CD)
+
+Entrega contínua é uma prática de desenvolvimento de software que utiliza a automação para acelerar o lançamento de novo código.
+
+Ela estabelece um processo pelo qual as alterações feitas por um desenvolvedor em uma aplicação possam ser enviadas para um repositório de código ou um registro de aplicações em container por meio da automação.
+
+A entrega contínua é parte da CI/CD, um método de entrega de software usado com frequência ao automatizar algumas das fases de desenvolvimento de aplicações. 
+
+"CI" refere-se à integração contínua. Com a integração contínua, novas alterações no código de uma aplicação são criadas, testadas e mescladas em um repositório compartilhado. É a solução ideal para evitar conflitos entre ramificações quando muitas aplicações são desenvolvidas ao mesmo tempo.
+
+“CD” pode se referir à implantação contínua ou à entrega contínua, que descrevem formas de automatizar as fases posteriores do pipeline.
+
+![CD1](https://www.redhat.com/cms/managed-files/styles/wysiwyg_full_width/s3/ci-cd-flow-desktop_edited.png?itok=k5bkXL-F)
+
+Um pipeline de CI/CD consiste em uma série de etapas a serem realizadas para a disponibilização de uma nova versão de software. Assim que você implantar o CI/CD, terá estabelecido um pipeline correspondente.
+
+O pipeline de CI/CD inclui monitoramento e automação para melhorar o fluxo de trabalho de desenvolvimento de aplicações, principalmente nos estágios de integração e teste, mas também na entrega e na implantação. 
+
+É possível executar manualmente cada etapa do pipeline de CI/CD, mas o real valor dele está na automação do ciclo de vida da aplicação.
+
+O CI/CD depende da automação para acelerar os processos de desenvolvimento, implementação e testes. A automação ajuda a manter a qualidade e reduz os erros humanos. Ela também aprimora a segurança como parte de uma estratégia DevSecOps.
 
 - [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
 ***
