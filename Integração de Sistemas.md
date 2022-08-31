@@ -72,30 +72,10 @@
   - [20. Continuous Integration (CI)](#20-continuous-integration-ci)
   - [21. Continuous Delivery (CD)](#21-continuous-delivery-cd)
 - [REFERÊNCIAS](#referências)
-  - [Integração de Sistemas](#integração-de-sistemas)
-  - [Arquitetura de Microsserviços dirigos a API](#arquitetura-de-microsserviços-dirigos-a-api)
-  - [Event Driven Architecture (EDA)](#event-driven-architecture-eda)
-  - [Camada de Mensageria](#camada-de-mensageria)
-  - [Service Level Agreement (SLA)](#service-level-agreement-sla)
-  - [Arquitetura Orientada a Serviços - SOA](#arquitetura-orientada-a-serviços---soa)
-  - [Simple Object Access Protocol](#simple-object-access-protocol)
-  - [SOAP Ui](#soap-ui)
-  - [Enterprise Service Bus (EBS)](#enterprise-service-bus-ebs)
-  - [APIs](#apis)
-  - [Swagger](#swagger)
-  - [Microsserviços](#microsserviços)
-  - [Protocolo HTTP](#protocolo-http)
-  - [Protocolo REST](#protocolo-rest)
-  - [cUrl](#curl)
-  - [Postman](#postman)
-  - [Containers](#containers)
-  - [Docker](#docker)
-  - [Docker Compose](#docker-compose)
-  - [CI - Continuous Integration](#ci---continuous-integration)
-  - [CD - Continuous Delivery](#cd---continuous-delivery)
-
-
+ 
 ## 1. O que é?
+
+![api integration](https://user-images.githubusercontent.com/110742899/187648087-95dcb3c6-620e-4b84-97c3-5bfff14a6775.svg)
 
    A **Integração de Sistemas** é uma solução tecnológica para automatizar uma série de procedimentos operacionais proporcionando ganho de produtividade com a otimização do fluxo de trabalho.
 
@@ -128,6 +108,7 @@
 
 
 - [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+- [Referências](#integração-de-sistemas)
 ***
 
 ## 3. Catálogo de Padrões de Integração de Sistemas - EIP (*Enterprise Integration Patterns*)
@@ -229,9 +210,12 @@
    ![Wire Tap](https://docs.wso2.com/download/thumbnails/12421407/WireTapIcon.gif?version=1&modificationDate=1364846659000&api=v2) | Wire Tap | Pode ser implantada para monitorar todas as mensagens que passam por um canal, sem interferir no fluxo normal da aplicação.
 
 - [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+- [Referências](#arquitetura-de-microsserviços-dirigos-a-api)
 ***
 
 ## 4. Event-Driven Architecture (EDA)
+
+![eda](https://user-images.githubusercontent.com/110742899/187648589-246f2519-cd88-42ed-9d87-f1807fce378d.png)
 
 Praticamente todas as aplicações ou serviços atuais assumem que você pode fazer o que quiser imediatament recebendo retorno instantâneo sobre o status de sua requisição e interagindo em tempo real com a requisição ou qualquer um envolvido no processo. Seja lá se seu pedido for um produto ou uma viagem por aplicativo, manufatura, processo financeiro, chat ou mensageiro, hoje em dia tudo é orientado a eventos. 
 
@@ -301,9 +285,12 @@ Após certo tempo, foram descobertos certos padrões de comportamento necessári
   MB lida com dois paradigmas de fluxo de mensagem: **topics** e **queues**. Topics devem ser entregues a vários subscribers quando expressam interesse em uma corrente de tópico, então é enviada uma corrente independente de mensagens in uma ordem apropriada. Queues são enviadas apenas para um de um número de determinadores que pode processar a transação. Uma mensagem não pode ser despachada até todos os subscribers em um protocolo baseado em tópico tenham recebido a mensagem. Ela também não pode ser despachada até que um dos determinadores reconheça o processamento da mensagem.
 
 - [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+- [Referências](#event-driven-architecture-eda)
 ***
 
 ## 6. Camada de Mensageria
+
+![messaging](https://user-images.githubusercontent.com/110742899/187649934-9206c688-ef9e-4772-9b9f-ff5bd6c8cce3.png)
 
 Camada de mensageria é um médoto de comunicação onde o sistema põe uma mensagem em uma fila de mensagens e não requer uma resposta imediata para um processamento contínuo. 
 
@@ -321,9 +308,12 @@ Dentro das desvantagens podemos destacar:
 - É necessário um componente adicional de **message broker** ou **transfer agent** para assegurar que a mensagem foi recebida, o que pode afetar tanto a performance quanto a confiabilidade.
 
 - [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+- [Referências](#camada-de-mensageria)
 ***
 
 ## 7. Arquitetura Orientada a Serviço (SOA)
+
+![soa](https://user-images.githubusercontent.com/110742899/187650494-3d9d0de0-b897-4beb-a08d-d0edae4d9d71.png)
 
 A Arquitetura Orientada a Serviço (SOA) é um tipo de design de software que torna os componentes reutilizáveis usando interfaces de serviços com uma linguagem de comunicação comum em uma rede.
 
@@ -358,9 +348,12 @@ Pode se dizer que sua base é consituída de três funções:
     Encontra um serviço no broker ou no registro de serviços. Então, conecta-se ao provedor de serviços para recebê-lo.
 
 - [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+- [Referências](#arquitetura-orientada-a-serviços---soa)
 ***
 
 ## 8. Simple Object Access Protocol (SOAP)
+
+![soap](https://user-images.githubusercontent.com/110742899/187650978-56b8873a-601f-4d91-9fd0-f140fdc035f4.png)
 
 SOAP é um protocolo padrão projetado originalmente para possibilitar a comunicação entre aplicações desenvolvidas em diferentes linguagens e plataformas. Como se trata de um protocolo, ele impõe regras integradas que aumentam sua complexidade e sobrecarga, desacelerando o tempo de carregamento das páginas. No entanto, esses padrões também proporcionam conformidade integrada, fazendo com que SOAP seja uma opção recomendada para casos empresariais.
 
@@ -385,9 +378,12 @@ Empacota informações de roteamento como metadados em cabeçalhos SOAP, em vez 
 Descreve a atividade de um serviço web e onde é iniciado e finalizado.
 
 - [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+- [Referências](#simple-object-access-protocol)
 ***
 
 ## 9. SoapUI
+
+![soapui](https://user-images.githubusercontent.com/110742899/187651341-013ea80e-1dc6-4c94-bb2e-268b76233989.png)
 
 É uma ferramenta open source escrita em Java cuja principal função é consumir e testar Web Services. 
 
@@ -405,9 +401,12 @@ Dentre suas principais características se destacam:
 - Suporte a expressões **XPATH** e de criação de testes complexos utilizando scripts **Groovy**.
   
 - [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+- [Referências](#soap-ui)
 ***
 
 ## 10. O que é uma API?
+
+![API imagem](https://user-images.githubusercontent.com/110742899/187646608-6837952e-8cfd-43be-a749-8d1077e97653.jpeg)
 
 API significa Application Programming Interface. No contexto de APIs, a palavra Aplicação refere-se a qualquer software com uma função distinta. A interface pode ser pensada como um contrato de serviço entre duas aplicações. Esse contrato define como as duas se comunicam usando solicitações e respostas. A documentação de suas respectivas APIs contém informações sobre como os desenvolvedores devem estruturar essas solicitações e respostas.
 
@@ -456,9 +455,12 @@ As APIs são classificadas de acordo com sua arquitetura e escopo de uso, podend
 
 
 - [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+- [Referências](#apis)
 ***
 
 ## 11. O que é Swagger?
+
+![swagger-7](https://user-images.githubusercontent.com/110742899/187651608-033e4416-3dc1-4819-b15c-4344ec1c19a7.png)
 
 Trata-se de uma aplicação open source que auxilia desenvolvedores nos processos de definir, criar, documentar e consumir APIs REST. EM suma, o **Swagger** visa padronizar este tipo de integração, descrevendo os recursos que uma API deve possuir, como *endpoints*, dados recebidos, dados retornados, códigos HTTP e métodos de autenticação, entre outros.
 
@@ -490,7 +492,7 @@ O Swagger é a melhor resposta. Ele simplifica algumas tarefas como:
 
 - Modelagem da integração;
 - Geração de documentação (legível);
--  Geração de códigos do cliente e do servidor, com suporte a várias linguagens de programação.
+- Geração de códigos do cliente e do servidor, com suporte a várias linguagens de programação.
 
 Além disso, o Swagger traz um ecossistema formado por várias ferramentas para criação e manipulação de especificação de APIs. Veja, no quadro a seguir, algumas delas.
 Nome | Descrição
@@ -504,9 +506,12 @@ Swagger Socket | Expõe e invoca definições de APIs feitas com Swagger em WebS
 Swagger Parser | Biblioteca independente para parsing de Java.
 
 - [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+- [Referências](#swagger)
 ***
 
 ## 12. Microsserviços
+
+![microsserviços](https://user-images.githubusercontent.com/110742899/187651885-3bd0f7d5-9e00-401a-8e99-d48821bbf1a3.png)
 
 Com as arquiteturas monolíticas, todos os processos são altamente acoplados e executam como um único serviço. Isso significa que se um processo do aplicativo apresentar um pico de demanda, toda a arquitetura deverá ser escalada. A complexidade da adição ou do aprimoramento de recursos de aplicativos monolíticos aumenta com o crescimento da base de código. Essa complexidade limita a experimentação e dificulta a implementação de novas ideias. As arquiteturas monolíticas aumentam o risco de disponibilidade de aplicativos, pois muitos processos dependentes e altamente acoplados aumentam o impacto da falha de um único processo.
 
@@ -552,9 +557,11 @@ As arquiteturas de microsserviços facilitam a escalabilidade e agilizam o desen
   A independência do serviço aumenta a resistência a falhas do aplicativo. Em uma arquitetura monolítica, a falha de um único componente poderá causar a falha de todo o aplicativo. Com os microsserviços, os aplicativos lidam com a falha total do serviço degradando a funcionalidade, sem interromper todo o aplicativo.
 
 - [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+- [Referêcias](#microsserviços)
 ***
 
 ## 13. Protocolo HTTP
+![99427853_123396039361472_8630412506986184704_n](https://user-images.githubusercontent.com/110742899/187653928-7d2d0fd9-599d-43f5-b38d-1ab8ed3f4173.jpg)
 
 HTTP - *Hypertext Transfer Protocol* - é um protocolo de transferência que possibilita que as pessoas que inserem a URL do seu site na Web possam ver os conteúdos e dados que nele existem. Esse sistema é a base da comunicação que existe em toda a Internet em que os sites e conteúdos que tragam hiperlinks possam ser encontrados mais facilmente pelo público por meio de um clique do mouse ou um toque na tela.
 
@@ -631,9 +638,12 @@ Os principais códigos de status HTTP são:
   5. Ataques maliciosos, como o infame Ataque Distribuído por Negação de Serviço (DDoS).
 
 - [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+- [Referências](#protocolo-http)
 ***
 
 ## 14. Protocolo REST
+
+![rest](https://user-images.githubusercontent.com/110742899/187654278-ff18e8f4-22ae-46f1-aea1-ddae411c5967.jpg)
 
 REST, ou *Representational State Transfer*, é um estilo arquitetônico aplicado para fornecer padrões entre sistemas de computador na web, facilitando a comunicação entre eles. Os sistemas em conformidade com REST, muitas vezes conhecidos como sistemas RESTful, são reconhecidos pelo jeito como separam as preocupações do cliente e do servidor. A utilização do estilo de arquitetura REST é fundamental para o estabelecimento de um ambiente favorável à realização das ações necessárias para manter um website em bom funcionamento.
 
@@ -684,9 +694,12 @@ REST é, também, um estilo arquitetônico independente do idioma. Aplicações 
   Para melhorar ainda mais o desempenho para as atuais e crescentes exigências da Internet, é possível acrescentar restrições de sistema por camadas. Assim, a arquitetura é constituída por camadas que seguem uma ordem hierárquica. Isso restringe o comportamento dos elementos, de modo que cada um deles só possa “enxergar” a camada com que estão interagindo no momento.
 
 - [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+- [Referências](#protocolo-rest)
 ***
 
 ## 15. cUrl
+
+![curl-logo](https://user-images.githubusercontent.com/110742899/187654521-b5f605a0-72ed-43d4-a5a3-3c565faa2fce.jpg)
 
 O cURL, ou "URL do cliente" é uma ferramenta de linha de comando que possibilita que desenvolvedores e usuários de serviços de hospedagem façam solicitações HTTP a partir do shell e protocolos como HTTPS, FTP, FTPS, IMAP, IMAPS, POP3, POP3S, SMTP e SMTP. Como é um projeto de código aberto, pode ser incrementado por uma comunidade de desenvolvedores, o que contribui constantemente para novas características e funcionalidades.
 
@@ -781,9 +794,12 @@ Algumas de suas funcionalidades são:
   Desenvolvedores podem solicitar o cURL a partir de qualquer terminal, uma vez que conseguem fazer o download por meio do apt-get no Linux. Apesar disso, a ferramenta já vem pré-instalada em sistemas operacionais baseados em Linux.
 
 - [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+- [Referências](#curl)
 ***
 
 ## 16. Postman
+
+![postman](https://user-images.githubusercontent.com/110742899/187654862-d0da9b9f-581a-48ed-ab4d-8c65361be2aa.jpg)
 
 O Postman é uma ferramenta que dá suporte à documentação das requisições feitas pela API. Ele possui ambiente para a documentação, execução de testes de APIs e requisições em geral.
 
@@ -1048,6 +1064,7 @@ De regra, você verá que esse comando começará com "pm.tes". Abaixo, alguns t
 12. Clique em Enviar (Send). A partir de agora deve haver dois resultados de teste aprovados para sua solicitação.
 
 - [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+- [Referências](#postman)
 ***
 
 ## 17. Containers
@@ -1075,6 +1092,7 @@ Como os contêineres compartilham o SO hospedado, não precisam inicializar um S
 ![container](https://azurecomcdn.azureedge.net/cvt-0747fe673b2e8ca5993409bc08d252e543aa7f50e5fa3d6409c621fbdd48b5c7/images/page/resources/cloud-computing-dictionary/what-is-a-container/valprop2.svg)
 
 - [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+- [Referências](#containers)
 ***
 
 ## 18. Docker
@@ -1088,6 +1106,7 @@ O Docker é algo parecido com uma máquina virtual extremamente leve, mas não s
 Na virtualização, há um maior consumo de recursos, uma vez que para cada aplicação é preciso carregar um sistema operacional. Já no Docker, não existe essa necessidade de múltiplos sistemas operacionais convidados.
 
 - [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+- [Referências](#docker)
 ***
 
 ## 19. Docker Compose
@@ -1104,6 +1123,7 @@ Outro detalhe, se esses ambientes estão em cloud e existe uma Instância/VM par
 Outra grande desvantagem desse processo é que ele é altamente manual, logo existe uma possibilidade de acontecer um erro humano.
 
 - [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+- [Referências](#docker-compose)
 ***
 
 ## 20. Continuous Integration (CI)
@@ -1135,6 +1155,7 @@ Um dos principais benefícios de adotar a CI é que ela economiza tempo durante 
   ![CI1](https://wac-cdn.atlassian.com/dam/jcr:af3ed106-66b2-4f9e-a58c-c3370c9fb5aa/TestingTriangle.png?cdnVersion=495)
 
 - [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+- [Referências](#ci---continuous-integration)
 ***
 
 ## 21. Continuous Delivery (CD)
@@ -1160,6 +1181,7 @@ O pipeline de CI/CD inclui monitoramento e automação para melhorar o fluxo de 
 O CI/CD depende da automação para acelerar os processos de desenvolvimento, implementação e testes. A automação ajuda a manter a qualidade e reduz os erros humanos. Ela também aprimora a segurança como parte de uma estratégia DevSecOps.
 
 - [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
+- [Referências](#cd---continuous-delivery)
 ***
 
 # REFERÊNCIAS
@@ -1174,14 +1196,13 @@ O CI/CD depende da automação para acelerar os processos de desenvolvimento, im
 ## Event Driven Architecture (EDA)
 - [WSO2]\: https://wso2.com/whitepapers/event-driven-architecture-the-path-to-increased-agility-and-high-expandability/#:~:text=WSO2%20offers%20a%20full%20suite,EDA%20and%20web%20services%20architectures
 - [Medium]\: https://medium.com/@marcelomg21/event-driven-architecture-eda-em-uma-arquitetura-de-micro-servi%C3%A7os-1981614cdd45
+- [Netreo]\: https://www.netreo.com/blog/sla-metrics-examples/
 - [Youtube]\: https://youtu.be/qaSS4Pci8vM
+- [Youtube]\: https://youtu.be/rsKUm6WA9TE
 
 ## Camada de Mensageria
 - [WSO2]\: https://ei.docs.wso2.com/en/7.2.0/micro-integrator/use-cases/integration-use-case/asynchronous-message-overview/
 - [Science Direct]\: https://www.sciencedirect.com/topics/computer-science/messaging-layer
-
-## Service Level Agreement (SLA)
-- [Netreo]\: https://www.netreo.com/blog/sla-metrics-examples/
 
 ## Arquitetura Orientada a Serviços - SOA
 - [WSO2]\: https://wso2.com/library/webinars/2015/09/service-oriented-architecture/
@@ -1190,14 +1211,10 @@ O CI/CD depende da automação para acelerar os processos de desenvolvimento, im
 
 ## Simple Object Access Protocol
 - [Red Hat]\: https://www.redhat.com/pt-br/topics/integration/whats-the-difference-between-soap-rest
-- 
 
 ## SOAP Ui
 - [Programar]\: https://www.revista-programar.info/artigos/soapui-ferramenta-util-desenvolve-web-services/
 - [DevMedia]\: https://www.devmedia.com.br/soapui-testes-de-web-services-rapido-e-descomplicado/37461
-
-## Enterprise Service Bus (EBS)
-- [Youtube]\: https://youtu.be/rsKUm6WA9TE
 
 ## APIs
 - [AWS AMAZON]\: https://aws.amazon.com/pt/what-is/api/
