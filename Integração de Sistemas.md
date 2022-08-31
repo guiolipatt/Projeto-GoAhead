@@ -72,7 +72,7 @@
   - [20. Continuous Integration (CI)](#20-continuous-integration-ci)
   - [21. Continuous Delivery (CD)](#21-continuous-delivery-cd)
 - [REFERÊNCIAS](#referências)
- 
+
 ## 1. O que é?
 
 ![api integration](https://user-images.githubusercontent.com/110742899/187648087-95dcb3c6-620e-4b84-97c3-5bfff14a6775.svg)
@@ -108,7 +108,6 @@
 
 
 - [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
-- [Referências](#integração-de-sistemas)
 ***
 
 ## 3. Catálogo de Padrões de Integração de Sistemas - EIP (*Enterprise Integration Patterns*)
@@ -210,7 +209,7 @@
    ![Wire Tap](https://docs.wso2.com/download/thumbnails/12421407/WireTapIcon.gif?version=1&modificationDate=1364846659000&api=v2) | Wire Tap | Pode ser implantada para monitorar todas as mensagens que passam por um canal, sem interferir no fluxo normal da aplicação.
 
 - [Tabela de Conteúdos](#introdução-à-integração-de-sistemas)
-- [Referências](#arquitetura-de-microsserviços-dirigos-a-api)
+- [Referências](#integração-de-sistemas)
 ***
 
 ## 4. Event-Driven Architecture (EDA)
@@ -1190,9 +1189,6 @@ O CI/CD depende da automação para acelerar os processos de desenvolvimento, im
 - [WSO2]\: https://docs.wso2.com/display/IntegrationPatterns/Enterprise+Integration+Patterns+with+WSO2+ESB
 - [Helder Rocha]\: https://www.academia.edu/11784011/Padr%C3%B5es_de_Integra%C3%A7%C3%A3o_de_Sistemas_com_aplica%C3%A7%C3%B5es_em_Java_
 
-## Arquitetura de Microsserviços dirigos a API
-- [Github]\: https://github.com/wso2/reference-architecture/blob/master/api-driven-microservice-architecture.md
-
 ## Event Driven Architecture (EDA)
 - [WSO2]\: https://wso2.com/whitepapers/event-driven-architecture-the-path-to-increased-agility-and-high-expandability/#:~:text=WSO2%20offers%20a%20full%20suite,EDA%20and%20web%20services%20architectures
 - [Medium]\: https://medium.com/@marcelomg21/event-driven-architecture-eda-em-uma-arquitetura-de-micro-servi%C3%A7os-1981614cdd45
@@ -1225,6 +1221,7 @@ O CI/CD depende da automação para acelerar os processos de desenvolvimento, im
 ## Microsserviços
 - [AWS AMAZON]\: https://aws.amazon.com/pt/microservices/
 - [WSO2]\: https://wso2.com/whitepapers/microservices-in-practice-key-architectural-concepts-of-an-msa/#02
+- [Github]\: https://github.com/wso2/reference-architecture/blob/master/api-driven-microservice-architecture.md
 
 ## Protocolo HTTP
 - [Rockcontent]\: https://rockcontent.com/br/blog/http/
