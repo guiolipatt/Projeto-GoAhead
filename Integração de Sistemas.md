@@ -72,6 +72,26 @@
   - [20. Continuous Integration (CI)](#20-continuous-integration-ci)
   - [21. Continuous Delivery (CD)](#21-continuous-delivery-cd)
 - [REFERÊNCIAS](#referências)
+  - [Integração de Sistemas](#integração-de-sistemas)
+  - [Event Driven Architecture (EDA)](#event-driven-architecture-eda)
+  - [Camada de Mensageria](#camada-de-mensageria)
+  - [Arquitetura Orientada a Serviços - SOA](#arquitetura-orientada-a-serviços---soa)
+  - [Simple Object Access Protocol](#simple-object-access-protocol)
+  - [SOAP Ui](#soap-ui)
+  - [APIs](#apis)
+  - [Swagger](#swagger)
+  - [Microsserviços](#microsserviços)
+  - [Protocolo HTTP](#protocolo-http)
+  - [Protocolo REST](#protocolo-rest)
+  - [cUrl](#curl)
+  - [Postman](#postman)
+  - [Containers](#containers)
+  - [Docker](#docker)
+  - [Docker Compose](#docker-compose)
+  - [CI - Continuous Integration](#ci---continuous-integration)
+  - [CD - Continuous Delivery](#cd---continuous-delivery)
+
+
 
 ## 1. O que é?
 
@@ -1188,6 +1208,7 @@ O CI/CD depende da automação para acelerar os processos de desenvolvimento, im
 ## Integração de Sistemas
 - [WSO2]\: https://docs.wso2.com/display/IntegrationPatterns/Enterprise+Integration+Patterns+with+WSO2+ESB
 - [Helder Rocha]\: https://www.academia.edu/11784011/Padr%C3%B5es_de_Integra%C3%A7%C3%A3o_de_Sistemas_com_aplica%C3%A7%C3%B5es_em_Java_
+- [Youtube]\: https://youtu.be/b-UVGmYdXDE
 
 ## Event Driven Architecture (EDA)
 - [WSO2]\: https://wso2.com/whitepapers/event-driven-architecture-the-path-to-increased-agility-and-high-expandability/#:~:text=WSO2%20offers%20a%20full%20suite,EDA%20and%20web%20services%20architectures
@@ -1195,57 +1216,71 @@ O CI/CD depende da automação para acelerar os processos de desenvolvimento, im
 - [Netreo]\: https://www.netreo.com/blog/sla-metrics-examples/
 - [Youtube]\: https://youtu.be/qaSS4Pci8vM
 - [Youtube]\: https://youtu.be/rsKUm6WA9TE
+- [Youtube]\: https://youtu.be/RHmy0rpwO7A
 
 ## Camada de Mensageria
 - [WSO2]\: https://ei.docs.wso2.com/en/7.2.0/micro-integrator/use-cases/integration-use-case/asynchronous-message-overview/
 - [Science Direct]\: https://www.sciencedirect.com/topics/computer-science/messaging-layer
+- [Youtube]\: https://youtu.be/U5h6B7eSiAE
 
 ## Arquitetura Orientada a Serviços - SOA
 - [WSO2]\: https://wso2.com/library/webinars/2015/09/service-oriented-architecture/
 - [Red Hat]\: https://www.redhat.com/pt-br/topics/cloud-native-apps/what-is-service-oriented-architecture#:~:text=Arquitetura%20orientada%20a%20servi%C3%A7os%20(SOA)%20%C3%A9%20um%20tipo%20de%20design,comunica%C3%A7%C3%A3o%20comum%20em%20uma%20rede
 - [IBM]\: https://www.ibm.com/br-pt/cloud/learn/soa
+- [Youtube]\: https://youtu.be/suZfVAk7hco
 
 ## Simple Object Access Protocol
 - [Red Hat]\: https://www.redhat.com/pt-br/topics/integration/whats-the-difference-between-soap-rest
+- [Youtube]\: https://youtu.be/YWPT2UOxbUg
 
 ## SOAP Ui
 - [Programar]\: https://www.revista-programar.info/artigos/soapui-ferramenta-util-desenvolve-web-services/
 - [DevMedia]\: https://www.devmedia.com.br/soapui-testes-de-web-services-rapido-e-descomplicado/37461
+- [Youtube]\: https://youtu.be/dAGrknAnyWY
 
 ## APIs
 - [AWS AMAZON]\: https://aws.amazon.com/pt/what-is/api/
+- [Youtube]\: https://youtu.be/RVIJnOHKOLc
 
 ## Swagger
 - [GR1D]\: https://gr1d.io/2022/04/15/swagger/
+- [Youtube]\: https://youtu.be/3nl9AzttzBQ
 
 ## Microsserviços
 - [AWS AMAZON]\: https://aws.amazon.com/pt/microservices/
 - [WSO2]\: https://wso2.com/whitepapers/microservices-in-practice-key-architectural-concepts-of-an-msa/#02
 - [Github]\: https://github.com/wso2/reference-architecture/blob/master/api-driven-microservice-architecture.md
+- [Youtube]\: https://youtu.be/jSnLOoGjQ80
 
 ## Protocolo HTTP
 - [Rockcontent]\: https://rockcontent.com/br/blog/http/
 - [Hostinger]\: https://www.hostinger.com.br/tutoriais/o-que-e-http-error-e-principais-codigos-http#O_que_e_HTTP_Error
 - [Mozzila]\: https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
+- [Youtube]\: https://youtu.be/V4XZ81vRGtM
 
 ## Protocolo REST
 - [Red Hat]\: https://www.redhat.com/pt-br/topics/api/what-is-a-rest-api#:~:text=REST%20n%C3%A3o%20%C3%A9%20um%20protocolo,recurso%20ao%20solicitante%20ou%20endpoint.
 - [Rockcontent]\: https://rockcontent.com/br/blog/rest/
+- [Youtube]\: https://youtu.be/weQ8ssA6iBU
 
 ## cUrl
 - [Rockcontent]\; https://rockcontent.com/br/blog/curl/
+- [Youtube]\: https://youtu.be/2fze_G-G2oU
 
 ## Postman
 - [eNotas]\: https://enotas.com.br/blog/postman/
 - [Guru99]\: https://www.guru99.com/postman-tutorial.html
+- [Youtube]\: https://youtu.be/op81bMbgZXs
 
 ## Containers
 - [ESR]\: https://esr.rnp.br/administracao-de-sistemas/containers-docker-como-utilizar/
 - [Treinaweb]\: https://www.treinaweb.com.br/blog/afinal-o-que-e-um-container
+- [Youtube]\: https://youtu.be/jv4_sLlGOS0
 
 ## Docker
 - [Treinaweb]\: https://www.treinaweb.com.br/blog/no-final-das-contas-o-que-e-o-docker-e-como-ele-funciona
 - [AWS]\: https://aws.amazon.com/pt/docker/
+- [Youtube]\: https://youtu.be/ntbpIfS44Gw
 
 ## Docker Compose
 - [4Linux]\: https://blog.4linux.com.br/docker-compose-explicado/
@@ -1253,9 +1288,12 @@ O CI/CD depende da automação para acelerar os processos de desenvolvimento, im
 - [Mundo Docker]\: https://www.mundodocker.com.br/docker-compose/
 - [Alura]\: https://www.alura.com.br/artigos/compondo-uma-aplicacao-com-o-docker-compose
 - [Macoratti]\: https://www.macoratti.net/19/01/intro_docker13.htm
+- [Youtube]\: https://youtu.be/HxPz3eLnXZk
 
 ## CI - Continuous Integration
 - [Atlassian]\: https://www.atlassian.com/br/continuous-delivery/continuous-integration
+- [Youtube]\: https://youtu.be/nI3IjYcBGiU
 
 ## CD - Continuous Delivery
 - [Red Hat]\: https://www.redhat.com/pt-br/topics/devops/what-is-continuous-delivery
+- [Youtube]\: https://youtu.be/6p4bYWQ6Dq8
