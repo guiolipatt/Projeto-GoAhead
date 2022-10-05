@@ -38,11 +38,28 @@
       - [Passo 2: Teste](#passo-2-teste)
     - [Cenário 8: Limitação de Taxa](#cenário-8-limitação-de-taxa)
       - [Contexto](#contexto-7)
+      - [Passo 1: Aplicando uma Apólice de Limitação de Taxa](#passo-1-aplicando-uma-apólice-de-limitação-de-taxa)
+      - [Passo 2: Definindo Taxa de Transferência Máxima](#passo-2-definindo-taxa-de-transferência-máxima)
     - [Cenário 9: Realtime Data com WebSocket API](#cenário-9-realtime-data-com-websocket-api)
+      - [Contexto](#contexto-8)
+      - [Passo 1: Desenvolvendo um Serviço no Streaming Integrator](#passo-1-desenvolvendo-um-serviço-no-streaming-integrator)
+      - [Passo 2: Expondo a WebSocket via API Manager](#passo-2-expondo-a-websocket-via-api-manager)
     - [Cenário 10: Notificações Utilizando Webhooks](#cenário-10-notificações-utilizando-webhooks)
+      - [Contexto](#contexto-9)
+      - [Passo 1: Subscrevendo em uma API](#passo-1-subscrevendo-em-uma-api)
+      - [Passo 2: Configurando Notificações](#passo-2-configurando-notificações)
+      - [Passo 3: Enviando Notificações](#passo-3-enviando-notificações)
     - [Cenário 11: Suporte GraphQL](#cenário-11-suporte-graphql)
+      - [Contexto](#contexto-10)
+      - [Passo 1: Criando uma API GraphQL](#passo-1-criando-uma-api-graphql)
+      - [Passo 2: Publicando e Testando a API](#passo-2-publicando-e-testando-a-api)
     - [Cenário 12: Entrega de Mensagem Garantida](#cenário-12-entrega-de-mensagem-garantida)
+      - [Contexto](#contexto-11)
+      - [Passo 1: Invocando a API](#passo-1-invocando-a-api)
+      - [Passo 2: Assegurando Entrega Bem-Sucedida](#passo-2-assegurando-entrega-bem-sucedida)
     - [Cenário 13: Integração com Serviços via Conectores](#cenário-13-integração-com-serviços-via-conectores)
+      - [Contexto](#contexto-12)
+      - [Passo 1: Criando e Configurando o Serviço](#passo-1-criando-e-configurando-o-serviço)
     - [Cenário 14: Suporte de Gerenciamento de Chaves Externas](#cenário-14-suporte-de-gerenciamento-de-chaves-externas)
   - [Tutoriais API Management](#tutoriais-api-management)
     - [Criar e Publicar uma GraphQL API](#criar-e-publicar-uma-graphql-api)
@@ -497,17 +514,328 @@ Esse tutorial é parte de uma série e pode ser utilizado como um tutorial por s
 - Tempo Estimado: 5 minutos.
 
 #### Contexto
+Enquanto analisava os dados de padrões de tráfego, o time de desenvolvedores da GOGO notou que o backend estava recebendo uma alta demanda de requisições e graças a essa alta demanda, os números de latência tinham aumentado. O time de desenvolvedores fez alguns testes de performance em seu backend de informações do usuário e identificou que os serviços de backend lidavam com o máximo de 1000 TPS. Então os gerenciadores da GOGO decidiram introduzir uma taxa limítrofe para coordenar seus usuários gratuitos.
 
+![scenarioeight1](https://apim.docs.wso2.com/en/4.1.0/assets/img/tutorials/scenario-tutorials/scenario8.png)
 
+#### Passo 1: Aplicando uma Apólice de Limitação de Taxa
+O WSO2 API Manager oferece vários níveis de limtação de rateio. Para esse caso, vamos aplicar **Subscription Rate Limiting Policy** e **Maximum Throughput** para o backend da PassengerInfoAPI.
 
+Para cirar uma política de limitação de taxa em inscrição, faça o seguinte:
 
+1. Logue no Admin Portal https://localhost:9443/admin utilizando *admin* e senha *admin*.
+2. Navegue até **Rate Limiting Policies → Subscription Policies** e crie uma nova política. Em seguida um exemplo de apólice.
+
+![scenarioeight2](https://apim.docs.wso2.com/en/4.1.0/assets/img/tutorials/scenarios/sample-policy.png)
+
+3. Uma vez que a apólice é criada, para aplicá-la à API, logue no Publisher Portal utilizando *apiprovider* com a senha *user123* e vá até a seção **Develop → Portal Configuration → Subscription**.
+4. Aplique a apólice para a PassengerInfoAPI e salve a API.
+
+![scenarioeight3](https://apim.docs.wso2.com/en/4.1.0/assets/img/tutorials/scenarios/apply-policy.png)
+
+5. Agora logue no Developer Portal e tente se subsescrever na API. Será notável que ela terá a nova apólice criada.
+6. Inscreva-se na API utilizando essa apólice e invoque a API usando o token gerado.
+
+![scenarioeight4](https://apim.docs.wso2.com/en/4.1.0/assets/img/tutorials/scenarios/subscribe-policy-api.png)
+
+![scenarioeight5](https://apim.docs.wso2.com/en/4.1.0/assets/img/tutorials/scenarios/invoke-policy-api.png)
+
+7. Quando requisitar mais de 10 vezes, o usuário receberá uma mensagem de throttled-out.
+
+![scenarioeight6](https://apim.docs.wso2.com/en/4.1.0/assets/img/tutorials/scenarios/throttleout-api.png)
+
+#### Passo 2: Definindo Taxa de Transferência Máxima
+O usuário pode definir uma taxa de transferência máxima para o backend assim protegendo o backend de uma sobrecarga de requisições.
+
+1. Logue no Publisher Portal e selecione a API, navegue até a seção **Develop → API Configurations → Runtime**.
+2. Sob a seção **Backend**, o usuário pode definir o máximo de TPS para seu backend. Para essa demonstração, para ver o resultado rapidamente, vamos configurar para 1 TPS e salvar a API.
+
+![scenarioeight7](https://apim.docs.wso2.com/en/4.1.0/assets/img/tutorials/scenarios/max-throughput.png)
+
+3. Para essa configuração surgir, o usuário precisa criar uma nova revisão para essa API. Para isso, vá até **Deploy → Deployments** e implante uma nova revisão.
+4. Invoque a API em sucessão rápida (mais do que uma requisição por minuto). O usuário poderá usar tokens prévios para isso.
+
+O usuário deve ver as requisições sendo impedidas com a seguinte mensagem.
+
+    {
+      "code": "900801",
+      "message": "API Limit Reached",
+      "description": "API not accepting requests"
+    }
+
+![scenarioeight8](https://apim.docs.wso2.com/en/4.1.0/assets/img/tutorials/scenarios/throttleout-backend.png)
+
+Isso demonstra que o API Manager está limitando as requisições ao backend.
+
+- [Índice](#documentação-api-manager-410)
 
 ### Cenário 9: Realtime Data com WebSocket API
+
+Esse tutorial é parte de uma série e pode ser utilizado como um tutorial por si só em como trabalhar com dados em tempo real com um WebSocket API. Para mais detalhes nesse cenário e pré-requisitos gerais, acesse a [página da visão geral de cenário](https://apim.docs.wso2.com/en/latest/tutorials/scenarios/scenario-overview/).
+
+- Tempo Estimado: 5 minutos.
+
+#### Contexto
+Quantis quer promover uma localização em tempo real de seus trens para seus clientes. Os sensores nos trens vão fornecer eventos em tempo real e Quantis quer convertê-los para WebSockets e expor como uma Streaming API para que aplicações de aparelhos móveis de clientes possam se inscrever e receber tais eventos em tempo real.
+
+![scenarionine1](https://apim.docs.wso2.com/en/4.1.0/assets/img/tutorials/scenario-tutorials/scenario9.png)
+
+WSO2 Streaming Integrator (SI) é um servidor de processamento de dado em streaming que integra dados em transmissão e toma ações baseado em dados em trasmissão. Quantis está planejando usar o Streaming Integrator para processar dados de eventos em tempo real.
+
+#### Passo 1: Desenvolvendo um Serviço no Streaming Integrator
+Para desenvolver um serviço no Streaming Integrator, o usuário necessitará usar as ferramentas Streaming Integrator. **Siddhi** é a ferramenta de processamento de evento que é usada dentro do Streaming Integrator. Para processar os WebSockets o usuário pode escrever o serviço em **linguagem Siddhi Query**. O usuário pode testar o serviço na própria ferramenta. Uma vez que o desenvolvimento estiver completo, o usuário poderá exportá-lo como um Siddhi app e aplicá-lo ao Streaming Integrator runtime.
+
+![scenarionine2](https://apim.docs.wso2.com/en/4.1.0/assets/img/tutorials/scenarios/streaming_api_tooling.png)
+
+Aqui, para simplificar, o serviço já está criado e exportado como SiddhiApp, e adicionado à instância do Streaming Integrator na configuração do tutorial. O usuário pode testar o serviço do Streaming Integrator ao invocá-lo diretamente. O usuário começa a receber eventos Realtime ao conectar um cliente WebSocket (o usuário pode utilizar [wscat](https://www.npmjs.com/package/wscat)).
+
+      wscat -c ws://localhost:8025/ 
+
+#### Passo 2: Expondo a WebSocket via API Manager
+
+Uma vez que o usuário expôs os eventos via servidor WebSocket, ele pode expor as WebSockets com o API Manager como faria com outras APIs que oferecem **acesso seguro, limitação de rateio, throttling, monetização, analíticas**, etc. A API já está publicada no Developer Portal. Para invocar a API, o usuário pode seguir os passos abaixo:
+
+1. Para se subscrever à WebSocket API, vá ao Developer Portal em https://localhost:9443/devportal/ e selecionando o domínio de hospedagem da Quantis (é necessário deslogar dos domínios prévios). Isso irá redirecionar o usuário para o Developer Portal da Quantis.
+2. Inscrever-se com um usuário do Developer Portal da Quantis. Utilize o usuário tipo *bob@quantis.com* e senha tipo *user123*.
+3. Clique em **TrainRealLocationAPI**, clique em **Subscribe** utilizando uma apólice e gere um token de acesso.
+
+![scenarionine3](https://apim.docs.wso2.com/en/4.1.0/assets/img/tutorials/scenarios/realtime_api_devportal.png)
+![scenarionine4](https://apim.docs.wso2.com/en/4.1.0/assets/img/tutorials/scenarios/realtime_api_subscriptions.png)
+
+4. O usuário pode usar o token de acesso buscado acima para subscrever-se na localização do trem 456 (Topic: loc-train-qnt-456), utilizando um WebSocket client. Por exemplo, o usuário pode usar uma ferramenta wscat, subscreva-se como abaixo:
+
+        wscat -c ws://localhost:9099/t/quantis.com/train/location/1.0.0/loc-train-qnt-456/ -H "Authorization: Bearer <Access Token>"
+
+- [Índice](#documentação-api-manager-410)
+
 ### Cenário 10: Notificações Utilizando Webhooks
+Esse tutorial é parte de uma série e pode ser utilizado como um tutorial por si só em como trabalhar com notificações utilizando Webhooks. Para mais detalhes nesse cenário e pré-requisitos gerais, acesse a [página da visão geral de cenário](https://apim.docs.wso2.com/en/latest/tutorials/scenarios/scenario-overview/).
+
+- Tempo Estimado: 5 minutos.
+
+#### Contexto
+De tempos em tempos GOGO Transit oferece notificações para as companhias de trem (por exemplo, indisponibilidade de plataformas, taxas revisadas, etc). GOGO Transit está planejando oferecer essas informação como WebHooks para que as companhias de trem possam se subescrever nessas notificações sem requisitar continuosamente.
+
+WebHooks permitem somente comunicações de uma via, de um app chamada web para outro app de chamada web. O cliente que intenciona receber os eventos do servidor/web app/publisher precisa registrar essa URL nos interessados pelo evento no publisher. Quando um evento ocorre, se um cliente está registrado para esse evento, o publisher fará uma requisição HTTP POST para a URL registrada do cliente assim notificando o evento.
+
+![scenarioten1](https://apim.docs.wso2.com/en/4.1.0/assets/img/tutorials/scenario-tutorials/scenario10.png)
+
+O usuário pode ver a WebHook API criada na WSO2 API Manager indo no publisher (Super tenant - admin) https://localhost:9443/publisher/apis.
+
+O usuário pode publicar notificações sob diferentes tópicos.
+
+![scenarioten2](https://apim.docs.wso2.com/en/4.1.0/assets/img/tutorials/scenarios/notification_api_topics.png)
+
+#### Passo 1: Subscrevendo em uma API
+Para se subscrever na API, o usuário precisa ir ao Developer Portal.
+1. Vá até o Developer Portal em  https://localhost:9443/devportal/ e selecione o tenant domain **Carbon.super**. Isso irá redirecioná-lo ao super tenant Developer Portal.
+2. Inscreva-se com um usuário Super tenant no Developer Portal. Utilize um usuário como *peter* e senha *user123*.
+3. Clique em **NotificationAPI**, clique em **Subscribe** utilizando uma apólice e gere um token de acesso.
+
+#### Passo 2: Configurando Notificações
+Para receber notificações, o usuário necessitará se registrar a um serviço que será chamado para cada evento.
+1. Pode ser utilizado https://webhook.site/ para esse propósito. O usuário pode usar a URL única no site WebHook para subscrever a si mesmo no **general topic**.
+2. Vá para a aba **Try out** e insira os seguintes detalhes sob o tópico **general**.
+
+![scenarioten3](https://apim.docs.wso2.com/en/4.1.0/assets/img/tutorials/scenarios/notification_subscribe_devportal.png)
+
+3. Clique em **Generate Curl**, copie o comando Curl, rode-o no seu terminal. Isso irá subscrever seu cliente (WebHook site) no API Manager. O usuário pode verificccar se a subscrição foi bem-sucedida ao checar o evento que foi recebido no WebHook site.
+
+#### Passo 3: Enviando Notificações
+Para enviar uma notificação, o usuário precisa reaver a URL de callback para um tópico do publisher.
+1. Inscreva-se no publisher novamente com credenciais de usuário admin e selecione NotificationAPI.
+2. O usuário pode conseguir a Callback URL ao visitar a aba de Tópicos, selecionando o tópico requerido. Já que foi subscrito ao tópico **general** acima, vamos reaver a URL para esse tópico.
+
+![scenarioten4](https://apim.docs.wso2.com/en/4.1.0/assets/img/tutorials/scenarios/notification_topic_configuration.png)
+
+3. Depois, o usuário precisa ir na seção do topo **Subscribe Configuration** e habilitá-la. Clique no botão **Generate** e gere um segredo. O usuário precisará desse segredo para calcular o valor hmac que poderá enviar no cabeçalho de requisição.
+
+![scenarioten5](https://apim.docs.wso2.com/en/4.1.0/assets/img/tutorials/scenarios/notification_topic_secret.png)
+
+4. Digamos que iremos enviar esse payload abaixo:
+
+       {"Message" : "Platform 12 on Braybrooke station will be closed for 2 hours on 2021-09-07T-15:50+00"}
+
+5. O usuário necessitará calcular o valor para o payload acima utilizando o segredo que foi gerado no publisher. Isso pode ser feito no seguinte website: https://www.freeformatter.com/hmac-generator.html (Use SHA1).
+6. Com o valor hmac derivado acima, o usuário pode invocar a requisição abaixo que enviará um evento no tópico **general**. Esse evento será recebido no WebHook site.
+
+       curl -X POST 'http://localhost:9021/notification/1.0.0/webhooks_events_receiver_resource?topic=/general' \
+        --header 'Accept: application/json' \
+        --header 'x-hub-signature: sha1=<hmac value>' \
+        --header 'Content-Type: application/json' \
+        --data-raw '{"Message" : "Platform 12 on Braybrooke station will be closed for 2 hours on 2021-09-07T-15:50+00"}'
+
+- [Índice](#documentação-api-manager-410)
+
 ### Cenário 11: Suporte GraphQL
+Esse tutorial é parte de uma série e pode ser utilizado como um tutorial por si só em como trabalhar com GraphSQL. Para mais detalhes nesse cenário e pré-requisitos gerais, acesse a [página da visão geral de cenário](https://apim.docs.wso2.com/en/latest/tutorials/scenarios/scenario-overview/).
+
+- Tempo Estimado: 5 minutos.
+
+#### Contexto
+Quantis está mais focada em oferecer maior capacidade para a comunidade de desenvolvedores. Eles esperam que a comunidade construa suas próprias aplicações móveis e web apps para usar suas APIs. Para tornar esse processo mais fácil, Quantis quer expor API GraphQL para o público.
+
+![scenarioeleven1](https://apim.docs.wso2.com/en/4.1.0/assets/img/tutorials/scenario-tutorials/scenario11.png)
+
+#### Passo 1: Criando uma API GraphQL
+WSO2 API Manager suporta a criação de APIs GraphQL utilizando o esquema GraphQL. Os passos seguintes podem ser usados para criar uma API de exemplo.
+
+1. Logue no Publisher Portal  https://localhost:9443/publisher utilizando *apiprovider@quantis.com* e a senha *user123*.
+2. Selecione **Create API → Import GraphQL SDL**.
+
+![scenarioeleven2](https://apim.docs.wso2.com/en/4.1.0/assets/img/tutorials/scenarios/select-graphql.png)
+
+3. Importe o **train.graphql** em **/resources** e crie a API. Use http://backend-service:8080/train-operations/graphql como a URL de endpoint para o backend.
+
+![scenarioeleven3](https://apim.docs.wso2.com/en/4.1.0/assets/img/tutorials/scenarios/import-graphql.png)
+
+#### Passo 2: Publicando e Testando a API
+1. Implemente a API e a publique.
+2. Vá ao Developer Portal e navegue até o domínio de hospedagem da Quantis. O usuário verá a API GraphQL no Developer Portal.
+
+![scenarioeleven4](https://apim.docs.wso2.com/en/4.1.0/assets/img/tutorials/scenarios/view-graphql.png)
+
+3. Logue no Developer Portal da Quantis usando *bob@quantis.com* com a senha *user123* e subscreva na API GraphQL utilizando uma aplicação e receba o token de acesso.
+4. O usuário pode usar a aba **Try out** para testar essa API GraphQL. Em seguida está um exemplo de requisição de payload.
+
+        schedules {
+          entryId
+          from
+          to
+          trainType 
+          }
+        }
+
+O usuário receberá uma resposta como a mostrada abaixo:
+
+![scenarioeleven5](https://apim.docs.wso2.com/en/4.1.0/assets/img/tutorials/scenarios/response-graphql.png)
+
+- [Índice](#documentação-api-manager-410)
+
 ### Cenário 12: Entrega de Mensagem Garantida
+Esse tutorial é parte de uma série e pode ser utilizado como um tutorial por si só em como garantir a entrega de mensagem. Para mais detalhes nesse cenário e pré-requisitos gerais, acesse a [página da visão geral de cenário](https://apim.docs.wso2.com/en/latest/tutorials/scenarios/scenario-overview/).
+
+- Tempo Estimado: 6 minutos.
+
+#### Contexto
+RailCo quer realizar uma parceria com a catering, um serviço de fornecimento de comida para passageiros de primeira classe. Para cada registro eles querem enviar uma entrada para o sistema de serviço da Catering. Entretanto, eles notaram que o sistema de serviço Catering fica indisponível de tempos em tempos. Para ter certeza que as entradas alcançarão o sistema da Catering, eles estão planejando implementar um sistema de Garantia de Entrega de Mensagens.
+
+Armazenamento e envio de mensageria padrão é utilizado para assegurar a entrega garantida de mensagens. Mensagens nunca serão perdidas se elas estiverem armazenadas no armazém de mensagens e disponíveis para futura referência.
+
+Isso será implementado com Message Store e Message Processor no Micro Integrator. Quando o sistema Catering estiver fora do ar, as mensagens serão armazenadas no Message Store. Quando o sistema voltar a ficar disponível novamente, as mensagens armazenadas serão enviadas ao sistema Catering.
+
+![scenariotwelve1](https://apim.docs.wso2.com/en/4.1.0/assets/img/tutorials/scenario-tutorials/scenario12.png)
+
+Se o usuário observar o arquivo *docker-compose.yml* poderá notar que *CATERING_SERVICE_EP* está definido como *‘http://www.urldoesnotexist.com’* sob  *mi-runtime service*. Se o usuário enviar uma requisição para esse endpoint, ela falhará e a mensagem será armazenada na base de dados da Message Store.
+
+#### Passo 1: Invocando a API
+Para invocar a API, o usuário pode usar a seguinte curl:
+
+    curl -X POST 'http://localhost:8290/catering/register' \
+    --header 'Content-Type: application/json' \
+    --data-raw '{
+      "passengerId": "241241d",
+      "class": "first",
+      "train": "RLC-5051",
+      "departure": {
+        "time": "2021-07-16 11:45",
+        "station": "King Cross"
+      },
+      "arrival": {
+        "time": "2021-07-16 16:40",
+        "station": "Edinburgh"
+      },
+      "duration": "4h 55m",
+      "food": [
+        {
+          "serving": "lunch",
+          "type": "Asian",
+          "comments": [
+            "Not too spicy"
+            ]
+          },
+          {
+          "serving": "snacks",
+          "type": "Normal",
+          "comments": []
+          }
+        ]
+      }'
+
+Se o usuário checar os logs do Micro Integrator, poderá ver que a invocação do backend falhou.
+
+    “Message processor [CateringServiceForwardingProcessor] failed to forward message 4 times. Moved failed message to fail-messages-store and continue”
+
+Após algum tempo, o Micro Integrator tentará enviar novamente a mensagem para o backend. Esse processo continuará até que a mensagem seja entregue com sucesso ao backend.
+
+#### Passo 2: Assegurando Entrega Bem-Sucedida
+Para obter sucesso na entrega, o usuário poderá providenciar um endpoint funcional e reiniciar o Micro Integrator. Isso irá enviar a mensagem acima para o backend.
+
+Para testar esse fluxo o usuário poderá fazer o seguinte:
+
+1. Criar um novo endpoint em  https://hookbin.com/ e fornecer o endpoint no arquivo *docker-compose.yml* sob *CATERING_SERVICE_EP*.
+2. Reiniciar a execução do Micro Integrator usando o seguinte comando:
+
+        docker-compose up -d --build mi-runtime
+
+Agora se os logs do Micro Integrator forem checados, poderá ser avistado que a invocação foi bem sucedida.
+
+    _Response = CateringServiceEP Reply Sequence Invoked, Payload: {"success":true}_
+
+O usuário pode atualizar o site hookbin e ver que a mensagem agora foi captada.
+
+- [Índice](#documentação-api-manager-410)
+
 ### Cenário 13: Integração com Serviços via Conectores
+Esse tutorial é parte de uma série e pode ser utilizado como um tutorial por si só em como usar conectores. Para mais detalhes nesse cenário e pré-requisitos gerais, acesse a [página da visão geral de cenário](https://apim.docs.wso2.com/en/latest/tutorials/scenarios/scenario-overview/).
+
+- Tempo Estimado: 10 minutos.
+
+#### Contexto
+RailCo está mantendo uma garagem para trens para sua manutenção de checagem rotineira de seus trens. Quando um trem vai para a garagem, um arquivo de entrada é criado em formato CSV. RailCo quer gerar um email a partir desse arquivo, e eles planejam usar o Micro Integrator e seu conector de email para conseguir isso.
+
+Quando o usuário integra os sistemas de sua organização, ele também necessariamente integra com sistemas de terceiros e suas capacidades para elevar seus serviços. WSO2 Micro Integrator usa Conectores para o propósito de referenciamento para APIS de sistemas de terceiros.
+
+![scenariothirteen1](https://apim.docs.wso2.com/en/4.1.0/assets/img/tutorials/scenario-tutorials/scenario13.png)
+
+Para desenvolver o serviço o usuário pode usar o Integrator Studio, onde ele poderá importar e compactar o conector com a aplicação Composite. Para buscar por um arquivo, ele pode usar um Inbound Endpoint, que estará escoltando uma locação em particular já fornecida. Uma vez que o arquivo é adicionado a essa locação ele irá puxar o arquivo e processá-lo. Inbound Endpoints suportam diversos protocolos tais quais HTTP, JMS, RabbitMQ, WebSocket, etc.
+
+Enquanto desenvolve, o usuário pode testar no Embedded Micro Integrator dentro do Studio. Uma vez que o desenvolvimento está completo, ele pode exportá-lo como uma aplicação Compose e adicioná-lo ao Micro Integrator runtime.
+
+#### Passo 1: Criando e Configurando o Serviço
+![scenariothirteen2](https://apim.docs.wso2.com/en/4.1.0/assets/img/tutorials/scenarios/integration_studio_connectors.png)
+
+Aqui, para simplificar, o serviço já foi criado e exportado como uma aplicação Compose junto com o conector. Antes de adicionar o serviço ao sistema, o usuário precisa fazer o seguinte:
+
+1. Criar um diretório temporário na sua máquina e criar três subdiretórios dentro dele chamados **in, out** e **error**.
+2. Apague a seção volume sob *mi-runtime* em *docker-compose.yml* e forneça o local do diretório temporário mudando a tag *<SourceLocation\>*.
+
+        # volumes:
+        #   - <SourceLocation>:/home/wso2carbon/sample
+
+3. Para enviar um email, o usuário precisa ter um servidor SMTP. Apague as seguintes variáveis de ambiente sob *_mi-runtime_* e preencha os detalhes:
+
+        #   SMTP_HOST: <SMTP_Host>
+        #   SMTP_PORT: <SMTP_Port>
+        #   SMTP_USERNAME: <SMTP_Server_Username>
+        #   SMTP_PASSWORD: <SMTP_Server_Password>
+        #   EMAIL_TO: <To_Address>
+        #   EMAIL_FROM: <From_Address>
+
+4. Após 
+
+
+
+
+
+
+
+
+
+
+- [Índice](#documentação-api-manager-410)
 ### Cenário 14: Suporte de Gerenciamento de Chaves Externas
+- [Índice](#documentação-api-manager-410)
 
 ## Tutoriais API Management
 A lista de tutoriais seguinte guia o usuário a criar pela primeira vez uma API gerenciada e expô-la ao mercado de APIs.
