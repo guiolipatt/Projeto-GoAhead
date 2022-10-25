@@ -158,20 +158,113 @@
       - [Passo 5: Construa e Rode os Artefatos](#passo-5-construa-e-rode-os-artefatos-2)
       - [Passo 6: Teste o Estudo de Caso](#passo-6-teste-o-estudo-de-caso-1)
     - [Execução Periódica de Processo de Integração](#execução-periódica-de-processo-de-integração)
+      - [Contexto](#contexto-21)
+      - [Passo 1: Configurar o Workspace](#passo-1-configurar-o-workspace-7)
+      - [Passo 2: Desenvolva os Artefatos de Integração](#passo-2-desenvolva-os-artefatos-de-integração-6)
+      - [Passo 3: Empacotar os Artefatos](#passo-3-empacotar-os-artefatos-7)
+      - [Passo 4: Construa e Rode os Artefatos](#passo-4-construa-e-rode-os-artefatos-3)
+      - [Passo 5: Teste o Estudo de Caso](#passo-5-teste-o-estudo-de-caso-4)
     - [Utilizando Inbound Endpoints](#utilizando-inbound-endpoints)
+      - [Contexto](#contexto-22)
+      - [Passo 1: Configurar o Workspace](#passo-1-configurar-o-workspace-8)
+      - [Passo 2: Desenvolva o Inbound Endpoint](#passo-2-desenvolva-o-inbound-endpoint)
+      - [Passo 3: Empacotar os Artefatos](#passo-3-empacotar-os-artefatos-8)
+      - [Passo 4: Construa e Rode os Artefatos](#passo-4-construa-e-rode-os-artefatos-4)
+      - [Passo 5: Teste o Estudo de Caso](#passo-5-teste-o-estudo-de-caso-5)
     - [Reutilizando Sequências de Mediação](#reutilizando-sequências-de-mediação)
-    - [Enviando Emails por um Serviço de Integração](#enviando-emails-por-um-serviço-de-integração)
+      - [Contexto](#contexto-23)
+      - [Passo 1: Configurar o Workspace](#passo-1-configurar-o-workspace-9)
+      - [Passo 2: Desenvolva os Artefatos de Integração](#passo-2-desenvolva-os-artefatos-de-integração-7)
+      - [Passo 3: Empacotar os Artefatos](#passo-3-empacotar-os-artefatos-9)
+      - [Passo 4: Construa e Rode os Artefatos](#passo-4-construa-e-rode-os-artefatos-5)
+      - [Passo 5: Teste o Estudo de Caso](#passo-5-teste-o-estudo-de-caso-6)
+    - [Enviando Emails por um Serviço de Integração (Conectando Web APIs/Serviços de Nuvem)](#enviando-emails-por-um-serviço-de-integração-conectando-web-apisserviços-de-nuvem)
+      - [Contexto](#contexto-24)
+      - [Passo 1: Configurar o Workspace](#passo-1-configurar-o-workspace-10)
+      - [Passo 2: Desenvolva os Artefatos de Integração](#passo-2-desenvolva-os-artefatos-de-integração-8)
+      - [Passo 3: Empacotar os Artefatos](#passo-3-empacotar-os-artefatos-10)
+      - [Passo 4: Construa e Rode os Artefatos](#passo-4-construa-e-rode-os-artefatos-6)
+      - [Passo 5: Teste o Estudo de Caso](#passo-5-teste-o-estudo-de-caso-7)
     - [Expondo um Serviço de Integração como uma API Gerenciada](#expondo-um-serviço-de-integração-como-uma-api-gerenciada)
+      - [Contexto](#contexto-25)
+      - [Conceitos e Artefatos Usados](#conceitos-e-artefatos-usados-3)
+      - [Passo 1: Desenvolva o Serviço de Integração](#passo-1-desenvolva-o-serviço-de-integração)
+      - [Passo 2: Configurando um Serviço Metadata](#passo-2-configurando-um-serviço-metadata)
+      - [Passo 3: Configurando o Micro Integrator](#passo-3-configurando-o-micro-integrator)
+      - [Passo 4: Empacotar os Artefatos](#passo-4-empacotar-os-artefatos)
+      - [Passo 5: Inicie o API Manager runtime](#passo-5-inicie-o-api-manager-runtime)
+      - [Passo 6: Monte e Rode o Serviço](#passo-6-monte-e-rode-o-serviço)
+      - [Passo 7: Criar e Implantar a API](#passo-7-criar-e-implantar-a-api)
+      - [Passo 8: Publicar a API](#passo-8-publicar-a-api)
+      - [Passo 9: Subscrever na API](#passo-9-subscrever-na-api)
+      - [Passo 10: Use a API](#passo-10-use-a-api)
     - [Expondo um Serviço de Integração SOAP como uma API Gerenciada](#expondo-um-serviço-de-integração-soap-como-uma-api-gerenciada)
-    - [Integrando com SAP](#integrando-com-sap)
+      - [Contexto](#contexto-26)
+      - [Passo 1: Desenvolva o Serviço de Integração](#passo-1-desenvolva-o-serviço-de-integração-1)
+      - [Passo 2: Configurar um Serviço de Metadata](#passo-2-configurar-um-serviço-de-metadata)
+      - [Passo 3: Configurando o Micro Integrator](#passo-3-configurando-o-micro-integrator-1)
+      - [Passo 4: Empacotar os Artefatos](#passo-4-empacotar-os-artefatos-1)
+      - [Passo 5: Inicie o API Manager runtime](#passo-5-inicie-o-api-manager-runtime-1)
+      - [Passo 6: Monte e Rode o Serviço](#passo-6-monte-e-rode-o-serviço-1)
+      - [Passo 7: Criar e Implantar o Serviço Proxy como uma SOAP Pass-Through API](#passo-7-criar-e-implantar-o-serviço-proxy-como-uma-soap-pass-through-api)
+      - [Passo 8: Publicar a API](#passo-8-publicar-a-api-1)
+      - [Passo 9: Subscrever na API](#passo-9-subscrever-na-api-1)
+      - [Passo 10: Use a SOAP Pass-Through API](#passo-10-use-a-soap-pass-through-api)
+    - [Integrando com SAP (Integração SAP)](#integrando-com-sap-integração-sap)
+      - [Contexto](#contexto-27)
+      - [Instalando o Adaptador SAP](#instalando-o-adaptador-sap)
+      - [Passo 2: Preparando o Arquivo de Configuração de Cliente](#passo-2-preparando-o-arquivo-de-configuração-de-cliente)
+      - [Passo 3: Preparando um Arquivo de Configuração de Servidor](#passo-3-preparando-um-arquivo-de-configuração-de-servidor)
+      - [Passo 4: Configurando um Adaptador WSO2 SAP](#passo-4-configurando-um-adaptador-wso2-sap)
+      - [Parâmetros de Configuração Adicionais](#parâmetros-de-configuração-adicionais)
+      - [Solução de Problemas](#solução-de-problemas)
   - [Tutoriais de Integração Streaming](#tutoriais-de-integração-streaming)
     - [Expondo um Kafka Stream como um WebSocket API Gerenciada](#expondo-um-kafka-stream-como-um-websocket-api-gerenciada)
+      - [Contexto](#contexto-28)
+      - [Pré-Requisitos](#pré-requisitos)
+      - [Passo 1: Inicie o API Manager](#passo-1-inicie-o-api-manager)
+        - [Passo 2: Inicie o Streaming Integrator](#passo-2-inicie-o-streaming-integrator)
+      - [Passo 3: Inicie e Crie um Streaming Backend no Streaming Integrator Tooling](#passo-3-inicie-e-crie-um-streaming-backend-no-streaming-integrator-tooling)
+      - [Passo 4: Gere um AsyncAPI Definition](#passo-4-gere-um-asyncapi-definition)
+      - [Passo 5: Publicar a AsyncAPI Definition](#passo-5-publicar-a-asyncapi-definition)
+      - [Passo 6: Visualizar a Entry do Catálogo de Serviços no WSO2 API-M](#passo-6-visualizar-a-entry-do-catálogo-de-serviços-no-wso2-api-m)
+      - [Passo 7: Crie uma API](#passo-7-crie-uma-api)
+      - [Publique a API](#publique-a-api)
+      - [Passo 9: Invoque a API Publicada](#passo-9-invoque-a-api-publicada)
+      - [Passo 10: Passar o Evento Streaming para o Broker](#passo-10-passar-o-evento-streaming-para-o-broker)
+      - [Passo 11: Avaliando Resultados](#passo-11-avaliando-resultados)
     - [Executando Mudança de Captura de Dado em Tempo Real com MySQL](#executando-mudança-de-captura-de-dado-em-tempo-real-com-mysql)
+      - [Introdução](#introdução)
+      - [Modo Listening e Polling](#modo-listening-e-polling)
+      - [Tipos de Eventos Capturados](#tipos-de-eventos-capturados)
+      - [Modo Listening](#modo-listening)
+      - [Modo Polling](#modo-polling)
     - [Executando ETL em Tempo Real com Arquivos](#executando-etl-em-tempo-real-com-arquivos)
+      - [Introdução](#introdução-1)
+      - [Extraindo Dados de um Arquivo](#extraindo-dados-de-um-arquivo)
+      - [Extraindo Dados de uma Pasta](#extraindo-dados-de-uma-pasta)
+      - [Carregando Dados para dentro de um Arquivo](#carregando-dados-para-dentro-de-um-arquivo)
     - [Criando uma Aplicação ETL via SI Tooling](#criando-uma-aplicação-etl-via-si-tooling)
+      - [Introdução](#introdução-2)
+      - [Passo 1: Desenhe a aplicação Siddhi com Funcionalidade ETL](#passo-1-desenhe-a-aplicação-siddhi-com-funcionalidade-etl)
+      - [Passo 2: Teste a Aplicação Siddhi](#passo-2-teste-a-aplicação-siddhi)
     - [Trabalhando com Kafka](#trabalhando-com-kafka)
+      - [Introdução](#introdução-3)
+      - [Consumindo Dados de Kafka](#consumindo-dados-de-kafka)
     - [Trabalhando com Business Rules](#trabalhando-com-business-rules)
-    - [Integrando Stores](#integrando-stores)
+      - [Contexto](#contexto-29)
+      - [Criando Business Rules](#criando-business-rules)
+      - [Gerenciando Business Rules](#gerenciando-business-rules)
+      - [Criando um Business Rules Template](#criando-um-business-rules-template)
+      - [Editando um Business Rule Template](#editando-um-business-rule-template)
+      - [Business Rules Templates](#business-rules-templates)
+      - [Configurando Permissões de Gerenciamento de Business Rules](#configurando-permissões-de-gerenciamento-de-business-rules)
+    - [Integrando Data Stores em Streaming Integration](#integrando-data-stores-em-streaming-integration)
+      - [Introdução](#introdução-4)
+      - [Contexto](#contexto-30)
+      - [Passo 1: Conecte uma aplicação Siddhi ao Armazém de Dados](#passo-1-conecte-uma-aplicação-siddhi-ao-armazém-de-dados)
+      - [Passo 2: Performar Operações CRUD](#passo-2-performar-operações-crud)
+      - [Realizando Operações CRUD via REST API](#realizando-operações-crud-via-rest-api)
     - [Expondo Processed Data como API](#expondo-processed-data-como-api)
     - [Tratamento de Erro com Data Stream](#tratamento-de-erro-com-data-stream)
     - [Engatilhando Fluxos de Intregração](#engatilhando-fluxos-de-intregração)
@@ -3534,23 +3627,4540 @@ Os artefatos serão implantados no Micro Integrator embutido e o servidor será 
 - [Índice](#documentação-api-manager-410)
 
 ### Execução Periódica de Processo de Integração
+#### Contexto
+As seções abaixo demonstram um exemplo de agendamento de uma tarefa (utilizando uma implementação padrão) para injetar uma mensagem XML e imprimí-la nos logs do servidor.
+
+#### Passo 1: Configurar o Workspace
+Download o [WSO2 Integration Studio](https://wso2.com/api-management/tooling/) relevante baseado em seu sistema operacional.
+
+#### Passo 2: Desenvolva os Artefatos de Integração
+Siga as instruções dadas nessa seção para criar e configurar os artefatos necessários.
+
+- Criando um projeto de integração
+
+  Um projeto de integração é um projeto especializado multimodular, o que conterá todos os módulos necessários para uma solução de integração.
+  
+  1. Abra o **WSO2 Integration Studio**.
+  2. Clique em **New Integration Project** na aba **Getting Started** como mostrado abaixo. ![ti8-1](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/common/create-integration-project.jpg) Isso abrirá a caixa de diálogo **New Integration Project**. ![ti8-2](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/common/create-simple-message-project.jpg)
+  3. Insira *SampleServices* como o nome do projeto e marque as seguintes caixas de seleção para criar os módulos necessários.
+     - **Create ESB Configs**
+     - **Create Composite Exporter**
+  4. Clique em **Finish**.
+
+Agora você verá os projetos listados no **Project Explorer**.
+
+- Criando a Sequência
+  1. No **Project Explorer**, clique com o botão direito no projeto **ScheduleDefaultTaskConfigs** e clique em **New → Sequence** ![ti8-3](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/scheduled-tasks/1-select-sequence.jpg)
+  2. Clique em **Create New Sequence** e depois **Next**.
+  3. Insira **InjectXMLSequence** como o nome da sequência depois clique em **Finish**. ![ti8-4](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/scheduled-tasks/2-enter-sequence-artifact.png) 
+  4. Arraste e solte o mediador **Log** e um mediador **Drop** da paleta **Mediators**. ![ti8-5](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/scheduled-tasks/3-inject-xml.png)
+  5. Clique no mediador **Log** e insira os seguintes detalhes na seção **Properties**.
+     - **Log Category**: INFO  
+     - **Log Level**: CUSTOM
+     - Adicione uma nova propriedade com os seguintes detalhes:
+
+        Property|Descrição
+        :-:|:-:
+        Property Name|City
+        Value Type|EXPRESSION
+        Expression|//city
+    
+      Abaixo está demonstrada a configuração fonte da Sequência completa(ex o arquivo *InjectXMLSequence.xml*).
+
+          <?xml version="1.0" encoding="UTF-8"?>
+          <sequence name="InjectXMLSequence" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+            <log level="custom">
+              <property expression="//city" name="City"/>
+            </log>
+            <drop/>
+          </sequence>
+
+- Criando a Tarefa Agendada
+  
+  1. No **Project Explorer**, clique com o botão direito em **ScheduleDefaultTask** e clique em **New →  Scheduled Task**. ![ti8-6](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/scheduled-tasks/4-create-task.jpg) 
+  2. Selecione **Create a New Scheduled Task Artifact** e clique em **Next**. ![ti8-7](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/scheduled-tasks/5-task-artifact-creation-options.png)
+  3. Insira os detalhes seguintes e depois clique em **Next**:
+     - **Task Name**: *InjectXMLTask*
+     - **Count**: -1
+     - **Interval (in seconds)**: 5
+     ![ti8-8](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/scheduled-tasks/6-task-artifact-creation-dialog.png)  
+  4. No **Form View** da tarefa *InjectXMLTask*, clique em **Task Implementation Properties**. ![ti8-9](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/scheduled-tasks/7-select-task-implementation-prop.png)
+       1. Insira os seguintes parâmetros:
+          - **injectTo**: *sequence*
+          - **sequenceName**:*InjectXMLSequence*
+       2. Selecione **XML** como o **Parameter Type** do parâmetro de **message**, insira o seguinte como a mensagem XML no campo **Value/Expression** e clique em **OK**. ![ti8-10](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/scheduled-tasks/8-task-properties.png)  
+
+  Abaixo está demonstrada a configuração fonte completa da tarefa agendada.
+
+      <?xml version="1.0" encoding="UTF-8"?>
+      <task class="org.apache.synapse.startup.tasks.MessageInjector" group="synapse.simple.quartz" name="InjectXMLTask" xmlns="http://ws.apache.org/ns/synapse">
+        <trigger interval="5"/>
+        <property name="injectTo" value="sequence" xmlns:task="http://www.wso2.org/products/wso2commons/tasks"/>
+        <property name="sequenceName" value="InjectXMLSequence" xmlns:task="http://www.wso2.org/products/wso2commons/tasks"/>
+        <property name="message" xmlns:task="http://www.wso2.org/products/wso2commons/tasks">
+          <request xmlns="">
+            <location>
+                 <city>London</city>
+                 <country>UK</country>
+            </location>
+          </request>
+        </property>
+      </task>
+
+#### Passo 3: Empacotar os Artefatos
+
+Empacote os artefatos em seu módulo **composite application** (SampleServicesCompositeExporter) para estar apto a implantar os artefatos no servidor.
+1. Abra o arquivo *pom.xml* no módulo **composite exporter**.
+2. Assegure-se que os artefatos relevantes estão selecionados no arquivo POM.
+3. Salve as mudanças.
+
+#### Passo 4: Construa e Rode os Artefatos
+Para testar os artefatos, implante o artefatos empacotados acima embutidos no Micro Integrator:
+1. Clique com o botão direito no módulo **composite exporter** e clique em **Export Project Artifacts and Run**.
+2. Na caixa de diálogo que abrirá, confirme que os artefatos requeridos do módulo **composite exporter** estão selecionados.
+3. Clique em **Finish**.
+
+Os artefatos serão implantados no Micro Integrator embutido e o servidor será iniciado.
+- Veja o log de inicialização na aba **Console**.
+- Veja as URLs dos serviços implantados e as APIs na aba **Runtime Services**.
+
+#### Passo 5: Teste o Estudo de Caso
+Você verá a mensagem XML que você injetou sendo impressa nos logs do Micro Integrator a cada 5 segundos.
+
+    [2019-10-10 19:33:00,602]  INFO {org.wso2.micro.integrator.ntask.core.impl.AbstractQuartzTaskManager} - Task scheduled: [-1234][ESB_TASK][InjectXMLTask]
+    [2019-10-10 19:33:00,671]  INFO {org.apache.synapse.mediators.builtin.LogMediator} - City = London
+    [2019-10-10 19:33:05,602]  INFO {org.apache.synapse.mediators.builtin.LogMediator} - City = London
+    [2019-10-10 19:33:10,603]  INFO {org.apache.synapse.mediators.builtin.LogMediator} - City = London
+    [2019-10-10 19:33:15,605]  INFO {org.apache.synapse.mediators.builtin.LogMediator} - City = London
+    [2019-10-10 19:33:20,600]  INFO {org.apache.synapse.mediators.builtin.LogMediator} - City = London
+    [2019-10-10 19:33:25,600]  INFO {org.apache.synapse.mediators.builtin.LogMediator} - City = London
+    [2019-10-10 19:33:30,601]  INFO {org.apache.synapse.mediators.builtin.LogMediator} - City = London
+    [2019-10-10 19:33:35,605]  INFO {org.apache.synapse.mediators.builtin.LogMediator} - City = London
+    [2019-10-10 19:33:40,603]  INFO {org.apache.synapse.mediators.builtin.LogMediator} - City = London
+    [2019-10-10 19:33:45,600]  INFO {org.apache.synapse.mediators.builtin.LogMediator} - City = London
+    [2019-10-10 19:33:50,605]  INFO {org.apache.synapse.mediators.builtin.LogMediator} - City = London
+    [2019-10-10 19:33:55,603]  INFO {org.apache.synapse.mediators.builtin.LogMediator} - City = London
+    [2019-10-10 19:34:00,605]  INFO {org.apache.synapse.mediators.builtin.LogMediator} - City = London
+    [2019-10-10 19:34:05,605]  INFO {org.apache.synapse.mediators.builtin.LogMediator} - City = London
+    [2019-10-10 19:34:10,599]  INFO {org.apache.synapse.mediators.builtin.LogMediator} - City = London
+    [2019-10-10 19:34:15,607]  INFO {org.apache.synapse.mediators.builtin.LogMediator} - City = London
+    [2019-10-10 19:34:20,605]  INFO {org.apache.synapse.mediators.builtin.LogMediator} - City = London
+    [2019-10-10 19:34:25,603]  INFO {org.apache.synapse.mediators.builtin.LogMediator} - City = London
+
+- [Índice](#documentação-api-manager-410)
+
 ### Utilizando Inbound Endpoints
+#### Contexto
+Nesse cenário de exemplo, você utilizará um **Inbound Endpoint** para expor uma REST API já definida através de uma porta diferente. Você pode reutilizar a REST API que foi definida no tutorial [Enviando uma Mensagem Simples para um Serviço](https://apim.docs.wso2.com/en/4.1.0/tutorials/integration-tutorials/sending-a-simple-message-to-a-service). Veja [Criando um Inbound Endpoint](https://apim.docs.wso2.com/en/4.1.0/integrate/develop/creating-artifacts/creating-an-inbound-endpoint) para detalhes em como trabalhar com inbound endpoints usando WSO2 Integration Studio.
+
+#### Passo 1: Configurar o Workspace
+Monte o WSO2 Integration Studio como segue:
+
+1. Download o [WSO2 Integration Studio](https://wso2.com/api-management/tooling/) relevante baseado em seu sistema operacional.
+2. Monte o projeto do tutorial [Enviando uma Mensagem Simples para um Serviço](https://apim.docs.wso2.com/en/latest/tutorials/integration-tutorials/using-inbound-endpoints/sending-a-simple-message-to-a-service)
+  
+    **Observação**: Esse tutorial é uma continuação do tutorial [Enviando uma Mensagem Simples para um Serviço](https://apim.docs.wso2.com/en/latest/tutorials/integration-tutorials/using-inbound-endpoints/sending-a-simple-message-to-a-service)
+
+    1. Baixe o [projeto pré empacotado](https://github.com/wso2-docs/WSO2_EI/blob/master/Integration-Tutorial-Artifacts/Integration-Tutorial-Artifacts-EI7.1.0/sending-simple-message-tutorial.zip)
+    2. Abra o WSO2 Integration Studio e vá para **File → Import**.
+    3. Selecione **Existing WSO2 Projects into workspace** sob a categoria **WSO2**, clique em **Next** e então suba o **prepackaged project**.
+
+#### Passo 2: Desenvolva o Inbound Endpoint
+
+1. Uma vez que você exportou o projeto de integração como descrito acima, o diretório do projeto aparecerá com os artefatos mostrados abaixo. Observe que *HealthcareAPI* já está incluso. ![ti9-1](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/inbound-project-explorer.png) 
+2. Clique com o botão direito em **SampleServicesConfigs** e navegue até **New → Inbound Endpoint**. Selecione **Create a New Inbound Endpoint** e clique em **Next**.
+3. Insira os detalhes seguintes e clique em **Finish**.
+
+    Parameter|Descrição
+    :-:|:-:
+    Inbound Endpoint Name|*QueryDoctorInboundEndpoint*
+    Inbound Endpoint Creation Type|HTTP
+
+    ![ti9-2](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/using-inbound-endpoint/create-inbound-dialog-box.png)
+4. Vá para a aba **Properties** na tela **Design** e insira o seguinte:
+
+    Parameter|Descrição
+    :-:|:-:
+    Inbound HTTP port|8285
+    Dispatch Filter Pattern|/healthcare/querydoctor/.*
+
+   ![ti9-3](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/using-inbound-endpoint/configure-inbound-endpoint.png)     
+
+   O enpoint agora será mapeado para qualquer URL que combina com o padrão oferecido acima. Você vai estar expondo a API de saúde em uma nova porta através desse inbound endpoint.
+
+#### Passo 3: Empacotar os Artefatos
+Empacote os artefatos em seu módulo **composite application** (SampleServicesCompositeExporter) para estar apto a implantar os artefatos no servidor.
+1. Abra o arquivo *pom.xml* no módulo **composite exporter**.
+2. Assegure-se que os artefatos seguintes estão selecionados no arquivo POM.
+   - HealthcareAPI
+   - QueryDoctorEP
+   - QueryDoctorInboundEndpointEP
+3. Salve as mudanças.
+
+#### Passo 4: Construa e Rode os Artefatos
+Para testar os artefatos, implante o artefatos empacotados acima embutidos no Micro Integrator:
+1. Clique com o botão direito no módulo **composite exporter** e clique em **Export Project Artifacts and Run**.
+2. Na caixa de diálogo que abrirá, confirme que os artefatos requeridos do módulo **composite exporter** estão selecionados.
+3. Clique em **Finish**.
+
+#### Passo 5: Teste o Estudo de Caso
+Vamos testar o estudo de caso enviando uma requisição de cliente simples que invoca o serviço. 
+
+- Inicie o serviço backend
+  1. Baixe o arquivo JAR do serviço de backend [aqui](https://github.com/wso2-docs/WSO2_EI/blob/master/Back-End-Service/Hospital-Service-JDK11-2.0.0.jar).
+  2. Abra o terminal, navegue até o local onde seu serviço de backend está salvo.
+  3. Execute o seguinte comando para iniciar o serviço:
+    
+          java -jar Hospital-Service-JDK11-2.0.0.jar 
+
+- Envie a requisição do cliente
+  
+  Vamos enviar uma mensagem para a REST API **healthcare** (através do inbound endpoint) na porta 8285. Você pode utilizar o **HTTP Client** embutido do WSO2 Integration Studio como segue:
+  1. Abra a aplicação Postman. Se você não tiver a aplicação, baixe-a [aqui](https://www.postman.com/downloads/).
+  2. Adicione as informações necessárias como dadas abaixo e clique no botão **Send**.
+  
+      Method|GET
+      :-:|:-:
+      URL| http://localhost:8285/healthcare/querydoctor/surgery
+
+  Se você quiser enviar a requisição de cliente do seu terminal:
+  1. Instale e configure [cUrl](https://curl.haxx.se) como seu cliente REST.
+  2. Abra uma linha de comando no terminal e execute o seguinte comando: 
+
+          curl -v http://localhost:8285/healthcare/querydoctor/surgery
+  Você terá uma resposta como mostrada abaixo. O inbound endpoint foi invocou com sucesso a REST API, e mais, a resposta recebida pela REST API foi roteada de volta ao cliente através do inbound endpoint.
+
+      [{"name":"thomas collins","hospital":"grand oak community 
+      hospital","category":"surgery","availability":"9.00 a.m - 11.00 a.m","fee":7000.0},
+      {"name":"anne clement","hospital":"clemency medical center","category":"surgery","availability":"8.00 a.m - 10.00 A.m","fee":12000.0},
+      {"name":"seth mears","hospital":"pine valley community hospital","category":"surgery","availability":"3.00 p.m - 5.00 p.m","fee":8000.0}]
+
+- [Índice](#documentação-api-manager-410)
+ 
 ### Reutilizando Sequências de Mediação
-### Enviando Emails por um Serviço de Integração
+#### Contexto
+Nesse cenário, você usará um **Sequence Template** e reutilizá-lo em múltiplos lugares do fluxo de mediação.
+
+#### Passo 1: Configurar o Workspace
+Download o [WSO2 Integration Studio](https://wso2.com/api-management/tooling/) relevante baseado em seu sistema operacional.
+
+#### Passo 2: Desenvolva os Artefatos de Integração
+Siga as instruções dadas nessa seção para criar e configurar os artefatos necessários.
+
+- Criando um projeto de integração
+
+  Um projeto de integração é um projeto multimodular maven, o que conterá todos os módulos necessários para uma solução de integração.
+
+  1. Abra o **WSO2 Integration Studio**.
+  2. Clique em **New Integration Project** na aba **Getting Started** como mostrado abaixo. ![ti10-1](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/common/create-integration-project.jpg) Isso abrirá a caixa de diálogo **New Integration Project**. ![ti10-2](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/common/create-simple-message-project.jpg)
+  3. Insira *SampleServices* como o nome do projeto e marque as seguintes caixas de seleção para criar os módulos necessários.
+     - **Create ESB Configs**
+     - **Create Composite Exporter**
+  4. Clique em **Finish**.
+
+Agora você verá os projetos listados no **Project Explorer**.
+
+- Criando uma REST API
+  
+  1. No Project Explorer, clique como o botão direito em **SampleServicesConfigs** e clique em **Next → REST API**.
+  2. Assegure-se que **Create a New API Artifact** foi selecionado e clique em **Next**.
+  3. Entre com os detalhes abaixo para criar uma nova REST API.
+  
+      Property|Value|Descrição|
+      :---:|:---:|:---:|
+      Name|HealthcareAPI|O nome da REST API
+      Context|/heatlhcare|Aqui você ancora a API no contexto */healthcare*. Isso se tornará parte do nome da URL gerada usada pelo cliente quando enviar os requests ao serviço de saúde. Por exemplo, definindo o contexto como */healthcare* significa que a API somente lidará com requests HTTP que o caminho da URL começa com *http://host:port/healthcare.*
+      Save location|SampleServicesConfigs|Esse é o módulo **ESB Config** onde o artefato será salvo.
+  
+  4. Clique na nova API Resource para acessar a aba **Properties** e insira os seguintes detalhes:
+      
+        Property|Descrição
+        :-:|:-:|
+        Url Syle|Clique no campo **Value**, clique na seta para baixo e selecione **URI_TEMPLATE** da lista.
+        URI-Template|Insira */categories/{category}/reserve* .
+        Methods|Da lista de métodos, selecione **POST**.
+
+        ![ti10-3](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/119132155/119132164.png)
+
+- Criando Endpoints
+  
+  Nesse tutorial, nós temos três serviços de hospital hospedados como o backend:
+    - Grand Oak Community Hospital: *http://localhost:9090/grandoaks/*
+    - Clemency Medical Center: *http://localhost:9090/clemency/*
+    - Pine Valley Community Hospital: *http://localhost:9090/pinevalley/*
+
+  O método de request é POST e o formato da URL de request esperado pelo serviço de backend é *http://localhost:9090/grandoaks/categories/{category}/reserve* .
+
+  Vamos criar três endpoints de HTTP para os serviços acima.
+
+  1. Clique com o botão direito em **SampleServiceConfigs** no **Project Explorer** e navegue até **New → Endpoint**.
+  2. Assegure-se que **Create a New Endpoint** está selecionado e clique em **Next**.
+  3. Insira as informações dadas abaixo para criar um novo endpoint.
+
+     Property|Value|Descrição
+     :-:|:-:|:-:
+     Endpoint Name| GrandOakEP|O nome do endpoint representando o serviço do Grand Oaks Hospital.
+     Endpoint Type|HTTP Endpoint|Indica que o serviço de backend é HTTP.
+     URI Template|http://localhost:9090/grandoaks/categories/{uri.var.category}/reserve|O template para a URL de request esperado pelo serviço de backend.
+     Method|POST|O método REST do HTTP do endpoint.
+     Static Endpoint||Selecione essa opção pois nós utilizaremos esse endpoint apenas nesse módulo ESB Config e não será reutilizado em outros projetos. **Observação**: Se você precisar criar um endpoint reutilizável, salve-o como **Dynamic Endpoint** tanto na **Configuration** quanto na **Governance Registry**.
+     Save Endpoint in|SampleServicesConfigs|Esse é o módulo ESB Config que nós criamos na última seção.
+
+      ![ti10-4](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/119132155/119132166.png)
+
+  4. Clique em **Finish**.
+  5. De forma similar, criar os HTTP endpoints para os dois outros serviços de hospitais usando o URI Templates dados abaixo:
+       - ClemencyEP: http://localhost:9090/clemency/categories/{uri.var.category}/reserve
+       - PineValleyEP: http://localhost:9090/pinevalley/categories/{uri.var.category}/reserve
+
+- Criando uma Sequence Template
+   
+   1. Clique com o botão direito no projeto **SampleServicesConfigs** e navegue até **New → Template**. A caixa de diálogo **New Template Artifact** abrirá.
+   2. Selecione **Create a New Template** e clique em **Next**.
+   3. Insira os seguintes detalhes e clique em **Finish**.
+       Parameter|Descrição
+       :-:|:-:|
+       Template Name|HospitalRoutingSeq
+       Template Type|Sequence Template
+
+       ![10-5](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/using-templates/create-sequence-temp-dialog-box.png)
+   4. O artefato do template abrirá na tela de transformação como mostrado abaixo.
+   5. Abra a aba **Properties** do sequence template clicando no canvas (fora da caixa de sequência).
+   6. Clique no ícone (+) para começar a adicionar parâmetros. ![ti10-6](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/sequence-canvas-2.png)
+   7. Na caixa de diálogo **Template Parameter** que abrirá, insira 'sethospital' como o nome do parâmetro e clique em **Finish**.
+   8. Adicione um mediador **Log** para o modelo de sequência como mostrado abaixo. Isso imprimirá uma mensagem indicando para qual hospital uma mensagem de requisição está encaminhada. ![ti10-7](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/log-mediator-in-sequence.png)
+   9. Abra a aba **Properties** do mediador log e especifique o seguinte:
+
+      Property|Descrição
+      :-:|:-:|
+      Log Category|INFO
+      Log Level|CUSTOM
+   10. Clique no ícone (+) para começar a definir uma propriedade. Então adicione os seguintes detalhes para a propriedade:
+      
+     Property|Descrição
+     :-:|:-:|
+     Name|message
+     Type|EXPRESSION
+     Property Expression|fn:concat('Routing to ', get-property('Hospital'))
+   
+   Nós selecionamos EXPRESSION porque as propriedades necessárias para a mensagem log devem ser extraídas da requisição, o que nós podemos fazer usando uma expressão XPath.
+
+   11. Adicione um mediador **Property** logo após o mediador **Log** para armazenar o valor para *uri.var.hospital* . ![10-8](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/using-templates/property-mediator-in-sequence.png)
+   12. Com o mediador **Property** selecionado, acesse a aba **Properties** e insira a informação dada abaixo:
+
+     Property|Descrição
+     :-:|:-:
+     Property Name|Selecione **New Property**
+     New Property Name| uri.var.hospital
+     URI Template|Selecione **set**
+     Property Data Type|Selecione **STRING**
+     Value|Cloque no botão **Ex** na frente da etiqueta **value** e adicione *$func:sethospital* como a expressão.
+     Description|Coloque **Hospital Variable**
+
+- Defina o Mediation Flow
+
+  Você pode começar a configurar o recurso da API.
+  
+  1. Arraste o mediador **Property** da paleta **Mediators** para a In Sequence do recurso da API e nomeie-o **Get Hospital**. Isso é usado para extrair o nome do hospital que é enviado no payload da requisição.
+  2. Com o mediador **Property** selecionado, acesse a aba **Properties** e insira os detalhes seguintes:
+   
+      Property|Descrição
+      :-:|:-:|
+      Property Name|Insira *New Property...* .
+      New Property Name|Insira *Hospital* .
+      Property Action|Insira *set* .
+      Property Scope|Insira *defautl* .
+      Value| Siga os passos abaixo para especificar o valor da expressão: 1. Clique no botão **Ex** antes do campo **Value**. Isso especificará o tipo de valor como *expression*. 2. Agora clique o botão **f** para abrir a caixa de diálogo do **Expression Selector**. 3. Insira *json-eval($.hospital)* como o valor da expressão. **Observação**: Essa é a expressão JSONPath que vai extrair o hospital do payload da requisição.
+      
+ 3. Adicione um mediador **Switch** da paleta **Mediator** logo após o mediador **Property**.
+ 4. Clique com o botão direito no mediador **Switch** que você acabou de adicionar e selecione **Add/Remove Case** para adicionar o número de casos que você quer especificar. ![ti10-9](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/119132155/119132163.png)
+
+    Nós temos três endpoints diferentes de hospitais, o que correspondem aos três casos de switch. Insira 3 para o **Number of branches** e clique em **OK**. ![ti10-10](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/119132155/switch-cases-dialog.png)
+  
+ 5. Com o mediador Switch selecionado, vá até a aba **Properties** e insira os seguintes detalhes:
+  
+    Property|Descrição
+    :-:|:-:|
+    Source XPath| O campo **Source XPath** é onde nós especificamos a expressão XPath, o que obtém o valor do Hospital que nós armazenamos no mediador Property. Siga os passos abaixo para especificar a expressão: 1. Clique na caixa de texto da propriedade **Source XPath**. isso abrirará a caixa de diálogo **Expression Selector**. 2. Selecione **Expression** da lista. 3. Insira *get-property('Hospital')* para substituir a expressão padrão. 4. Clique em **OK**.
+    Case Branches|Siga os passos abaixo para adicioanr os case branches: 1. Clique duas vezes em cada **case regex** (correspondendo a cada branch) que está listado. Isso abrirá a caixa de diálogo **SwitchCaseBranchOutputConnector**. 2. Mude os valores RegEx para os switch cases como segue: a) Case 1: grand oak community hospital. b) Case 2: clemency medical center. c) Case 3: pine valley community hospital. 3. Clique em **OK**.
+
+ 6. Adicione o mediador **Call Template** para a primeira sequência **switch case**.
+ 7. Abra a aba **Properties** do mediador **Call Template** e selecione *'HospitalRoutingSeq'* da lista de modelos disponíveis.  
+ 8. Clique no ícone (+) para inciar a adição de parâmetros. Insira os detalhes de parâmetros a seguir e clique em **Finish**. 
+ 
+    Parameter|Descrição
+    :-:|:-:
+    Parameter Name|sethospital
+    Parameter Type|value
+    Value/Expression|grandoaks
+
+ 9. Repita os passos acima para adiciona um **Call Template** para os hospitais 'Clemency' e 'Pine Valley'. Adicione **clemency** e **pinevalley** como respectivos valores de parâmetros.
+ 10. Arraste os mediadores **Call** da paleta **Mediators** após os mediadores **Call Template** em cada sequência switch.
+ 11. Então, adicione os endpoints **GrandOakEP**, **ClemencyEP** e **PineValleyEP** da paleta **Defined Endpoints** para as caixas vazias adjunta do mediador Call.
+ 12. Arraste um **Respond mediator** para retornar as respostas do serviço de backend de saúde ao cliente.
+ 13. Salve a configuração.
+
+#### Passo 3: Empacotar os Artefatos
+
+ Empacote os artefatos em seu módulo **composite exporter** (SampleServicesCompositeExporter) para estar apto a implantar os artefatos no servidor.
+ 
+ 1. Abra o arquivo *pom.xml* no módulo **composite exporter**.
+ 2. Assegure-se que os artefatos seguintes estão selecionados no arquivo POM.
+     - HealthcareAPI
+     - HospitalRoutingSeq
+ 3. Salve as mudanças.
+
+#### Passo 4: Construa e Rode os Artefatos
+  Para testar os artefatos, implante o artefatos empacotados acima embutidos no Micro Integrator:
+  
+  1. Clique com o botão direito no módulo **composite exporter** e clique em **Export Project Artifacts and Run**.
+  2. Na caixa de diálogo que abrirá, confirme que os artefatos requeridos do módulo **composite exporter** estão selecionados.
+  3. Clique em **Finish**.
+
+   Os artefatos serão implantados no Micro Integrator embutido e o servidor será iniciado.
+   - Veja o log de inicialização na aba **Console**.
+   - Veja as URLs dos serviços implantados e as APIs na aba **Runtime Services**.
+
+#### Passo 5: Teste o Estudo de Caso
+
+  Vamos testar o estudo de caso enviando uma requisição de cliente simples que invoca o serviço.
+
+- Inicie o serviço backend
+
+  1. Baixe o arquivo JAR do serviço de backend [aqui](https://github.com/wso2-docs/WSO2_EI/blob/master/Back-End-Service/Hospital-Service-JDK11-2.0.0.jar).
+  2. Abra o terminal, navegue até o local onde seu serviço de backend está salvo.
+  3. Execute o seguinte comando para iniciar o serviço:
+  
+         java -jar Hospital-Service-JDK11-2.0.0.jar 
+
+- Envie a requisição do cliente
+
+  Vamos enviar a requisição para o recurso da API fazer o agendamento. Você pode usar o **HTTP Client** embutido do WSO2 Integration Studio como segue:
+
+  1. Abra a aplicação Postman. Se você não tiver a aplicação, baixe-a [aqui](https://www.postman.com/downloads/).
+  2. Adicione a informação do requerida como dada abaixo e clique no botão **Send**.
+
+      Method|POST
+      :-:|:-:
+      Headers|Content-Type=application/json
+      URL|*http://localhost:8290/healthcare/categories/surgery/reserve* .
+      Body|{ "name": "John Doe", "dob": "1940-03-19", "ssn": "234-23-525", "address": "California", "phone": "8770586755", "email": "johndoe@gmail.com", "doctor": "thomas collins", "hospital_id": "grandoaks", "hospital": "grand oak community hospital", "cardNo": "7844481124110331", "appointment_date": "2025-04-02" } . Esse JSON payload contém detalhes do agendamento da consulta, o que inclui detalhes do paciente, médico, hospital e data da consulta.
+
+  Se você quiser enviar a requisição do cliente de seu terminal:
+
+  1. Instale e configure [cUrl](https://curl.haxx.se) como seu cliente REST.
+  2. Crie um arquivo JSON chamado *request.json* com o seguinte payload de requisição. 
+
+          {
+            "name": "John Doe",
+            "dob": "1940-03-19",
+            "ssn": "234-23-525",
+            "address": "California",
+            "phone": "8770586755",
+            "email": "johndoe@gmail.com",
+            "doctor": "thomas collins",
+            "hospital_id": "grandoaks",
+            "hospital": "grand oak community hospital",
+            "cardNo": "7844481124110331",
+            "appointment_date": "2025-04-02"
+          }         
+  3. Abra um terminal e navegue até o diretório onde você salvou o arquivo *request.json* . e Execute o seguinte comando.
+
+          curl -v -X POST --data @request.json http://localhost:8290/healthcare/categories/surgery/reserve --header "Content-Type:application/json"
+
+- Analise a resposta
+
+  Você verá a seguinte resposta recebida em seu **HTTP Client**: 
+
+      {"appointmentNumber":1,
+        "doctor":
+          {"name":"thomas collins",
+          "hospital":"grand oak community hospital",
+          "category":"surgery","availability":"9.00 a.m - 11.00 a.m",
+          "fee":7000.0},
+        "patient":
+          {"name":"John Doe",
+          "dob":"1990-03-19",
+          "ssn":"234-23-525",
+          "address":"California",
+          "phone":"8770586755",
+          "email":"johndoe@gmail.com"},
+        "fee":7000.0,
+      "confirmed":false,
+      "appointmentDate":"2025-04-02"}
+
+  Agora cheque a aba **Console** do WSO2 Integration Studio e você verá a seguinte mensagem:
+
+  INFO - LogMediator message = Routing to grand oak community hospital
+  
+  Essa é a mensagem impressa pelo mediador Log quando a mensagem do cliente é encaminhada para o endpoint relevante no mediador Switch.
+
+- [Índice](#documentação-api-manager-410)
+
+### Enviando Emails por um Serviço de Integração (Conectando Web APIs/Serviços de Nuvem)
+#### Contexto
+Quando você integra os sistemas em sua organização, também é necessário integrar com sistemas de terceiros e suas capacidades para ampliar seus serviços. WSO2 Micro Integrator usa **Connectors** para o propósito de referir-se às APIs de sistemas de terceiros.
+
+Nesse tutorial, quando um cliente enviar uma requisição de agendamento de consulta para o Micro Integrator, o cliente deve receber um email confirmando os detalhes do agendamento da consulta. Para construir esse estudo de caso, você pode adicionar um conector de email para o fluxo de mediação.
+
+#### Passo 1: Configurar o Workspace
+Download o [WSO2 Integration Studio](https://wso2.com/api-management/tooling/) relevante baseado em seu sistema operacional.
+
+#### Passo 2: Desenvolva os Artefatos de Integração
+
+- Criando um projeto de integração
+
+  Um projeto de integração é um projeto multimodular maven, o que conterá todos os módulos necessários para uma solução de integração.
+  1. Abra o **WSO2 Integration Studio**.
+  2. Clique em **New Integration Project** na aba **Getting Started** como mostrado abaixo. ![ti11-1](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/common/create-integration-project.jpg) Isso abrirá a caixa de diálogo **New Integration Project**. ![ti11-2](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/common/create-simple-message-project.jpg)
+  3. Insira *SampleServices* como o nome do projeto e marque as seguintes caixas de seleção para criar os módulos necessários.
+     - **Create ESB Configs**
+     - **Create Composite Exporter**
+     - **Create Connector Exporter** 
+  4. Clique em **Finish**.
+
+Agora você verá os projetos listados no **Project Explorer**.
+
+- Criando uma REST API
+
+  1. No **Project Explorer**, clique com o botão direito em **SampleServicesConfigs** e vá para **New → REST API**.
+  2. Assegure-se que **Create a New API Artifact** está selecionado e clique em **Next**.
+  3. Insira os detalhes dados abaixo para criar uma nova REST API.
+
+      Property|Value|Descrição
+      :-:|:-:|:-:|
+      Name|HealthcareAPI|O nome da REST API.
+      Context|/healthcare|Aqui você está ancorando a API no contexto /healthcare. Isso se tornará parte do nome da URL gerada usada pelo cliente ao enviar a requisição para o serviço de saúde. Por exemplo, configurando o contexto como /healthcare significa que a API vai apenas lidar com requisições HTTP onde o caminho da URL começa com *http://host:port/healthcare* .
+      Save location|SampleServicesConfigs|Esse é o módulo **ESB Config** onde o artefato será salvo.
+
+  4. Clique na nova API Resource e acesse a aba **Properties** e insira as seguintes informações.
+
+      Property|Descrição
+      :-:|:-:|
+      Url Style|Clique no campo **Value**, clique na seta para baixo e selecione **URI_TEMPLATE** da lista.
+      URI-Template|Insira */categories/{category}/reserve* . 
+      Methods|Da lista de métodos, selecione **POST**.
+
+- Criando um Endpoint
+  
+  Vamos criar um endpoint HTTP para representar o Serviço de Saúde.
+  
+  1. Clique com o botão direito em **SampleServiceConfigs** no project explorer e clique em **New → Endpoint**.
+  2. Assegure-se que **Create a New Endpoint** está selecionado e clique em **Next**.
+  3. Vamos criar o endpoint de serviço do hospital (**HospitalServicesEP**) usando os seguintes valores.
+   
+   Property|Value|Descrição|
+   :-:|:-:|:-:|
+   Endpoint Name|*HospitalServicesEP*|Esse é o endpoint único configurado para encaminhar requisições para o hospital relevante ao ler o hospital especificado no payload da requisição
+   Endpoint Type|HTTP Endpoint|Indica que o serviço de backend é HTTP.
+   URI Template|hhttp://localhost:9090/{uri.var.hospital}/categories/{uri.var.category}/reserve|O template para a URL de request esperada pelo serviço de backend. As duas variáveis seguintes serão substituidas pelos valores correspondentes na mensagem de requisição: - {uri.var.hospital} / - {uri.var.category}
+   Method|POST|Método do Endpoint HTTP REST
+   Static Endpoint||Selecione essa opção pois nós vamos utilizar esse endpoint apenas nesse módulo ESB Config e não vamos reutilizá-lo em outros projetos. **Observação**: Se você precisar criar um endpoint reutilizável, salve como **Dynamic Endpoint** em **Configuration** ou **Governance Registry**.
+   Save Endpoint in|*SampleServicesConfigs*|Esse é o módulo **ESB Config** onde o artefato será salvo.
+
+  4. Clique em **Finish**.  
+
+- Importando um Conector de Email dentro do WSO2 Integration Studio
+  1. Clique com o botão direito no módulo **Sample Services Configs** no Project Explorer e selecione **Add or Remove Connector/Module**.
+  2. Selecione **Add Connector/Module** e clique em **Next**. Você agora está conectado à [WSO2 Connector Store](https://store.wso2.com/store/pages/top-assets)
+  3. Encontre **Email** da lista de conectores e clique no botão **Download** no **Email Connector**. ![ti11-3](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/119132294/import-gmail-connector.jpg)
+  4. Clique em **Finish**. O conector será baixado para sua área de trabalho no WSO2 Integration Studio e as operações do conector estarão disponíveis na paleta **Email Connector**. ![ti11-4](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/119132294/select-connector-dialog.png) Vamos usar essas operações de conectores na configuração.
+
+- Atualize o message flow
+  
+  Você pode agora iniciar a atualização do recurso da API com o fluxo de mediação.
+  
+  1. Abra o recurso da API REST. Você verá a tela de criação para a **in sequence** e **out sequence**.
+  2. Arraste o mediador **Property** da paleta **Mediators** para a In Sequence do recurso da API e nomeie-o **Get Hospital**. Isso é usado para extrair o nome do hospital que é enviado no payload da requisição.
+  3. Com o mediador **Property** selecionado, acesse a aba **Properties** e dê os seguintes detalhes:
+
+      Property|Value|Descrição
+      :-:|:-:|:-:|
+      Property Name|*New Property...*|Especifica uma nova propriedade.
+      New Property Name|*uri.var.hospital*|O nome que será usado para se referir ao valor da propriedade.
+      Property Action|set|A ação da propriedade.
+      Property Scope|default|O escopo da propriedade
+      Value (Expression)|json-eval($.hospital_id)| Siga os passos abaixo para especificar o valor da expressão: ![ti11-5](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/119132155/expression-value.png) 1. Clique no botão **Ex** antes do campo **Value**. Isso especificará o tipo de valor como *expression*. 2. Agora clique o botão **f** para abrir a caixa de diálogo do **Expression Selector**. 3. Insira *json-eval($.hospital_id)* como o valor da expressão. **Observação**: Essa é a expressão JSONPath que vai extrair o hospital do payload da requisição.
+  
+  4. Adicione um mediador Property para recuperar e armazenar os endereços de email dos pacientes.
+  5. Com o mediador Property selecionado, acesse a aba **Property** do mediador e preencha as informações da tabalea seguinte:
+
+      Property|Descrição
+      :-:|:-:|
+      Property Name|Insira *New Property*
+      New Property Name|Insira *email_id*
+      Property Action|Insira *set*
+      Value Type|Insira *EXPRESSION*
+      Value Expression|Siga os passos abaixo para especificar a expressão: a. Clique na caixa de texto para o campo **Value Expression**. Isso abrirá a caixa de diálogo **Expression Selector**. b. Selecione **Expression** da lista. c. Insira *json-eval($.patient.email)* para substituir a expressão padrão. d. Clique em **OK**.
+      Description|Get Email ID
+  
+  6. Adicione um mediador Call da paleta **Mediators** e adicione o endpoint HospitalServicesEP da paleta **Defined Endpoints** para a caixa vazia adjunta ao mediador Call.
+
+      **Info**: Usar o mediador Call permite-nos definir invocações de outros serviços seguindo esse mediador.
+
+      **Observação**: A seguinte resposta será retornada de GrandOakEP, ClemencyEP ou PineValleyEP:
+
+          {"appointmentNumber":1,   "doctor":
+            {"name":"thomas collins",
+                "hospital":"grand oak community hospital",
+                "category":"surgery","availability":"9.00 a.m - 11.00 a.m",
+                "fee":7000.0},
+              "patient":
+                {"name":"John Doe",
+                "dob":"1990-03-19",
+                "ssn":"234-23-525",
+                "address":"California",
+                "phone":"8770586755",
+                "email":"johndoe@gmail.com"},
+              "fee":7000.0,
+              "confirmed":false}
+
+  7. Adicione outro mediador Property logo após o mediador Call para recuperar e armazenar a resposta enviada de HospitalServiceEP. Isso será usado de dentro do corpo do email.
+  8. Com o mediador Property selecionado, acesse a aba **Property** e especifique os detalhes dados abaixo.
+  
+      Property|Value
+      :-:|:-:|
+      Property Name|Selecione **New Property**
+      New Property Name| hospital_response
+      Property Action|Selecione **Set**
+      Value Type|Selecione **Expression**
+      Value Expression|json-eval($)
+      Description|Get Hospital Response
+
+  9. Arraste e solte a operação *send* da paleta **Email Connector** adjunta ao mediador Property que você adicionou anteriormente.
+  10. Com a operação *send* selecionada, acesse a aba Property e crie uma conexão clicando no ícone +. Na janela pop up, os seguintes parâmetros devem ser adicionados.
+
+      **Dica**: Se você habilitou a autenticação de dois fatores, uma senha de app deverá ser obtida como segue a instrução [aqui](https://support.google.com/accounts/answer/185833?hl=en).
+
+      Property|Value
+      :-:|:-:|
+      Connection Name|smtpconnection
+      Connection Type|Selecione **SMTP Secured Connection**
+      Host|smtp.gmail.com
+      Port|465
+      Username|Seu endereço de email
+      Password|Sua senha de email
+  
+  11. Após a conexão ter sido criada com sucesso, selecione a conexão criada como *Connection* da drop down na janela de propriedades.
+  12. Especifique os detalhes seguintes na aba Properties:
+  
+        Property|Descrição
+        :-:|:-:
+        From|Insira seu endereço de email como valor. Essa será a conta da qual o email será enviado.
+        To|Insira *$ctx:email_id* como o valor. Isso recupera o endereço de email do paciente que foi armazenado no mediador Property relevante.
+        Subject|Insira *Appointment Status* como valor. Essa é a linha de assunto no email que será enviado.
+        Content|Insira *$ctx:hospital_response* como valor. Isso recupera a resposta do pagamento que foi armazenado no mediador Property relevante.
+  
+  13. Salve a configuração de sequência atualizada.
+  14. Arraste um mediador **Drop** para o final do processo de sequência.
+  15. Clique com o botão direito em **SampleServicesConnectorExporter**, navegue até **New → Add/Remove Connectors**, selecione **Add connector/module** e clique em **Next**. Selecione **Workspace** para listar os conectores que foram adicionados. ![ti11-6](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/119132294/add-remove-connectors.png) ![ti11-7](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/119132294/connector-select-dialog.png)
+  16. Selecione o conector de email da lista, clique em **OK** e então **Finish**.
+
+#### Passo 3: Empacotar os Artefatos
+
+  Empacote os artefatos em seu módulo **composite application** (SampleServicesCompositeExporter) e o projeto Connector (SampleServicesConnectorExporter) para estar apto a implantar os artefatos no servidor.
+  1. Abra o arquivo *pom.xml* no módulo **composite exporter**.
+  2. Assegure-se que os artefatos e módulos seguintes estão selecionados no arquivo POM.
+     - SampleServicesConfigs 
+       - HealthcareAPI
+       - HospitalServiceEP
+       - Smptpsconnection
+     - SampleServicesConnectorExporter
+  3. Salve as mudanças.
+
+#### Passo 4: Construa e Rode os Artefatos
+
+  Para testar os artefatos, implante o artefatos empacotados acima embutidos no Micro Integrator:
+  
+  1. Clique com o botão direito no módulo **composite exporter** e clique em **Export Project Artifacts and Run**.
+  2. Na caixa de diálogo que abrirá, confirme que os artefatos requeridos do projeto estão selecionados.
+  3. Clique em **Finish**.
+
+  Os artefatos serão implantados no Micro Integrator embutido e o servidor será iniciado.
+
+  - Veja o log de inicialização na aba **Console**.
+  - Veja as URLs dos serviços implantados e as APIs na aba **Runtime Services**.
+
+#### Passo 5: Teste o Estudo de Caso
+
+Vamos testar o estudo de caso enviando uma requisição de cliente simples que invoca o serviço. 
+
+- Inicie o serviço backend
+
+  1. Baixe o arquivo JAR do serviço de backend [aqui](https://github.com/wso2-docs/WSO2_EI/blob/master/Back-End-Service/Hospital-Service-JDK11-2.0.0.jar).
+  2. Abra o terminal, navegue até o local onde seu serviço de backend está salvo.
+  3. Execute o seguinte comando para iniciar o serviço:
+      
+          java -jar Hospital-Service-JDK11-2.0.0.jar 
+
+- Envie a requisição do cliente
+
+  Vamos enviar uma requisição para o recurso da API. Você pode usar um **HTTP Client** embutido do WSO2 Integration Studio como segue:
+
+  1. Abra a aplicação Postman. Se você não tiver a aplicação, baixe-a [aqui](https://www.postman.com/downloads/).
+  2. Adicione a informação requerida como dada abaixo e clique no botão **Send**.
+
+        Method|POST
+        :-:|:-:
+        Headers|Content-Type=application/json
+        URL|http://localhost:8290/healthcare/categories/surgery/reserve . O Formato da URI-Template que é usado nessa URL foi definida durante a criação do recurso da API: *http://:/categories/{category}/reserve* .
+        Body|{ "patient": { "name": "John Doe", "dob": "1940-03-19", "ssn": "234-23-525", "address": "California", "phone": "8770586755", "email": "johndoe@gmail.com", "cardNo": "7844481124110331" }, "doctor": "thomas collins", "hospital_id": "grandoaks", "hospital": "grand oak community hospital", "appointment_date": "2025-04-02" } . Esse JSON payload contém detalhes do agendamento da consulta, o que inclui detalhes do paciente, médico, hospital e data da consulta.
+
+  Se você quiser enviar a requisição do cliente de seu terminal:
+  1. Instale e configure [cUrl](https://curl.haxx.se) como seu cliente REST.
+  2. Crie um arquivo JSON chamado *request.json* com o seguinte payload de requisição. Assegure-se que você inseriu um endereço de email válido para que você possa testar o email sendo enviado ao paciente. 
+
+          {
+            "patient": {
+            "name": "John Doe",
+            "dob": "1940-03-19",
+            "ssn": "234-23-525",
+            "address": "California",
+            "phone": "8770586755",
+            "email": "johndoe@gmail.com",
+            "cardNo": "7844481124110331"
+            },
+            "doctor": "thomas collins",
+            "hospital_id": "grandoaks",
+            "hospital": "grand oak community hospital",
+            "appointment_date": "2025-04-02"
+          }
+
+  3. Abra um terminal e navegue até o diretório onde você salvou o arquivo *request.json* .
+  4. Execute o seguinte comando.
+
+          curl -v -X POST --data @request.json http://localhost:8290/healthcare/categories/surgery/reserve --header 
+          "Content-Type:application/json"
+
+- Analise a resposta
+
+  Um email será enviado ao endereço de email informado do paciente com os seguintes detalhes: 
+
+      Subject: Payment Status
+             
+      Message:
+        {"appointmentNo":2,"doctorName":"thomas collins","patient":"John
+        Doe","actualFee":7000.0,"discount":20,"discounted":5600.0,"paymentID":"8458c75a-c8e0-4d49-8da4-5e56043b1a20","status":"Settled"}
+
+Você completou com sucesso esse tutorial descobrindo como importar o conector de Email para o Micro Integrator e então usando operações de conectores para enviar emails.
+
+- [Índice](#documentação-api-manager-410)
+
+
 ### Expondo um Serviço de Integração como uma API Gerenciada
+#### Contexto
+Nesse tutorial, você está definindo um serviço de integração usando WSO2 Integration Studio e a expondo como uma API gerenciada para o mercado de API. Consumidores de API então **descobrem** a API do mercado, se **inscrevem** nela e a **usa** para o desenvolvimento de aplicações. ![ti12-1](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/exposing-servie-as-managed-api.png)
+
+Isso demonstra como os componentes de integração e componentes de gerenciamento de API do WSO2 API Manager 4.1.0 trabalham juntos para habilitar integração API-led. O diagrama seguinte ilustra os diversos componentes API Manager e as diferentes funções de usuário que estão envolvidas na implementação esse processo: ![ti12-2](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/api-led-integration-components.png)
+
+1. Um **Integration Developer** cria o serviço usando WSO2 Integration Studio e o implanta no tempo de execução do Micro Integrator.
+
+**Observação**: O serviço de integração é desenhado para comunicar com o serviço de backend (representado aqui como um Hospital) e consegue detalhes de médicos disponíveis para diversas especializações.
+
+2. Um **API Creator** converte o serviço de integração para uma API gerenciada (aplica segurança, rate limiting, etc.).
+3. Um **API Publisher** publica a API para o mercado de API (Developer Portal).
+4. Um **API Consumer** (desenvolvedor de aplicações) descobre e usa essa API do Developer Portal.
+
+#### Conceitos e Artefatos Usados
+Os seguintes conceitos e artefatos são utilizados nesse tutorial:
+- REST API/Integration Service;
+- Endpoints;
+- Mediators;
+- Service Catalog;
+- API Publisher;
+- API Developer Portal.
+
+Vamos começar. Siga os passos abaixo para construir um estudo de caso e experimentá-lo.
+
+**Observação**: Para mais informações em como gerar artefatos metadata se você estiver usando uma versão mais antiga da área de trabalho do Integration Studion, svea [Gerando Artefato Metadata do Catálogo de Serviços](https://apim.docs.wso2.com/en/latest/integrate/develop/generate-service-catalog-metadata/)
+
+#### Passo 1: Desenvolva o Serviço de Integração
+Siga as instruções dadas nessa seção para criar e configurar os artefatos necessários.
+
+1. Download o [WSO2 Integration Studio](https://wso2.com/api-management/tooling/) relevante baseado em seu sistema operacional.
+2. Abra o **WSO2 Integration Studio**.
+3. Clique em **New Integration Project** na aba **Getting Started** como mostrado abaixo. ![ti12-3](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/common/create-integration-project.jpg) Isso abrirá a caixa de diálogo **New Integration Project**.
+4. Insira *ServiceCatalogSample* como o nome do projeto e marque as seguintes caixas de seleção para criar os módulos necessários.
+   - **Create ESB Configs**
+   - **Create Composite Exporter**
+5. Clique em **Finish**. Você poderá ver os projetos listados no **Project Explorer** como mostrado abaixo: ![ti12-4](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/project-explorer-service-catalog.png)
+
+**Observação**: Uma pasta **resources** é criada no projeto *ServiceCatalogSampleConfigs*. Essa pasta hospeda os arquivos Swagger e metadata YAML. Esses arquivos YAML serão upados para o catálogo de serviço posteriormente nesse tutorial.
+
+6. Crie um artefato **Endpoint**.
+   1. Clique com o botão direito em **ServiceCatalogSampleConfigs** no project explorer e clique em **New → Endpoint**.
+   2. Assegure-se que **Create a New Endpoint** está selecionado e clique em **Next**.
+   3. Insira a informação dada abaixo para criar o novo endpoint.
+
+        Property|Value|Descrição
+        :-:|:-:|:-:
+        Endpoint Name|QueryDoctorEP|O nome do endpoint.
+        Endpoint Type|HTTP Endpoint|Indica que o serviço de backend é HTTP.
+        URI Template|http://localhost:9090/healthcare/{uri.var.category}|O modelo para a URL de requisição esperado pelo serviço de backend. Nesse caso, a variável *category* que precisa ser incluída na requisição para consultar médicos é representada como *{uri.var.category}* no modelo.
+        Method|GET|Indica que nós estamos criando esse endpoint para requisições GET que serão enviadas para o serviço de backend.
+        Save Endpoint in|ServiceCatalogSampleConfigs|Esse é o módulo **ESB Config** onde o artefato será salvo.
+    4. Clique em **Finish**.
+
+7. Crie um artefato API REST
+   1. No project explorer, clique com o botão direito em **ServiceCatalogSampleConfigs** e clique em **New → REST API**.
+   2. Assegure-se que **Create A New API Artifact** está selecionado e clique em **Next**.
+   3. Insira os detalhes abaixo para criar uma REST API.
+
+        Property|Value|Descrição
+        :-:|:-:|:-:
+        Name|HealthcareAPI|O nome da API REST
+        Context|/healthcare|Isso ancora a API no contexto */healthcare* . O contexto se torna parte do nome da URL da API, a qual será utilizada pelo cliente quando enviar requisições para o serviço de saúde. Por exemplo, colocando o contexto como */healthcare* significa que a API só lidará com requisições HTTP onde o caminho da URL começa com *http://host:port/healthcare* .
+        Save location|ServiceCatalogSampleConfigs|Esse é o módulo **ESB Config** onde o artefato será salvo.
+   4. Clique em **Finish**.
+8. Abra a visão de **Source** da HealthcareAPI que você criou e aplique o seguinte.
+
+        <?xml version="1.0" encoding="UTF-8"?>
+        <api context="/healthcare" name="HealthcareAPI" xmlns="http://ws.apache.org/ns/synapse">
+          <resource methods="GET" uri-template="/querydoctor/{category}">
+            <inSequence>
+              <log description="Request Log" level="custom">
+                <property name="Log Property message" value="&quot;Welcome to HealthcareService&quot;"/>
+              </log>
+              <send>
+                <endpoint key="QueryDoctorEP"/>
+              </send>
+            </inSequence>
+            <outSequence>
+              <send/>
+            </outSequence>
+            <faultSequence/>
+          </resource>
+        </api>
+    Quando a **HealthcareAPI** for criada, os dos novos arquivos seguintes serão criados na pasta metadata.
+
+    **Dica**: Esse dado é usado mais tarde nesse tutorial para o gerenciamento em tempo de execução da API para gerar o proxy da API gerenciada.
+
+      HealthcareAPI_metadata.yaml|Esse arquivo contém o metadata do serviço de integração que você criou no passo anterior.
+      :-:|:-:|
+      HealthcareAPI_swagger.yaml|Esse arquivo Swagger contém a definição da OpenAPI do serviço de integração.
+
+      ![ti12-5](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/metadata-folder-service-catalog.png)
+
+#### Passo 2: Configurando um Serviço Metadata
+
+Vamos atualizar o metadata do serviço de integração.
+
+1. Abra o arquivo *HealthcareAPI_metadata.yaml* do project explorer.
+2. Atualize os seguintes valores no arquivo.
+
+    Parameter|Value|Descrição
+    :-:|:-:|:-:
+    description|API to fetch doctors for a given category|Explica o propósito da API.
+    serviceUrl|http://localhost:8290/healthcare|Essa é a URL da API quando você conseguir implementá-la no Micro Integrator. Você (como um desenvolver de integração) pode não conhecer essa URL durante o desenvolvimento. Portanto, você pode parametrizar a URL para ser resolvida depois usando variáveis de ambiente. Por padrão, os valores *{MI_HOST}* e *{MI_PORT}* estão parametrizados com marcadores de posição. Você pode configurar o serviceUrl das seguintes maneiras: 1. Adiciona a URL completa sem parâmetros. Por exemplo: *http://localhost:8290/healthcare* . **Usaremos essa opção nesse tutorial.** 2. Parametrizando ao usar a combinação host e port. Por exemplo: *http://{MI_HOST}:{MI_PORT}/healthcare* . 3. Parametrizando ao usar a URL pré configurada. Por exemplo: *http://{MI_URL}/healthcare* .
+
+    **Dica**: Veja [a documentação de API do Catálogo de Serviço](https://apim.docs.wso2.com/en/4.1.0/reference/product-apis/service-catalog-apis/service-catalog-v1/service-catalog-v1/) para mais informações sobre metadata no arquivo YAML.
+
+3. **Importante**: Assegure-se de mudar o *serviceUrl* de HTTPS para HTTP. Isso é necessário porque a HealthcareAPI não é assegurada.
+4. Deixe os valores padrões para os parâmetros restantes.
+
+#### Passo 3: Configurando o Micro Integrator
+O Micro Integrator contém uma aplicação cleinte, o que automaticamente publica artefatos para o **Service Catalog** no portal **API Publisher**. 
+
+Vamos habilitar esse cliente para o Micro Integrator embutido do WSO2 Integration Studio.
+
+1. Clique no ícone (![ti12-6](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/common/server-config-64x64.png)) do **Embedded Micro Integrator Configuration** no menu superior para abrir a caixa de diálogo.
+2. Apague a seção *[[service_catalog]]* como mostrado abaixo e mude as configurações do servidor APIM de acordo.
+
+    **Dica**: O usuário e senha padrão para conectar ao gateway da API é *admin*.
+
+        [[service_catalog]]
+        apim_host = "https://localhost:9443"
+        enable = true
+        username = "admin"
+        password = "admin"
+3. Opcionalmente, você pode encriptar o nome de usuário e a senha para melhor segurança:
+   1. Atualize as configurações como mostrado abaixo.
+   
+          [secrets]
+          userName = "[admin]"
+          password = "[admin]"
+
+          [[service_catalog]]
+          apim_host = "https://localhost:9443"
+          enable = true
+          username = "$secret{username}"
+          password = "$secret{password}"
+    2. Clique em **Encrypt Secrets**.
+
+        **Dica**: Veja [Encrypt Static (embedded) Server Secrets](https://apim.docs.wso2.com/en/4.1.0/integrate/develop/using-embedded-micro-integrator/#encrypt-static-embedded-server-secrets)
+4. Salve as configurações.
+5. **Opcionalmente**, injete variáveis de ambiente para seu Micro Integrator.
+   
+   Se você escolher parametrizar *serviceUrl* no arquivo metadata, você deve injetar os valores parametrizados como variáveis de ambiente. Abaixo é mostrado os examplares de valores de marcadores de posição que você pode ter usado no *serviceUrl* seguido pelas variáveis de ambiente correspondentes.
+
+        {MI_HOST}  :  localhost
+        {MI_PORT}  :  8290
+        {MI_URL}   :  localhost:8290
+
+    **Dica**: Veja as instruções em [injetando variáveis de ambiente ao Micro Integrator embutido](https://apim.docs.wso2.com/en/4.1.0/integrate/develop/using-embedded-micro-integrator/#injecting-environment-variables-to-embedded-micro-integrator)
+
+#### Passo 4: Empacotar os Artefatos
+Empacote os artefatos em seu módulo **composite application** para estar apto a implantar os artefatos no servidor.
+1. Abra o arquivo *pom.xml* do módulo **ServiceCatalogSampleCompositeExporter**.
+2. Assegure-se que os artefatos seguintes estão selecionados no arquivo POM.
+   - HealthcareAPI
+   - QueryDoctorEP
+3. Por padrão, a caixa de seleção *Publish to Service Catalog* está habilitada. Caso não esteja, selecione a caixa no wizard para que ela seja incluída nos arquivos metada dos artefatos selecionados.
+4. Salve as mudanças.
+
+#### Passo 5: Inicie o API Manager runtime
+Vamos iniciar o API Managar runtime antes de inicializar o Micro Integrator.
+1. Baixe e instale o [WSO2 API Manager 4.1.0](https://wso2.com/api-management/)
+2. Inicie o servidor.
+
+#### Passo 6: Monte e Rode o Serviço
+Vamos implantar o pacote de artefatos no Micro Integrator embutido.
+
+**Info**: Quando você fizer esse passo...
+  1. O Micro Integrator primeiro lê os arquivos de metadata.
+  2. Se você utilizou placeholders no arquivo de metadata, eles serão trocados por valores de variáveis de ambiente e um arquivo Zip será criado.
+  3. Finalmente, ele upará o metadata para o API management runtime.
+
+1. Clique com o botão direito no módulo **composite exporter** e clique em **Export Project Artifacts and Run**.
+2. Na caixa de diálogo que abrirá, confirme que os artefatos necessários do módulo **composite explorer** estão selecionados.
+3. Clique em **Finish**.
+
+Os artefatos serão implantados no Micro Integrator embutido e o Micro Integrator inicializará. O serviço de integração também é implantado no **Service Catalog** durante a inicialização do servidor. Você verá o seguinte log de inicialização do servidor.
+
+    Successfully updated the service catalog
+
+#### Passo 7: Criar e Implantar a API
+- Criar a API
+
+  Vamos expôr o serviço de integração como uma API gerenciada.
+  1. Inscreva-se no portal API Publisher: *https://localhost:9443/publisher* .
+  
+  **Dica**: Use *admin* como nome de usuário e senha.
+
+  2. Você também pode clicar no ícone **hamburger** no canto superior esquerdo e clicar em **Services** para ver os serviços disponíveis. ![ti12-7](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/open-service-catalog.png)
+  3. Abra a HealthcareAPI da lista acima. ![ti12-8](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/new-service-api-view.png)
+  4. Clique em **Create API** na tela acima para abrir a caixa de diálogo **Create API**. ![ti12-9](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/create-api-from-service.png)
+  5. Especifique um nome de API, um contexto, versão e então clique em **Create API**.
+    
+      **Dica**: Você vai encontrar esses valores já adicionados baseado nas informações no serviço de integração.
+
+      Agora você pode visualizar a página de visão geral da API. ![ti12-10](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/api-overview.png)
+
+      **Observação**:
+        - Você pode usar navegação do lado esquerdo para explorar a nova API.
+        - Clique em **Endpoints** na navegação do lado esquerdo. Você verá que a nova API utiliza o serviço de integração implantado no Micro Integrator como o endpoint (backend). ![ti12-11](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/endpoint-config-of-api.png)
+
+- Selecione os Planos de Negócio
+  
+  Vamos alocar alguns planos de negócio para a API.
+
+  1. Vá para a visão geral da API e clique em **Business Plan**. ![ti12-12](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/api-overview-business-plan.png)
+  2. Selecione ao menos um plano de negócio para a API e salve. ![ti12-13](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/api-business-plans.png)
+
+- Implantar a API no Gateway
+
+  Vamos implantar a API no ambiente de gateway.
+  1. Vá para a visão geral da API e clique em **Deploy**.
+
+      **Dica**: Isso abrirá a aba **Deployment** na navegação do lado esquerdo.
+
+      ![ti12-14](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/api-overview-deployment.png)
+   2. Clique em **Default** para especificar o ambiente de gateway e host.
+
+      **Dica**: Essa configuração implanta a API em Produção como também em gateways de sandbox. Saiba mais sobre [ambientes de gateway](https://apim.docs.wso2.com/en/4.1.0/deploy-and-publish/deploy-on-gateway/api-gateway/maintaining-separate-production-and-sandbox-gateways)
+
+      ![ti12-15](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/api-deployment-revision.png)
+  3. **Opcionalmente**, você pode adicionar uma descrição.
+  4. Clique em **Deploy**.
+
+    Você agora verá a implantação como a primeira revisão da API. ![ti12-16](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/api-gateway-deployment-summary.png)
+
+#### Passo 8: Publicar a API
+Vá até a visão geral da API no portal **Publisher** e clique em **Publish** para a *HealthcareAPI* como mostrado abaixo. ![ti12-17](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/api-overview-publish.png)
+
+A API agora está disponível no portal **Developer** para os consumidores acessarem.
+
+#### Passo 9: Subscrever na API
+Agora vamos assumir que você é um consumidor de API que quer usar a API. Como um consumidor, você precisa se inscrever primeiro na API.
+
+1. Inscreva-se no portal **Developer**: *https://localhost:9443/devportal/apis* .
+
+    **Dica**: Use *admin* como nome de usuário e senha.
+2. Vá para a aba **API**. A *HealthcareAPI* está listada como mostrado abaixo. ![ti12-18](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/developer-portal-api-list.png)
+3. Selecione a *HealthcareAPI* para abrir a visão geral da API. ![ti12-19](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/developer-portal-api-overview.png)
+4. Vá para a aba **Subscription** e subscreva-se usando o **DefaultApplication** como mostrado abaixo. ![ti12-20](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/developer-portal-api-subscription.png)
+
+    **Dica**: Para instruções detalhadas, veja [Subscrevendo-se em uma API](https://apim.docs.wso2.com/en/4.1.0/consume/manage-subscription/subscribe-to-an-api/).
+
+#### Passo 10: Use a API
+
+**Antes de começar**:
+  
+  Vamos iniciar o serviço de backend do hospital.
+  1. Baixe o arquivo JAR do serviço de backend [aqui](https://github.com/wso2-docs/WSO2_EI/blob/master/Back-End-Service/Hospital-Service-JDK11-2.0.0.jar).
+  2. Abra o terminal, navegue até o local onde seu serviço de backend está salvo.
+  3. Execute o seguinte comando para iniciar o serviço:
+
+          java -jar Hospital-Service-JDK11-2.0.0.jar 
+
+- Gere um Token de Acesso
+
+  Quando você consome uma API do mercado de APIs, seu acesso à API é autenticado. Portanto, a **DefaultApplication** que você usou para se subscrever na API deve receber um token de acesso para o ambiente de gateway ao qual a API está implantada. Desde que a *HealthcareAPI* foi implantada no gateway Production, você deve gerar chaves **PROD**.
+  1. Vá para a aba **Subscriptions** para a *HealthcareAPI* no portal **Developer**.
+  2. Clique em **PROD KEYS** para a **DefaultApplication**. ![ti12-21](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/developer-portal-api-generate-keys.png)
+  3. Clique em **Generate Keys** (no canto debaixo dessa tela) para aplicar uma chave de consumidor e um segredo como mostrado abaixo.
+
+      **Observação**: A aplicação pode já ter uma chave de consumidor e segredo gerados. Nesse caso, você pode pular esse passo.
+      ![ti12-22](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/developer-portal-api-consumer-keys.png)
+  4. Clique em **Generate Access Token** como na tela acima para gerar um token de acesso.
+  5. Salve o token gerado.
+
+- Experimente o Serviço
+  
+  Agora vamos testar o estudo de caso enviando uma requisição de cliente simples que invoca o serviço. 
+
+  1. Clique em **Try Out** para a *HealthcareAPI* no portal **Developer** como mostrado abaixo. ![ti12-23](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/developer-portal-api-try-it.png)
+  2. Insira os seguintes detalhes.
+
+      Securty Type|Selecione **OAuth** como o security type
+      :-:|:-:|
+      Applications|Selecione **DefaultApplication** da lista de aplicações.
+      Key Type|Selecione **Production** como key type. Isso significa que o gateway de produção (environment) é usado.
+      access.token|Adicione o token de acesso que você gerou para a **Default Application**. Você também pode clicar em **GET TEST KEY** para gerar um token para teste.
+      Gateway|Selecione **Default** como o gateway.
+
+  3. Expanda o recurso **/querydoctor/{category}** e clique em **Try it out**.
+  4. Vamos especificar 'surgery' como a categoria do médico.
+  5. Clique em **Execute**. ![ti12-24](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/developer-portal-api-try-it-execute.png)
+  
+      Você receberá a mensagem de resposta do serviço de Healthcare se você enviou a categoria *surgery* :
+        
+          [
+            {
+              "name":"thomas collins",
+              "hospital":"grand oak community hospital",
+              "category":"surgery",
+              "availability":"9.00 a.m - 11.00 a.m",
+              "fee":7000.0
+              },
+            {
+              "name":"anne clement",
+              "hospital":"clemency medical center",
+              "category":"surgery",
+              "availability":"8.00 a.m - 10.00 a.m",
+              "fee":12000.0
+            },
+            {
+              "name":"seth mears",
+              "hospital":"pine valley community hospital",
+              "category":"surgery",
+              "availability":"3.00 p.m - 5.00 p.m",
+              "fee":8000.0
+            }
+          ]
+
+      Agora cheque a aba **Console** do WSO2 Integration Studio e você verá a seguinte mensagem:
+      
+          INFO - LogMediator message = "Welcome to HealthcareService"
+      
+      Para mais instruções detalhadas veja [Invocando uma API usando o Integrated API Console](https://apim.docs.wso2.com/en/4.1.0/consume/invoke-apis/invoke-apis-using-tools/invoke-an-api-using-the-integrated-api-console/)
+
+- [Índice](#documentação-api-manager-410)
+
 ### Expondo um Serviço de Integração SOAP como uma API Gerenciada
-### Integrando com SAP
+#### Contexto
+APIs Gerenciadas se referem às APIs que são gerenciadas usando WSO2 API Managar, são elas REST APIs, GraphQL APIs, SOAP APIs e Streaming APIs. Esse guia explica como criar um Proxy Service (backend SOAP) para a solução de integração, gerando metadata relevante para o correspondente serviço proxy, publicar a definição WSDL no WSO2 API Manager Service Catalog e então criar uma **SOAP Pass-Through API**.
+
+Também, isso demonstrará como componentes de integração e componentes de gerenciamento de API do WSO2 API Managar 4.1.0 trabalham juntos para permitir integração API-led.
+
+**Observação**: Para mais informações em como gerar artefatos metadata se você estiver usando uma versão mais antiga da área de trabalho do Integration Studion, svea [Gerando Artefato Metadata do Catálogo de Serviços](https://apim.docs.wso2.com/en/latest/integrate/develop/generate-service-catalog-metadata/)
+
+#### Passo 1: Desenvolva o Serviço de Integração
+Siga as instruções dadas nessa seção para criar e configurar os artefatos necessários.
+
+1. Download o [WSO2 Integration Studio](https://wso2.com/api-management/tooling/) relevante baseado em seu sistema operacional.
+2. Abra o **WSO2 Integration Studio**.
+3. Clique em **New Integration Project** na aba **Getting Started** como mostrado abaixo. ![ti13-1](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/common/create-integration-project.jpg) Isso abrirá a caixa de diálogo **New Integration Project**.
+4. Insira *ProxyServiceSample* como o nome do projeto e marque as seguintes caixas de seleção para criar os módulos necessários.
+   - **Create ESB Configs**
+   - **Create Composite Exporter**
+5. Clique em **Finish**. Você poderá ver os projetos listados no **Project Explorer** como mostrado abaixo: ![ti13-2](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/project-explorer-service-catalog.png)
+
+**Observação**: Uma pasta **resources** é criada no projeto *ProxyServiceSampleConfigs*. Essa pasta hospeda os arquivos metadata YAML do serviço proxy criado. Esses arquivos YAML serão upados para o catálogo de serviço posteriormente nesse tutorial.
+
+6. Crie um artefato **Proxy Service**.
+   1. No project explorer, clique com o botão direito em **ProxyServiceSampleConfigs** e clique em **New → Proxy Service**.
+   2. Siga o [Utilizando um Serviço Proxy Simples](https://apim.docs.wso2.com/en/4.1.0/integrate/examples/proxy_service_examples/introduction-to-proxy-services.md) para criar o Serviço Proxy *StockQuoteProxy*.
+   3. Insira os detalhes dados abaixo para criar um novo Serviço Proxy.
+
+        Property|Value|Descrição
+        :-:|:-:|:-:|
+        Name|*StockQuoteProxy*|O nome do Serviço Proxy
+        Save location|ProxyServiceSampleConfigs|Esse é o módulo **ESB Config** onde o artefato será salvo
+   4. Clique em **Finish**.
+
+7. Abra o view do **Source** do StockQuoteProxy que você criou e edite a solução de integração.
+
+        <?xml version="1.0" encoding="UTF-8"?>
+        <proxy name="StockQuoteProxy" startOnLoad="true" transports="http https" xmlns="http://ws.apache.org/ns/synapse">
+          <target>
+            <endpoint>
+              <address uri="http://localhost:9000/services/SimpleStockQuoteService"/>
+            </endpoint>
+            <inSequence>
+              <log description="Request Log" level="custom">
+                <property name="Message" value="&quot;You have successfully invoked the StockQuoteProxy&quot;"/>
+              </log>
+            </inSequence>
+            <outSequence>
+              <send/>
+            </outSequence>
+            <faultSequence/>
+          </target>
+          <publishWSDL uri="file:/path/to/sample_proxy_1.wsdl"/>
+        </proxy>
+
+Quando o **StockQuoteProxy** for criado, o novo arquivo seguinte será criado na pasta de metadata.
+
+  StockQuoteProxy_proxy_metadata.yaml|Esse arquivo contém o metadata do serviço de integração que vocẽ criou no passo anterior.
+  :-:|:-:
+
+![ti13-3](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/expose-soap-service/metadata-folder-service-catalog.png)
+
+#### Passo 2: Configurar um Serviço de Metadata
+Vamos atualizar o metadata do serviço de integração.
+
+1. Abra o arquivo *StockQuoteProxy_proxy_metadata.yaml* do project explorer.
+2. Atualize os seguintes valores no arquivo.
+
+    Parameter|Value|Descrição
+    :-:|:-:|:-:
+    description| Response a sample payload from the service|Explica o propósito do Serviço Proxy
+    serviceUrl|http://localhost:8290/services/StockQuoteProxy|Essa é a URL da API quando você conseguir implementá-la no Micro Integrator. Você (como um desenvolver de integração) pode não conhecer essa URL durante o desenvolvimento. Portanto, você pode parametrizar a URL para ser resolvida depois usando variáveis de ambiente. Por padrão, os valores *{MI_HOST}* e *{MI_PORT}* estão parametrizados com marcadores de posição. No runtime, se os valores de placeholder não estão definidos o nome do host padrão do servidor e as portas http/https de escuta serão usadas. Você pode configurar o serviceUrl das seguintes maneiras: 1. Adiciona a URL completa sem parâmetros. Por exemplo: *http://localhost:8290/services/StockQuoteProxy* . **Usaremos essa opção nesse tutorial.** 2. Parametrizando ao usar a combinação host e port. Por exemplo: *http://{MI_HOST}:{MI_PORT}/services/StockQuoteProxy* . 3. Parametrizando ao usar a URL pré configurada. Por exemplo: *http://{MI_URL}/services/StockQuoteProxy* .
+
+    **Dica**: Veja [a documentação de API do Catálogo de Serviço](https://apim.docs.wso2.com/en/4.1.0/reference/product-apis/service-catalog-apis/service-catalog-v1/service-catalog-v1/) para mais informações sobre metadata no arquivo YAML.
+
+3. **Importante**: Assegure-se de mudar o *serviceUrl* de HTTPS para HTTP. Isso é necessário porque a StockQuoteProxy não é assegurada.
+4. Deixe os valores padrões para os parâmetros restantes.
+
+#### Passo 3: Configurando o Micro Integrator
+O Micro Integrator contém uma aplicação cleinte, o que automaticamente publica artefatos para o **Service Catalog** no portal **API Publisher**. 
+
+Vamos habilitar esse cliente para o Micro Integrator embutido do WSO2 Integration Studio.
+
+1. Clique no ícone (![ti13-4](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/common/server-config-64x64.png)) do **Embedded Micro Integrator Configuration** no menu superior para abrir a caixa de diálogo.
+2. Apague a seção *[[service_catalog]]* como mostrado abaixo e mude as configurações do servidor APIM de acordo.
+
+    **Dica**: O usuário e senha padrão para conectar ao gateway da API é *admin*.
+
+        [[service_catalog]]
+        apim_host = "https://localhost:9443"
+        enable = true
+        username = "admin"
+        password = "admin"
+3. Opcionalmente, você pode encriptar o nome de usuário e a senha para melhor segurança:
+   1. Atualize as configurações como mostrado abaixo.
+   
+          [secrets]
+          userName = "[admin]"
+          password = "[admin]"
+
+          [[service_catalog]]
+          apim_host = "https://localhost:9443"
+          enable = true
+          username = "$secret{username}"
+          password = "$secret{password}"
+    2. Clique em **Encrypt Secrets**.
+
+        **Dica**: Veja [Encrypt Static (embedded) Server Secrets](https://apim.docs.wso2.com/en/4.1.0/integrate/develop/using-embedded-micro-integrator/#encrypt-static-embedded-server-secrets)
+4. Salve as configurações.
+5. **Opcionalmente**, injete variáveis de ambiente para seu Micro Integrator.
+   
+   Se você escolher parametrizar *serviceUrl* no arquivo metadata, você deve injetar os valores parametrizados como variáveis de ambiente. Abaixo é mostrado os examplares de valores de marcadores de posição que você pode ter usado no *serviceUrl* seguido pelas variáveis de ambiente correspondentes.
+
+        {MI_HOST}  :  localhost
+        {MI_PORT}  :  8290 #for http protocols. Otherwise 8253
+        {MI_URL}   :  localhost:8290 #for http protocols. Otherwise localhost:8253
+
+    **Dica**: Veja as instruções em [injetando variáveis de ambiente ao Micro Integrator embutido](https://apim.docs.wso2.com/en/4.1.0/integrate/develop/using-embedded-micro-integrator/#injecting-environment-variables-to-embedded-micro-integrator)
+
+#### Passo 4: Empacotar os Artefatos
+Empacote os artefatos em seu módulo **composite application** para estar apto a implantar os artefatos no servidor.
+1. Abra o arquivo *pom.xml* do módulo **ProxyServiceSampleCompositeExporter**.
+2. Assegure-se que os artefatos seguintes estão selecionados no arquivo POM.
+   - StockQuoteProxy
+3. Por padrão, a caixa de seleção *Publish to Service Catalog* está habilitada. Caso não esteja, selecione a caixa no wizard para que ela seja incluída nos arquivos metada dos artefatos selecionados.
+4. Salve as mudanças.
+
+#### Passo 5: Inicie o API Manager runtime
+Vamos iniciar o API Managar runtime antes de inicializar o Micro Integrator.
+1. Baixe e instale o [WSO2 API Manager 4.1.0](https://wso2.com/api-management/)
+2. Inicie o servidor.
+
+#### Passo 6: Monte e Rode o Serviço
+Vamos implantar o pacote de artefatos no Micro Integrator embutido.
+
+**Info**: Quando você fizer esse passo...
+  1. O Micro Integrator primeiro lê os arquivos de metadata.
+  2. Se você utilizou placeholders no arquivo de metadata, eles serão trocados por valores de variáveis de ambiente e um arquivo Zip será criado.
+  3. Finalmente, ele upará o metadata para o API management runtime.
+
+1. Clique com o botão direito no módulo **composite exporter** e clique em **Export Project Artifacts and Run**.
+2. Na caixa de diálogo que abrirá, confirme que os artefatos necessários do módulo **composite explorer** estão selecionados.
+3. Clique em **Finish**.
+
+Os artefatos serão implantados no Micro Integrator embutido e o Micro Integrator inicializará. O serviço de integração também é implantado no **Service Catalog** durante a inicialização do servidor. Você verá o seguinte log de inicialização do servidor.
+
+    Successfully updated the service catalog
+
+#### Passo 7: Criar e Implantar o Serviço Proxy como uma SOAP Pass-Through API
+- Criar a API
+
+  Vamos expôr o serviço de integração como uma API gerenciada.
+  1. Inscreva-se no portal API Publisher: *https://localhost:9443/publisher* .
+  
+      **Dica**: Use *admin* como nome de usuário e senha.
+
+  2. Você também pode clicar no ícone **hamburger** no canto superior esquerdo e clicar em **Services** para ver os serviços disponíveis. ![ti13-5](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/expose-soap-service/open-service-catalog.png)
+  3. Abra a StockQuoteProxy da lista acima. ![ti13-6](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/expose-soap-service/new-service-api-view.png)
+  4. Clique em **Create API** na tela acima para abrir a caixa de diálogo **Create API**. ![ti13-7](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/expose-soap-service/create-api-from-service.png)
+  5. Especifique um nome de API, um contexto, versão e então clique em **Create API**.
+    
+      **Dica**: Você vai encontrar esses valores já adicionados baseado nas informações no serviço de integração.
+
+      Agora você pode visualizar a página de visão geral da API. ![ti13-8](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/expose-soap-service/api-overview.png)
+
+      **Observação**:
+        - Você pode usar navegação do lado esquerdo para explorar a nova API.
+        - Clique em **Endpoints** na navegação do lado esquerdo. Você verá que a nova API utiliza o serviço de integração implantado no Micro Integrator como o endpoint (backend). ![ti13-9](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/expose-soap-service/endpoint-config-of-api.png)
+
+- Selecione os Planos de Negócio
+  
+  Vamos alocar alguns planos de negócio para a API.
+
+  1. Vá para a visão geral da API e clique em **Business Plan**. ![ti13-10](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/api-overview-business-plan.png)
+  2. Selecione ao menos um plano de negócio para a API e salve. ![ti13-11](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/expose-soap-service/api-business-plans.png)
+
+- Implantar a API no Gateway
+
+  Vamos implantar a API no ambiente de gateway.
+  1. Vá para a visão geral da API e clique em **Deploy**.
+
+      **Dica**: Isso abrirá a aba **Deployment** na navegação do lado esquerdo.
+
+      ![ti13-12](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/api-overview-deployment.png)
+   2. Clique em **Default** para especificar o ambiente de gateway e host.
+
+      **Dica**: Essa configuração implanta a API em Produção como também em gateways de sandbox. Saiba mais sobre [ambientes de gateway](https://apim.docs.wso2.com/en/4.1.0/deploy-and-publish/deploy-on-gateway/api-gateway/maintaining-separate-production-and-sandbox-gateways)
+
+      ![ti13-13](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/expose-soap-service/api-deployment-revision.png)
+  3. **Opcionalmente**, você pode adicionar uma descrição.
+  4. Clique em **Deploy**.
+
+    Você agora verá a implantação como a primeira revisão da API. ![ti13-14](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/expose-soap-service/api-gateway-deployment-summary.png)
+
+#### Passo 8: Publicar a API
+Vá até a visão geral da API no portal **Publisher** e clique em **Publish** para a *StockQuoteProxy* como mostrado abaixo. ![ti13-15](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/api-overview-publish.png)
+
+A API agora está disponível no portal **Developer** para os consumidores acessarem.
+
+#### Passo 9: Subscrever na API
+Agora vamos assumir que você é um consumidor de API que quer usar a API. Como um consumidor, você precisa se inscrever primeiro na API.
+
+1. Inscreva-se no portal **Developer**: *https://localhost:9443/devportal/apis* .
+
+    **Dica**: Use *admin* como nome de usuário e senha.
+2. Vá para a aba **API**. A *StockQuoteProxy* está listada como mostrado abaixo. ![ti13-16](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/expose-soap-service/developer-portal-api-list.png)
+3. Selecione a *StockQuoteProxy* para abrir a visão geral da API. ![ti13-17](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/expose-soap-service/developer-portal-api-overview.png)
+4. Vá para a aba **Subscription** e subscreva-se usando o **DefaultApplication** como mostrado abaixo. ![ti13-18](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/expose-soap-service/developer-portal-api-subscription.png)
+
+    **Dica**: Para instruções detalhadas, veja [Subscrevendo-se em uma API](https://apim.docs.wso2.com/en/4.1.0/consume/manage-subscription/subscribe-to-an-api/).
+
+#### Passo 10: Use a SOAP Pass-Through API
+
+**Antes de começar**:
+  
+  Vamos iniciar o serviço de backend do hospital.
+  1. Baixe o arquivo JAR do serviço de backend [aqui](https://github.com/wso2-docs/WSO2_EI/blob/master/Back-End-Service/axis2Server.zip).
+  2. Extraia o arquivo zip baixado.
+  3. Abra o terminal, navegue até o diretório *axis2Server/bin/* dentro da pasta extraída.
+  4. Execute o seguinte comando para iniciar o axis2server com o serviço backend SimpleStockQuote:
+
+          No MacOS/Linux/CentOS
+          sh axis2server.sh
+          
+          No Windows
+          axis2server.bat
+
+- Gere um Token de Acesso
+
+  Quando você consome uma API do mercado de APIs, seu acesso à API é autenticado. Portanto, a **DefaultApplication** que você usou para se subscrever na API deve receber um token de acesso para o ambiente de gateway ao qual a API está implantada. Desde que a *StockQuoteProxy* foi implantada no gateway Production, você deve gerar chaves **PROD**.
+  1. Vá para a aba **Subscriptions** para a *StockQuoteProxy* no portal **Developer**.
+  2. Clique em **PROD KEYS** para a **DefaultApplication**. ![ti13-19](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/developer-portal-api-generate-keys.png)
+  3. Clique em **Generate Keys** (no canto debaixo dessa tela) para aplicar uma chave de consumidor e um segredo como mostrado abaixo.
+
+      **Observação**: A aplicação pode já ter uma chave de consumidor e segredo gerados. Nesse caso, você pode pular esse passo.
+      ![ti13-20](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/developer-portal-api-consumer-keys.png)
+  4. Clique em **Generate Access Token** como na tela acima para gerar um token de acesso.
+  5. Salve o token gerado.
+
+- Experimente o Serviço
+  
+  Agora vamos testar o estudo de caso enviando uma requisição de cliente simples que invoca o serviço. 
+
+  1. Clique em **Try Out** para a *StockQuoteProxy* no portal **Developer** como mostrado abaixo. ![ti13-21](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/expose-soap-service/developer-portal-api-try-it.png)
+  2. Insira os seguintes detalhes.
+
+      Securty Type|Selecione **OAuth** como o security type
+      :-:|:-:|
+      Applications|Selecione **DefaultApplication** da lista de aplicações.
+      Key Type|Selecione **Production** como key type. Isso significa que o gateway de produção (environment) é usado.
+      access.token|Adicione o token de acesso que você gerou para a **Default Application**. Você também pode clicar em **GET TEST KEY** para gerar um token para teste.
+      Gateway|Selecione **Default** como o gateway.
+
+  3. Expanda o recurso **/POST** e clique em **Try it out**.
+  4. Vamos especificar 'urn:getQuote' como a SOAP Action.
+  5. Vamos adicionar o seguinte payload como o SOAP Request.
+
+          <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://services.samples" xmlns:xsd="http://services.samples/xsd">
+            <soapenv:Header/>
+            <soapenv:Body>
+              <ser:getQuote>
+                <ser:request>
+                <xsd:symbol>IBM</xsd:symbol>
+                </ser:request>
+              </ser:getQuote>
+            </soapenv:Body>
+          </soapenv:Envelope>
+  6. Clique em **Execute**. ![ti13-22](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/expose-soap-service/developer-portal-api-try-it-execute.png)
+  
+      Você receberá a mensagem de resposta do serviço StockQuoteProxy:
+        
+          <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+            <soapenv:Header/>
+            <soapenv:Body>
+              <ns:getQuoteResponse xmlns:ns="http://services.samples">
+                <ns:return xsi:type="ax21:GetQuoteResponse" xmlns:ax21="http://services.samples/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                  <ax21:change>3.9976027101114964</ax21:change>
+                  <ax21:earnings>13.346364457377131</ax21:earnings>
+                  <ax21:high>-73.39500514990955</ax21:high>
+                  <ax21:last>73.6913265107944</ax21:last>
+                  <ax21:lastTradeTimestamp>Fri Sep 24 22:10:56 IST 2021</ax21:lastTradeTimestamp>
+                  <ax21:low>-71.88761385784731</ax21:low>
+                  <ax21:marketCap>4.3004624870633185E7</ax21:marketCap>
+                  <ax21:name>IBM Company</ax21:name>
+                  <ax21:open>-71.86467758088759</ax21:open>
+                  <ax21:peRatio>24.390401836247552</ax21:peRatio>
+                  <ax21:percentageChange>-5.715833533678435</ax21:percentageChange>
+                  <ax21:prevClose>-69.93910313442652</ax21:prevClose>
+                  <ax21:symbol>IBM</ax21:symbol>
+                  <ax21:volume>8029</ax21:volume>
+                </ns:return>
+              </ns:getQuoteResponse>
+            </soapenv:Body>
+          </soapenv:Envelope>
+      Agora cheque a aba **Console** do WSO2 Integration Studio e você verá a seguinte mensagem:
+      
+          INFO - LogMediator Message = "You have successfully invoked the StockQuoteProxy"
+      
+      Para mais instruções detalhadas veja [Invocando uma API usando o Integrated API Console](https://apim.docs.wso2.com/en/4.1.0/consume/invoke-apis/invoke-apis-using-tools/invoke-an-api-using-the-integrated-api-console/)
+
+- [Índice](#documentação-api-manager-410)
+
+### Integrando com SAP (Integração SAP)
+#### Contexto
+**Sistemas, Aplicações e Produtos (SAP)** para o processamento de dados é uma solução de software empresarial líder de indústria amplamente utilizado na orientação empresarial de produção e processo para finanças, operações, RH, e muitos outros aspectos de negócios.
+
+WSO2 Micro Integrator traz o melhor dos dois mundos ao oferecer a camada de integração que pode ser usada para integrar uma solução existente baseada em SAP R/3 de uma empresa com outros sistemas orientados para dados/negócios para que você possa misturar e combinar requerimentos com o mínimo esforço. Como resultado, empresas podem manter partes de seus sistemas independentes de SAP e extendê-los para muitos outros sistemas, soluções e middlewares.
+
+O adaptador WSO2 SAP vem com o Micro Integrator e é implementado como um transporte. O adaptador WSO2 suporta tanto o protocolo IDoc quanto BAPI. Ele usa a biblioteca SAP JCo como framework adjacente para comunicar com SAP. Essa seção descreve como configurar o Micro Integrator em um ambiente SAP e instalar o seguinte: biblioteca de middleware SAP JCo, adaptadores SAP Intermediate Document (IDoc) e Business Application Programming Interface (BAPI). 
+
+#### Instalando o Adaptador SAP
+Siga as instruções abaixo para instalar e configurar o adaptador SAP
+
+1. Baixe o [WSO2 Micro Integrator](https://wso2.com/integration/micro-integrator/)
+2. Baixe o *sapidoc3.jar* e *sapjoc3.jar* bibliotecas de middleware do portal de suporte SAP e copie essas bibliotecas para o diretório *<MI_HOME>/lib*.
+
+**Info**: Você precisa ter credenciais de login SAP para acessar o portal de suporte SAP.
+
+1. Baixe a biblioteca nativa SAP JCo e a copie para o path do sistema. Você precisa selecionar o path do sistema aplicável ao seu sistema operacional como descrito abaixo.
+
+OS|Path do Sistema
+:-:|:-:
+Linux 32-bit|Copie a jcolibrary nativa SAP *libsapjco3.so* para *<JDK_HOME>/jre/lib/i386/server*
+Linux 64-bit|Copie a jcolibrary nativa SAP *libsapjco3.s* para *<JDK_HOME>/jre/lib/amd64*
+Windows|Copie a jcolibrary nativa SAP *sapjco3.dll* para *<WINDOWS_HOME>/system32*
+
+4. Crie um diretório chamado *sap* dentro do diretório *<MI_HOME>/conf/* e dê direitos de acesso para leitura dos arquivos de propriedades que você salvará dentro mais tarde.
+5. Copie os arquivos de propriedade de endpoint SAP para o diretório *<MI_HOME>/conf/sap/*. Você precisa ter dois arquivos de propriedades, um para o servidor final e outro para o cliente final para comunicar com um endpoint SAP externo usando IDoc ou BAPI.
+   - \*.dest : Aqui é onde nós armazenamos parâmetros do endpoint SAP quando o Micro Integrator é configurado como um cliente para um endpoint SAP externo.
+   - \*.server : Aqui é onde nós armazenamos parâmetros do endpoint SAP quando o Micro Integrator é configurado como um servidor para um endpoint SAP externo.
+
+    Para detalhes em como criar os arquivos de propriedades e definir propriedades relevantes, veja [Preparando o Arquivo de Configuração de Cliente](https://apim.docs.wso2.com/en/latest/tutorials/integration-tutorials/sap-integration/#setting-up-the-client-configuration-file) e [Preparando o Arquivo de Configuração de Servidor](https://apim.docs.wso2.com/en/latest/tutorials/integration-tutorials/sap-integration/#setting-up-the-server-configuration-file).
+
+6. Inicie o Micro Integrator usando o comutador *-Djava.library.path* para especificar a localização de sua biblioteca SAP jco. Por exemplo, você pode executar o seguinte comando para iniciar o Micro Integrator do diretório *MI_HOME/bin*
+
+        ./micro-integrator.sh -Djava.library.path=/usr/lib/jvm/jre1.7.0/lib/i386/server/
+
+#### Passo 2: Preparando o Arquivo de Configuração de Cliente
+Para preparar o Micro Integrator como um cliente para um sistema SAP você precisa criar o arquivo de propriedades *\*.dest* e definir as propriedades relevantes. A tabela a seguir lista as propriedades e a descrição de cada propriedade que deve ser especificada no arquivo de propriedades *\*.dest* .
+
+Property|Descrição
+:-:|:-:|
+jco.client.client |	Logon de Cliente
+jco.client.user |	Logon de Usuário
+jco.client.alias_user |	Alias de nome de usuário
+jco.client.passwd |	Senha de logon
+jco.client.lang |	Linguagem de logon
+jco.client.sysnr |	Número de sistema R/3
+jco.client.ashost |	Servidor de Aplicação R/3 
+jco.client.mshost |	Servidor de Mensagem R/3 
+jco.client.gwhost |	Gateway host
+jco.client.gwserv |	Gateway service
+jco.client.r3name |	Nome R/3
+jco.client.group |	Grupo de application servers
+jco.client.tpname |	Program ID de servidor de programa externo
+jco.client.tphost |	Host do servidor de programa externo
+jco.client.type |	Tipo de host remoto (3=R/3, E=External)
+jco.client.codepage |	Página de código inicial para logon
+jco.client.use_sapgui |	Uso de interface gráfica de usuário SAP remota
+jco.client.mysapsso2 |	Uso versão 2 de cookie SAP específico como o ticket de logon
+jco.client.grt_data |	Dado adicional para GUI
+jco.client.use_guihost |	Host para o qual a GUI remota é redirecionada
+jco.client.use_guiserv |	Serviço para o qual a GUI remota é redirecionada
+jco.client.use_guiprogid |	Progid do servidor que inicia a GUI remota
+jco.client.snc_partnername |	Nome do parceiro SNC (por exemplo, CN=B20, O=SAP-AG, C=DE\) 
+jco.client.snc_mode |	SNC mode (0 ou 1)
+jco.client.snc_qop |	Level de segurança SNC (1-9)
+jco.client.snc_myname |	Nome SNC; sobrepõe o parceiro SNC padrão
+jco.client.snc_lib |	Path para a biblioteca
+jco.client.Dest |	Destinação R/2
+jco.client.saplogon_id |	SAPLOGON string em Windows 32-bit
+jco.client.extiddata |	Dado para aplicação externa (PAS)
+jco.client.extidtype |	Type of external authentication (PAS)
+jco.client.x509cert |	Uso do certificado X509 especificado como o ticket de logon
+jco.client.msserv |	Número da porta R/3 do servidor de mensagem
+jco.client.profile_name |	Nome de perfil usado para comunicação de memória usada
+jco.client.idle_timeout |	Limite de tempo ocioso para a conexão
+jco.client.ice Ignore | Biblioteca RFC de erros de conversão de caracteres (1 or 0)
+jco.client.logon |	Habilita ou desabilita a checagem de logon na abertura (1 or 0)
+jco.client.trace |	Habilita ou desabilita RFC trace (1 or 0)
+jco.client.abap_debug |	Habilita ABAP debugging (1 or 0)
+jco.client.getsso2 |	Consegue ou não consegue um ticket SSO após logon (1 or 0)
+jco.client.toupper |	Habilita ou desabilita conversão de caracter em caixa alta para logon
+
+**Info**: Você pode obter os valores para essas propriedades do adminstrador de sistema SAP.
+
+Os arquivos de propriedades *\*.dest* devem ser nomeados *<SAP-GWHOST>.dest* . Por exemplo, se o nome de seu gateway SAP é *SAPSYS*, o nome do arquivo deve ser *SAPSYS.dest* . Em seguida está um exemplo de configuração para o arquivo de propriedades *\*.dest* :
+
+      jco.client.client=800
+      jco.client.user=wso2_user
+      jco.client.passwd=wso2pass14
+      jco.client.lang=en
+      jco.client.ashost=/H/217.116.29.154/S/3299/H/10.100.5.120/S/3200
+      jco.client.gwserv=3300
+      jco.client.sysnr=00
+      jco.client.idle_timeout=300
+      jco.client.logon=0
+      jco.client.msserv=3600
+      jco.client.trace=0
+      jco.client.getsso2=0
+      jco.client.r3name=CPT
+
+#### Passo 3: Preparando um Arquivo de Configuração de Servidor
+Para preparar o Micro Integrator como um servidor IDoc, você precisa criar o arquivo de propriedades *\*.server* e definir as propriedades relevantes. A tabela a seguir lista as propriedades e a descrição de cada propriedade que deve ser especificada no arquivo de propriedades *\*.server*.
+
+Property|Descrição
+:-:|:-:
+jco.server.gwhost |	Gateway host
+jco.server.gwserv |	Gateway service
+jco.server.progid |	Program ID do servidor
+jco.server.trace |	Você pode habilitar ou desabilitar o RFC trace
+jco.server.repository_destination |	Nome do arquivo .dest . Por exemplo, se o arquivo .dest é *SAPSYS01.dest* , configure-o para SAPSYS01 .
+jco.server.params |	Parâmetros arbitrários para a biblioteca RFC 
+jco.server.snc_myname |	Nome SNC 
+jco.server.snc_qop |	Level de segurança SNC (1-9)
+jco.server.snc_lib |	Path para a biblioteca SNC
+jco.server.profile_name |	Nome do arquivo de perfil usado durante a inicialização
+jco.server.unicode |	Determina se você se conecta ou não em unicodemode (1=true, 0=false)
+jco.server.max_startup_delay |	Tempo de delay máximo em segundos para inicialização do servidor
+jco.server.connection_count |	Número do SAP para conexões Micro Integrator
+jco.server.name |	Nome da configuração do servidor. Aqui precisa ser o mesmo nome dado na configuração SAP 
+
+**Info**: Você pode obter os valores para essas propriedades do adminstrador de sistema SAP.
+
+O arquivo deve ser nomeado *<SAP-GWHOST>.server* . Por exemplo, se o nome de seu gateway SAP é *SAPSYS*, o nome do arquivo deve ser *SAPSYS.server* . Em seguida está um exemplo de configuração para o arquivo de propriedades *\*.server* :
+
+    jco.server.gwhost=/H/217.116.29.154/S/3299/H/10.100.5.120/S/3200
+    jco.server.gwserv=3300
+    jco.server.progid=IGS.CPT
+    jco.server.repository_destination=IGS.CPT
+    jco.server.name=IGS.CPT
+    jco.server.unicode=1
+
+#### Passo 4: Configurando um Adaptador WSO2 SAP
+
+Vá até a aba requerida para os passos detalhados baseado em como você precisa configurar o Adaptador WSO2 SAP.
+
+O Adaptador WSO2 SAP pode ser usado com IDoc, que é uma interface síncrona usada quando troca dados com o sistema SAP. WSO2 Micro Integrator pode ser configurado para **Envio de IDocs** ou **Recebimento de IDocs** quando usado o adaptador SAP.
+
+- Enviando IDocs
+  
+  Siga as instruções abaixo para configurar o Micro Integrator como um cliente IDoc usando o adaptador SAP.
+
+  1. Apague a seguinte linha no arquivo *MI_HOME/conf/deployment.toml* para habilitar o IDoc transport sender.
+   
+          [transport.sap]
+          sender.idoc.enable=true
+          sender.idoc.class="org.wso2.carbon.transports.sap.SAPTransportSender"
+
+  2. Crie um serviço proxy *IDocSender* com a seguinte configuração:
+
+          <proxy xmlns="http://ws.apache.org/ns/synapse" 
+            name="IDocSender"
+            transports="http" 
+            startOnLoad="true" 
+            trace="enable" 
+            statistics="enable">
+          <target>
+            <inSequence>
+              <log level="full"/>
+              <property name="OUT_ONLY" value="true"/>
+              <send>
+                <endpoint name="sapidocendpoint">
+                  <address uri="idoc:/SAPSYS"/>
+                </endpoint>
+              </send>
+            </inSequence>
+            <outSequence/>
+          </target>
+          <parameter name="serviceType">proxy</parameter>
+          <description/>
+          </proxy> 
+
+      **Info**: 
+      - Se você colocar a propriedade mostrada abaixo (use o mediador **Property** antes do mediador **Send** na sequência acima), qualquer mensagem de error business-level que é enviada de volta do endpoint SAP vai ser transferida com sucesso para fora da sequência de fluxo. Sem essa propriedade, os erros de business-level do SAP podem ser detectados como mensagens problemáticas e passadas para a Fault sequence.
+
+            <property name="sap.escape.error.handling" scope="axis2" value="true"/>
+      - O arquivo de propriedades do cliente SAP *SAPSYS.dest* deve estar na pasta *MY_HOME/conf/sap* .
+
+  3. Inicie o Micro Integrator usando o comutador *-D java.library.path* para especificar a localização da sua biblioteca SAP jco. Por exemplo, você pode executar o seguinte comando para iniciar o Micro Integrator do diretório *MI_HOME/bin* :
+
+        ./micro-integrator.sh -Djava.library.path=/usr/lib/jvm/jre1.7.0/lib/i386/server/ 
+
+      Agora você pode enviar IDocs utilizando o adaptador WSO2 SAP configurado.
+
+- Recebendo IDocs
+
+  Siga as instruções abaixo para configurar o Micro Integrator como um servidor IDoc utilizando um adaptador SAP.
+
+  1. Apague a seguinte linha no arquivo *MI_HOME/conf/deployment.toml* para habilitar o IDoc transport receiver.
+
+          [transport.sap]
+          listener.idoc.enable=true
+          listener.idoc.  class="org.wso2.carbon.transports.sap.SAPTransportListener"
+  2. Assegure-se que o arquivo de configuração do servidor *SAPSYS.server* está habilitado na pasta *MI_HOME/conf/sap* .
+  3. Crie o serviço proxy *IDocReceiver* com a seguinte configuração:
+  
+          <proxy xmlns="http://ws.apache.org/ns/synapse" 
+              name="IDocReceiver"
+              transports="idoc" 
+              statistics="enable" 
+              trace="enable" 
+              startOnLoad="true">
+            <target>
+              <inSequence>
+                <log level="full"/>
+                <drop/>
+              </inSequence>
+              <outSequence/>
+            </target>
+            <parameter name="transport.sap.enableTIDHandler">enabled</parameter>
+            <parameter name="transport.sap.serverName">SAPSYS</parameter>
+            <description/>
+          </proxy>
+
+    **Observação**: 
+    - O arquivo de propriedades do servidor do endpoint SAP *SAPSYS.server* deve estar na pasta *MI_HOME/conf/sap* .
+    - Parâmetros de nível de escuta do proxy adicionais que podem ser definidos na configuração do proxy estão listadas em [Proxy Service Listener Parameter](https://apim.docs.wso2.com/en/latest/tutorials/integration-tutorials/sap-integration/#proxy-service-listener-parameters)
+
+   4. Inicie o Micro Integrator usando o comutador *-Djava.library.path* para especificar a localização de sua biblioteca SAP jco. Por exemplo, você pode executar o seguinte comando para iniciar o Micro Integrator do diretório *MI_HOME/bin* .
+
+          ./micro-integrator.sh -Djava.library.path=/usr/lib/jvm/jre1.7.0/lib/i386/server/
+
+      O adaptador WSO2 SAP está pronto para receber mensagens IDoc.
+
+O Adaptador WSO2 SAP pode ser usado com BAPI, que é uma interface síncrona usada quando troca dados com o sistema SAP. WSO2 Micro Integrator pode ser configurado para **Envio de BAPIs** ou **Recebimento de BAPIs** quando usado o adaptador SAP. 
+
+- Enviando BAPIs
+  
+  Siga as instruções abaixo para configurar o Micro Integrator como um cliente BAPI usando o adaptador SAP.
+
+  1. Apague a seguinte linha no arquivo *MI_HOME/conf/deployment.toml* para habilitar o BAPI transport sender. 
+   
+          [transport.sap]
+          sender.bapi.enable=true
+          sender.bapi.class="org.wso2.carbon.transports.sap.SAPTransportSender"
+
+  2. Crie um serviço proxy *BAPISender* com a seguinte configuração:
+
+          <proxy xmlns="http://ws.apache.org/ns/synapse" 
+            name="BAPISender"
+            transports="http" 
+            startOnLoad="true" 
+            trace="enable" 
+            <target>
+              <inSequence>
+                <send>
+                  <endpoint name="sap_bapi_endpoint">
+                  <address uri="bapi:/SAPSYS"/>
+                  </endpoint>
+                </send>
+              </inSequence>
+              <outSequence>
+                <log level="full"/>
+                <send/>
+              </outSequence>
+            </target>
+          </proxy> 
+
+      **Info**: 
+      - Se você colocar a propriedade mostrada abaixo (use o mediador **Property** antes do mediador **Send** na sequência acima), qualquer mensagem de error business-level que é enviada de volta do endpoint SAP vai ser transferida com sucesso para fora da sequência de fluxo. Sem essa propriedade, os erros de business-level do SAP podem ser detectados como mensagens problemáticas e passadas para a Fault sequence.
+
+        
+             <property name="sap.escape.error.handling" scope="axis2" value="true"/>
+
+      - O arquivo de propriedades do cliente SAP *SAPSYS.dest* deve estar na pasta *MY_HOME/conf/sap* .
+  
+  3. Inicie o Micro Integrator usando o comutador *-D java.library.path* para especificar a localização da sua biblioteca SAP jco. Por exemplo, você pode executar o seguinte comando para iniciar o Micro Integrator do diretório *MI_HOME/bin* :
+
+        ./micro-integrator.sh -Djava.library.path=/usr/lib/jvm/jre1.7.0/lib/i386/server/ 
+
+      Agora você pode enviar IDocs utilizando o adaptador WSO2 SAP configurado.
+
+- Recebendo BAPIs
+
+  Siga as instruções abaixo para configurar o Micro Integrator como um servidor BAPI utilizando um adaptador SAP.
+
+  1. Apague a seguinte linha no arquivo *MI_HOME/conf/deployment.toml* para habilitar o BAPI transport receiver.
+
+          [transport.sap]
+          listener.bapi.enable=true
+          listener.bapi.  class="org.wso2.carbon.transports.sap.SAPTransportListener"
+
+  2. Crie o serviço proxy *BAPIReceiver* com a seguinte configuração:
+  
+          <proxy xmlns="http://ws.apache.org/ns/synapse" 
+              name="BAPIReceiver"
+              transports="bapi" 
+              statistics="enable" 
+              trace="enable" 
+              startOnLoad="true">
+            <target>
+              <inSequence>
+                <log level="full"/>
+                <drop/>
+              </inSequence>
+              <outSequence/>
+            </target>
+            <parameter name="transport.sap.enableTIDHandler">enabled</parameter>
+            <parameter name="transport.sap.serverName">SAPSYS</parameter>
+            <description/>
+          </proxy>
+
+    **Observação**: 
+    - O arquivo de propriedades do servidor do endpoint SAP *SAPSYS.server* deve estar na pasta *MI_HOME/conf/sap* .
+    - Parâmetros de nível de escuta do proxy adicionais que podem ser definidos na configuração do proxy estão listadas em [Proxy Service Listener Parameter](https://apim.docs.wso2.com/en/latest/tutorials/integration-tutorials/sap-integration/#proxy-service-listener-parameters)
+
+   3. Inicie o Micro Integrator usando o comutador *-Djava.library.path* para especificar a localização de sua biblioteca SAP jco. Por exemplo, você pode executar o seguinte comando para iniciar o Micro Integrator do diretório *MI_HOME/bin* .
+
+          ./micro-integrator.sh -Djava.library.path=/usr/lib/jvm/jre1.7.0/lib/i386/server/
+
+#### Parâmetros de Configuração Adicionais
+Essa seção descreve parâmetros adicionais que podem ser usados quando configurando o adaptador WSO2 SAP.
+
+- Parâmetros de Escuta de Serviço Proxy
+  
+  A seguir estão descrições de parâmetros de níveis de escuta do proxy que podem ser definidos na configuração proxy quando utilizando o Micro Integrator como um servidor SAP:
+
+    Parameter|Descrição
+    :-:|:-:
+    transport.sap.serverName |	O nome do servidor contendo a configuração do servidor JCO.
+    transport.sap. enableErrorListener |	Ponha isso para habilitar o padrão de erro de escuta. Se isso for usado junto com o parâmetro transport.sap. customErrorListener, o erro de escuta customizado será usado.
+    transport.sap. enableTIDHandler |	Ponha isso para habilitar o transaction handler para lidar com transações que são recebidas pelo sistema SAP. Aplicações de transação devem oferecer uma implementação customizável usando o parâmetros transport.sap. customTIDHandler .
+    transport.sap. customTIDHandler |	O nome da classe totalmente qualificada para a customização do TID handler implementando JCoServerTIDHandler .
+    transport.sap.connections |	O número de conexões registradas gerenciadas pela instância do servidor. O valor padrão é 1 e o valor máximo é 100 .
+    transport.sap. customErrorListener |	O nome da classe totalmente qualificada para customizar o erro de escuta implementando JCoServerErrorListener .
+    transport.sap. customExceptionListener |	O nome da classe totalmente qualificada para customizar a exceção de escuta implementando JCoServerExceptionListener . 
+
+#### Solução de Problemas
+Abaixo segue um guia de soluções de problemas gerais
+
+- Como lidar com Erro de Servidor Desconhecido
+  
+  Um exemplo dessa mensagem de erro é como segue:
+
+      [2010-10-25 19:53:00,405] ERROR - DefaultErrorListener Exception occured on :
+      JCOSERVER01 and connection : null
+      com.sap.conn.jco.JCoException: (129) JCO_ERROR_SERVER_STARTUP: Server startup
+      failed at Mon Oct 25 19:53:00 IST 2010.
+      This is caused by either a) erroneous server settings, b) the backend system has been shutdown,
+      c) network problems. Will try next startup in 1 seconds.
+      Could not start server: Connect to SAP gateway failed
+      Connect parameters: TPNAME=JCOSERVER01 GWHOST=cynthia GWSERV=sapgw00
+      ERROR service 'sapgw00' unknown
+      TIME Mon Oct 25 19:53:00 2010
+      RELEASE 720
+      COMPONENT NI (network interface)
+      VERSION 40
+      RC -3
+      MODULE nixxsl.cpp
+      LINE 184
+      DETAIL NiSrvLGetServNo: service name cached as unknown
+      COUNTER 2
+      at com.sap.conn.jco.rt.DefaultServer.openConnection(DefaultServer.java:1168)
+      at com.sap.conn.jco.rt.DefaultServer.openConnections(DefaultServer.java:1057)
+      at com.sap.conn.jco.rt.DefaultServer.adjustConnectionCount(DefaultServer.java:1004)
+      at
+      com.sap.conn.jco.rt.DefaultServerManager$DispatcherWorker.run (DefaultServerManager.java:
+      299)
+      at java.lang.Thread.run(Thread.java:619)
+      Caused by: com.sap.conn.jco.JCoException: (129) JCO_ERROR_SERVER_STARTUP: Could
+      not start server: Connect to SAP gateway failed
+      Connect parameters: TPNAME=JCOSERVER01 GWHOST=cynthia GWSERV=sapgw00
+      ERROR service 'sapgw00' unknown
+      TIME Mon Oct 25 19:53:00 2010
+      RELEASE 720
+      COMPONENT NI (network interface)
+      VERSION 40
+      RC -3
+      MODULE nixxsl.cpp
+      LINE 184
+      DETAIL NiSrvLGetServNo: service name cached as unknown
+      COUNTER 2
+      at
+      com.sap.conn.jco.rt.MiddlewareJavaRfc$JavaRfcServer.accept(MiddlewareJavaRfc.java:2135)
+      at com.sap.conn.jco.rt.ServerConnection.accept(ServerConnection.java:380)
+      at com.sap.conn.jco.rt.DefaultServer.openConnection(DefaultServer.java:1149)
+      © 2012 WSO2
+      .. 4 more
+      Caused by: RfcException: [null]
+      message: Connect to SAP gateway failed
+      Connect parameters: TPNAME=JCOSERVER01 GWHOST=cynthia GWSERV=sapgw00
+      ERROR service 'sapgw00' unknown
+      TIME Mon Oct 25 19:53:00 2010
+      RELEASE 720
+      COMPONENT NI (network interface)
+      VERSION 40
+      RC -3
+      MODULE nixxsl.cpp
+      LINE 184
+      DETAIL NiSrvLGetServNo: service name cached as unknown
+      COUNTER 2
+      Return code: RFC_FAILURE(1)
+      error group: 102
+      key: RFC_ERROR_COMMUNICATION
+      at com.sap.conn.rfc.engine.RfcIoControl.error_end(RfcIoControl.java:255)
+      at com.sap.conn.rfc.engine.RfcIoControl.ab_rfcaccept(RfcIoControl.java:43)
+      at com.sap.conn.rfc.api.RfcApi.RfcAccept(RfcApi.java:41)
+      at
+      com.sap.conn.jco.rt.MiddlewareJavaRfc$JavaRfcServer.accept(MiddlewareJavaRfc.java:2121)
+      ... 6 more
+
+  A solução para resolver isso é adicionar os nomes do servidor SAP para o arquivo */etc/services* com as portas relevantes. Por exemplo, as linhas seguintes podem ser adicionados se nós considerarmos o exemplo de erro dado acima.
+
+      sapgw00 3300/tcp
+      sapgw01 3301/tcp
+
+- Como lidar com Erro de Falha de Conexão com Servidor Host de Mensagem
+
+  Um exemplo dessa mensagem de erro é dado abaixo:
+
+      Connection parameters: TYPE=B DEST=SAPSYS01 MSHOST=SAPSYS01 MSSERV=3600 R3NAME=ERD GROUP=PUBLIC PCS=1
+      ERROR Group PUBLIC not found
+      TIME Fri Jan 24 15:48:53 2014
+
+  Isso indica que o nome de usuário (ex: wso2-user) usado na configuração acima não está assinado no grupo de usuário 'público'. A solução para solucionar isso é adicionar o wso2-user para o grupo de usuário chamado 'público' no seu sistema SAP. Se tal grupo não existe, um grupo de usuário chamado 'público' precisa ser cirado e o usuário acima precisa ser adicionado ao grupo.
+
+- [Índice](#documentação-api-manager-410)
 
 ## Tutoriais de Integração Streaming
 Os tutoriais de streaming guiam o usuário através das principais capacidades e ferramentas do Streaming Integrator, auxiliando o entendimento sobre a construção com aplicações Streaming.
 
 ### Expondo um Kafka Stream como um WebSocket API Gerenciada
+
+#### Contexto
+O Componente Streaming Integrator (SI) no WSO2 API Manager (WSO2 API-M) pode consumir eventos de um tópico de streaming provedor de terceiros (ex: tópico Kafka) e publicar esses eventos para um Streaming Backend (ex: WebSocket Streaming Backend) em um modo streaming. Quando um stream de eventos é recebido por uma fonte de provedor streaming de terceiros (ex: Kafka source), ele é publicado para o Streaming Backend simultaneamente.
+
+Streaming Integrator é um dos componentes WSO2 API-M que tem a capacidade de conectar com múltiplos sources/sinks =. Streaming Integration Tooling é outro componente que oferece ferramentas amigáveis a desenvolvedores. Nesse tutorial, Streaming Integrator é utilizado como o ponto de integração com Kafka. Então os eventos recebidos com Kafka (*SweetProductionStream*) são expostos via servidor Websocket usando um sink no Streaming Integrator.
+
+Uma vez que você tem sinks relevantes definidos você pode usar a funcionalidade de geração de AsyncAPI no Streaming Integration Tooling para gerar a definição AsyncAPI relevante e então finalmente implantá-la como um serviço no catálogo de serviços WSO2 API Manager. Você estará apto a criar uma API do serviço e você poderá invocá-la como uma API gerenciada. Finalmente, as mensagens advindas dos tópicos Kafka poderão ser recebidas via Streaming API.
+
+Siga as instruções abaixo para expor um stream de Provedor de Serviço como uma API gerenciada.
+
+#### Pré-Requisitos
+
+1. Configurar o Streaming Integrator
+
+    Siga os passos abaixo para configurar o Streaming Integrator para consumir o stream do Kafka:
+
+    - Baixe o [Kafka broker](https://www.apache.org/dyn/closer.cgi?path=/kafka/2.3.0/kafka_2.12-2.3.0.tgz), que está disponível no site Apache e o extraia. Vamos referir-se a esse diretório como *<KAFKA_HOME>* .
+    - Instale bibliotecas relevantes do cliente Kafka no SI usando o instalador de extensões. Para instruções em como baixar e instalar uma extensão Siddhi, veja [Baixando e Instalando Extensões Siddhi](https://apim.docs.wso2.com/en/4.1.0/reference/streaming-connectors/downloading-and-installing-siddhi-extensions/).
+    - Configure os detalhes básicos necessários para publicar uma aplicação siddhi com definição AsyncAPI para os serviços no API Manager.
+      1. Abra o arquivo *<SI_HOME>/conf/server/deployment.yaml* .
+      2. Atualize a seção *service.catalog.configs:* como segue:
+      
+             ```
+              service.catalog.configs:
+                enabled: true
+                hostname: localhost
+                port: 9448
+                username: admin
+                password: admin
+              ```
+              In the above configuration -
+
+              - You are enabling the AsyncAPI generation functionality by setting the `enabled` parameter to `true`.
+
+              - You are specifying `9448` as the port because you configured a port offset of 5 in the previous step. The default port of the API Manager is `9443`.  
+    - Configure as autenticações entre API-M e SI. Copie as chaves relativas a keyStore e client trustStore do WSO2 API-M para WSO2 SI.
+      1. Copie os arquivos seguintes.
+         - <API-M_HOME>/repository/resources/security/client-truststore.jks
+         - <API-M_HOME>/repository/resources/security/wso2carbon.jks
+    - Adicione os arquivos copiados no diretório <SI_HOME>/resources/security/ .
+
+2. Configure a porta API Manager
+   
+   Você terá que definir a porta a qual o Streaming Integrator publicará a definição AsyncAPI.
+    - Abra o arquivo <API-M_HOME>/repository/conf/deployment.toml .
+    - Apague *offset* na seção *[server]* e coloque para *5* como mostrado abaixo.
+      
+          [server]
+          offset=5 
+
+3. Inicie o Kafka
+   - Navegue até o diretório <KAFKA_HOME> e inicie um node Zookeper.
+
+          ```
+          sh bin/zookeeper-server-start.sh config/zookeeper.properties
+          ```
+
+    - Navegue até o diretório <KAFKA_HOME> e inicie um node de servidor Kafka.
+
+          sh bin/kafka-server-start.sh config/server.properties
+
+4. Instale Apache Ant
+
+    Baixe e instale [Apache Ant](https://ant.apache.org/).
+
+#### Passo 1: Inicie o API Manager
+1. Navegue até o diretório *<APIM_HOME>/bin* .
+2. Inicie o [API Manager](https://apim.docs.wso2.com/en/latest/install-and-setup/install/installing-the-product/running-the-api-m/). O seguinte log aparecerá no console do API Manager quando o servidor for iniciado com sucesso.
+
+        [2021-04-20 15:51:00,036]  INFO - StartupFinalizerServiceComponent Server           :  WSO2 API Manager-4.0.0
+        [2021-04-20 15:51:00,038]  INFO - StartupFinalizerServiceComponent WSO2 Carbon started in 77 sec
+
+##### Passo 2: Inicie o Streaming Integrator
+1. Navegue até o diretório *<SI_HOME>/bin* .
+2. Inicie o [Streaming Integrator](https://apim.docs.wso2.com/en/latest/install-and-setup/install/installing-the-product/running-the-si/#starting-the-si-server). O seguinte log aparecerá no console do SI quando o servidor for iniciado com sucesso.
+
+        INFO {org.wso2.carbon.kernel.internal.CarbonStartupHandler} - WSO2 Streaming Integrator started in 4.240 sec
+
+#### Passo 3: Inicie e Crie um Streaming Backend no Streaming Integrator Tooling
+
+O componente do Streaming Integrator padrão é alimentado pelo [Siddhi](https://siddhi.io/). Logo, você precisa criar uma aplicação Siddhi como o Streaming Backend.
+
+Vamos criar uma aplicação Siddhi básica que pode consumir mensagens de um tópico Kafka e publicá-la para o evento sink baseado em WebSocket no formato XML.
+
+Siga as instruções abaixo para criar um servidor Streaming Backend:
+
+1. Inicie o [Streaming Integrator Tooling](https://apim.docs.wso2.com/en/4.1.0/develop/streaming-apps/streaming-integrator-studio-overview/#starting-streaming-integrator-tooling).
+2. Clique em **New** para abrir um novo arquivo.
+3. Defina sua aplicação Siddhi.
+   
+       @App:name("KafkaToWebSocketSample")
+        @App:description("Description of the plan")
+
+         @source(type='kafka',
+              topic.list='kafka_sample_topic',
+              partition.no.list='0',
+              threading.option='single.thread',
+              group.id='group',
+              bootstrap.servers='localhost:9092',
+         @map(type='xml'))
+         define stream SweetProductionStream(name string, amount double);
+
+         @sink(type='websocket-server', host='localhost',port='8025',
+         @map(type='xml'))
+         define stream TotalCountStream (totalCount long);
+
+         @info(name='query1')
+         from SweetProductionStream
+         select count() as totalCount
+         insert into TotalCountStream; 
+4. Salve o arquivo. Se não houver erro de sintaxe na aplicação Siddhi, a seguinte mensagem aparecerá no console:
+
+        Siddhi App KafkaToWebSocketSample.siddhi successfully deployed. 
+
+#### Passo 4: Gere um AsyncAPI Definition
+Siga as instruções abaixo para gerar um AsyncAPI Definition via Streaming Integrator Tooling Component.
+
+1. Clique **Async API View**. O formulário AsyncAPI Generation aparecerá. ![tis1-1](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-async-api/open-async-api-view-button.png)
+2. Insira os detalhes da WebSocket Streaming API relacionada. 
+
+    O formulário de geração AsyncAPI aparecerá porque você não ofereceu nenhum conteúdo relacionado ao Streaming API para a anotação *@App:asyncAPI* quando definiu a aplicação Siddhi. 
+  
+    Vamos adicionar a seguinte informação Streaming API para criar uma WebSocket API baseado em definição AsyncAPI.
+
+      Field|Value
+      :-:|:-:|
+      Title|SweetProdApp
+      Version|1.0.0
+      Description|Consumes events of sweets production
+      Select Source or Sink type to Generate Async API|Selecione **websocket-server**
+      Sources|Selecione **TotalCountStream**
+
+      ![tis1-2](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-async-api/async-api-form.png)
+
+3. Clique em **Generate Async API** para gerar a definição da AsyncAPI. ![tsi1-3](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-async-api/generate-async-api-view-button.png)
+
+    Após a Async API ser gerada como descrito acima, as especificações da Async API ficarão visíveis no **Async API View**. ![tsi1-4](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-async-api/async-api-spec-view.png)
+4. Adicione a definição da AsyncAPI gerada ao Streaming backend. Clique em **Add Async API** para adicionar a definição AsyncAPI gerada à aplicação Siddhi. ![tsi1-5](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-async-api/add-async-api-button.png)
+5. Clique em **Code View** para ver a aplicação Siddhi com a definição AsyncAPI que foi gerada e salve-a para que ela possa ser implantada no servidor SI.
+
+#### Passo 5: Publicar a AsyncAPI Definition
+Você precisa implantar seu Streaming backend, o que contém a definição AsyncAPI, no servidor do Streaming Integrator para que possa exportar a definição AsyncAPI que você gerou para os serviços no WSO2 API Manager.
+
+Siga as instruções abaixo para publicar a definição AsyncAPI para o catálogo de serviço:
+
+1. Clique em **Deploy** e então clique em **Deploy to Server** no Streaming Integrator Tooling. ![tsi1-6](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-async-api/async-api-deploy-to-server.png) Isso abrirá a caixa de diálogo **Deploy Siddhi Apps to Server**.
+2. Adicione o host e porta (padrão 9443) do servidor SI e selecione a caixa de seleção relevante para sua aplicação Siddhi, a que contém a definição AsyncAPI, e para o servidor no qual você quer implantá-la.
+3. Clique em **Deploy**. ![tsi1-7](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-async-api/async-api-deploy.png) Após a aplicação Siddhi ser implantada com sucesso, a seguinte mensagem de log aparecerá no Streaming Integrator e logs do servidor API Manager para indicar que a definição AsyncAPI foi publicada com sucesso no Service Catalog.
+
+        Streaming Integrator server logs
+        Siddhi App KafkaToWebSocketSample deployed successfully
+        Async API: SweetProdApp-1.0.0 uploaded to the service catalog
+
+        API Manager server logs
+        CommonUtil Creation of folder is successful. Directory Name : SweetProdApp-1.0.0
+
+#### Passo 6: Visualizar a Entry do Catálogo de Serviços no WSO2 API-M
+Siga as instruções abaixo para visualizar a entrada do catálogo de serviços no WSO2 API Manager:
+
+1. Acesse o Publisher (https://\<hostname>:9448/publisher). Para o propósito de teste, você pode usar https://localhost:9448/publisher e *admin* como nome de usuário e senha. ![tsi1-8](https://apim.docs.wso2.com/en/4.1.0/assets/img/integrate/tutorials/service-catalog/open-service-catalog.png)
+2. Clique em **Services**. Os serviços, o que inclui o serviço *SweetProdApp*, aparecerá.
+3. Clique no serviço respectivo (*SweetProdApp*) para ver detalhes do serviço gerenciado.
+
+#### Passo 7: Crie uma API
+Siga as instruções abaixo para criar uma API do serviço gerenciado implantado via WSO2 API Manager Publisher.
+
+1. Clique em **Create API** na página Service Catalog, que fica no Publisher.
+2. Insira todos os detalhes da Streaming API
+
+    Field|Value
+    :-:|:-:
+    Name|SweetProdApp
+    Context|/SweetProdApp
+    Version|1.0.0
+
+3. Clique em **Create API**. ![tsi1-9](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-async-api/create-api-from-service.png) A página de visão geral da API aparecerá.
+
+#### Publique a API
+Siga as instruções abaixo para publicar a API via WSO2 API Manager Publisher.
+
+1. Clique em **Lifecycle** para navegar até o ciclo de vida da API.
+2. Clique em **Publish** para publicar a API no portal API Developer. Se a API for publicada com sucesso, o estado do ciclo de vida mudará para **PUBLISHED**. ![tsi1-10](https://apim.docs.wso2.com/en/4.1.0/assets/img/learn/publish-api.png)
+
+#### Passo 9: Invoque a API Publicada
+1. Veja a API publicada. Navegue até o portal Developer (https://\<hostname>:9448/devportal). Para o propósito de testagem, você pode usar https://localhost:9448/devportal e *admin* como nome de usuário e senha. A API que você publicou estará visível na página de listagem de API.
+2. Subscreva-se na API.
+3. Clique em **Subscription** e depois clique em **SSUBSCRIPTION & KEY GENERATION WIZARD**.
+   1. Navegue através do SUBSCRIPTION & KEY GENERATION WIZARD. Esse wizard leva você através dos passos de criação de uma nova aplicação, subscrição, geração de chaves e geração de token de acesso para invocar a API. ![tsi1-11](https://apim.docs.wso2.com/en/4.1.0/assets/img/learn/key-generation-wizard.png)
+   2. Copie o token de autorização que aparece aqui. ![tsi1-12](https://apim.docs.wso2.com/en/4.1.0/assets/img/learn/generate-access-token-popup.jpg)
+4. Experimente as operações.
+   1. Instale o cliente wscat.
+    
+          npm install -g wscat  
+   2. Invoque a API usando um header de autorização ao executar o seguinte comando.
+            
+          WS
+          wscat -c ws://localhost:9104/sweetProdApp/1.0.0 -H "Authorization: Bearer [accesstoken]" 
+
+          WSS
+          wscat -n -c wss://localhost:8104/sweetProdApp/1.0.0 -H "Authorization: Bearer [accesstoken]"
+    
+      **Observação**: Há clientes (especialmente navegadores) que não permitem adição de headers. Em tais casos, você pode enviar o token de acesso para a invocação da API como parâmetro query chamado *access_token* usando o comando abaixo:
+
+          WS
+          wscat -c "ws://localhost:9104/sweetProdApp/1.0.0?access_token=[accesstoken]" 
+
+          WSS
+          wscat -n -c "wss://localhost:8104/sweetProdApp/1.0.0?access_token=[accesstoken]"
+
+#### Passo 10: Passar o Evento Streaming para o Broker
+Vamos executar o seguinte exemplo de cliente Kafka producer para passar o evento streaming para Kafka.
+
+1. Se necessário copie *org.wso2.carbon.si.metrics.core_ jar* de *<SI_HOME>/wso2/lib/plugins* para *<SI_HOME>/sample/sample-clients/lib/* antes de rodar o cliente Kafka-producer
+2. Abra um terminal e navegue até o arquivo *<SI_HOME>/samples/sample-clients/kafka-producer* .
+3. Receba eventos XML via Kafka. Execute o seguinte comando Apache Ant.
+         
+        ant -Dtype=xml -DtopicName=kafka_sample_topic 
+
+    **Info**: Em adição, você limitar o número de eventos assim:
+  
+        ant -Dtype=xml -DnoOfEventsToSend=5 -DtopicName=kafka_sample_topic
+
+#### Passo 11: Avaliando Resultados
+Como o servidor SI já está rodando como explicado nos passos acima, quando o cliente Kafka envia os eventos eles serão consumidos pela fonte no servidor SI e empurrados para o servidor WebSocket. Como o comando do cliente WS escuta esses eventos, os tipos de eventos seguintes serão impressos no terminal que o cliente WS foi rodado. ![tsi1-13](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-async-api/async-api-websocket-results.png)
+
+Agora, você criou com sucesso e publicou a API que corresponde ao serviço WebSocket em Services. Mais que isso, você se subscreveu nela, obteve um token de acesso para testagem, e testou a API com o token de acesso gerado com o cliente Kafka que enviou eventos de streaming.
+
+- [Índice](#documentação-api-manager-410)
+
 ### Executando Mudança de Captura de Dado em Tempo Real com MySQL
+#### Introdução
+O Streaming Integrator (SI) permite que você capture mudanças para uma tabela de database, em um modo streaming, habilitando a você performar operações ETL.
+
+Esse tutorial leva você através de diferentes modos e opções as quais você poderá utilizar para performar Change Data Capturing (CDC) usando SI. Nesse tutorial, você estará usando um datasource MySQL.
+
+**Info**: Para usar um database diferente do MySQL, veja [Dependências para CDC](https://github.com/siddhi-io/siddhi-io-cdc#dependencies) e adicione o driver jar correspondete. Além disso, modifique a URL JDBC, de acordo, no parâmetro *url* em todas aplicações Siddhi dadas nesse tutorial.
+
+#### Modo Listening e Polling
+Há dois modos os quais você pode performar CDC utilizando o SI: **Listening mode** e **Polling mode**.
+
+- Polling mode: No modo polling, o data source é periodicamente sondado para a captura de mudanças. O período de sondagem pode ser configurado.
+    
+- Listening mode: No modo listening, o SI mantém a escuta para o Change Log do database e notifica se alguma mudança ocorrer. Aqui, diferente do modo polling, você será notificado da mudança imediatamente.
+
+#### Tipos de Eventos Capturados
+Você pode capturar os seguintes tipos de mudanças feitas na tabela database:
+- Operações de inserção;
+- Operações de atualização;
+- Operações de remoção (apenas no modo Listening).
+
+#### Modo Listening
+**Antes de começar**:
+- Você precisa ter acesso à uma instância MySQL.
+- Permita logagem binário no servidor MySQL. Para instruções detalhadas, veja [Documentação Debezium - Permitindo o Binlog](https://debezium.io/docs/connectors/mysql/#enabling-the-binlog). Se você estiver usando MySQL 8.0, use o seguinte query para checar o status binlog.
+        
+      SELECT variable_value as "BINARY LOGGING STATUS (log-bin) ::" FROM performance_schema.global_variables WHERE variable_name='log_bin'; 
+- Adicione o driver MySQL JDBC no diretório *<SI_HOME>/lib* :
+  1. Baixe o driver MySQL JDBC do [site MySQL](https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.45.tar.gz).
+  2. Unzipe o arquivo.
+  3. Copie o *mysql-connector-java-5.1.45-bin.jar* para o diretório *<SI_HOME>/lib* .
+  4. Inicie o servidor SI.
+- Uma vez que você instalou o MySQL e iniciou o servidor MySQL, crie o database e a tabela database que você necessita:
+  1. Vamos criar um novo banco de dados no servidor MySQL o qual você usará por todo esse tutorial. Para fazer isso execute o seguinte query.
+           
+          CREATE SCHEMA production;  
+  2. Crie um novo usuário ao executar o seguinte SQL query.
+
+          GRANT SELECT, RELOAD, SHOW DATABASES, REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO 'wso2si' IDENTIFIED BY 'wso2';
+  3. Mude para o database *production* e crie uma nova tabela ao executar os seguintes queries.
+
+          use production;
+          CREATE TABLE SweetProductionTable (name VARCHAR(20),amount double(10,2));
+- Baixe e instale a extensão [siddhi-io-cdc](https://siddhi-io.github.io/siddhi-io-cdc/). Para instruções, leia [Baixando e Instalando Conectores Siddhi](https://apim.docs.wso2.com/en/4.1.0/reference/streaming-connectors/downloading-and-installing-siddhi-extensions/).
+
+**Capturando Inserções**
+
+Agora você pode escrever uma aplicação Siddhi simples para monitorar o *SweetProductionTable* para operações de inserção.
+1. Abra um arquivo de texto e copie-cole a seguinte aplicação nele.
+      
+        @App:name('CDCListenForInserts')
+
+        @App:description('Capture MySQL Inserts using CDC listening mode.')
+
+        @source(type = 'cdc', url = 'jdbc:mysql://localhost:3306/production', username = 'wso2si', password = 'wso2', table.name = 'SweetProductionTable', operation = 'insert',
+          @map(type = 'keyvalue'))
+        define stream InsertSweetProductionStream (name string, amount double);
+
+        @sink(type = 'log')
+        define stream LogStream (name string, amount double);
+
+        @info(name = 'query')
+        from InsertSweetProductionStream
+        select *
+        insert into LogStream; 
+    Aqui o parâmetro *url* tem o valor *jdbc:mysql://localhost:3306/production* . Mude-o para apontar para seu servidor MySQL.
+2. Salve o arquivo como *CDCListenForInserts.siddhi* no diretório *<SI_HOME>/wso2/server/deployment/siddhi-files* .
+
+    **Info**: A aplicação Siddhi captura todas as inserções feitas para a tabela do banco de dados *SweetProductionTable* e as loga.
+3. Para instalar as extensões requeridas para a aplicação Siddhi *CDCListenForInserts* que você subiu, abra uma nova janela de terminal e navegue até o diretório *<SI_HOME>/bin* e emita um dos seguintes comandos apropriados, baseado no seu sistema operacional.
+
+        For Windows: extension-installer.bat
+
+        For Linux: sh extension-installer.sh  
+4. Agora vamos fazer uma operação de inserção na tabela MySQL ao executar o seguinte query no banco de dados:
+
+         insert into SweetProductionTable values('chocolate',100.0);
+    O seguinte log aparecerá no console SI:
+
+         INFO {org.wso2.siddhi.core.stream.output.sink.LogSink} - CDCWithListeningMode : logStream : Event{timestamp=1563200225948, data=[chocolate, 100.0], isExpired=false}  
+
+**Capturando Atualizações**
+Agora você pode escrever uma aplicação Siddhi para monitorar o *SweetProductionTable* por operações de atualização.
+1. Abra o arquivo de texto e copie e cole a seguinte aplicação nele.
+      
+       @App:name('CDCListenForUpdates')
+
+       @App:description('Capture MySQL Updates using CDC listening mode.')
+
+       @source(type = 'cdc', url = 'jdbc:mysql://localhost:3306/production', username = 'wso2si', password = 'wso2', table.name = 'SweetProductionTable', operation = 'update',
+        @map(type = 'keyvalue'))
+       define stream UpdateSweetProductionStream (before_name string, name string, before_amount double, amount double);
+
+       @sink(type = 'log')
+       define stream LogStream (before_name string, name string, before_amount double, amount double);
+
+       @info(name = 'query')
+       from UpdateSweetProductionStream
+       select *
+       insert into LogStream; 
+2. Salve esse arquivo como *CDCListenForUpdates.sidhhi* no diretório *<SI_HOME>/wso2/server/deployment/siddhi-files* .
+    
+    **Info**: A aplicação Siddhi captura todas as atualizações da tabela do banco de dados *SweetProductionTable* e as loga.
+3. Agora vamos fazer uma operação de atualização na tabela MySQL. Para isso execute o seguinte MySQL query no banco de dados:
+
+        update SweetProductionTable SET name = 'Almond cookie' where name = 'chocolate';
+    Como resultado você verá o seguinte log no console SI.
+
+        INFO {org.wso2.siddhi.core.stream.output.sink.LogSink} - CDCWithListeningMode : updateSweetProductionStream : Event{timestamp=1563201040953, data=[chocolate, Almond cookie, 100.0, 100.0], isExpired=false}
+
+    **Info**: Aqui, o atributo *before_name1* indica o valor do atributo *name* antes da atualização ter sido feita (nesse caso *chocolate*), e o atributo *name* tem o nome atual após a atualização (ex: *almond cookie*).
+
+**Capturando Remoções**
+Agora você pode escrever uma aplicação Siddhi simples para monitorar o *SweetProductionTable* para  operações de remoção.
+1. Abra um arquivo de texto e copie-cole a seguinte aplicação nele.
+      
+        @App:name('CDCListenForDeletes')
+
+        @App:description('Capture MySQL Deletes using CDC listening mode.')
+
+        @source(type = 'cdc', url = 'jdbc:mysql://localhost:3306/production', username = 'wso2si', password = 'wso2', table.name = 'SweetProductionTable', operation = 'delete',
+          @map(type = 'keyvalue'))
+        define stream DeleteSweetProductionStream (before_name string, before_amount double);
+
+        @sink(type = 'log')
+        define stream LogStream (before_name string, before_amount double);
+
+        @info(name = 'query')
+        from DeleteSweetProductionStream
+        select *
+        insert into LogStream;    
+
+2. Salve o arquivo como *CDCListenForDelets.siddhi* no diretório *<SI_HOME>/wso2/server/deployment/siddhi-files* .
+
+    **Info**: Essa aplicação Siddhi captura todas as operações de remoção feitas para a tabela do banco de dados *SweetProductionTable* e as loga.
+3. Agora vamos fazer uma operação de remoção na tabela MySQL ao executar o seguinte query no banco de dados:
+
+         delete from SweetProductionTable where name = 'Almond cookie';
+    O seguinte log aparecerá no console SI:
+
+         INFO {org.wso2.siddhi.core.stream.output.sink.LogSink} - CDCWithListeningMode : DeleteSweetProductionStream : Event{timestamp=1563367367098, data=[Almond cookie, 100.0], isExpired=false}
+
+    **Info**: Aqui, o atributo *before_name* indica o nome do doce que foi deletado no registro (ex: *almond cookie*). De forma similarm o *before_amount* indica a quantia no registro deletado.
+
+**Preservando Estado da Aplicação Apesar de uma Falha do Sistema**
+
+Vamos experimentar um cenário ao qual você vai subir uma aplicação Siddhi para contar o número total de produções.
+
+**Info**: Nesse cenário, o servidor SI é necessário para lembrar a contagem atual apesar de falhas no sistema para que quando o sistema for restaurado, a contagem não resete a zero. Para conseguir isso, você pode usar a capacidade de persistência de estado no Streaming Integrator.
+
+1. Habilite a ferramenta de persistência de estado no servidor SI. Abra o arquivo *<SI_HOME>/conf/server/deployment.yaml* no editor de texto e localize a seção *state.persistence* .
+      
+          # Periodic Persistence Configuration
+        state.persistence:
+          enabled: true
+          intervalInMin: 1
+          revisionsToKeep: 2
+          persistenceStore: org.wso2.carbon.streaming.integrator.core.persistence.FileSystemPersistenceStore
+          config:
+            location: siddhi-app-persistence
+    Ponha o parâmetro *enabled* para *true* e salve o arquivo.
+
+2. Habilite os logs de debug de persistência de estado. Abra o arquivo *<SI_HOME>/conf/server/log4j2.xml* no editor de texto e localize a seguinte linha nele.
+
+        <Logger name="com.zaxxer.hikari" level="error"/> 
+
+    Adicione o elemento *\<Logger>* abaixo dele.
+
+        <Logger name="org.wso2.carbon.streaming.integrator.core.persistence" level="debug"/>
+
+    Salve o arquivo.
+3. Reinicie o servidor Streaming Integrator para a mudança acima ser efetivada.
+4. Abra um arquivo de texto e copie-cole a aplicação Siddhi seguinte nele.
+
+        @App:name('CountProductions')
+
+        @App:description('Siddhi application to count the total number of orders.')
+
+        @source(type = 'cdc', url = 'jdbc:mysql://localhost:3306/production', username = 'wso2si', password = 'wso2', table.name = 'SweetProductionTable', operation = 'insert',
+          @map(type = 'keyvalue'))
+        define stream InsertSweetProductionStream (name string, amount double);
+
+        @sink(type = 'log')
+        define stream LogStream (totalProductions double);
+
+        @info(name = 'query')
+        from InsertSweetProductionStream
+        select sum(amount) as   totalProductions
+        insert into LogStream;
+5. Salve o arquivo como *CountProductions.siddhi* no diretório *<SI_HOME>/wso2/server/deployment/siddhi-files*. Quando a aplicação Siddhi for implantada com sucesso, o seguinte log *INFO* aparecerá no console do Streaming Integrator.
+
+        INFO {org.wso2.carbon.stream.processor.core.internal.StreamProcessorService} - Siddhi App CountProductions deployed successfully
+6. Agora vamos fazer pequenas operações de inserção na tabela MySQL. Execute os seguintes queries MySQL no banco de dados.
+
+        insert into SweetProductionTable values('Almond cookie',100.0);
+
+        insert into SweetProductionTable values('Baked alaska',20.0);
+    Agora vocẽ poderá ver os seguintes logs no console SI.
+
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - CountProductions : LogStream : Event{timestamp=1564151034866, data=[100.0], isExpired=false}
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - CountProductions : LogStream : Event{timestamp=1564151037870, data=[120.0], isExpired=false}
+
+    Esses logs imprimem a contagem de produção de doces. Observe que a atual contagem de produção de doces está sendo impressa como 120 no segundo log. Isso é porque a fábrica tem produzido até então 120 doces: 100 Almond cookies e 20 Baked alaskas.
+7. Agora espere para o seguinte log aparecer no console SI.
+
+        DEBUG {org.wso2.carbon.streaming.integrator.core.persistence.FileSystemPersistenceStore} - Periodic persistence of CountProductions persisted successfully
+
+    Esse log indica que o estado atual da aplicação Siddhi persistiu com sucesso. O estado da aplicação Siddhi persiste a cada minuto. Logo, você pode ver o log aparecendo a cada minuto.
+
+    Depois, vamos inserir duas produções de doces dentro do *SweetProductionTable* e fechar o servidor SI antes que o estado de persistência aconteça (em outras palavras, antes que o log acima apareça).
+
+    **Dica**: É melhor começar inserindo os registros imediatamente após o log do estado de persistência aparecer, para que vocẽ tenha tempo o bastante para mandar mensagens e fechar o servidor antes que o próximo log apareça.
+8. Insira os seguintes doces na *SweetProductionTable* executando os seguintes queries no banco de dados:
+
+        insert into SweetProductionTable values('Croissant',100.0);
+
+        insert into SweetProductionTable values('Croutons',100.0);
+
+9. Feche o servidor SI. Aqui você estará criando deliberadamente um cenário onde o servidor tem problema antes que o servidor SI possa persistir na contagem da última produção.
+
+    **Info**: Aqui, o servidor SI é interrompido antes que o estado seja persistido. Logo, o servidor SI não pode persistir na última contagem (o que deve incluir as duas últimas produções '100 Croissants' e '100 Croutons'). As boas notícias é que o *CDC source* reproduz as duas últimas mensagens, permitindo o Streaming Integrator recupera com sucesso o servidor após a interrupção.
+10. Reinicie o servidor SI e espere aproximadamente por um minuto.
+11. O seguinte log aparecerá no console SI:
+
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - CountProductions : LogStream : Event{timestamp=1564151078607, data=[220.0], isExpired=false}
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - CountProductions : LogStream : Event{timestamp=1564151078612, data=[320.0], isExpired=false}
+
+    Observe que o *CDC source* reproduziu as duas últimas mensagens. Como resultado, a contagem da produção de doces foi restaurada corretamente.
+
+#### Modo Polling 
+**Antes de começar**:
+- Você precisa ter acesso à uma instância MySQL. Crie o banco de dado necessário e uma tabela de banco de dados na instância MySQL como segue:
+  1. Vamos criar um novo banco de dados no servidor MySQL o qual você usará por todo esse tutorial. Para fazer isso execute o seguinte comando.
+           
+          CREATE SCHEMA production_pol;  
+  2. Mude para o database *production* e crie uma nova tabela ao executar os seguintes queries.
+
+          use production_pol;
+          CREATE TABLE SweetProductionTable (last_update TIMESTAMP, name VARCHAR(20),amount double(10,2));
+  3. Se você não já tem um usuário criado, crie um novo usuário ao executar o seguinte SQL query.
+
+          GRANT SELECT, RELOAD, SHOW DATABASES, REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO 'wso2si' IDENTIFIED BY 'wso2';       
+  4. Se você ainda não tem o driver MySQL JDBC dentro do diretório *<SI_HOME>/lib* , adicione assim:
+     1. Baixe o driver MySQL JDBC do [site MySQL](https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.45.tar.gz).
+     2. Unzipe o arquivo.
+     3. Copie o *mysql-connector-java-5.1.45-bin.jar* para o diretório *<SI_HOME>/lib* .
+
+**Capturando Inserções**
+
+Agora você pode escrever uma aplicação Siddhi simples para monitorar o *SweetProductionTable* por operações de inserção.
+1. Abra um arquivo de texto e copie-cole a seguinte aplicação nele.
+      
+        @App:name("CDCPolling")
+
+        @App:description("Capture MySQL changes, using CDC source - polling mode.")
+
+        @source(type = 'cdc',
+          url = 'jdbc:mysql://localhost:3306/production_pol?useSSL=false',
+          mode = 'polling',
+          jdbc.driver.name = 'com.mysql.jdbc.Driver',
+          polling.column = 'last_update',
+          polling.interval = '10',
+          username = 'wso2si',
+          password = 'wso2',
+          table.name = 'SweetProductionTable',
+          @map(type = 'keyvalue' ))
+        define stream SweetProductionStream (name string, amount double);
+
+        @sink(type = 'log')
+        define stream LogStream (name string, amount double);
+
+        @info(name = 'query')
+        from SweetProductionStream
+        select *
+        insert into LogStream; 
+    
+    Aqui o parâmetro *url* atualmente especifica a URL *jdbc:mysql://localhost:3306/production_pol* . Mude-o para apontar para seu servidor MySQL.
+2. Salve o arquivo como *CDCPolling.siddhi* no diretório *<SI_HOME>/wso2/server/deployment/siddhi-files* .
+
+    **Info**: Essa aplicação Siddhi apura o banco de dados periodicamente, captura as mudanças feitas para a tabela do banco de dados *SweetProductionTable* durante o intervalo de sondagem e as loga. O intervalo de polling é especificado via parâmetro *polling.interval* na aplicação Siddhi quando definimos o CDC source. Nesse exemplo, o intervalo de sondagem é de 10 segundos.  
+3. Agora vamos fazer uma operação de inserção na tabela MySQL ao executar o seguinte query no banco de dados:
+
+         insert into SweetProductionTable(name,amount) values('chocolate',100.0);
+    O seguinte log aparecerá no console SI:
+
+         INFO {org.wso2.siddhi.core.stream.output.sink.LogSink} - CDCWithPollingMode : LogStream : Event{timestamp=1563378804914, data=[chocolate, 100.0], isExpired=false}
+
+**Capturando Atualizações**
+
+Para capturar atualizações você pode usar a mesma aplicação Siddhi *CDCPolling.siddhi* que você implantou na seção Capturando Inserções.
+
+Vamos realizar uma operação de atualização na tabela MySQL. Para fazer isso, execute o seguinte query MySQL no banco de dados:
+
+    update SweetProductionTable SET name = 'Almond cookie' where name = 'chocolate';
+
+O seguinte log aparecerá no console SI:
+
+        INFO {org.wso2.siddhi.core.stream.output.sink.LogSink} - CDCWithPollingMode : logStream : Event{timestamp=1563436388530, data=[Almond cookie, 100.0], isExpired=false}
+
+**Preservando Estado da Aplicação Apesar de uma Falha do Sistema**
+
+Vamos experimentar um cenário ao qual você vai subir uma aplicação Siddhi para contar o número total de produções.
+
+**Info**: Nesse cenário, o servidor SI é necessário para lembrar a contagem atual apesar de falhas no sistema para que quando o sistema for restaurado, a contagem não resete a zero. Para conseguir isso, você pode usar a capacidade de persistência de estado no Streaming Integrator.
+
+1. Habilite a ferramenta de persistência de estado no servidor SI. Abra o arquivo *<SI_HOME>/conf/server/deployment.yaml* no editor de texto e localize a seção *state.persistence* .
+      
+          # Periodic Persistence Configuration
+        state.persistence:
+          enabled: true
+          intervalInMin: 1
+          revisionsToKeep: 2
+          persistenceStore: org.wso2.carbon.streaming.integrator.core.persistence.FileSystemPersistenceStore
+          config:
+            location: siddhi-app-persistence
+    Ponha o parâmetro *enabled* para *true* e salve o arquivo.
+
+2. Habilite os logs de debug de persistência de estado. Abra o arquivo *<SI_HOME>/conf/server/log4j2.xml* no editor de texto e localize a seguinte linha nele.
+
+        <Logger name="com.zaxxer.hikari" level="error"/> 
+
+    Adicione o elemento *\<Logger>* abaixo dele.
+
+        <Logger name="org.wso2.carbon.streaming.integrator.core.persistence" level="debug"/>
+
+    Salve o arquivo.
+3. Reinicie o servidor Streaming Integrator para a mudança acima ser efetivada.
+4. Abra um arquivo de texto e copie-cole a aplicação Siddhi seguinte nele.
+
+        @App:name("CountProductions_pol")
+
+        @App:description("Siddhi application to count the total number of orders.")
+
+        @source(type = 'cdc',
+          url = 'jdbc:mysql://localhost:3306/production_pol?useSSL=false',
+          mode = 'polling',
+          jdbc.driver.name = 'com.mysql.jdbc.Driver',
+          polling.column = 'last_update',
+          polling.interval = '10',
+          username = 'wso2si',
+          password = 'wso2',
+          table.name = 'SweetProductionTable',
+          @map(type = 'keyvalue' ))
+        define stream SweetProductionStream (name string, amount double);
+
+        @sink(type = 'log')
+        define stream LogStream (totalProductions double);
+
+        @info(name = 'query')
+        from SweetProductionStream
+        select sum(amount) as totalProductions
+        insert into LogStream;
+5. Salve o arquivo como *CountProductions_pol.siddhi* no diretório *<SI_HOME>/wso2/server/deployment/siddhi-files*. Quando a aplicação Siddhi for implantada com sucesso, o seguinte log *INFO* aparecerá no console do Streaming Integrator.
+
+        INFO {org.wso2.carbon.stream.processor.core.internal.StreamProcessorService} - Siddhi App CountProductions_pol deployed successfully
+6. Agora vamos fazer pequenas operações de inserção na tabela MySQL. Execute os seguintes queries MySQL no banco de dados.
+
+        insert into SweetProductionTable values('Almond cookie',100.0);
+
+        insert into SweetProductionTable values('Baked alaska',20.0);
+    Agora vocẽ poderá ver os seguintes logs no console SI.
+
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - CountProductions_pol : LogStream : Event{timestamp=1564385971323, data=[100.0], isExpired=false}
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - CountProductions_pol : LogStream : Event{timestamp=1564386011344, data=[120.0], isExpired=false}
+
+    Esses logs imprimem a contagem de produção de doces. Observe que a atual contagem de produção de doces está sendo impressa como 120 no segundo log. Isso é porque a fábrica tem produzido até então 120 doces: 100 Almond cookies e 20 Baked alaskas.
+7. Agora espere para o seguinte log aparecer no console SI.
+
+        DEBUG {org.wso2.carbon.streaming.integrator.core.persistence.FileSystemPersistenceStore} - Periodic persistence of CountProductions_pol persisted successfully
+
+    Esse log indica que o estado atual da aplicação Siddhi persistiu com sucesso. O estado da aplicação Siddhi persiste a cada minuto. Logo, você pode ver o log aparecendo a cada minuto.
+
+    Depois, vamos inserir duas produções de doces dentro do *SweetProductionTable* e fechar o servidor SI antes que o estado de persistência aconteça (em outras palavras, antes que o log acima apareça).
+
+    **Dica**: É melhor começar inserindo os registros imediatamente após o log do estado de persistência aparecer, para que vocẽ tenha tempo o bastante para mandar mensagens e fechar o servidor antes que o próximo log apareça.
+8. Insira os seguintes doces na *SweetProductionTable* executando os seguintes queries no banco de dados:
+
+        insert into SweetProductionTable values('Croissant',100.0);
+
+        insert into SweetProductionTable values('Croutons',100.0);
+
+9. Feche o servidor SI. Aqui você estará criando deliberadamente um cenário onde o servidor tem problema antes que o servidor SI possa persistir na contagem da última produção.
+
+    **Info**: Aqui, o servidor SI é interrompido antes que o estado seja persistido. Logo, o servidor SI não pode persistir na última contagem (o que deve incluir as duas últimas produções '100 Croissants' e '100 Croutons'). As boas notícias é que o *CDC source* reproduz as duas últimas mensagens, permitindo o Streaming Integrator recupera com sucesso o servidor após a interrupção.
+10. Reinicie o servidor SI e espere aproximadamente por um minuto.
+11. O seguinte log aparecerá no console SI:
+
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - CountProductions_pol : LogStream : Event{timestamp=1564386179998, data=[220.0], isExpired=false}
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - CountProductions_pol : LogStream : Event{timestamp=1564386180004, data=[320.0], isExpired=false}
+
+    Observe que o *CDC source* reproduziu as duas últimas mensagens. Como resultado, a contagem da produção de doces foi restaurada corretamente.
+
+- [Índice](#documentação-api-manager-410)
+
 ### Executando ETL em Tempo Real com Arquivos
+#### Introdução
+O Streaming Integrator (SI) permite que você realize ETL em tempo real com dados que são armazenados nos arquivos.
+
+Esse tutorial levará você através dos diferentes modes e opções que você poderá usar para realizar ETL em tempo real com arquivos usando SI.
+
+**Antes de começar**:
+- Inicie o Servidor SI navegando até o diretório *<SI_HOME>/bin* e emitindo um dos seguintes comandos apropriados baseados em seu sistema operacional:
+  -  For Windows: server.bat --run
+
+  - For Linux: sh server.sh
+
+O seguinte log aparecerá no console do Streaming Integrator uma vez que você iniciou com sucesso o servidor.
+
+    INFO {org.wso2.carbon.kernel.internal.CarbonStartupHandler} - WSO2 Streaming Integrator started in 4.240 sec
+
+#### Extraindo Dados de um Arquivo
+Nessa seção do tutorial, você explorará as diferentes maneiras as quais você pode extrair dados de um arquivo específico.
+
+**Verificando um Arquivo de Texto Linha por Linha**
+
+Nesse cenário você estará catando um arquivo de texto linha por linha, para extrar dados dele. Cada linha extraída é um evento que passará por uma transformação simples depois. Vamos escrever uma simples aplicação Siddhi para fazer isso.
+
+1. Baixe o arquivo *production.csv* [daqui](https://github.com/wso2/docs-ei/tree/master/en/streaming-integrator/docs/examples/resources/productions.csv) e salve em um local de sua escolha.
+2. Abra um arquivo de texto e copie-cole a aplicação Siddhi seguinte nele.
+
+        @App:name('TailFileLineByLine')
+
+        @App:description('Tails a file line by line and does a simple transformation.')
+
+        @source(type='file', mode='LINE',
+          file.uri='file:/Users/foo/productions.csv',
+          tailing='true',
+          @map(type='csv'))
+        define stream SweetProductionStream (name string, amount double);
+
+        @sink(type = 'log')
+        define stream LogStream (name string, amount double);
+
+        from SweetProductionStream
+        select str:upper(name) as name, amount
+        insert into LogStream;
+  
+    Mude o valor do parâmetro *file.uri* na aplicação Siddhi acima para o caminho do arquivo *productions.csv* que você baixou anteriormente.
+  
+3. Salve esse arquivo como  *TailFileLineByLine.siddhi* no diretório *<SI_HOME>/wso2/server/deployment/siddhi-files*.
+
+    **Info**: Essa aplicação Siddhi verifica o arquivo *productions.csv* linha por linha. Cada linha é convertida em um evento no stream *SweetProductionStream*. Após isso, uma simples transformação é levada para o processo de produção de doces. A transformação envolve converter o valor para o atributo *name* para caixa alta. Finalmente, o output é logado no console do Streaming Integrator.
+
+    Após implantar com sucesso, o seguinte log aparecerá no console SI:
+
+        INFO {org.wso2.carbon.streaming.integrator.core.internal.StreamProcessorService} - Siddhi App TailFileLineByLine deployed successfully
+
+4. Para instalar as extensões necessárias para a aplicação Siddhi *TailFileLineByLine* que você implementou, abra uma nova janela de terminal e navegue até o diretório *<SI_HOME>/bin* e emita um dos seguintes comandos baseados no seu sistema operacional.
+   - For Windows: extension-installer.bat
+
+   - For Linux: sh extension-installer.sh 
+5. Agora a aplicação Siddhi iniciará o processo do arquivo *productions.csv*. O arquivo contém as seguintes entradas.
+
+        Almond cookie,100.0
+        Baked alaska,20.0
+
+    Como resultado, o seguinte log aparecerá no console SI:
+
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - ReceiveEventsFromFile : LogStream : Event{timestamp=1564490830652, data=[ALMOND COOKIE, 100.0], isExpired=false}
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - ReceiveEventsFromFile : LogStream : Event{timestamp=1564490830657, data=[BAKED ALASKA, 20.0], isExpired=false}
+
+6. Agora acrescente a seguinte linha para o arquivo *production.csv* e salve o arquivo.
+
+         Cup cake,300.0 
+
+7. O seguinte log aparecerá no console SI.
+
+         INFO {io.siddhi.core.stream.output.sink.LogSink} - ReceiveEventsFromFile : LogStream : Event{timestamp=1564490869579, data=[CUP CAKE, 300.0], isExpired=false} 
+
+**Verificando um Arquivo de Texto Usando uma Expressão Regular**
+
+Nesse cenário, você estará usando uma expressão regular para extrair dados do arquivo. Após o dado ser extraído, uma transformação simples será feita neles. Finalmente, o evento transformado é logado no console SI. Vamos escrever uma aplicação Siddhi simples para fazer isso.
+
+1. Baixe o arquivo *noisy_data.txt* [daqui](https://github.com/wso2/docs-ei/tree/master/en/streaming-integrator/docs/examples/resources/noisy_data.txt) e salve no local de sua escolha.
+2. Abra um arquivo de texto e copie-cole a aplicação Siddhi seguinte nele.
+
+        @App:name('TailFileRegex')
+
+        @App:description('Tails a file using a regex and does a simple transformation.')
+
+        @source(type='file', mode='REGEX',
+          file.uri='file:/Users/foo/noisy_data.txt',
+          begin.regex='\<', end.regex='\>',
+          tailing='true',
+          @map(type='text', fail.on.missing.attribute = 'false', regex.A='(\w+)\s([-0-9]+)',regex.B='volume\s([-0-9]+)', @attributes(symbol = 'A[1]',price = 'A[2]',volume = 'B')))
+        define stream StockStream (symbol string, price float, volume long);
+
+        @sink(type = 'log')
+        define stream LogStream (symbol string, price float, volume long);
+
+        from StockStream[NOT(symbol is null)]
+        select str:upper(symbol) as symbol, price, volume  
+        insert into LogStream;
+    Mude o valor do parâmetro *file.uri* na aplicação Siddhi acima para o caminho do arquivo *noisy_data.txt.* que você baixou anteriormente.
+3. Salve esse arquivo como *TailFileRegex.siddhi* no diretório *<SI_HOME>/wso2/server/deployment/siddhi-files*    
+
+    **Info**: Essa aplicação Siddhi rastreia o arquivo *noisy_data.txt* para encontrar correspondências de acordo com expressões regulares dadas: *begin.regex* e *end.regex* . Cada correspondência é convertida em um evento no stream *StockStream*. Após isso, uma simples transformação é dada no stream *StockStream* onde o valor para o atributo *symbol* do evento é convertido para caixa alta. Finalmente, o output é logado no console SI.
+
+    Uma vez que a aplicação Siddhi é implantada com sucesso o seguinte log aparecerá no console SI.
+
+        INFO {org.wso2.carbon.streaming.integrator.core.internal.StreamProcessorService} - Siddhi App TailFileRegex deployed successfully
+4. A partir de então a aplicação Siddhi iniciará o processo do arquivo *noisy_data.txt*. Como resultado, o seguinte log aparecerá no console SI:
+
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - TailFileRegex : LogStream : Event{timestamp=1564583307974, data=[WSO2, 75.0, 100], isExpired=false}
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - TailFileRegex : LogStream : Event{timestamp=1564583307975, data=[ORCL, 95.0, 200], isExpired=false}
+5. Agora adicione o seguinte texto para o arquivo *noisy_data.txt* e salve o arquivo.
+
+        IBM <ibm 88 volume 150> 1 New Orchard Rd  Armonk, NY 10504 
+        Phone Number: (914) 499-1900
+        Fax Number: (914) 765-6021 
+6. O seguinte log aparecerá no console SI:
+          
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - TailFileRegex : LogStream : Event{timestamp=1564588585214, data=[IBM, 88.0, 150], isExpired=false}
+
+**Lendo um Arquivo de Texto Remoto e Movendo-o após o Processamento**
+
+Nos cenários anteriores, você rastreou um arquivo e cada arquivo gerou múltiplos eventos. Nesse cenário, você estará lendo o arquivo completo para construir um evento único.
+
+Além disso, para experimentar a capacidade de processamento de arquivos remotos, você estará processando um arquivo remoto invés de um arquivo localizado no seu sistema.
+
+1. Baixe o arquivo *portfolio.txt* [daqui]() e upe-o dentro de um servidor FTP.
+2. Crie um diretório no servidor FTP. O arquivo *portfolio.txt* será movido para essa pasta depois que o processamento for completado.
+3. Abra um arquivo de texto e copie-cole a aplicação Siddhi seguinte nele.
+
+        @App:name('TextFullFileProcessing')
+
+        @App:description('Reads a text file and moves it after processing.')
+
+        @source(type='file', mode='TEXT.FULL',
+          file.uri="ftp://<username>:<password>@<ftp_hostname>:<ftp_port>/Users/foo/portfolio.txt",
+          action.after.process='MOVE', move.after.process="ftp://<username>:<password>@<ftp_hostname>:<ftp_port>/Users/foo/move.after.process", 
+          @map(type='json', enclosing.element="$.portfolio", @attributes(symbol = "stock.company.symbol", price = "stock.price", volume = "stock.volume")))
+        define stream StockStream (symbol string, price float, volume long);
+
+        @sink(type = 'log')
+        define stream LogStream (symbol string, price float, volume long);
+
+        from StockStream
+        select str:upper(symbol) as symbol, price, volume   
+        insert into LogStream;
+    Mude o valor do parâmetro *file.uri* da aplicação Siddhi acima para o caminho do arquivo remoto *portfolio.txt* o qual você subiu no passo anterior. Em adição a isso, mude *move.after.process* para que ele aponte para a pasta remota que você criou. Ao configurar ambos parâmtros acima, mude os valores para os parâmetros *\<username>* *\<password>*, *\<ftp_hostname>*, e *\<ftp_port>*.
+4. Salve esse arquivo como *TextFullFileProcessing.siddhi* no diretório *<SI_HOME>/wso2/server/deployment/siddhi-files*
+
+    **Info**: Essa aplicação Siddhi lê o arquivo remoto *portfolio.txt* completo para criar um evento *StockStream*. Após isso, uma simples transformação é realizado no stream *StockStream* onde o valor para o atributo *symbol* em cada evento é convertido para caixa alta. Finalmente o output é logado no console SI. 
+
+    Uma vez que a aplicação Siddhi é implantada com sucesso, o log a seguir aparecerá no console SI:
+
+        INFO {org.wso2.carbon.streaming.integrator.core.internal.StreamProcessorService} - Siddhi App TextFullFileProcessing deployed successfully
+
+    **Info**: Nesse cenário você moveu o arquivo após processá-lo. Para deletar um arquivo após o processamento, remova os parâmetros *action.after.process* e *move.after.process* da aplicação Siddhi. Para outras opções de configuração, veja [Dcoumentação Siddhi File Source](https://siddhi-io.github.io/siddhi-io-file/api/latest/#file-source).
+
+**Lendo um Arquivo Binário e Movendo-o após Processamento**
+
+Nos cenários passados, você processou arquivos de texto para extrair dados. Nesse cenário, você estará lendo um arquivo binário. O conteúdo do arquivo gerará um evento único.
+
+1. Baixe o arquivo *wso2.bin* [daqui]() e salve-o no local de sua escolha.
+2. Abra um arquivo de texto e copie-cole a aplicação Siddhi seguinte nele.
+
+        @App:name('BinaryFullFileProcessing')
+
+        @App:description('Reads a binary file and moves it after processing.')
+
+        @source(type='file', mode='TEXT.FULL',
+          file.uri='file:/Users/foo/wso2.bin',
+          action.after.process='MOVE', move.after.process='file:/Users/foo/move.after.process', 
+          @map(type='json', enclosing.element="$.portfolio", @attributes(symbol = "stock.company.symbol", price = "stock.price", volume = "stock.volume")))
+        define stream StockStream (symbol string, price float, volume long);
+
+        @sink(type = 'log')
+        define stream LogStream (symbol string, price float, volume long);
+
+        from StockStream
+        select str:upper(symbol) as symbol, price, volume   
+        insert into LogStream;
+    Na aplicação Siddhi acima, mude o valor para o parâmetro *file.uri* para o caminho do arquivo ao qual você baixou o arquivo *wso2.bin* no passo anterior.
+3. Salve esse arquivo como *BinaryFullFileProcessing.siddhi* no diretório *<SI_HOME>/wso2/server/deployment/siddhi-files*
+
+    **Info**: Essa aplicação Siddhi lê o arquivo *wso2.bin* completamente para criar um evento *StockStream*. Após isso, uma simples transformação é carregada para o stream *StockStream* onde o valor para o atributo *symbol* em cada evento é convertido para caixa alta. Finalmente o output é logado no console SI. 
+
+    Uma vez que a aplicação Siddhi é implantada com sucesso, o log a seguir aparecerá no console SI:
+
+        INFO {org.wso2.carbon.streaming.integrator.core.internal.StreamProcessorService} - Siddhi App BinaryFullFileProcessing deployed successfully
+
+4. Agora a aplicação Siddhi inciará o processo do arquivo *wso2.bin*. Como resultado, o seguinte log aparecerá no console SI:
+
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - BinaryFullFileProcessing :  LogStream : Event{timestamp=1564660553623, data=[WSO2, 55.6, 100], isExpired=false} 
+
+**Lendo um Arquivo Linha por Linha e Deletando-o após Processamento**
+
+Nesse cenário você estará lendo um arquivo de texto completamente, e então o deletará após o processamento. Em outras palavras, o arquivo não é fixado. Você lê o arquivo linha por linha onde cada linha gerará um evento.
+
+1. Baixe o arquivo *productions.csv* [daqui](https://github.com/wso2/docs-ei/tree/master/en/streaming-integrator/docs/examples/resources/productions.csv) e salve-o no local de sua escolha.
+2. Abra um arquivo de texto e copie-cole a aplicação Siddhi nele:
+
+        @App:name('ReadFileLineByLine')
+
+        @App:description('Reads a file line by line and does a simple transformation.')
+
+        @source(type='file', mode='LINE',
+          file.uri='file:/Users/foo/productions.csv',
+          tailing='false',
+          @map(type='csv'))
+        define stream SweetProductionStream (name string, amount double);
+
+        @sink(type = 'log')
+        define stream LogStream (name string, amount double);
+
+        from SweetProductionStream
+        select str:upper(name) as name, amount
+        insert into LogStream;
+
+    Mude o valor do parâmetro *file.uri* na aplicação Siddhi acima para o caminho do arquivo *productions.csv* que você baixou no passo anterior.
+3. Salve esse arquivo como *ReadFileLineByLine.siddhi* no diretório *<SI_HOME>/wso2/server/deployment/siddhi-files* . 
+
+    **Info**: Essa aplicação Siddhi verifica o arquivo *productions.csv* linha por linha. Cada linha é convertida em um evento no stream *StockStream* Após isso, uma simples transformação é realizado no stream *StockStream* onde o valor para o atributo *name* em cada evento é convertido para caixa alta. Finalmente o output é logado no console SI. 
+
+    Uma vez que a aplicação Siddhi é implantada com sucesso, o log a seguir aparecerá no console SI:
+
+        INFO {org.wso2.carbon.streaming.integrator.core.internal.StreamProcessorService} - Siddhi App ReadFileLineByLine deployed successfully
+
+4. Agora que a aplicação Siddhi iniciará o processo do arquivo *productions.csv*. O arquivo terá duas entradas:
+
+       Almond cookie,100.0
+       Baked alaska,20.0 
+
+    Como resultado, o log seguinte aparecerá no console SI:
+
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - ReadFileLineByLine : LogStream : Event{timestamp=1564490867341, data=[ALMOND COOKIE, 100.0], isExpired=false}
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - ReadFileLineByLine : LogStream : Event{timestamp=1564490867341, data=[BAKED ALASKA, 20.0], isExpired=false}
+5. Observe que o arquivo *productions.csv* não é apresentado na locação *file.uri*.
+6. Depois, crie um novo arquivo *productions.csv* no local *file.uri* que inclui os últimos set de produções. Baixe o arquivo *productions.csv* [daqui](https://github.com/wso2/docs-ei/tree/master/en/streaming-integrator/docs/examples/resources/productions.csv) e salve-o no local *file.uri* .
+7. Agora que a aplicação Siddhi iniciará a processar o novo set de produção ocorridos no arquivo *productions.csv*. O arquivo terá duas entradas seguintes:
+
+        Cup cake,300.0
+        Doughnut,500.0    
+
+    Como resultado, o seguinte log aparecerá no console SI:
+
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - ReadFileLineByLine : LogStream : Event{timestamp=1564902130543, data=[CUP CAKE, 300.0], isExpired=false}
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - ReadFileLineByLine : LogStream : Event{timestamp=1564902130543, data=[DOUGHNUT, 500.0], isExpired=false}
+
+**Lendo um Arquivo usando uma Expressão Regular e Deletando-o depois do Processamento**
+
+Nesse cenário você estará usando uma expressão regular para extrair dados de um conteúdo do arquivo. Aqui você não fixará o arquivo. Invés disso, você lerá o conteúdo total do arquivo e gerará um evento único. Após isso, o arquivo será deletado. Para gerar um evento de stream, você pode manter-se recriando o arquivo com novos dados.
+
+1. Baixe o arquivo *noisy_data.txt* [daqui](https://github.com/wso2/docs-ei/tree/master/en/streaming-integrator/docs/examples/resources/noisy_data.txt) e salve-o no local de sua escolha.
+2. Abra o arquivo de texto e copie-cole a aplicação Siddhi nele.
+
+        @App:name('ReadFileRegex')
+
+        @App:description('Reads a file using a regex and does a simple transformation.')
+
+        @source(type='file', mode='REGEX',
+          file.uri='file:/Users/foo/noisy_data.txt',
+          begin.regex='\<', end.regex='\>',
+          tailing='false',
+          @map(type='text', fail.on.missing.attribute = 'false', regex.A='(\w+)\s([-0-9]+)',regex.B='volume\s([-0-9]+)', @attributes(symbol = 'A[1]',price = 'A[2]',volume = 'B')))
+        define stream StockStream (symbol string, price float, volume long);
+
+        @sink(type = 'log')
+        define stream LogStream (symbol string, price float, volume long);
+
+        from StockStream[NOT(symbol is null)]
+        select str:upper(symbol) as symbol, price, volume  
+        insert into LogStream;
+
+    Mude o valor do parâmetro *file.uri* na aplicação Siddhi acima para o caminho do arquivo *noisy_data.txt.* que você baixou anteriormente.
+3. Salve esse arquivo como *ReadFileRegex.siddhi* no diretório *<SI_HOME>/wso2/server/deployment/siddhi-files*    
+
+    **Info**: Essa aplicação Siddhi rastreia o arquivo *noisy_data.txt* para encontrar correspondências de acordo com expressões regulares *begin.regex* e *end.regex* . Cada correspondência é convertida em um evento no stream *StockStream*. Após isso, uma simples transformação é dada no stream *StockStream* onde o valor para o atributo *symbol* do evento é convertido para caixa alta. Finalmente, o output é logado no console SI.
+
+    Uma vez que a aplicação Siddhi é implantada com sucesso o seguinte log aparecerá no console SI.
+
+        INFO {org.wso2.carbon.streaming.integrator.core.internal.StreamProcessorService} - Siddhi App ReadFileRegex deployed successfully
+
+4. A partir de então a aplicação Siddhi iniciará o processo do arquivo *noisy_data.txt*. Como resultado, o seguinte log aparecerá no console SI:
+
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - ReadFileRegex : LogStream : Event{timestamp=1564906475623, data=[WSO2, 75.0, 100], isExpired=false}
+
+    Observe que o arquivo *noisy_data.txt* não é apresentado na locação *file.uri*.
+    
+5. Depois, crie um novo arquivo *noisy_data.txt* na locação *file.uri* que inclui os últimos set de produções. Baixe o arquivo *noisy_data.txt* [daqui](https://github.com/wso2/docs-ei/tree/master/en/streaming-integrator/docs/examples/resources/noisy_data.txt) e salve-o na locação *file.uri* .
+
+    Agora que a aplicação Siddhi iniciará a processar o novo set de produção ocorridos no arquivo *productions.csv*. O arquivo terá duas entradas seguintes:
+
+        Oracle Corporation <orcl 95 volume 200> 500 Oracle Parkway.
+        Redwood Shores CA, 94065.
+        Corporate Phone: 650.506.7000.
+        HQ-Security: 650.506.5555    
+
+    Como resultado, o seguinte log aparecerá no console SI:
+
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - ReadFileRegex : LogStream : Event{timestamp=1564906713176, data=[ORCL, 95.0, 200], isExpired=false}
+
+#### Extraindo Dados de uma Pasta
+**Processando Todos Arquivos de uma Pasta**
+
+Nesse cenário, você extrairá dados de uma pasta especificada. Todos os arquivos serão processados sequencialmente, onde cada arquivo gerará um evento único.
+
+1. Baixe o arquivo *productions.zip* [daqui](https://github.com/wso2/docs-ei/tree/master/en/streaming-integrator/docs/examples/resources/productions.zip) e extraia-o. Agora você terá uma pasta chamada *productions*. Coloque-a no local de sua escolha.
+2. Abra um arquivo de texto e copie-cole a aplicação Siddhi nele:
+
+        @App:name('ProcessFolder')
+
+        @App:description('Process all files in the folder and delete files after processing.')
+
+        @source(type='file', mode='text.full',
+          dir.uri='file:/Users/foo/productions',  
+          @map(type='json', enclosing.element="$.portfolio", @attributes(symbol = "stock.company.symbol", price = "stock.price", volume = "stock.volume")))
+        define stream StockStream (symbol string, price float, volume long);
+
+        @sink(type = 'log')
+        define stream LogStream (symbol string, price float, volume long);
+
+        from StockStream
+        select str:upper(symbol) as symbol, price, volume    
+        insert into LogStream;
+
+
+    Mude o valor do parâmetro *dir.uri* na aplicação Siddhi acima para o caminho da pasta *productions* que você baixou anteriormente.
+3. Salve esse arquivo como *ProcessFolder.siddhi* no diretório *<SI_HOME>/wso2/server/deployment/siddhi-files*    
+
+    **Info**: Essa aplicação Siddhi processa cada arquivo na pasta *productions* . Cada arquivo gera um evento no stream *StockStream*. Após isso, uma simples transformação é dada no stream *StockStream* onde o valor para o atributo *symbol* do evento é convertido para caixa alta. Finalmente, o output é logado no console SI.
+
+    Uma vez que a aplicação Siddhi é implantada com sucesso o seguinte log aparecerá no console SI.
+
+        INFO {org.wso2.carbon.streaming.integrator.core.internal.StreamProcessorService} - Siddhi App ProcessFolder deployed successfully
+
+4. A partir de então a aplicação Siddhi iniciará o processo de cada arquivo no diretório *productions*. Como resultado, o seguinte log aparecerá no console SI:
+
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - ProcessFolder : LogStream : Event{timestamp=1564932255417, data=[WSO2, 75.0, 100], isExpired=false}
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - ProcessFolder : LogStream : Event{timestamp=1564932255417, data=[ORCL, 95.0, 200], isExpired=false}
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - ProcessFolder : LogStream : Event{timestamp=1564932255417, data=[IBM, 88.0, 150], isExpired=false}
+
+    **Info**: Nesse cenário, você deletou cada arquivo na pasta após processá-los. Você pode escolher mover os arquivos invés de deletá-los. Para fazer isso, configure o parâmetros *action.after.process* para *MOVE* e especifique o diretório ao qual os arquivos devem ser movidos via parâmetro *move.after.process*. Para mais informações sobre esses parâmetros, veja [Documentação Siddhi File Source](https://siddhi-io.github.io/siddhi-io-file/api/latest/#file-source).
+
+#### Carregando Dados para dentro de um Arquivo
+Nessa seção do tutorial, você estará explorando maneiras diferentes na qual você poderá carregar dados para dentro de um arquivo.
+
+**Adicionando ou Sobrescrevendo Eventos para um Arquivo**
+
+Nesse cenário, você estará adicionando um stream de eventos para o fim de um arquivo.
+
+1. Abra um arquivo de texto e copie-cole a aplicação Siddhi seguinte nele.
+
+        @App:name('AppendToFile')
+
+        @App:description('Append incoming events in to a file.')
+
+        @Source(type = 'http', receiver.url='http://localhost:8006/SweetProductionStream', basic.auth.enabled='false',
+        @map(type='json'))
+        define stream SweetProductionStream (name string, amount double);
+
+        @sink(type='file', @map(type='json'), file.uri='/Users/foo/low_productions.txt')
+        define stream LowProductionStream (name string, amount double);
+
+        -- Query to filter productions which have amount < 500.0
+        @info(name='query1') 
+        from SweetProductionStream[amount < 500.0]
+        select *
+        insert into LowProductionStream;  
+
+    Crie um arquivo vazio e especifique a localização do arquivo como o valor para o parâmetro *file.uri*. Se esse arquivo não existir, ele será criado na execução.
+2. Salve esse arquivo como *AppendToFile.siddhi* no diretório *<SI_HOME>/wso2/server/deployment/siddhi-files*
+
+    **Info**: A aplicação Siddhi filtra os eventos *SweetProductionStream* recebidos, seleciona as produções correntes dos quais os valores para o atributo *amoutn* é menor do que *500.0* e insere o resultado dentro do *LowProductionStream* . Finalmente, todos os eventos nos eventos de LowProductionStream estão anexados ao arquivo especificado via o parâmetro *file.uri* na aplicação Siddhi.
+
+    Uma vez que a aplicação Siddhi foi implantada com sucesso, o log seguinte aparecerá no console SI:
+
+        INFO {org.wso2.carbon.streaming.integrator.core.internal.StreamProcessorService} - Siddhi App AppendToFile deployed successfully
+3. Para inserir uns poucos eventos dentro de SweetProductionStream, vamos emitir os seguintes comandos CURL:
+
+        curl -X POST -d "{\"event\": {\"name\":\"Almond cookie\",\"amount\": 100.0}}"  http://localhost:8006/SweetProductionStream --header "Content-Type:application/json"
+
+        curl -X POST -d "{\"event\": {\"name\":\"Baked alaska\",\"amount\": 20.0}}"  http://localhost:8006/SweetProductionStream --header "Content-Type:application/json"
+
+        curl -X POST -d "{\"event\": {\"name\":\"Cup cake\",\"amount\": 300.0}}"  http://localhost:8006/SweetProductionStream --header "Content-Type:application/json"
+
+
+4. Agora abra o arquivo que você especificou via o parâmetro *file.uri*. Perceba que o arquivo tem o seguinte conteúdo.
+
+        {"event":{"name":"Almond cookie","amount":100.0}}
+        {"event":{"name":"Baked alaska","amount":20.0}}
+        {"event":{"name":"Cup cake","amount":300.0}}
+
+    **Info**: Invés de anexar cada evento ao fim do arquivo, você pode configurar sua aplicação Siddhi para sobrescrever o arquivo. Para fazer isso, defina a configuração *append='false'* na aplicação Siddhi como mostrado na configuração sink do exemplo *file*.
+
+        @sink(type='file', append='false',  @map(type='json'), file.uri='/Users/foo/low_productions.txt')
+        define stream LowProductionAlertStream (name string, amount double);
+    Para outras opções de configuração, veja a [Documentação Siddhi File Sink](https://siddhi-io.github.io/siddhi-io-file/api/latest/#file-sink).
+
+**Preservando Estado da Aplicação Apesar de uma Falha do Sistema**
+
+Vamos experimentar um cenário ao qual você vai subir uma aplicação Siddhi para contar o número total de produções de uma fábrica de doces.
+
+Os dados de produção são atualizados no arquivo e portanto você tem que manter o acompanhamento desse arquivo para receber atualizações sobre as produções.
+
+**Info**: Nesse cenário, o servidor SI precisa lembrar a contagem atual apesar de falhas no sistema para que quando o sistema for restaurado, a contagem não resete a zero. Para conseguir isso, você pode usar a capacidade de persistência de estado no Streaming Integrator.
+
+1. Habilite a ferramenta de persistência de estado no servidor SI. Abra o arquivo *<SI_HOME>/conf/server/deployment.yaml* no editor de texto e localize a seção *state.persistence* .
+      
+            # Periodic Persistence Configuration
+        state.persistence:
+          enabled: true
+          intervalInMin: 1
+          revisionsToKeep: 2
+          persistenceStore: org.wso2.carbon.streaming.integrator.core.persistence.FileSystemPersistenceStore
+          config:
+            location: siddhi-app-persistence
+    
+    Ponha o parâmetro *enabled* para *true* e salve o arquivo.
+
+2. Habilite os logs de debug de persistência de estado. Abra o arquivo *<SI_HOME>/conf/server/log4j2.xml* no editor de texto e localize a seguinte linha nele.
+
+        <Logger name="com.zaxxer.hikari" level="error"/> 
+
+    Adicione o elemento *\<Logger>* abaixo dele.
+
+        <Logger name="org.wso2.carbon.streaming.integrator.core.persistence" level="debug"/>
+
+    Salve o arquivo.
+3. Reinicie o servidor Streaming Integrator para a mudança acima ser efetivada.
+4. Baixe o arquivo *productions.csv* [daqui](https://github.com/wso2/docs-ei/tree/master/en/streaming-integrator/docs/examples/resources/productions.csv) e salve no local de sua escolha.
+5. Abra um arquivo de texto e copie-cole a aplicação Siddhi seguinte nele.
+
+        @App:name('CountProductions')
+
+        @App:description('Siddhi application to count the total number of orders.')
+
+        @source(type='file', mode='LINE',
+          file.uri='file:/Users/foo/productions.csv',
+          tailing='true',
+          @map(type='csv'))
+        define stream SweetProductionStream (name string, amount double);
+
+        @sink(type = 'log')
+        define stream LogStream (totalProductions double);
+
+        -- Following query counts the number of sweet productions.
+        @info(name = 'query')
+        from SweetProductionStream
+        select sum(amount) as totalProductions
+        insert into LogStream;
+    Mude o parâmetro *file.uri* na aplicação Siddhi acima para o caminho do arquivo para o qual você baixou o arquivo *productions.csv* . 
+6. Salve o arquivo como *CountProductions.siddhi* no diretório *<SI_HOME>/wso2/server/deployment/siddhi-files*. 
+  
+   **Info**: Essa aplicação Siddhi verifica o arquivo *productions.csv* linha por linha. Cada linha é convertida em um evento no stream *SweetProductionStream* Após isso, uma simples transformação é mandada para o controle de produção de doces. A transformação envolve a conversão do valor para o atributo *name*  para caixa alta. Finalmente o output é logado no console SI. 
+   
+   Quando a aplicação Siddhi for implantada com sucesso, o seguinte log *INFO* aparecerá no console do Streaming Integrator.
+
+        INFO {org.wso2.carbon.streaming.integrator.core.internal.StreamProcessorService} - Siddhi App CountProductions deployed successfully
+7. Agora a aplicação Siddhi iniciará o processamento do arquivo *productions.csv*. O arquivo tem duas entradas:
+        
+        Almond cookie,100.0
+        Baked alaska,20.0
+    
+    Agora vocẽ poderá ver os seguintes logs no console SI.
+
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - CountProductions : LogStream : Event{timestamp=1565097506866, data=[100.0], isExpired=false}
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - CountProductions : LogStream : Event{timestamp=1565097506866, data=[120.0], isExpired=false}
+
+    Esses logs imprimem a contagem de produção de doces. Observe que a atual contagem de produção de doces está sendo impressa como 120 no segundo log. Isso é porque a fábrica tem produzido até então 120 doces: 100 Almond cookies e 20 Baked alaskas.
+8. Agora espere para o seguinte log aparecer no console SI.
+
+        DEBUG {org.wso2.carbon.streaming.integrator.core.persistence.FileSystemPersistenceStore} - Periodic persistence of CountProductions persisted successfully
+
+    Esse log indica que o estado atual da aplicação Siddhi persistiu com sucesso. O estado da aplicação Siddhi persiste a cada minuto. Logo, você pode ver o log aparecendo a cada minuto.
+
+    Depois, vamos inserir duas produções de doces dentro do arquivo *productions.csv* e fechar o servidor SI antes que o estado de persistência aconteça (em outras palavras, antes que o log acima apareça).
+
+    **Dica**: É melhor começar inserindo os registros imediatamente após o log do estado de persistência aparecer, para que vocẽ tenha tempo o bastante para mandar mensagens e fechar o servidor antes que o próximo log apareça.
+9. Agora anexe o seguinte conteúdo no arquivo *productions.csv* :
+
+        Croissant,100.0
+        Croutons,100.0
+
+10. Feche o servidor SI. Aqui você estará criando deliberadamente um cenário onde o servidor tem problema antes que o servidor SI possa persistir na contagem da última produção.
+
+    **Info**: Aqui, o servidor SI é interrompido antes que o estado seja persistido. Logo, o servidor SI não pode persistir na última contagem (o que deve incluir as duas últimas produções '100 Croissants' e '100 Croutons'). As boas notícias é que o *File source* reproduz as duas últimas mensagens, permitindo o Streaming Integrator recupera com sucesso o servidor após a interrupção.
+11. Reinicie o servidor SI e espere aproximadamente por um minuto.
+12. O seguinte log aparecerá no console SI:
+
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - CountProductions : LogStream : Event{timestamp=1565097846807, data=[220.0], isExpired=false}
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - CountProductions : LogStream : Event{timestamp=1565097846812, data=[320.0], isExpired=false}
+
+    Observe que o *File source* reproduziu as duas últimas mensagens. Como resultado, a contagem da produção de doces foi restaurada corretamente.
+
+- [Índice](#documentação-api-manager-410)
+
 ### Criando uma Aplicação ETL via SI Tooling
+#### Introdução
+ETL (Extract, Transform, Load) é uma forma de processamento de dados que involve a realização das seguintes funções na dada ordem:
+- **Extract**: Obter dados inseridos de uma fonte específica como um arquivo ou banco de dados.
+- **Transform**: Converter o dado obtido para uma forma diferente.
+- **Load**: Escrever o dado extraído e transformado para dentro de outro destino.
+
+Tutoriais como [Performando ETL Em Tempo Real com Arquivos](https://apim.docs.wso2.com/en/4.1.0/use-cases/streaming-tutorials/performing-real-time-etl-with-files) e [Performando ETL em Tempo Real com MySQL](https://apim.docs.wso2.com/en/4.1.0/use-cases/streaming-tutorials/performing-real-time-etl-with-mysql) mostram como o WSO2 Streaming Integrator pode realizar ETL para transmissão de dados ao escrever e implementar aplicações Siddhi com funcionalidade ELT. Se você precisa criar tal aplicação Siddhi sem escrever código, você pode utilizar o ETL Flow wizard no Streaming Integrator Tooling.
+
+Nesse tutorial, vamos criar a mesma aplicação Siddhi criada em [Performando ETL em Tempo Real com MySQL](https://apim.docs.wso2.com/en/4.1.0/use-cases/streaming-tutorials/performing-real-time-etl-with-mysql), utilizando o Streaming Integrator Tooling.
+
+**Antes de Começar**
+- Você precisa ter acesso a uma instância MySQL. 
+- Permita registração binária no servidor MySQL. Para instruções detalhadas, veja [Documentação Debezium - Permitindo o Binlog](https://debezium.io/docs/connectors/mysql/#enabling-the-binlog). 
+ 
+  **Info**: Se você estiver usando MySQL 8.0, use o seguinte query para checar o status binlog.
+        
+      SELECT variable_value as "BINARY LOGGING STATUS (log-bin) ::" FROM performance_schema.global_variables WHERE variable_name='log_bin'; 
+- Adicione o driver MySQL JDBC no diretório *<SI_HOME>/lib* :
+  1. Baixe o driver MySQL JDBC do [site MySQL](https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.45.tar.gz).
+  2. Unzipe o arquivo.
+  3. Copie o *mysql-connector-java-5.1.45-bin.jar* para o diretório *<SI_HOME>/lib* .
+  4. Inicie o servidor SI emitindo o comando apropriado baseado em seu sistema operacional.
+     - Para Windows: server.bat --run
+     - Para Linux: sh server.sh 
+- Uma vez que você instalou o MySQL e iniciou o servidor MySQL, crie o database e a tabela database que você necessita:
+  1. Vamos criar um novo banco de dados no servidor MySQL o qual você usará por todo esse tutorial. Para fazer isso execute o seguinte query.
+           
+          CREATE SCHEMA production;  
+  2. Crie um novo usuário ao executar o seguinte SQL query.
+
+          GRANT SELECT, RELOAD, SHOW DATABASES, REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO 'wso2si' IDENTIFIED BY 'wso2';
+  3. Mude para o database *production* e crie uma nova tabela ao executar os seguintes queries.
+
+          use production;
+          
+          CREATE TABLE SweetProductionTable (name VARCHAR(20),amount double(10,2));
+- Baixe o arquivo *productions.csv* [daqui](https://github.com/wso2/docs-ei/tree/master/en/streaming-integrator/docs/examples/resources/productions.csv) e salve em um local de sua escolha (ex: no */Users/foo*).
+- Baixe e instale [Streaming Integrator Tooling](https://wso2.com/integration/streaming-integrator/#)
+- Baixe e instale a extensão [siddhi-io-cdc](https://siddhi-io.github.io/siddhi-io-cdc/). Para instruções, leia [Baixando e Instalando Conectores Siddhi](https://apim.docs.wso2.com/en/4.1.0/reference/streaming-connectors/downloading-and-installing-siddhi-extensions/).
+
+#### Passo 1: Desenhe a aplicação Siddhi com Funcionalidade ETL
+Para desenhar uma aplicação Siddhi com funcionalidade ETL via Streamint Integrator Tooling siga os passos abaixo:
+
+1. Inicie o Streaming Integrator Tooling ao navegar até o diretório <SI_TOOLING_HOME>/bin e emitindo um dos seguintes comandos apropriados para o seu sistema operacional:
+   - Para Windows: tooling.bat
+   - Para Linux: ./tooling.sh
+ 
+    Então acesse o Streaming Integrator Tooling via a URL que aparecerá no registro de inicialização com o texto *Editor Started on:* .
+2. Na tela de boas vindas, clique em **New ETL Flow**. ![tsi5-1](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/create-etl-application-via-tooling/open-new-etl-flow.png) Isso abrirá o ajudante para criar os fluxos de tarefa ETL como segue. ![tsi5-2](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/create-etl-application-via-tooling/etl-task-flow.png)
+3. Mude o nome do fluxo de tarefa ETL de *UntitledETLTaskFlow* para *SweetFactoryETLTaskFlow*.
+4. Em **Step 1 Configure Source**, insira as informações relacionadas ao data source como segue:
+   1. Sob **Transport Properties**, selecione **CDC** como a source. Então insira valores para as propriedades relacionadas ao CDC source como segue: ![tsi5-3](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/create-etl-application-via-tooling/source-transport-properties.png)
+
+      Property|Value
+      :-:|:-:|
+      url|jdbc:mysql://localhost:3306/production
+      username |	wso2si
+      password 	wso2
+      table.name |	SweetProductionTable
+      operation |	insert
+
+    Depois clique em **Next**.
+    
+    2. Na seção **Configure Schema**, faça o seguinte para definir o esquema de eventos você espera receber como dado inserido:
+       1. Clique no (✓) para o parâmetro **Add log sink for testing**.
+       2. Sob **Enter input stream name**, insira *InsertSweetProductionsStream*. Então adicione dois atributos como segue: ![tsi5-4](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/create-etl-application-via-tooling/configure-schema.png)
+       3. Mova o cursor sobre o sinal (+) próximo ao **input stream attributes** e selecione **STRING**. Como resultado, uma nova linha é criada para o atributo. Insira *name* como o nome do atributo.
+       4. Mova o cursor sobre o sinal (+) novamente, então selecione **DOUBLE**. Então insira *amount* como nome do atributo.
+       5. CLique em **Next**.
+    3. Na seção **Configure Input Mapping**, selecione **keyvalue** como o tipo de mapeador de fonte. ![tsi5-5](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/create-etl-application-via-tooling/select-source-mapper-type.png)
+    
+        Depois clique em **Next**. 
+5. Nesse cenário vamos fazer uma simples conversão onde os nomes que são recebidos com letras minúsculas são convertidos para letras maiúsculas quando eles são publicados.
+6. No **Step 3 Configure Destination**, insira a informação de como você quer que o output seja publicado. Nesse cenário, vamos publicar o output em um arquivo CSV chamado *productioninserts.csv* .
+   1. Sob **Transport Properties**, selecione **file** como sink type. Então insira o caminho para o arquivo *productioninserts.csv.* que você salvou como um arquivo CSV vazio (nesse exemplo, */Users/foo/productioninserts.csv*) ![tsi5-6](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/create-etl-application-via-tooling/sink-transport-properties.png)
+    
+      Depois clique em **Next**. 
+   
+   2. Na seção **Configure Schema**, insira a informação como segue para criar um stream output que define o esquema dos eventos de saída. ![tsi5-7](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/create-etl-application-via-tooling/configure-output-event-schema.png)
+      
+      1. Clique no (✓) para o parâmetro **Add log sink for testing** para que registre os eventos de output no console.
+      2. Sob **Enter output stream name**, insira *ProductionUpdatesStream* .
+      3. Mova o cursor sob o sinal (+) próximo ao **output stream attributes** e selecione **STRING**. Como resultado, uma nova linha é criada para o atributo. Insira *name* como o nome do atributo.
+      4. Mova o cursor sobre o sinal (+) novamente, então selecione **DOUBLE**. Então insira *amount* como nome do atributo.
+       5. CLique em **Next**.
+    3. Na seção **Configure Output Mapping** selecione **text** como o tipo de mapeador sink. ![tsi5-8](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/create-etl-application-via-tooling/configure-output-mapping.png)
+
+        Depois clique em **Next**.
+7. No **Step 4 Process Output Data**, mova o cursor sobre o sinal (+) sob **Group Output by Fields**, então clique em **name**. Esse grupo contém os eventos de output pelo nome do produto. ![tsi5-9](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/create-etl-application-via-tooling/group-by.png)
+   
+   Depois clique em **Next**. 
+8. No **Step 5 Data Mapping**, siga o procedimento abaixo para realizar as configurações requeridas para que a transformação dos dados seja feita pela sua aplicação Siddhi ETL.
+   1. Clique no seguinte botão para mapear todos os atributos. ![tsi5-10](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/create-etl-application-via-tooling/select-atributes.png). 
+      
+      Como resultado, os atributos no input stream e output stream serão unidos pelas linhas como mostrado abaixo.
+      ![tsi5-11](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/create-etl-application-via-tooling/matched-attributes.png)
+
+      Isso indica que o valor para cada atributo input é direcionado para o output stream sem qualquer mais processo para ser publicado. Entretanto, para isso você precisa fazer uma simples conversão para o atributo *name*. Logo, remova a correspondência para esse atributo clicando no ícone seguinte para ele sob **Output Attributes**. Mova o cursor para a direita do atributo para fazer com que esse ícone apareça. ![tsi5-12](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/create-etl-application-via-tooling/remove-matching.png)
+    2. Clique em **name** sob **Output Attributes**. ![tsi5-13](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/create-etl-application-via-tooling/select-name-attribute.png)
+        
+        Isso abrirá uma caixa de diálogo chamada **Create expressiona for name of ProductionUpdatesStream**.
+    3. Na caixa de diálogo **Create expression for name of ProductionUpdatesStream**, clique em **Function**. Desça até encontrar a função **str.upper**, então clique nela para selecioná-la. ![tsi5-14](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/create-etl-application-via-tooling/select-function.png)
+
+        Uma vez selecionada a função, ela será mostrada como segue. Clique na função selecionada novamente. ![tsi5-15](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/create-etl-application-via-tooling/click-selected-function.png)
+    4. Quando a função for adicionada como mostrado abaixo, clique nela novamente. ![tsi5-16](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/create-etl-application-via-tooling/configure-function-parameters.png)
+    
+        Outra barra aparecerá abaixo da função selecionada com a expressão da função no modo clicável entre os colchetes.
+    5. Para especificar o atributo ao qual a função deve ser aplicada, clique nos pontos entre os colchetes. ![tsi5-17](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/create-etl-application-via-tooling/select-attribute-for-function.png)
+    6. Clique no atributo **name** para selecioná-lo como atributo ao qual a função se aplica. ![tsi5-18](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/create-etl-application-via-tooling/select-attribute.png)
+    7. Uma vez que o atributo *name* está selecionado e mostrado, clique na seta apontando para cima à direita do atributo. Isso adicionará o atributo *name* para a expressão da função. ![tsi5-19](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/create-etl-application-via-tooling/add-attribute-to-function-expression.png)
+    8. Uma vez que a função está sendo mostrada com a expressão e o atributo, clique na seta apontada para cima à direita dela. Isso completará a configuração da função. ![tsi5-20](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/create-etl-application-via-tooling/complete-function-configuration.png)
+    9. Cliquem em **Submit**.
+       
+       Agora tanto o atributo aparece correspondido novamente quanto a expressão da função é mostrada para o atributo **name**. ![tsi5-21](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/create-etl-application-via-tooling/joined-attributes.png)
+    10. Clique em **Save**.
+9. No **Step 6 Finalize**, implante a aplicação Siddhi que você acabou de completar clicando em **Deploy to Worker**. ![tsi5-22](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/create-etl-application-via-tooling/deploy-etl-app-to-worker.png)
+      
+      Isso abrirá a caixa de diálogo **Deploy Siddhi Apps to Server**.
+      
+      1. Na seção **Add New Server**, insira o host, porta, nome de usuário e a senha de seu servidor Streaming Integrator como mostrado abaixo. Adicione um Novo Servidor. Então clique em **Add**.
+      2. Na seção **Siddhi Apps to Deploy**, marque a caixa de seleção para a aplicação **SweetFactoryETLTaskFlow.siddhi**. Na seção **Servers**, marque a caixa de seleção para o servidor que você adicionou. Então clique em **Deploy**. ![tsi5-23](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/create-etl-application-via-tooling/select-siddhi-app-and-server.png) A seguinte mensagem aparecerá na caixa de diálogo **Deploy Siddhi Apps to Server**.
+      
+              SweetFactoryETLTaskFlow.siddhi was successfully deployed to 0.0.0.0:9444 
+
+#### Passo 2: Teste a Aplicação Siddhi
+Para testar a aplicação Siddhi, insira um registro para a tabela MySQL *SweetProductionTable* ao emitir o seguinte comando em seu console MySQL:
+
+    INFO {org.wso2.siddhi.core.stream.output.sink.LogSink} - CDCWithListeningMode : logStream : Event{timestamp=1563200225948, data=[chocolate, 100.0], isExpired=false}
+
+O seguinte log aparecerá no console Streaming Integrator.
+
+    INFO {org.wso2.siddhi.core.stream.output.sink.LogSink} - CDCWithListeningMode : logStream : Event{timestamp=1563200225948, data=[chocolate, 100.0], isExpired=false}
+
+Se você abrir o arquivo /Users/foo/productions.csv, o registro *Chocolate, 100.0* é mostrado como abaixo. ![tsi5-24](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/create-etl-application-via-tooling/updated-file.png)
+
+**E depois?**
+
+Uma vez que você desenvolveu uma aplicação ELT, você pode precisar realizar as seguintes tarefas:
+
+- **Error Handling**: Para entender como lidar com erros que possam ocorrer quando executa operações ELT, tente o [Tutorial de Gerenciamente de Dados Streaming com Erros](https://apim.docs.wso2.com/en/4.1.0/use-cases/streaming-tutorials/handling-requests-with-errors).
+- **Monitoring ETL Statistics**: Para instruções em como montar um dashboard pré configurado oferecido com WSO2 Streaming Integrator e visualizar estatísticas relacionadas a seu ELT, veja [Monitorando Estatísticas ETL com Grafana](https://apim.docs.wso2.com/en/4.1.0/observe/streaming-integrator/viewing-etl-flows).
+
+- [Índice](#documentação-api-manager-410)
+
 ### Trabalhando com Kafka
+#### Introdução
+O Streaming Integrator pode consumir de um tópico Kafka tão bem quanto publicar em um tópico Kafka em um modo transmissão.
+
+Esse tutorial levará você através do consumo de um tópico Kafka, processamento de mensagens, e finalmente, publicando output para um tópico Kafka.
+
+**Antes de Começar**
+
+  Prepare o servidor para consumir de ou para publicar em Kafka, siga os passos abaixo:
+
+  1. Baixe o Kafka broker do [site Apache](https://www.apache.org/dyn/closer.cgi?path=/kafka/2.3.0/kafka_2.12-2.3.0.tgz) e o extraia. Daqui para frente, esse diretório será referido como *<KAFKA_HOME>* .
+  2. Crie um diretório chamado *source* em um local de preferência em sua máquina e copie os seguintes JARs para ela do diretório *<KAFKA_HOME>/libs* .
+     - kafka_2.12-2.3.0.jar
+     - kafka-clients-2.3.0.jar
+     - metrics-core-2.2.0.jar
+     - scala-library-2.12.8.jar
+     - zkclient-0.11.jar
+     - zookeeper-3.4.14.jar
+ 3. Crie um outro diretório chamado *destination* em um local de preferência em sua máquina.
+ 4. Converta os Kafka JARS que você copiou para o diretório *source*, emita o seguinte comando:
+ 
+        sh <SI_HOME>/bin/jartobundle.sh <{source}_Directory_Path> <{destination}_Directory_Path> 
+ 5. Copie todos os JARs do diretório *destination* para o diretório *<SI_HOME>/lib* .
+
+#### Consumindo Dados de Kafka
+**Passo 1: Inicie o Kafka**
+  1. Navegue até o diretório <KAFKA_HOME> e inicie um node zookeeper ao emitir o seguinte comando.
+
+          sh bin/zookeeper-server-start.sh config/zookeeper.properties
+  2. Navegue até o diretório <KAFKA_HOME> e inicie o servidor node Kafka ao emitir o seguinte comando
+
+          sh bin/kafka-server-start.sh config/server.properties
+
+**Passo 2: Inicie o Streaming Integrator**
+
+  Navegue até o diretório <SI_HOME>/bin e emita o seguinte comando.
+        
+    sh server.sh
+
+O seguinte log aparecerá no console SI quando o servidor for iniciado com sucesso
+
+    INFO {org.wso2.carbon.kernel.internal.CarbonStartupHandler} - WSO2 Streaming Integrator started in 4.240 sec
+
+**Passo 3: Consuma de um Kafka Topic**
+
+  Vamos criar uma aplicação básica Siddhi para consumir mensagens de um Kafka topic.
+
+  1. Abra um arquivo de texto e copie-cole a aplicação Siddhi nele.
+
+          @App:name("HelloKafka")
+
+          @App:description('Consume events from a Kafka Topic and log the messages on the console.')
+
+          @source(type='kafka',
+            topic.list='productions',
+            threading.option='single.thread',
+            group.id="group1",
+            bootstrap.servers='localhost:9092',
+            @map(type='json'))
+          define stream SweetProductionStream (name string, amount double);
+
+          @sink(type='log')
+          define stream OutputStream (name string, amount double);
+
+          -- Query to transform the name to upper case.
+          from SweetProductionStream
+          select str:upper(name) as name, amount
+          insert into OutputStream;
+
+  2. Salve esse arquivo como *HelloKafka.siddhi* no diretório *<SI_HOME>/wso2/server/deployment/siddhi-files* . O seguinte log aparecerá no console SI:
+   
+          INFO {org.wso2.carbon.streaming.integrator.core.internal.StreamProcessorService} - Siddhi App HelloKafka deployed successfully
+
+  **Info**: Você acabou de criar uma aplicação Siddhi que ouvirá um Kafka topic chamado *productions* e registrará qualquer mensagem recebida. Quando registrado, o atributo nome da mensagem é convertido para caixa alta. Entretanto, você ainda não terá criado esse Kafka topic ou publicado qualquer mensagem nele. Para fazer isso, prossiga para o próximo passo.
+
+  3. Gere alguma mensagens Kafka que o Streaming Integrator possa receber para seguir o procedimento abaixo:
+     1. Crie um tópico chamado *productions* no servidor Kafka. Para fazer isso, navegue para *<KAFKA_HOME>* e execute o seguinte comando:
+     
+            bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic productions   
+     2. Rode a linha de comando cliente Kafka para mandar algumas mensagens para o servidor Kafka.
+     
+            bin/kafka-console-producer.sh --broker-list localhost:9092 --topic productions   
+     3. Você está apto a digitar mensagens no console. Digite a seguinte no comando prompt:
+             
+            {"event":{ "name":"Almond cookie", "amount":100.0}}  
+        Isso empurrará uma mensagem ao Kafka Server. Então, a aplicação Siddhi implantada no Streaming Integrator consumirá essa mensagem. Como resultado, o log do Streaming Integrator mostrará o seguinte:
+
+            ```
+            INFO {io.siddhi.core.stream.output.sink.LogSink} - HelloKafka : OutputStream : Event{timestamp=1562069868006, data=[ALMOND COOKIE, 100.0], isExpired=false}
+            ``` 
+
+        Você pode perceber que a mensagem output tem um nome em caixa alta: *ALMOND COOKIE*. Isso é por causa da simples transformação de mensagem feita na aplicação Siddhi.
+
+**Passo 4: Consuma Mensagens Kafka com um Offset**
+
+Anteriormente, você consumiu mensagens do tópico *productions* sem especificar um offset. Em outras palavras, o offset Kafka era zero. Nessa seção, invés de consumir com o offset em zero, você especificará um valor de offset e consumirá mensagens desse offset daqui pra frente.
+
+Para esse propósito, você pode configurar o parâmetro *topic.offsets.map*. Vamos modificar nossa aplicação Siddhi anterior para especificar um valor de offset. Especifique um valor de offset 2 para que a aplicação Siddhi consuma mensagens com index 2 e acima.
+
+1. Abra o arquivo <SI_HOME>/wso2/server/deployment/siddhi-files/HelloKafka.siddhi e adicione a nova configuração de parâmetro a seguir.
+
+        topic.offsets.map='productions=2'
+
+    A aplicação Siddhi completa ficará assim.
+
+        @App:name("HelloKafka")
+
+        @App:description('Consume events from a Kafka Topic and log the messages on the console.')
+
+        @source(type='kafka',
+          topic.list='productions',
+          threading.option='single.thread',
+          group.id="group1",
+          bootstrap.servers='localhost:9092',
+          topic.offsets.map='productions=2',
+          @map(type='json'))
+        define stream SweetProductionStream (name string, amount double);
+
+        @sink(type='log')
+        define stream OutputStream (name string, amount double);
+
+        from SweetProductionStream
+        select str:upper(name) as name, amount
+        insert into OutputStream;
+
+2. Salve o arquivo.
+3. Mande a seguinte mensagem para o servidor Kafka.
+
+        {"event":{ "name":"Baked alaska", "amount":20.0}}
+
+    Observe que essa é a segunda mensagem que você mandou (carregando o index 1), logo não será consumida pelo Streaming Integrator.
+4. Vamos enviar outra mensagem (carregando o index 2) para o servidor Kafka.
+
+        {"event":{ "name":"Cup cake", "amount":300.0}}
+    A mensagem de log a seguir aparecerá no console do Streaming Integrator Studio.
+
+        ```
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - HelloKafka : OutputStream : Event{timestamp=1562676477785, data=[CUP CAKE, 300.0], isExpired=false}
+        ```
+    Como você configurou sua aplicação Siddhi para consumir mensagens com o offset 2, todas mensagens portando index 2 ou acima serão consumidas.
+
+**Passo 5: Adicione mais Consumidores ao Grupo de Consumidores**
+
+Em nossa aplicação Siddhi *HelloKafka*, observe o parâmetro *group_id*. Esse parâmetro define o grupo de consumidores Kafka.
+
+Vamos adicionar outra aplicação Siddhi *HelloKafka_2* , para adicionar outro consumidor Kafka para o mesmo grupo de consumidores.
+
+1. Abra um arquivo de texto e copie-cole a aplicação Siddhi seguinte nele.
+
+        @App:name("HelloKafka_2")
+
+        @App:description('Consume events from a Kafka Topic and log the messages on the console.')
+
+        @source(type='kafka',
+          topic.list='productions',
+          threading.option='single.thread',
+          group.id="group1",
+          bootstrap.servers='localhost:9092',
+          @map(type='json'))        
+        define stream SweetProductionStream (name string, amount double);
+
+        @sink(type='log')
+        define stream OutputStream (name string, amount double);
+
+        from SweetProductionStream
+        select str:upper(name) as name, amount   
+        insert into OutputStream;
+2. Salve esse arquivo como *HelloKafka_2.siddhi* no diretório *<SI_HOME>/wso2/server/deployment/siddhi-files* . QUando a aplicação Siddhi for implantada com sucesso, o seguinte log *INFO* aparecerá no console *Streaming Integrator*.
+
+        INFO {org.wso2.carbon.stream.processor.core.internal.StreamProcessorService} - Siddhi App HelloKafka_2 deployed successfully
+3. Navegue até o diretório <KAFKA_HOME> e rode o seguinte comando.
+
+         bin/kafka-topics.sh --alter --bootstrap-server localhost:9092 --partitions 2 --topic productions 
+
+    Isso adicionará outra partição para o servidor Kafka usando o Kafka Console Producer.
+
+        {"event":{ "name":"Doughnut", "amount":500.0}}
+
+        {"event":{ "name":"Danish pastry", "amount":200.0}} 
+
+        {"event":{ "name":"Eclair", "amount":400.0}} 
+
+        {"event":{ "name":"Eclair toffee", "amount":100.0}} 
+    Observe os seguintes logs no console SI.
+
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - HelloKafka_2 : OutputStream : Event{timestamp=1562759480019, data=[DOUGHNUT, 500.0], isExpired=false}
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - HelloKafka : OutputStream : Event{timestamp=1562759494710, data=[DANISH PASTRY, 200.0], isExpired=false}
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - HelloKafka_2 : OutputStream : Event{timestamp=1562759506252, data=[ECLAIR, 400.0], isExpired=false}
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - HelloKafka : OutputStream : Event{timestamp=1562759508757, data=[ECLAIR TOFFEE, 100.0], isExpired=false}
+    Você pode ver que os eventos estão sendo recebidos pelos dois consumidores em uma maneira Round Robin. Eventos recebidos pelo primeiro consumidor são registrados pela aplicação Siddhi *HelloKafka* , enquanto eventos recebidos pelo segundo consumidor são registrados pela aplicação Siddhi *HelloKafka_2* .
+
+**Passo 6: Atribuir Consumidores a Partições**
+
+No passo anterior você tinha duas partições para o tópico Kafka e dois consumidores. Invés de atribuir os consumidores para as partições, você permitiu que o Kafka fizesse as atribuições. Opcionalmente, você pode atribuir consumidores a partições.
+
+Essa opção é útil se você tiver múltiplos consumidores com diferentes velocidades de performance e você precisa balancear a quantia entre os consumidores.
+
+Vamos alterar seu tópico para ter três partições. Depois disso, você pode atribuir duas partições para *consumer -1* e a partição restante para *consumer -2* .
+
+1. Navegue até o diretório <KAFKA_HOME> e emita o seguinte comando.
+
+       bin/kafka-topics.sh --alter --bootstrap-server localhost:9092 --partitions 3 --topic productions 
+    Isso adicionará outra partição para o tópico Kafka *productions* . Como resultado, haverá três partições no total.
+2. Para atribuir partições aos consumidores, adicione o parâmetro *partition.no.list* como mostrado abaixo.
+
+        @App:name("HelloKafka")
+
+        @App:description('Consume events from a Kafka Topic and log the messages on the console.')
+
+        -- consumer-1
+        @source(type='kafka',
+          topic.list='productions',
+          threading.option='single.thread',
+          group.id="group1",
+          bootstrap.servers='localhost:9092',
+          partition.no.list='0,1',
+          @map(type='json'))
+        define stream SweetProductionStream1 (name string, amount double);
+
+        -- consumer-2
+        @source(type='kafka',
+          topic.list='productions',
+          threading.option='single.thread',
+          group.id="group1",
+          bootstrap.servers='localhost:9092',
+          partition.no.list='2',
+          @map(type='json'))
+        define stream SweetProductionStream2 (name string, amount double);
+
+        @sink(type='log')
+        define stream OutputStream (name string, amount double, id string);
+
+        from SweetProductionStream1
+        select str:upper(name) as name, amount, 'consumer-1' as id
+        insert into OutputStream;
+
+        from SweetProductionStream2
+        select str:upper(name) as name, amount, 'consumer-2' as id
+        insert into OutputStream;
+
+    Observe que para o *consumer -1* foram atribuídas as partições 0 e 1, enquanto para o *consumer -2* foi atribuída a partição 2.
+3. Publique algumas mensagens como segue, e veja como a carga é distribuída entre os consumidores com as novas atribuições de partição.
+
+        {"event":{ "name":"Fortune cookie", "amount":100.0}} 
+
+        {"event":{ "name":"Frozen yogurt", "amount":350.0}} 
+
+        {"event":{ "name":"Gingerbread", "amount":450.0}} 
+
+        {"event":{ "name":"Hot-fudge sundae", "amount":150.0}} 
+
+        {"event":{ "name":"Hot-chocolate pudding", "amount":200.0}} 
+
+        {"event":{ "name":"Ice cream cake", "amount":250.0}} 
+
+4. Observe os registros seguintes do Streaming Integrator. O seguinte aparecerá.
+
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - HelloKafka : OutputStream : Event{timestamp=1562851086792, data=[FORTUNE COOKIE, 100.0, consumer-1], isExpired=false}
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - HelloKafka : OutputStream : Event{timestamp=1562851092100, data=[FROZEN YOGURT, 350.0, consumer-1], isExpired=false}
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - HelloKafka : OutputStream : Event{timestamp=1562851094459, data=[GINGERBREAD, 450.0, consumer-2], isExpired=false}
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - HelloKafka : OutputStream : Event{timestamp=1562851096434, data=[HOT-FUDGE SUNDAE, 150.0, consumer-1], isExpired=false}
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - HelloKafka : OutputStream : Event{timestamp=1562851098328, data=[HOT-CHOCOLATE PUDDING, 200.0, consumer-1], isExpired=false}
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - HelloKafka : OutputStream : Event{timestamp=1562851100309, data=[ICE CREAM CAKE, 250.0, consumer-2], isExpired=false}
+    Você pode observar um padrão onde a carga é distribuída entre *consumer -1* e *consumer -2* em uma proporção 2:1. Isso por que você atribuiu duas partições para *consumer -1* e atribuiu somente uma partição para *consumer -2* .
+
+**Passo 7: Publique em um Kafka Topic**
+
+Vamos criar uma nova aplicação Siddhi para consumir do tópico *productions*, filtrar as mensagens recebidas baseado em uma condição e então publicar essas mensagens filtradas para outro tópico Kafka.
+
+1. Crie um novo tópico chamado *bulk-orders* no servidor Kafka.
+2. Para publicar as mensagens filtradas para o tópico Kafka *bulk-orders* que você criou, emita o seguinte comando.
+
+       bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic bulk-orders 
+3. Depois, vamos criar a aplicação Siddhi. Abra um arquivo de texto e copie-cole a aplicação Siddhi a seguir nele.
+
+        @App:name("PublishToKafka")
+
+        @App:description('Consume events from a Kafka Topic, do basic filtering and publish filtered messages to a Kafka topic.')
+
+        @source(type='kafka',
+            topic.list='productions',
+            threading.option='single.thread',
+            group.id="group2",
+            bootstrap.servers='localhost:9092',
+            @map(type='json'))
+        define stream SweetProductionStream (name string, amount double);
+
+        @sink(type='kafka',
+          topic='bulk-orders',
+          bootstrap.servers='localhost:9092',
+          partition.no='0',
+          @map(type='json'))
+        define stream BulkOrdersStream (name string, amount double);
+
+        from SweetProductionStream[amount > 50]
+        select *
+        insert into BulkOrdersStream;
+
+4. Salve esse arquivo como *PublishToKafka.siddhi* no diretório *<SI_HOME>/wso2/server/deployment/siddhi-files* . Quando a aplicação Siddhi tiver sido implantada com sucesso, o seguinte log *INFO* aparecerá no console Streaming Integrator.
+
+        INFO {org.wso2.carbon.streaming.integrator.core.internal.StreamProcessorService} - Siddhi App PublishToKafka deployed successfully
+
+    **Info**: A aplicação Siddhi *PublishToKafka* consome todas as mensagens do tópico *productions* e preenche o stream *SweetProductionStream* . Toda a produção de doces corrente onde a quantia é maior do que 100 são inseridas no stream *BulkOrderStream* . Esses eventos são mandados para o tópico Kafka *bulk-orders*.
+5. Para observar as mensagens no tópico *bulk-orders*, rode um Kafka Console Consumer. Então navegue até o diretório <KAFKA_HOME> e emita o seguinte comando.
+
+        bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic bulk-orders --from-beginning
+    Você pode ver a seguinte mensagem no log do Kafka Consumer. Isso indica a corrente de produção da qual a quantia é maior do que 50.
+
+        {"event":{ "name":"Almond cookie", "amount":100.0}}
+
+**Passo 8: Preservando Estado da Aplicação Apesar de uma Falha do Sistema**
+
+Vamos experimentar um cenário ao qual você vai subir uma aplicação Siddhi para contar o número total de produção.
+
+**Info**: Nesse cenário, o servidor SI precisa lembrar a contagem atual apesar de falhas no sistema para que quando o sistema for restaurado, a contagem não resete a zero. Para conseguir isso, você pode usar a capacidade de persistência de estado no Streaming Integrator.
+
+1. Habilite a ferramenta de persistência de estado no servidor SI. Abra o arquivo *<SI_HOME>/conf/server/deployment.yaml* no editor de texto e localize a seção *state.persistence* .
+      
+            # Periodic Persistence Configuration
+        state.persistence:
+          enabled: true
+          intervalInMin: 1
+          revisionsToKeep: 2
+          persistenceStore: org.wso2.carbon.streaming.integrator.core.persistence.FileSystemPersistenceStore
+          config:
+            location: siddhi-app-persistence
+    
+    Ponha o parâmetro *enabled* para *true* e salve o arquivo.
+
+2. Habilite os logs de debug de persistência de estado. Abra o arquivo *<SI_HOME>/conf/server/log4j2.xml* no editor de texto e localize a seguinte linha nele.
+
+        <Logger name="com.zaxxer.hikari" level="error"/> 
+
+    Adicione o elemento *\<Logger>* abaixo dele.
+
+        <Logger name="org.wso2.carbon.streaming.integrator.core.persistence" level="debug"/>
+
+    Salve o arquivo.
+3. Reinicie o servidor Streaming Integrator para a mudança acima ser efetivada.
+4. Vamos criar um novo tópico chamado *sandwich_production* no servidor Kafka. Para fazer isso navegue até <KAFKA_HOME> e rode o seguinte comando:
+
+       bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic sandwich_productions 
+5. Abra um arquivo de texto e copie-cole a aplicação Siddhi seguinte nele.
+
+        @App:name("CountProductions")
+
+        @App:description('Siddhi application to count the total number of orders.')
+
+        @source(type='kafka',
+            topic.list='sandwich_productions',
+            threading.option='single.thread',
+            group.id="group3",
+            bootstrap.servers='localhost:9092',
+            partition.no.list='0',
+            @map(type='json'))
+        define stream SandwichProductionStream (name string, amount double);
+
+        @sink(type='log')
+        define stream OutputStream (totalProductions double);
+
+        from SandwichProductionStream
+        select sum(amount) as totalProductions
+        insert into OutputStream;
+ 
+6. Salve esse arquivo como *CountProductions.siddhi* no diretório *<SI_HOME>/wso2/server/deployment/siddhi-files*. Quando a aplicação Siddhi for implantada com sucesso, o seguinte log *INFO* aparecerá no console do Streaming Integrator.
+
+        INFO {org.wso2.carbon.stream.processor.core.internal.StreamProcessorService} - Siddhi App CountProductions deployed successfully
+7. Rode a linha de comando cliente Kafka para mandar algumas mensagens para o servidor Kafka. Navegue até <KAFKA_HOME> e rode o seguinte comando:
+
+        bin/kafka-console-producer.sh --broker-list localhost:9092 --topic sandwich_productions
+8. Você está preparado para digitar as mensagens no console. Digite o seguinte no prompt de comando:
+
+        {"event":{ "name":"Bagel", "amount":100.0}}
+
+        {"event":{ "name":"Buterbrod", "amount":100.0}} 
+    O seguinte log aparecerá no console SI.
+
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - CountProductions : OutputStream : Event{timestamp=1563903034768, data=[100.0], isExpired=false}
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - CountProductions : OutputStream : Event{timestamp=1563903034768, data=[200.0], isExpired=false}
+
+    Esses logs imprimem a contagem de produção de sanduíches. Observe que a atual contagem de produção de sanduíches está sendo impressa como 200 no segundo log. Isso é porque a contagem de produção até então é de 200 sanduíches: 100 bagels e 100 buterbrods.
+
+9. Agora espere para o seguinte log aparecer no console SI.
+
+        DEBUG {org.wso2.carbon.streaming.integrator.core.persistence.FileSystemPersistenceStore} - Periodic persistence of CountProductions persisted successfully
+
+    Esse log indica que o estado atual da aplicação Siddhi persistiu com sucesso. O estado da aplicação Siddhi persiste a cada minuto. Logo, você pode ver o log aparecendo a cada minuto.
+
+    Depois, vamos inserir duas mensagens de produção de sanduíche para o servidor Kafka e fechar o servidor SI antes que o estado de persistência aconteça (em outras palavras, antes que o log acima apareça).
+
+    **Dica**: É melhor começar a enviar as mensagens imediatamente após o log do estado de persistência aparecer, para que vocẽ tenha tempo o bastante para mandar mensagens e fechar o servidor antes que o próximo log apareça.
+10. Mande as seguintes mensagens para o servidor Kafka usando o Kafka Console Producer:
+
+        {"event":{ "name":"Croissant", "amount":100.0}}
+        
+        {"event":{ "name":"Croutons", "amount":100.0}} 
+
+11. Feche o servidor SI. Aqui você estará criando deliberadamente um cenário onde o servidor tem problema antes que o servidor SI possa persistir na contagem da última produção.
+
+    **Info**: Aqui, o servidor SI é interrompido antes que o estado seja persistido. Logo, o servidor SI não pode persistir na última contagem (o que deve incluir as duas últimas produções '100 Croissants' e '100 Croutons'). As boas notícias é que o Kafka source reproduz as duas últimas mensagens, permitindo o Streaming Integrator recupera com sucesso o servidor após a interrupção.
+12. Reinicie o servidor SI e espere aproximadamente por um minuto para observar os seguintes log:
+
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - CountProductions : OutputStream : Event{timestamp=1563904912073, data=[300.0], isExpired=false}
+        INFO {io.siddhi.core.stream.output.sink.LogSink} - CountProductions : OutputStream : Event{timestamp=1563904912076, data=[400.0], isExpired=false}
+
+    Observe que o Kafka source reproduziu as duas últimas mensagens. Como resultado, a contagem de sanduíche foi restaurada corretamente.
+
+- [Índice](#documentação-api-manager-410)
+
 ### Trabalhando com Business Rules
-### Integrando Stores
+#### Contexto
+Na integração streaming, há casos de uso comum para análise de estatísticas que envolvem operações tipo calcular a média, mínimo, máximo, etc. para endpoints diferentes. O Business Rules Manager permite que você defina modelos e gere regras de negócio delas para diferentes cenários com requerimentos comuns.
+
+#### Criando Business Rules
+Essa seção explica como criar um business rule. Um business rule pode ser criado de um **template** ou do **zero**.
+
+**Criando Business Rules de um Template**
+
+Criar business rules de um modelo existente permite que você use sources, sinks e filtros que já foram definidos, e atribuí-los valores de variáveis para processar eventos.
+
+**Antes de começar**:
+- O modelo de business rule deve já estar configurado no arquivo *<SI_TOOLING_HOME>/conf/server/deployment.yaml* .
+- Se você quer implantar a business rule após criá-la, você precisa iniciar o servidor SI navegando até o diretório <SI_HOME>/bin e emitindo um dos seguintes comandos:
+  - No Windows: server.bat --run
+  - No Linux/Mac OS: ./server.sh
+
+Para criar uma business rule de um template, veja o procedimento abaixo:
+
+1. Navegue até o diretório 
+<SI_TOOLING_HOME> através de um terminal e inicie o Streaming Integrator Tooling emitindo um dos seguintes comandos:
+
+     - No Windows: tooling.bat --run
+     - No Linux/Mac OS:  ./tooling.sh
+2. Acesse o Business Rule Manager via a URL que aparece no terminal para o Business Rules no formato *https://<SI_TOOLING_HOST>:<HTTPS_PORT>/business-rules* .
+    
+    **Dica**: A URL padrão é *https://0.0.0.0:9743/business-rules* . Se necessário, você pode mudar o nome do host (ex, 0.0.0.0) ou nome da aplicação web UI (ex business-rules). Para instruções, veja [Mudando o Nome de Host e Contexto de Path do SI Tooling](https://apim.docs.wso2.com/en/latest/install-and-setup/setup/si-setup/change-hostname-and-context-path/).
+
+    Isso abrirá o seguinte: ![tsi7-1](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/no-business-rules-exist.png)
+3. Clique em **Create** para abrir a seguinte página. ![tsi7-2](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/select-business-rule-creation-method.png)
+4. Então clique em **From Template** para abrir a página **Select a Template Group**, onde os modelos disponíveis serão mostrados.
+5. Clique no grupo de templates que contém os templates necessários para criar uma regra de negócio dela. Nesse exemplo, a regra de negócio é criada baseado em um modelo no grupo de template *SweetFactory* que está empacotado com o Streaming Integrator por padrão. Logo, clique em **Sweet Factory** para abrir esse grupo de template. ![tsi7-3](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/select-template-group.png)
+6. No grupo de template, expanda a lista **Rule Template** como mostrado abaixo, clique no template requerido. Para esse exemplo, clique em **Identify Continuous Production Decrease**. ![tsi7-4](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/view-rules.png)
+7. Se vocẽ quiser mudar o modelo de regra do qual você quer criar a regra de negócio, selecione o valor requerido para o campo **Rule Template**.
+8. Insira o nome para a business rule no campo **Business Rule Name**.
+9. Insir os valores para o resto dos campos seguindo as instruções na UI.
+
+    **Info**: Os campos mostrados para a business rule diferem baseado no template selecionado.
+10. Se você quiser salvar a business rule e implantá-la depois, clique em **Save**. Se você quiser implantar a business rule imediatamente, clique em **Save and Deploy**.
+
+**Criando Business Ruls do Zero**
+Criar uma business rule do zero permite que você defina o filtro lógico para a regra no momento da criação, invés de usar o filtro lógico que já está definido no modelo. Entretanto, você pode selecionar as configurações de source e sink requeridas de um template existente.
+
+**Antes de começar**:
+- Se você quer implantar a business rule após criá-la, você precisa iniciar o servidor SI navegando até o diretório <SI_HOME>/bin e emitir um dos seguintes comandos:
+  - No Windows: server.bat --run
+  - No Linux/Mac OS: ./server.sh
+
+Para criar uma regra de negócio do zero, siga o procedimento abaixo:
+1. Navegue até o diretório <SI_TOOLING_HOME> pelo terminal e inicie o Streaming Integrator Tooling ao emitir um dos seguintes comandos:
+     - No Windows: server.bat --run
+     - No Linux/Mac OS: ./server.sh 
+2. Acesse o Business Rule Manager via uma das seguintes URLs.
+
+    Protocol|URL Format|Example
+    :-:|:-:|:-:
+    HTTP |	http://<SI_TOOLING_HOST>:<HTTP_PORT>/business-rules | 	http://0.0.0.0:9090/business-rules
+    HTTPS |	https://<SI_TOOLING_HOST>:<HTTPS_PORT>/business-rules | 	https://0.0.0.0:9443/business-rules
+    
+   As URLs dadas acima são as URLs padrões. Se necessário, você pode mudar o nome de host (ex, 0.0.0.0) ou nome da aplicação web UI (ex business-rules). Para instruções, veja [Mudando o Nome de Host e Contexto de Path do SI Tooling](https://apim.docs.wso2.com/en/latest/install-and-setup/setup/si-setup/change-hostname-and-context-path/).
+
+   Isso abrirá o seguinte: ![tsi7-5](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/no-business-rules-exist.png)
+3. Clique em **Create** para abrir a seguinte página, depois clique em **From Scratch**. ![tsi7-6](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/select-business-rule-creation-method.png)
+
+    Isso abrirá a página **Select a Template Group** onde grupos de templates disponíveis são exibidos como mostra o exemplo abaixo. ![tsi7-7](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/select-a-template-group-.png) 
+4. Clique no grupo de template do qual você quer selecionar os sources e sinks necessários para sua business rule. Para esse exemplo, clique em **Stock Exchange** para abrir esse grupo de template como mostrado abaixo. ![tsi7-8](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/template-group.png)
+5. Clique em **Input** para expandir a seção **Input**. Entção selecione o modelo de regra do qual as configurações de source e input para o business rule deve ser selecionado. ![tsi7-9](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/Select-Input.png)
+
+    Isso mostrará a lista de sources disponíveis e os atributos expostos do template selecionado como mostra abaixo. ![tsi7-10](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/input-details.png)
+6. Clique em **Filters** para expandir a seção **Filters**. Clique em (+) para adicionar um novo filtro. Uma tabela será exibida como mostrado abaixo. ![tsi7-11](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/filter-details.png)
+7. Para definir um filtro, siga os passos abaixo:
+   1. No campo **Attribute**, selecione o atributo baseado no que você quer para definir a condição do filtro.
+   2. No campo **Operator**, selecione um operador.
+   3. No campo **Value/Attribute**, insira o valor ou outro atributo baseado em qual **Operator** é aplicado para o **Attribute**.
+   
+      Por exemplo: se você quiser filtrar eventos onde o *price* é menor do que 100 (o qual é o valor), selecione valores para os campos como a seguir:
+      
+      Field|Value
+      :-:|:-: 
+      Attribute |	price
+      Operator |	<
+      Value/Attribute (Value) |	100
+
+      Se você quiser filtrar eventos onde o *price* é igual ao *volume* (que é outro atributo), selecione valores para os campos como segue:
+
+      Field|Value
+      :-:|:-: 
+      Attribute |	price
+      Operator |	==
+      Value/Attribute (Attribute) |	volume
+
+      Uma vez que você definiu dois ou mais filtros, insira a regra lógica no campo **Rule Logic** usando condições *OR*, *AND* e *NOT*. Os exemplos de como você pode usar essas palavras chave são explicadas na tabela abaixo.
+
+       Keyword |	Exemplo
+       :-:|:-:
+       OR |	1 OR 2 retorna eventos que correspondem ou ao filtro 1 ou ao 2.
+       AND |	1 AND 2 retorna eventos que correspondem ambos filtros 1 e 2.
+        NOT |	NOT 1 retorna eventos que não correspondem ao filtro 1.
+8. Clique em **Output** para expandir a seção **Output**. Então selecione o modelo de regra dos quais as configurações sink e output para a regra de negócio devem ser selecionados. ![tsi7-12](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/select-output.png)
+
+    Isso mostra a seção para configurações de mapeamento como demonstrado no exemplo abaixo. ![tsi7-13](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/output-details.png)
+9. Selecione os nomes de atributos relevantes para a coluna **Input**. Ao publicar os eventos para os quais a regra é aplicada via sink pré-definidos selecionados, cada evento input que você selecionou é publicado com o nome correspondente na coluna **Output**.
+      
+    **Info**: Os mapeamentos de output mostrados diferem baseados no modelo de regra de output que você selecionou.
+10. Se você quiser salvar a regra e implantá-la depois, clique em **Save**. Se você quiser implantar a regra imediatamente, clique em **Save and Deploy**.
+
+#### Gerenciando Business Rules 
+Uma vez que você criou uma ou mais business rules, você pode gerenciá-las visualizando, editando, implementando, retirar e deletá-las como requerido.
+
+**Visualizando Business Rules**
+Uma vez que você iniciou e acessou o Business Rules Manager, as regras de negócios disponíveis são exibidas como mostrado no exemplo abaixo. ![tsi7-14](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/view-business-rule.png)
+
+Para visualizar uma regra de negócio, clique no ícone de visualização (marcado na imagem acima) para a fila relevante. Isso abrirá a regra como mostrado no exemplo abaixo. ![tsi7-15](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/business-rule-view.png)
+
+**Editando Business Rules**
+Uma vez que você iniciou e acessou o Business Rules Manager, as regras de negócios disponíveis são exibidas como mostrado no exemplo abaixo. ![tsi7-16](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/edit-business-rule.png)
+
+Para editar uma regra de negócio, clique no ícone para edição (marcado na imagem acima) para a coluna relevante. Isso abrirá a regra como mostrado no exemplo abaixo. ![tsi7-17](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/business-rule-edit.png)
+
+Modificar os valores para os parâmetros exibidos como requerido e clique em **Save**.
+
+**Implantando Business Rules**
+
+**Antes de Começar**:
+Inicie o servidor Streaming Integrator navegando até o diretório <SI_HOME>/bin do CLI e emitindo um dos seguintes comandos:
+     - No Windows: server.bat --run
+     - No Linux/Mac OS: ./server.sh 
+
+Para implantar uma regra de negócio que você tem previamente salvo, clique no ícone para implantação (marcado na imagem abaixo) para a coluna relevante. Como resultado, uma mensagem aparecerá para informar você que a regra foi implementada com sucesso. ![tsi7-18](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/deploy-business-rule.png)
+
+**Removendo Business Rules**
+
+Para remover uma regra de negócio, clique no ícone para remover (marcado na imagem abaixo) para a coluna relevante. Como resultado, uma mensagem aparecerá para informar você que a regra foi removida. ![tsi7-19](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/undeploy-business-rule.png)
+
+**Visualizando Informações de Implementação**
+
+Se você quer ver informações relacionadas à implementação de uma regra de negócio, clique no ícone para visualização de informação de implementação (marcado na imagem abaixo) para a coluna relevante. ![tsi7-20](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/view-deployment-information.png)
+
+Como resultado, as informações de implementação incluindo host e porta dos nodes nos quais a regra foi implantada e os status de implementaçãos serão exibidas como mostra a imagem abaixo ![tsi7-21](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/deployment-information.png)
+
+Possíveis status de implementação podem ser:
+  - **Saved**: A regra de negócio foi criada, mas não foi implementada ainda em nenhum node do Streaming Integrator.
+  - **Deployed**: A regra de negócio foi criada e implantada somente nos nodes requeridos no cluster do Streaming Integrator.
+  - **Partially Deployed**: A regra de negócio foi criada e implantada somente em alguns dos nodes requeridos no cluster do Streaming Integrator.
+  - **Partially Undeployed**: A regra de negócio tinha sido implantada anteriormente, depois removida somente em alguns dos nodes no cluster do Streaming Integrator.
+
+**Info**: **Nodes Requeridos** são configurados com respeito a uma regra de modelo. Para instruções detalhadas, veja **Implantando Business Rules no Servidor SI**.
+
+**Deletando Business Rules**
+
+Para deletar uma regra de negócio, clique no ícone para deletar (marcado na imagem abaixo) para a coluna relevante. Uma mensagem aparecerá para confirmar se você quer proceder com a eliminação. Clique em **Delete** na mensagem. Como resultado, outra mensagem aparecerá para informar você que a regra foi deletada com sucesso. ![tsi7-22](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/delete-business-rule.png)
+
+#### Criando um Business Rules Template
+Para criar um modelo de negócio usando o Business Rules Template Editor, siga o procedimento abaixo.
+
+1. Se vocẽ ainda não tiver iniciado o Streaming Integrator Tooling navegue até o diretório <SI_TOOLING_HOME> pelo terminal e inicie o Streaming Integrator Tooling ao emitir um dos seguintes comandos:
+     - No Windows: server.bat --run
+     - No Linux/Mac OS: ./server.sh 
+2. Acesse o Business Rules Templates Editor via a URL que aparecerá para ele nos logs de inicialização mostrados no examplo abaixo. ![tsi7-23](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/template-editor-url.png)
+
+**Info**: 
+A URL padrão é http://localhost:9390/template-editor. Se necessário, você pode mudar o nome do host (ex, localhost) ou o nome da aplicação web UI (ex., template-editor). Para instruções, leia [Mudando o Nome de Host e Path de Contexto do SI Tooling](https://apim.docs.wso2.com/en/4.1.0/install-and-setup/setup/si-setup/change-hostname-and-context-path).
+
+3. O Template Editor abrirá como mostrado abaixo. Há duas visualizações das quais você pode interagir e criar um grupo de template. **Design view** permite que você visualize um grupo de template e interaja com ele. **Code view** permite que você interaja com um grupo de template ao digitar conteúdo. Para mais informações sobre estrutura de grupo de template, veja **Business Rules Templates**.
+
+**Atenção**: Não modele informações sensíveis tais quais senhas em uma aplicação Siddhi ou exponha-as diretamente em uma aplicação Siddhi. Para instruções detalhadas em como proteger dados ao ofuscá-los, veja [Protegendo Dados Sensíveis via Secure Vault](https://apim.docs.wso2.com/en/latest/install-and-setup/setup/si-setup/protecting-sensitive-data-via-the-secure-vault/).
+
+![tsi7-24](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/business-rules-template-editor.png)
+
+Você pode criar um grupo de template utilizando a visão de design ou a visão de código como explicado nas seguintes seções.
+
+**Criando através da Design View**
+
+Para criar um grupo de modelo de regras de negócio a partir do design view, siga o procedimento abaixo:
+1. Insira a **UUID** (Universally Unique Identifier), nomeie e dê uma descrição para o grupo de template como a seguir:
+
+    Field |	Name
+    :-:|:-:|
+    UUID |	sweet-factory
+    Name |	Sweet Factory
+    Description |	Analyzes Sweet Factory scenarios
+
+    ![tsi7-25](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/template-group-basic-information.png)
+
+2. Expanda o primeiro modelo de regras que existe por padrão e insira os detalhes abaixo.
+
+    Field Name |	Value
+    :-:|:-:
+    UUID | 	identifying-continuous-production-decrease
+    Name |	Identify Continuous Production Decrease
+    Description |	Alert factory managers if the rate of production continuously decreases for a specified time period
+    Type |	Template
+    Instance Count |	One
+
+    ![tsi7-26](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/rule-template-details.png)
+
+3. Para incluir um modelo de aplicação Siddhi, expanda o primeiro template que é exibido por padrão e insira o seguinte modelo de aplicação Siddhi. ![tsi7-27](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/siddhi-application-template.png)
+
+        @App:name('SweetFactory-TrendAnalysis')
+
+        @source(type='http', @map(type='json'))
+        define stream SweetProductionStream (name string, amount double, factoryId int);
+
+        @sink(type='log', @map(type='text', @payload("""
+        Hi ${username},
+        Production at Factory  has gone
+        from  to  in ${timeInterval} seconds!""")))
+        define stream ContinousProdReductionStream (factoryId int, initaltime long, finalTime long, initalamout double, finalAmount double);
+
+        from SweetProductionStream#window.timeBatch(${timeInterval} sec)
+        select factoryId, sum(amount) as amount, currentTimeMillis() as ts
+        insert into ProdRateStream;
+
+        partition with ( factoryId of ProdRateStream )
+        begin
+          from every e1=ProdRateStream,
+          e2=ProdRateStream[ts - e1.ts <= ${timeRange} and e1.amount > amount ]*,
+          e3=ProdRateStream[ts - e1.ts >= ${timeRange} and e1.amount > amount ]
+          select e1.factoryId, e1.ts as initaltime, e3.ts as finalTime, e1.amount as initalamout, e3.amount as finalAmount
+          insert into ContinousProdReductionStream;
+        end;
+
+4. Para adicionar atributos de variáveis para o script, clique em **Add Variables**.
+
+    **Info**: Um script é um javascript que pode ser aplicado quando os inputs dados pelo usuário do business que utiliza o template precisam ser processados antes de de trocar os valores para as variáveis do template. Ex: se o valor médio não é dado, uma função dentro do script pode derivá-lo calculando-o através dos valores de mínimo e máximo fornecidos pelo usuário do business.
+
+    ![tsi7-28](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/add-variables.png)
+5. Para especificar os atributos que precisam ser considerados como variáveis, marque as caixas de seleção relevantes sob **Select templated elements**. Nesse exemplo, você pode marcar as caixas de seleção do **username** e **timeRange** para eleger os atributos com esses nomes como as variáveis. ![tsi7-29](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/select-templated-elements.png)
+
+    Então clique em **Add to Script** para atualizar o script com as variáveis selecionadas com os corpos de função de auto-geração. ![tsi7-30](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/add-script.png)
+
+6. Edite o script para adicionar as funções requeridas. Nesse exemplo, vamos renomear myFunction1(input) para getUsername(email), e myFunction2(input) para validateTimeRange(number).
+
+    ![tsi7-31](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/edit-script.png)
+
+       var username = getUsername('${userInputForusername}');
+       var timeRange = validateTimeRange('${userInputFortimeRange}');
+       /**
+       * Extracts the username from given email
+       * @returns Extracted username
+       * @param email Provided email
+       */
+       function getUsername(email) {
+          if (email.match(/\S+@\S+/g)) {
+            if (email.match(/\S+@\S+/g)[0] === email) {
+                return email.split('@')[0];
+            }
+            throw 'Invalid email address provided';
+          }
+          throw 'Invalid email address provided';
+        }
+
+
+        /**
+        * Validates the given value for time range
+        * @returns Processed input
+        * @param input User given value
+        */
+        function validateTimeRange(number) {
+          if (!isNaN(number) && (number > 0)) {
+            return number;
+          } else {
+            throw 'A positive number expected for time range';
+          }
+        }
+
+7. Para gerar propriedades, clique em **Generate** em contra ponto a **Properties**. ![tsi7-32](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/generate-properties.png)
+
+    Isso expandirá a seção **Properties**: ![tsi7-33](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/template-properties.png)
+
+8. Insira os valores para as propriedades disponíveis. Para esse exemplo, vamos inserir valores como mostrado na tabela seguinte.
+
+    **Info**: Uma propriedade é definida por cada atributo modelado (definido no formato ${templatedElement} ), para isso ele é auto descritivo para o usuário do business que usa o template. Os valores configurados para cada propriedade são esses:
+      - **Field Name**: O nome com o qual o atributo modelado é exibido para o usuário do business.
+      - **Field Description**: Uma descrição da propriedade para o usuário do business entender seu propósito.
+      - **Default Value**: O valor atribuído para a propriedade por padrão. O usuário do business pode alterar esse valor se for necessário.
+      - **Options**: Essa é uma configuração opcional que permite você definir um conjunto de valores para uma propriedade para que o usuário do business possa selecionar os valores necessários de uma lista. Isso é útil quando o valor possível para a propriedade é limitado para um grupo de opções.
+
+    Property |	Field Name |	Field Description |	Default Value
+    :-:|:-:|:-:|:-:
+    timeInterval |	Time interval (in seconds) |	Production amounts are considered per time interval |	6
+    userInputForusername | 	Manager Email ID |	Email address to show in greeting |	example@email.com
+    userInputFortimeRange |	Time Range (in milliseconds) |	Time period in which, product amounts are analyzed for decrease |	5
+
+    ![tsi7-34](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/edit-properties.png)
+
+9. Salve o template, clique no ícone para salvar no topo da página. ![tsi7-35](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/save-template.png)
+
+**Criando através do Code View**
+
+Quando você usa o code view, os mesmos parâmetros para os quais você insere valores no design view são representados com chaves JSON. Para cada parâmetro, você pode especificar um valor contra a chave JSON relevante.
+![tsi7-36](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/business-template-source-view-extract.png)
+
+Quando você atualiza o code view com uma definição de grupo de template válido, o design view é atualizado simultaneamente.
+
+![tsi7-37](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/design-view-and-source-view.png)
+
+Entretanto, se o conteúdo que você insere no code view é um grupo de template inválido, o design view não é atualizado e um erro é mostrado.
+
+![tsi7-38](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/error-code.png)
+
+Quando um erro é detectado inserido na estrutura de grupo de template, o botão **Recover** é mostrado com uma mensagem de erro.
+
+![tsi7-39](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/error-code-with-recover-button.png)
+
+Quando você clica em **Recover**, o code view é resetado para a última definição válida de grupo de template detectada. A qualquer momento, a design view exibe informações baseado na última definição válida de grupo de template detectada.
+
+**Info**: Não é recomendado adicionar modelos de aplicação Siddhi e scripts usando o code view porque eles precisam ser fornecidos como uma linha única, e os possíveis caracters de escape devem ser lidados cuidadosamente.
+
+#### Editando um Business Rule Template
+WSO2 SI permite que você faça edições para um modelo de regras de negócio que você já tem criado e salvo. Para editar um template via ferramenta Template Editor siga os passos abaixo.
+
+1. Inicie o perfil do Streaming Integrator Tooling emitindo um dos seguintes comandos:
+     - No Windows: server.bat --run
+     - No Linux/Mac OS: ./server.sh 
+2. Acesse o Template Editor via a URL que aparece para ela nos logs de inicialização.
+![tsi7-40](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/template-editor-url.png)
+
+    **Info**: A URL padrão é http://localhost:9390/template-editor. Se necessário, você pode mudar o nome do host (ex, localhost) ou o nome da aplicação web UI (ex., template-editor). Para instruções, leia [Mudando o Nome de Host e Path de Contexto do SI Tooling](https://apim.docs.wso2.com/en/4.1.0/install-and-setup/setup/si-setup/change-hostname-and-context-path).
+
+3. O Template Editor abrirá.
+![tsi7-41](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/business-rules-template-editor.png)
+
+    Para abrir um template existente, clique no ícone **Open** no topo do painel (marcado na imagem acima). Na caixa de diálogo **Open Template File**, clique em **Choose File** e pesquise pelo template requerido. Uma vez que você selecionou o template, clique em **Load** para abri-lo no Template Editor.
+    
+    ![tsi7-42](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/choose-file.png)
+4. Edite o template como requerido. Você pode atualizá-lo no Design View or o Source View como preferir.
+5. Salve suas edições clicando no ícone **Save** no topo do painel.
+
+    ![tsi7-43](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/working-with-business-rules/save-business-template.png)
+
+#### Business Rules Templates
+**Rule Templates** são usados como especificações para ganhar inputs de usuários através de campos gerados dinamicamente com o propósito de criar regras de negócios. Um **template group** é um agrupamento de nível de domínio de negócio. A definição de um template parece dessa forma.
+
+    {
+      "templateGroup" : {
+        "name" : "<Name of the template group>",
+        "uuid":"<UUID for the template group>",
+        "description" : "<(Optional) description for the template group>",
+        "ruleTemplates" : [
+          {
+            "name" : "<Name of the rule template>" ,
+            "uuid" : "<UUID for the rule template>",
+            "type" : "template",
+            "instanceCount" : "one <or> many",
+            "description" : "<(Optional) description for the rule template>",
+            "script" : "<(Optional) Javascript with reference to the properties>",
+            "templates" : [
+              { "type" : "siddhiApp",
+                "content" : "<SiddhiApp_1 with ${templatedProperty_x}>"
+              },
+              { "type" : "siddhiApp",
+                "content" : "<SiddhiApp_n with ${templatedProperty_y}>"
+              }
+            ],
+            "properties" : {
+                "templatedProperty_x" : {"fieldName" : "<Field name for the property>", "description" : "<Description for the property>", "defaultValue" : "<Default value for the property>"},
+                "templatedProperty_y" : {"fieldName" : "<Field name for the property>", "description" : "<Description for the property>", "defaultValue" : "<Default value for the property>", "options" : ["<option_1>", "<option_n>"]}
+            }
+          },
+          {
+            "name" : "<Name of the rule template>",
+            "uuid" : "<UUID for the rule template>",
+            "type" : "input",
+            "instanceCount" : "one <or> many",
+            "description" : "<(Optional) description for the rule template>",
+            "script" : "<(Optional) Javascript with reference to the properties>",
+            "templates" : [
+              { "type" : "siddhiApp",
+                "content" : "<SiddhiApp with ${templatedProperty_x}>",
+                "exposedStreamDefinition" :"<Exposed stream definition>"
+              }
+            ],
+            "properties" : {
+              "templatedProperty_x" : {"fieldName" : "<Field name for the property>", "description" : "<Description for the property>", "defaultValue" : "<Default value for the property>", "options" : ["<option_1>", "<option_n>"]}
+            }
+          },
+          {
+            "name" : "<Name of the rule template>",
+            "uuid" : "<UUID for the rule template>",
+            "type" : "output",
+            "instanceCount" : "one <or> many",
+            "description" : "<(Optional) description for the rule template>",
+            "script" : "<(Optional) Javascript with reference to the properties>",
+            "templates" : [
+              { "type" : "siddhiApp",
+                "content" : "<SiddhiApp with ${templatedProperty_x}>",
+                "exposedStreamDefinition" :"<Exposed stream definition>"
+              }
+            ],
+            "properties" : {
+              "templatedProperty_x" : {"fieldName" : "<Field name for the property>", "description" : "<Description for the property>", "defaultValue" : "<Default value for the property>", "options" : ["<option_1>", "<option_n>"]}
+            }
+          }
+        ]
+      }
+    }
+
+Os seguintes parâmetros foram configurados.
+
+**Dados Básicos de Grupo de Template**
+
+Os parâmetros a seguir estão configurados sob *templateGroup*.
+
+Parameter |	Descrição |	Requerido/Opcional
+:-:|:-:|:-: |
+name |	Um nome para o grupo de template | Requerido
+uuid |	Uma id de identificação única para o grupo de template |	Requerido
+description |	Uma descrição para o template |	Opcional
+
+**Detalhes de Rule Template**
+
+Múltiplos modelos de regras podem ser definidos sob um *templateGroup*. Para cada *ruleTemplate*, o conjunto seguinte de parâmetros precisa ser configurado.
+
+Parameter |	Descrição |	Requerido/Opcional
+:-:|:-:|:-:|
+name |	Um nome para cada modelo de regra |	Requerido
+uuid |	Uma id de identificação única para o grupo de template | 	Requerido
+type |	O tipo de modelo de regra. Valores possíveis como segue: **template**: Utilizado apenas para criar uma regra de negócio inteira de um template./ **input**: Usado apenas na criação de regras de negócio do zero./ **output**: utilizado apenas na criação de regras de negócio do zero.|Requerido
+instanceCount |	Isso especifica se as regras de negócio derivadas de um template podem ser implantadas somente em um node, ou se eles podem ser implantados em diversos nodes. Valores possíveis: **one** ou **many**. | Requerido
+script| Leia a seção de aviso abaixo | Opcional
+description |	Uma breve descrição do modelo de regra. |	Opcional
+templates |	Esses são os artefatos (ex: SiddhiApps) com parâmetros modelados que estão instanciados com os valores substituidos quando uma regra de negócio é criada. |Requerido
+properties |	Você pode adicionar um campo de nome, descrição, valor padrão e valores possíveis (opcional) para os parâmetros modelados. | Requerido
+
+**Aviso**: O script Java pode ser executado nos campos modelados. Desenvolvedores podem usar esse script para: 
+1. validar propósitos 
+2. derivar valores para um parâmetro modelado ao combinar alguns outros parâmetros inseridos. 
+
+Você precia mencionar cada elemento modelado que precisa ser derivado para inserir parâmetros como um variável no escopo global do JavaScript. 
+
+Você também precisará modelar os parâmetros inseridos no script por si só. Esses valores serão mais tarde substituídos com seus respectivos valores inseridos.
+
+Considere o script a seguir:
+
+    /* 
+    * Validates a number and returns after adding 10 to it
+    * @throws Error when a non number is entered
+    */
+    function deriveValue(value){
+    if( !isNan(value) ) {
+      return value + 10;
+    }
+    throw "A number is required";
+    }
+
+    var derivedValue = deriveValue(${enteredValue});
+
+*enteredValue* deve ser definido como uma propriedade sob *properties* para que seja preenchido pelo usuário e substituído depois.
+
+O valor derivado armazenado em *derivedValue* é então usado para substituir *${derivedValue}* no template SiddhiApp.
+
+#### Configurando Permissões de Gerenciamento de Business Rules
+Há dois níveis de permissões para uma aplicação de regras de negócio:
+- **Manager**: Usuários com o nível de permissão dessa função tem privilégios administrativos sobre as regras de negócio. Eles estão habilitados a criar, ver, editar, implantar ou deletar regras de negócio.
+- **Viewer**: Usuários com o nível de permissão dessa função estão apenas aptos a ver as regras de negócio.
+
+Essa seção cobre como configurar as permissões de Business Rules Manager.
+
+**Antes de começar**: Antes de configurar as permissões de Business Rules Manager, o usuário a ter atribuído permissões de função deve já estar definido no user store com as ID's de usuário requeridas. Para instruções detalhadas, veja [Gerenciamento de Usuários](https://docs.wso2.com/display/SP440/User+Management).
+
+Você precisa definir as funções relacionadas ao Business Rules Manager sob o componente namespace em *wso2.business.rules.manager* no arquivo *<SI_TOOLING_HOME>/conf/server/deployment.yaml* .
+
+A seguinte um exemplo de configuração de função de usuário para o Business Rules Manager.
+
+    wso2.business.rules.manager:
+      roles:
+        manager:
+          - name: role1
+            id: 1
+        viewer:
+          - name: role2
+            id: 2
+
+- [Índice](#documentação-api-manager-410)
+
+### Integrando Data Stores em Streaming Integration
+#### Introdução
+WSO2 Streaming Integrator permite você incorporar armazéns de dados quando performando diversas atividades de integração de streaming. Os metodos nos quais isso é feito inclui:
+- Mudança de captura de dados;
+- Armazenamento de dados recebidos / dados processados em armazéns de dados;
+- Realizar operações CRUD em armazéns de dados.
+  
+O tutorial **Realizando Mudança em Tempo Real de Dados Capturados com MySQL cobre como realizar a mudança de captura de dados em detalhes. Logo, nesse tutorial, vamos aprender como WSO2 Streaming Integrator pode incoporar armazéns de dados em operações streaming ao performar operações CRUD.
+
+#### Contexto
+Vamos considerar o exemplo de uma Fábrica de Doces que armazena a seguinte informação em três diferentes bancos de dados.
+- Registros de materiais comprados para serem usados na produção;
+- Registros de materiais despachados para produção;
+- O estoque atual de materiais.
+
+Para gerenciar o estoque de materiais e manter os registros necessários, o Factory Manager precisa fazer as seguintes atividades:
+- Registre cada material comprado na armazenagem de compras;
+- Registre cada despacho de material para produção na armazenagem de despachos;
+- Atualize a armazenagem com o estoque atual para cada material após cada compra e despacho para mantê-la atualizada.
+
+Recordar compras e despachos envolve a inserção de novos registros dentro de armazém de dados. Para manter os registros de estoque atuais, o Factory Manager precisa recuperar informações tanto sobre as compras quanto sobre despachos, calcular o impacto de ambos no estoque atual e então performar uma operação de inserção/atualização para a armazenagem com os registros de estoque.
+
+Para entender como o WSO2 Streaming Integrator performa essas operações, siga os passos abaixo.
+
+**Antes de começar**:
+Você precisa completar os seguintes pré-requisitos para acessar uma instância MySQL.
+
+- Você precisa ter acesso a uma instância MySQL.
+- Instale a extensão *rdbms-mysql* no WSO2 Streaming Integrator:
+  1. Inicie o WSO2 Streaming Integrator navegando até o diretório <SI_HOME>/bin e emita o comando apropriado baseado em seu sistema operacional.
+      - Para Linux: ./server.sh
+      - Para Windows: server.bat --run
+  2. Para instalar a extensão *rdbms-mysql*, navegue até o diretório <SI_HOME>/bin e emita o comando apropriado baseado em seu sistema operacional:
+        - Para Linux: ./extension-installer.sh
+        - Para Windows: extension-installer.bat --run   
+  3. Reinicie o servidor WSO2 Streaming Integrator.
+- Instale a extensão *rdbms-mysql* no WSO2 Streaming Integrator:
+  1. Inicie o WSO2 Streaming Integrator Tooling navegando até o diretório <SI_TOOLING_HOME>/bin e emita o comando apropriado baseado em seu sistema operacional:
+        - Para Linux: ./tooling.sh
+        - Para Windows: tooling.bat --run 
+  2. Acesse o Streaming Integrator Tooling. Então clique em **Tools → Extension Installer** para abrir a caixa de diálogo **Extension Installer**.
+  3. Na caixa de diálogo **Extension Installer**, clique em **Install** para a extensão **RDBMS-MYSQL**. Depois clique em **Install** na mensagem que aparecerá para confirmar se você quer prosseguir.
+  4. Reinicie o WSO2 Streaming Integrator Tooling.
+- Inicie o servidor MySQL.
+- Crie três bancos de dados ao emitir os comandos.
+
+      CREATE SCHEMA purchases;
+      CREATE SCHEMA dispatches;
+      CREATE SCHEMA closingstock;  
+#### Passo 1: Conecte uma aplicação Siddhi ao Armazém de Dados
+Nessa seção vamos aprender diferentes maneiras as quais você pode conectar uma aplicação Siddhi a um armazém de dados.
+
+No Streaming Integrator Tooling, abra um novo arquivo e inicie a criação de uma nova aplicação Siddhi chamada *StockManagementApp* .
+
+        ```
+        @App:name("StockManagementApp")
+        @App:description("Managing Raw Materials")
+        ```
+
+Agora vamos conectar a um armazém de dados (ex: bancos de dados) que você criou previamente para a aplicação Siddhi. Há três métodos para isso ser feito. Para aprendê-los, vamos conectar cada um desses três bancos de dados em um método diferente.
+
+**Conectar a um Armazém via um Data Source**
+
+Para conectar a um banco de dados *closingstock* via um data source:
+
+1. Defina um data source no arquivo <SI_TOOLING_HOME>/conf/server/deployment.yaml .
+
+        - name: Stock_DB
+          description: The datasource used for stock records
+          jndiConfig:
+            name: jdbc/closingstock
+          definition:
+            type: RDBMS
+            configuration:
+              jdbcUrl: 'jdbc:mysql://localhost:3306/closingstock?useSSL=false'
+              username: root
+              password: root
+              driverClassName: com.mysql.jdbc.Driver
+              minIdle: 5
+              maxPoolSize: 50
+              idleTimeout: 60000
+              connectionTestQuery: SELECT 1
+              validationTimeout: 30000
+              isAutoCommit: false 
+
+    O data source acima conecta ao banco de dados *closingstock* que você criou previamente via jdbcUrl especificada.
+2. Agora inclua a definição de tabelha na aplicação Siddhi *StockManagementApp* que você acabou de criar.
+
+        @store(type = 'rdbms', datasource = "Stock_DB")
+        @primaryKey('name' )
+        define table StockTable (name string, amount double);        
+    Na definição de tabela acima:
+    - A tabela tem dois atributos *name* e *amount* para corresponder com o banco de dados *closingstock* criado anteriormente.
+    - A anotação *@store* especifica o tipo de banco de dados como *rdbms* e conecta a tabela para o data source *Stock_DB* que você configurou. Desse modo, você é conectado ao banco de dados *closingstock* via data source.
+    - A anotação *@primaryKey* especifica *name* como a chave primária da tabela, requerindo que cada registro na tabela tenha um valor único para *name*.
+
+**Referir-se a um Armazém Definido Externamente**
+
+Para conectar o banco de dados *purchases* via referência:
+
+1. No arquivo <SI_TOOLING_HOME>/conf/server/deployment.yaml, adicione uma subseção para refs, depois adicione uma ref:
+
+        siddhi:
+          refs:
+           -
+            ref:
+              name: 'purchases'
+              type: 'rdbms'
+              properties:
+                jdbc.url: "jdbc:mysql://localhost:3306/purchases?useSSL=false"
+                username: 'root'
+                password: 'root'
+                jdbc.driver.name: 'com.mysql.jdbc.Driver' 
+    
+    A referência acima conecta ao banco de dados *purchases* criado anteriormente.
+2. Agora inclua a definição de tabela seguinte na aplica Siddhi *StockManagementApp*.
+
+        @store(type = 'rdbms', ref = "purchases")
+        define table PurchasesTable (timestamp long, name string, amount double);
+
+**Configure o Armazém de Dados Inline**
+
+Você pode definir a configuração de um armazém de dados para um banco de dados *dispatches* adicionando uma definição de tabela na aplicação Siddhi *StockManagementApp* .
+
+      @store(type = 'rdbms', jdbc.url = "jdbc:mysql://localhost:3306/dispatches?useSSL=false", username = "root", password = "root", jdbc.driver.name = "com.mysql.jdbc.Driver")
+      define table DispatchesTable (timestamp long, name string, amount double);
+
+Aqui você está configurando a configuração do armazém de dados na própria aplicação Siddhi. A aplicação Siddhi conecta ao banco de dados *dispatches* via JDBC URL especificada.
+
+#### Passo 2: Performar Operações CRUD
+
+**Performar Operações CRUD via Siddhi Queries**
+
+Nessa seção, vamos completar a aplicação Siddhi *StockManagementApp* adicionando os streams e queries para performar operações CRUD.
+
+1. Primeiro, defina os streams que recebem informações sobre materiais comprados e despachados:
+      - Para comprados:
+
+            define stream MaterialPurchasesStream (timestamp long, name string, amount double);
+      
+      - Para despachados:
+              
+            define stream MaterialDispatchesStream (timestamp long, name string, amount double); 
+
+    Agora vamos escrever queries Siddhi para performar diferentes operações CRUD.
+
+**Inserir Registros**
+
+Para inserir valores para os bancos de dados *purchases* e *dispatches*, escreva duas queries:
+    
+  - Para compras: 
+
+        @info(name = 'Save purchase records')
+        from MaterialPurchasesStream 
+        select * 
+        insert into PurchasesTable;
+  - Para despachos:
+
+        @info(name = 'Save purchase records')
+        from MaterialPurchasesStream 
+        select * 
+        insert into PurchasesTable;
+
+    Para experimentar esses queries, simule eventos para os streams via Event Simulator.
+
+  - Salve a aplicação Siddhi. A aplicação Siddhi parecerá assim:
+
+        @App:name('StockManagementApp')
+
+        @App:description('Managing Raw Materials')
+
+        define stream MaterialDispatchesStream (timestamp long, name string, amount double);
+
+        define stream MaterialPurchasesStream (timestamp long, name string, amount double);
+
+        @store(type = 'rdbms', jdbc.url = "jdbc:mysql://localhost:3306/dispatches?useSSL=false", username = "root", password = "root", jdbc.driver.name = "com.mysql.jdbc.Driver")
+        define table DispatchesTable (timestamp long, name string, amount double);
+
+        @store(type = 'rdbms', ref = "purchases")
+        define table PurchasesTable (timestamp long, name string, amount double);
+
+        @store(type = 'rdbms', datasource = "Stock_DB")
+        @primaryKey("name")
+        define table StockTable (name string, amount double);
+
+        @info(name = 'Save material dispatch records')
+        from MaterialDispatchesStream 
+        select * 
+        insert into DispatchesTable;
+
+        @info(name = 'Save purchase records')
+        from MaterialPurchasesStream 
+        select * 
+        insert into PurchasesTable;  
+
+    Então a inicie clicando no ícone de play no topo do painel.
+   
+   - Clique no ícone **Event Simulator** para abrir o simulador de evento.
+    ![tsi8-1](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/testing-siddhi-applications/event-simulation-icon.png)
+  
+      Ele abrirá o painel esquerdo para simulação de evento.
+
+      ![tsi8-2](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming//testing-siddhi-applications/event-simulation-panel.png)
+
+   - Para simular eventos de compras, selecione *StockManagementApp* para o campo **Siddhi App Name** e *MaterialPurchasesStream* para o campo **Stream Name**. Depois insira os valores para os campos de atributos como abaixo e clique em **Send**.
+
+        timestamp|name|amount
+        :-:|:-:|:-:
+        1608023646000 |	honey |	150
+   - Para simular um evento para materiais despachados, selecione *StockManagementApp* para o campo **Siddhi App Name** e *MaterialDispatchesStream* para o campo **Stream Name**. Depois insira os valores para os campos de atributos como abaixo e clique em **Send**.
+
+        timestamp|name|amount
+        :-:|:-:|:-:
+        1608023646000 |	honey |	150
+   - Para checar se as inserções acima tiveram sucesso, emita os seguintes comandos MySQL no terminal o qual está rodando o servidor MySQL.
+    
+     - Para o banco de dados *purchases*:
+
+            use purchases;
+            select * from PurchasesTable;
+        A seguinte tabela será mostrada.
+
+        ![tsi8-3](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/integrating-stores/saved-purchase-records.png)      
+     - Para o banco de dados *dispatches*:  
+
+            use dispatches;
+            select * from DispatchesTable;
+        A seguinte tabela será mostrada.
+
+        ![tsi8-4](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/integrating-stores/saved-dispatch-records.png)    
+
+**Recuperação de Registros**
+
+Assuma que a Factory Manager precisa ver todos os registros de compra para mel. Isso pode ser feito seguindo os passos abaixo:
+
+1. Para receber as requisições de recuperação de registros como eventos input, defina um input stream:
+
+        define stream PurchaseRecordRetrievalStream (name string);
+    Essa stream só tem o atributo *name* porque só o nome é necessário para filtrar a pesquisa de resultados.
+
+2. Para apresentar os registros recuperados, defina um stream output:
+
+        @sink(type = 'log', prefix = "Search Results",
+          @map(type = 'passThrough'))
+        define stream SearchResultsStream (timestamp long, name string, amount double);
+
+    O output stream *SearchResultsStream* tem todos os atributos da tabela *PurchasesTable* para recuperar o registro completo. Além disso, a anotação *@sink* conecta esse stream a um log sink para que os resultados de pesquisa possam ser logados.
+3. Agora adicione uma join query para unir a tabela *PurchaseRecordRetrievalStream* e a tabela *PurchasesTable*.
+
+        @info(name = 'Retrieve purchase records')
+        from PurchaseRecordRetrievalStream as s 
+        join PurchasesTable as p 
+          on s.name == p.name 
+        select p.timestamp as timestamp, s.name as name, p.amount as amount 
+          group by p.name 
+        insert into SearchResultsStream
+   Observe o seguinte a respeito do join query acima:
+   - O stream está associado ao curto nome *s* e a tabela é associada ao curto nome *p*.
+   - Baseado no ponto anterior, a condição *on s.name == p.name* especifica que um evento de compatibilidade é identificado quando o *PurchasesTable* tem um registro onde o valor para o atributo *name* é o mesmo daquele da stream.
+   - A clause *select* especifica que quando um tipo de evento de compatibilidade é identificado, valores de atributos para o evento de output devem ser selecionados como segue: 
+
+         - The timestamp from the table
+         - The name from the stream
+         - The amount from the table
+   - A clause *insert into* especifica que os eventos de output derivados como declarados acima devem ser inseridos dentro de *SearchResultsStream*.
+   - Salve a aplicação Siddhi. A aplicação Siddhi completa após as mudanças acima deve ficar assim:
+   
+          @App:name('StockManagementApp')
+          @App:description('Managing Raw Materials')
+
+          define stream MaterialDispatchesStream (timestamp long, name string, amount double);
+
+          @sink(type = 'log', prefix = "Search Results",
+            @map(type = 'passThrough'))
+          define stream SearchResultsStream (timestamp long, name string, amount double);
+
+          define stream MaterialPurchasesStream (timestamp long, name string, amount double);
+
+          define stream PurchaseRecordRetrievalStream (name string);
+
+          @store(type = 'rdbms', jdbc.url = "jdbc:mysql://localhost:3306/dispatches?useSSL=false", username = "root", password = "root", jdbc.driver.name = "com.mysql.jdbc.Driver")
+          define table DispatchesTable (timestamp long, name string, amount double);
+
+          @store(type = 'rdbms', ref = "purchases")
+          define table PurchasesTable (timestamp long, name string, amount double);
+
+          @store(type = 'rdbms', datasource = "Stock_DB")
+          @primaryKey("name")
+          define table StockTable (name string, amount double);
+
+          @info(name = 'Save material dispatch records')
+          from MaterialDispatchesStream 
+          select * 
+          insert into DispatchesTable;
+
+          @info(name = 'Save purchase records')
+          from MaterialPurchasesStream 
+          select * 
+          insert into PurchasesTable;
+
+          @info(name = 'Retrieve purchase records')
+          from PurchaseRecordRetrievalStream as s 
+          join PurchasesTable as p 
+            on s.name == p.name 
+          select p.timestamp as timestamp, s.name as name, p.amount as amount 
+            group by p.name 
+          insert into SearchResultsStream; 
+
+4. Abra o Event Simulator e simule um evento para o stream *PurchaseRecordRetrievalStream* da aplicação Siddhi *StockManagementApp* com o valor *honey* como o valor para o atributo **name**. O seguinte será logado no terminal.
+
+    ![tsi8-5](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/integrating-stores/retrieved-event.png)
+
+**Atualize ou Insira Registros**
+
+A tabela *Stock Table* a qualquer momento dado contém um registro único por produto, mostrando o atual fechamento de estoque para o produto relevante. Quando você envia um novo evento reportando um valor de estoque para a tabela, a saída é uma das seguintes:
+   - Se um registro com o mesmo valor para *name* já existe, o evento atualiza o valor para o atributo *amount* no registro.
+   - Se um registro com o mesmo valor para *name* não existe, o novo evento é inserido na tabela como um novo registro.
+
+Para testar isso:
+
+1. Adicione um novo stream:
+
+        define stream LatestStockStream (name string, amount double);
+2. Agora adicione uma query para atualizar ou inserir valores dentro do stream *StockTable*: 
+
+        @info(name = 'Update or Record Stock')
+        from LatestStockStream
+        select name, amount
+        update or insert into StockTable
+         set LatestStockStream.amount = amount
+         on StockTable.name == name 
+    
+    Aqui, o Streaming Integrator checa se um evento no *LatestStockStream* tem um registro compatível na tabela *StockTable* onde o valor para o atributo *name* é o mesmo. Se tal registro existe, o valor para o atributo *amount* nesse registro é definido para a quantia reportada via  evento de stream. Se nenhum evento compatível existe, o evento de stream é inserido como um novo evento.
+3. Salve a aplicação Siddhi. A aplicação Siddhi completa fica assim:
+
+        @App:name('StockManagementApp')
+
+        @App:description('Managing Raw Materials')
+
+        define stream MaterialDispatchesStream (timestamp long, name string, amount double);
+
+        @sink(type = 'log', prefix = "Search Results",
+          @map(type = 'passThrough'))
+        define stream SearchResultsStream (timestamp long, name string, amount double);
+
+        define stream MaterialPurchasesStream (timestamp long, name string, amount double);
+
+        define stream PurchaseRecordRetrievalStream (name string);
+
+        define stream LatestStockStream (name string, amount double);
+
+        @store(type = 'rdbms', jdbc.url = "jdbc:mysql://localhost:3306/dispatches?useSSL=false", username = "root", password = "root", jdbc.driver.name = "com.mysql.jdbc.Driver")
+        define table DispatchesTable (timestamp long, name string, amount double);
+
+        @store(type = 'rdbms', ref = "purchases")
+        define table PurchasesTable (timestamp long, name string, amount double);
+
+        @store(type = 'rdbms', datasource = "Stock_DB")
+        @primaryKey("name")
+        define table StockTable (name string, amount double);
+
+        @info(name = 'Save material dispatch records')
+        from MaterialDispatchesStream 
+        select * 
+        insert into DispatchesTable;
+
+        @info(name = 'Save purchase records')
+        from MaterialPurchasesStream 
+        select * 
+        insert into PurchasesTable;
+
+
+        @info(name = 'Retrieve purchase records')
+        from PurchaseRecordRetrievalStream as s 
+        join PurchasesTable as p 
+          on s.name == p.name 
+        select p.timestamp as timestamp, s.name as name, p.amount as amount 
+          group by p.name 
+        insert into SearchResultsStream;
+
+        @info(name = ''Update or Record Stock'')
+        from LatestStockStream
+        select name, amount
+        update or insert into StockTable
+          set LatestStockStream.amount = amount
+          on StockTable.name == name 
+
+4. Simule os eventos:
+   1. No simulador de evento, selecione **StockManagementApp** para o campo **Siddhi App Name** e selecione **LatestStockStream** para o campo **Stream Name**.
+   2. Insira os seguintes valores para os campos de atributo e envie o evento.
+   
+      name|amount
+      :-:|:-:|
+      flour|150
+
+   4. Execute as seguintes MySQL queries:
+
+          use closing stock
+
+          select * from StockTable
+      O seguinte será mostrado.
+
+      ![tsi8-6](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/integrating-stores/saved-stock-records.png)
+
+      Aqui, o único registro  mostrado é o evento que você enviou. Esse evento é inserido como um novo registro porque a tabela *StockTable* não tinha nenhum registro.     
+   5. Agora simule um outro evento para o mesmo stream com os seguintes valores de atributo:
+
+      name|amount
+      :-:|:-:|
+      flour|200
+   6. Execute as seguintes MySQL queries:
+   
+          use closing stock
+
+          select * from StockTable
+       O seguinte será mostrado:
+
+       ![tsi8-7](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/integrating-stores/updated-stock-records.png) 
+
+       Novamente um registro único é mostrado. Apesar do valor para o atributo *name* sser o mesmo, o valor para o atributo *amount* foi atualizado de 150 para 200. Isso é porque o *name* é a chave primária da tabela *StockTable* e a qualquer dado momento, só pode haver um registro com um nome específico para o atributo *name*. Logo, porque você simulou dois eventos com o mesmo valor para o atributo *name* o segundo evento atualizou o primeiro.
+
+**Atualizar Registros**
+
+Para atualizar a tabela *StockTable* via streams:
+
+1. Adicione uma nova stream:
+
+        define stream UpdateStockStream (name string, amount double);
+
+2. Agora adicione uma query para atualizar os valores na stream *StockTable*:
+
+        @info(name = 'Update Stock')
+        from UpdateStockStream
+        select name, amount
+        update StockTable
+          set UpdateStockStream.amount = amount
+          on StockTable.name == name; 
+
+    Aqui, o Streaming Integrator checa se um evento no *UpdateStockStream* tem um registro compatível na tabela *StockTable* onde o valor para o atributo *name* é o mesmo. Se tal registro existe, o valor para o atributo *amount* nesse registro é definido para a quantia reportada via  evento de stream.
+3. Salve a aplicação Siddhi. A aplicação Siddhi completa fica assim:
+
+        @App:name('StockManagementApp')
+
+        @App:description('Managing Raw Materials')
+
+        define stream MaterialDispatchesStream (timestamp long, name string, amount double);
+
+        @sink(type = 'log', prefix = "Search Results",
+          @map(type = 'passThrough'))
+        define stream SearchResultsStream (timestamp long, name string, amount double);
+
+        define stream MaterialPurchasesStream (timestamp long, name string, amount double);
+
+        define stream PurchaseRecordRetrievalStream (name string);
+
+        define stream LatestStockStream (name string, amount double);
+
+        @store(type = 'rdbms', jdbc.url = "jdbc:mysql://localhost:3306/dispatches?useSSL=false", username = "root", password = "root", jdbc.driver.name = "com.mysql.jdbc.Driver")
+        define table DispatchesTable (timestamp long, name string, amount double);
+
+        @store(type = 'rdbms', ref = "purchases")
+        define table PurchasesTable (timestamp long, name string, amount double);
+
+        @store(type = 'rdbms', datasource = "Stock_DB")
+        @primaryKey("name")
+        define table StockTable (name string, amount double);
+
+        @info(name = 'Save material dispatch records')
+        from MaterialDispatchesStream 
+        select * 
+        insert into DispatchesTable;
+
+        @info(name = 'Save purchase records')
+        from MaterialPurchasesStream 
+        select * 
+        insert into PurchasesTable;
+
+
+        @info(name = 'Retrieve purchase records')
+        from PurchaseRecordRetrievalStream as s 
+        join PurchasesTable as p 
+          on s.name == p.name 
+        select p.timestamp as timestamp, s.name as name, p.amount as amount 
+          group by p.name 
+        insert into SearchResultsStream;
+
+        @info(name = ''Update or Record Stock'')
+        from LatestStockStream
+        select name, amount
+        update or insert into StockTable
+          set LatestStockStream.amount = amount
+          on StockTable.name == name 
+
+        @info(name = 'Update Stock')
+        from UpdateStockStream
+        select name, amount
+        update StockTable
+          set UpdateStockStream.amount = amount
+          on StockTable.name == name;
+4. Simule eventos:
+   1. No simulador de evento, selecione **StockManagementApp** para o campo **Siddhi App Name** e selecione **UpdateStockStream** para o campo **Stream Name**. 
+   2. Insira os seguintes valores para os campos de atributo e envie o evento.
+   
+      name|amount
+      :-:|:-:|
+      flour|129
+
+   3. Execute as seguintes MySQL queries:
+
+          use closing stock
+
+          select * from StockTable
+      O seguinte será mostrado.
+
+      ![tsi8-8](https://apim.docs.wso2.com/en/4.1.0/assets/img/streaming/integrating-stores/edited-stock-records.png)
+
+      Aqui, o único registro  mostrado é o evento que você enviou. Esse evento é inserido como um novo registro porque a tabela *StockTable* não tinha nenhum registro.     
+
+**Deletar Registros**
+
+Para deletar registros na tabela *StockTable* via streams:
+1. Adicione uma nova stream:
+
+        define stream DeleteStream (name string, amount double);
+2. Agora adicione uma query para atualizar os valores na stream *StockTable*:
+
+        @info(name = 'Delete Stock')
+        from DeleteStream
+        select name, amount
+        delete StockTable 
+          on StockTable.name == name;
+
+    Aqui, o Streamnig Integrator checa se um evento no *DeleteStream* tem um registro correspondente na tabela *StockTable* onde o valor para o atributo *name* é o mesmo. Se tal registro existir, ele será deletado.
+3. Salve a aplicação Siddhi. A aplicação Siddhi completa ficará assim:
+
+        @App:name('StockManagementApp')
+
+        @App:description('Managing Raw Materials')
+
+        define stream MaterialDispatchesStream (timestamp long, name string, amount double);
+
+        @sink(type = 'log', prefix = "Search Results",
+          @map(type = 'passThrough'))
+        define stream SearchResultsStream (timestamp long, name string, amount double);
+
+        define stream MaterialPurchasesStream (timestamp long, name string, amount double);
+
+        define stream PurchaseRecordRetrievalStream (name string);
+
+        define stream LatestStockStream (name string, amount double);
+
+        @store(type = 'rdbms', jdbc.url = "jdbc:mysql://localhost:3306/dispatches?useSSL=false", username = "root", password = "root", jdbc.driver.name = "com.mysql.jdbc.Driver")
+        define table DispatchesTable (timestamp long, name string, amount double);
+
+        @store(type = 'rdbms', ref = "purchases")
+        define table PurchasesTable (timestamp long, name string, amount double);
+
+        @store(type = 'rdbms', datasource = "Stock_DB")
+        @primaryKey("name")
+        define table StockTable (name string, amount double);
+
+        @info(name = 'Save material dispatch records')
+        from MaterialDispatchesStream 
+        select * 
+        insert into DispatchesTable;
+
+        @info(name = 'Save purchase records')
+        from MaterialPurchasesStream 
+        select * 
+        insert into PurchasesTable;
+
+
+        @info(name = 'Retrieve purchase records')
+        from PurchaseRecordRetrievalStream as s 
+        join PurchasesTable as p 
+          on s.name == p.name 
+        select p.timestamp as timestamp, s.name as name, p.amount as amount 
+          group by p.name 
+        insert into SearchResultsStream;
+
+        @info(name = ''Update or Record Stock'')
+        from LatestStockStream
+        select name, amount
+        update or insert into StockTable
+          set LatestStockStream.amount = amount
+          on StockTable.name == name 
+
+        @info(name = 'Update Stock')
+        from UpdateStockStream
+        select name, amount
+        update StockTable
+          set UpdateStockStream.amount = amount
+          on StockTable.name == name;
+
+        @info(name = 'Delete Stock')
+        from DeleteStream
+        select name, amount
+        delete StockTable 
+          on StockTable.name == name;
+4. Simule eventos:
+   1. No simulador de evento, selecione **StockManagementApp** para o campo **Siddhi App Name** e selecione **DeleteStream** para o campo **Stream Name**. 
+   2. Insira os seguintes valores para os campos de atributo e envie o evento.
+   
+      name|amount
+      :-:|:-:|
+      flour|129
+
+   3. Execute as seguintes MySQL queries:
+
+          use closing stock
+
+          select * from StockTable
+
+      O *StockTable* será mostrado como um conjunto vazio. Isso é porque o evento que você enviou para a stream *DeleteStram* correspondeu ao registro na tabela, e como resultado, o registro foi deletado pela query *Delete Stock*.
+
+#### Realizando Operações CRUD via REST API
+Nessa seção vamos performar operações CRUD via [Store API](https://apim.docs.wso2.com/en/4.1.0/develop/streaming-apps/store-apis/).
+
+
+
+
+
+
+
+- [Índice](#documentação-api-manager-410)
 ### Expondo Processed Data como API
 ### Tratamento de Erro com Data Stream
 ### Engatilhando Fluxos de Intregração
