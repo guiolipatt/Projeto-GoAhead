@@ -12,10 +12,10 @@ Siga os passos abaixo.
 2. Vá para o site oficial do [WSO2 Identity Server](https://wso2.com/br/identity-server/) e clique em Começar.
 3. Instale o WSO2 Identity Server baixando a VERSÃO BINÁRIA MAIS RECENTE.
 
-- Informação: O local de instalação do WSO2 Identity Server é conhecido como .<IS_HOME>
+- Informação: O local de instalação do WSO2 Identity Server é conhecido como **<IS_HOME>** .
 
 # Configurar o servidor
-Abra o arquivo (armazenado na pasta) e adicione a seguinte configuração para habilitar o CORS: **deployment.toml<IS_HOME>/repository/conf**
+Abra o arquivo **deployment.toml** (armazenado na pasta **<IS_HOME>/repository/conf**) e adicione a seguinte configuração para habilitar o CORS:
 
     [cors]
     allow_generic_http_requests = true
@@ -43,23 +43,23 @@ Observe que o seguinte log aparece no prompt de comando quando o servidor é ini
 
 ![1](https://is.docs.wso2.com/en/6.0.0/assets/img/get-started/qsg-start-server.png)
 
-- Desligando o servidor: Para desligar o servidor, pressione . Observe que o log a seguir aparece no prompt de comando no desligamento do servidor com Ctrl + C.
+- Desligando o servidor: Para desligar o servidor, pressione **Ctrl + C**. Observe que o log a seguir aparece no prompt de comando no desligamento do servidor.
 
     ![2](https://is.docs.wso2.com/en/6.0.0/assets/img/get-started/qsg-stop-server.png)
 
-# Cenário de exemplo
+# Cenário
 Você pode experimentar facilmente os recursos de gerenciamento de identidade e acesso (IAM) no WSO2 Identity Server (WSO2 IS) usando o cenário explicado abaixo.
 
-# Sobre o cenário de exemplo
+# Sobre o cenário
 Pickup é uma empresa de táxi que tem muitos funcionários que usam diferentes credenciais para entrar em diferentes aplicativos corporativos internos. A Pickup registrará seus usuários e aplicativos no WSO2 Identity Server para atender aos requisitos do IAM.
 
 ![3](https://is.docs.wso2.com/en/6.0.0/assets/img/get-started/qsg-overall-scenario.png)
 
 A seguir estão duas dessas aplicações:
 
-|Despacho de Recolha|Este aplicativo ajuda a gerenciar as operações gerais na Pickup.|
+|Pickup Dispatch|Este aplicativo ajuda a gerenciar as operações gerais na Pickup.|
 |:-:|:-:|
-|Gerente de Coleta|	Esta aplicação ajuda a alocar veículos para os motoristas.|
+|Pickup Manager|	Esta aplicação ajuda a alocar veículos para os motoristas.|
 
 A seguir estão três usuários na empresa:
 
@@ -149,7 +149,7 @@ Depois de concluir a configuração dos exemplos, você verá a seguinte lista d
 # Logon único
 Siga as instruções dadas para experimentar o logon único.
 
-# Cenário de problema
+# Cenário
 Quando o número de aplicativos que são usados no Pickup aumenta, o os funcionários têm que manter mais credenciais. Isso não é escalável.
 
 Portanto, o Pickup decide usar o logon único (SSO) para superar essa situação. Com o SSO, quando um usuário entra em um aplicativo, o usuário é conectado automaticamente a outros aplicativos, eliminando a necessidade de manter várias credenciais.
@@ -160,7 +160,7 @@ Siga as [instruções de configuração rápida](https://is.docs.wso2.com/en/lat
 # Experimente o SSO com SAML 2.0
 Se os dois aplicativos estiverem usando SAML 2.0 como protocolo de autenticação, siga os passos abaixo.
 
-# Executar o cenário de exemplo
+# Executar o cenário
 Primeiro, vamos configurar e executar os aplicativos de exemplo.
 
 1. Siga as instruções sobre como [configurar](https://is.docs.wso2.com/en/latest/get-started/sample-use-cases/sample-scenario/#set-up-the-sample-apps) os exemplos.
@@ -212,8 +212,8 @@ Observe que o aplicativo Pickup-Manager é aberto sem precisar inserir as creden
 # Experimente o SSO com o OIDC
 Siga as etapas abaixo para experimentar o cenário em que os dois aplicativos usam o OIDC como autenticação protocolo:
 
-# Executar o cenário de exemplo
-Primeiro, vamos configurar e executar os aplicativos de exemplo.
+# Executar o cenário
+Primeiro, vamos configurar e executar os aplicativos.
 
 1. Siga as instruções sobre como configurar os exemplos.
 - Uma mensagem é exibida para escolher um cenário. 
