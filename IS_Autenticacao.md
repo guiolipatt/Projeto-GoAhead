@@ -1420,7 +1420,7 @@ Clique em Atualizar para salvar as alterações.
 
 Agora você adicionou o provedor de identidade como autenticador federado para o Salesforce.
 
-Testando as configurações¶
+Testando as configurações
 Execute as etapas a seguir para testar as configurações de um novo usuário em Salesforce e o Identity Server.
 
 Crie um usuário no Salesforce. Este usuário deve ter o mesmo e-mail endereço como sua conta do Facebook.
@@ -1459,3 +1459,362 @@ Faça login usando suas credenciais do Facebook. Você é então redirecionado d
 Lembre-se de usar o mesmo endereço de e-mail que o usuário no Salesforce conta.
 
 Agora você configurou com êxito o servidor de identidade WSO2 para poder fazer login no Salesforce usando o Facebook como o provedor de identidade.
+
+### Salesforce Windows
+
+A Autenticação Integrada do Windows (IWA) é um mecanismo de autenticação introduzido pela Microsoft para autenticar usuários em sistemmas operacionais baseados em Microsoft Windows NT. A autenticação IWA fornece uma maneira mais fácil para que os usuários façam logon em aplicativos que usam o Windows Active Directory como um userstore. É uma escolha popular de autenticação entre usuários de Windows e administradores de servidor, uma vez que elimina a necessidade de lembrar de credenciais extras dos usuários e reduzindo a sobrecarga de autenticação para os administradores do servidor.
+
+Este tópico fornece instruções sobre como configurar o WSO2 Identity Server para autenticar usuários do Salesforce usando o Autenticação Integrada do Windows.
+
+- Ao fazer login no Salesforce, você normalmente usa um endereço de e-mail. Para integrar isso ao WSO2 Identity Server, configure os usuários no WSO2 Identity Server para que os usuários possam efetuar login usando seus endereços de email.
+
+- Configurar o endereço de e-mail como o nome de usuário em um Identity Server já em execução não é a maneira recomendada de produção. Portanto, certifique-se de configurá-lo antes de começar a trabalhar com o WSO2 IS.
+
+#### Configurando o Endereço de Email como Nome de Usuário
+Siga as etapas abaixo para configurar o endereço de email como o nome de usuário.
+
+1. Abra o arquivo *<IS_HOME>/repository/conf/deployment.toml*
+2. Defina a configuração em *enable_email_domain [tenant_mgt] true*
+
+        [tenant_mgt]
+        enable_email_domain="true"
+3. Abra o arquivo *<IS_HOME>/repository/conf/claim-config.xml* e configure a propriedade *AttributeID* da ID da declaração *http://wso2.org/claims/username* que está sob *\<Dialect dialectURI="http://wso2.org/claims">* para *mail*.
+
+        <Claim>
+            <ClaimURI>http://wso2.org/claims/username</ClaimURI>
+            <DisplayName>Username</DisplayName>
+            <AttributeID>mail</AttributeID>
+            <Description>Username</Description>
+        </Claim>
+
+- Esse arquivo é verificado somente quando o WSO2 IS está sendo iniciado pela primeira vez. Portanto, se você não tiver configurado essa propriedade no momento da inicialização do servidor pela primeira vez, você receberá erros na inicialização.
+
+4. Abra o arquivo *<IS_HOME>/repository/conf/identity/identity-mgt.properties* e defina a seguinte propriedade como *true*.
+
+- Esta etapa é necessária devido a um problema conhecido que impede que os códigos de confirmação sejam removidos depois que eles são usados quando os nomes de usuário de email estão habilitados. Isso ocorre porque o caractere '@' (e alguns caracteres especiais) não são permitidos no Registro. Para superar esse problema, habilite nomes de usuário com hash ao salvar os códigos de confirmação configurando as propriedades abaixo.
+
+        UserInfoRecovery.UseHashedUserNames=true
+
+- Opcionalmente, você também pode configurar a propriedade a seguir para determinar qual algoritmo de hash usar.
+
+        UserInfoRecovery.UsernameHashAlg=SHA-1
+
+5. Configure o seguinte conjunto de parâmetros na configuração de repositório do usuário, dependendo do tipo de repositório do usuário ao qual você está conectado (LDAP/Active Directory/JDBC).
+
+- Se você estiver conectado ao armazenamento do usuário do Active Directory, essas propriedades deverão ser adicionadas dentro de *[user_store.properties]* em vez de *[user_store]*.
+
+Parâmetro | Descrição
+:-:|:-:|
+user_name_attribute | Defina o atributo de email do usuário. Somente LDAP/Active Directory
+
+    [user_store]
+    user_name_attribute = "mail"
+Parâmetro | Descrição
+:-:|:-:|
+user_name_search_filter |Use o atributo de email do usuário em vez de *cn* ou *uid* . Somente LDAP/Active Directory.
+
+    [user_store]
+    user_name_search_filter = "(&(objectClass=identityPerson)(mail=?))"
+Parâmetro | Descrição
+:-:|:-:|
+user_name_list_filter |  Use o atributo de email do usuário. Somente LDAP/Active Directory. 
+
+    [user_store]
+    user_name_list_filter = "(&(objectClass=identityPerson)(mail=*))"
+
+Parâmetro | Descrição
+:-:|:-:|
+username_javas_cript_regex | Altere essa propriedade que está sob a marca de gerenciador de loja de usuário relevante da seguinte maneira. Essa propriedade permite que você adicione caracteres especiais como "@" no nome de usuário.
+
+    [user_store]
+    user_name_javascript_regex="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}"</a></code></pre></div>
+    </div>
+    </div>
+    </div></td>
+    </tr>
+    <tr class="even">
+    <td><pre><code>username_java_regex</code></pre></td>
+    <td><div class="content-wrapper">
+    <p>This is a regular expression to validate usernames. By default, strings have a length of 5 to 30. Only non-empty characters are allowed. You can provide ranges of alphabets, numbers and also ranges of ASCII values in the RegEx properties.</p>
+    <div class="code panel pdl" style="border-width: 1px;">
+    <div class="codeContent panelContent pdl">
+    <div class="sourceCode" id="cb8" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence" style="brush: xml; gutter: false; theme: Confluence"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb8-1" title="1"><span class="kw">[user_store]<br>username_java_regex="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
+
+Parâmetro | Descrição
+:-:|:-:|
+Realm configurations | O nome de usuário [super_admin] deve usar o atributo de email do usuário administrador.
+
+    [super_admin]
+    username = "admin@wso2.com"
+    password = "admin"
+
+- Antes dessa configuração, o usuário que tinha o nome de usuário admin e a senha admin era considerado o superadministrador. O usuário superadministrador não pode ser excluído. Após essa configuração, o usuário que tiver o nome de usuário admin@wso2.com é considerado o superadministrador. O usuário que tem o nome de usuário admin é considerado um administrador normal.
+
+- Se você alterou a senha do usuário admin para algo diferente de 'admin', inicie o servidor WSO2 IS usando o parâmetro -Dsetup, conforme mostrado no comando abaixo.
+  
+        sh wso2server.sh -Dsetup
+
+- Com essas configurações, os usuários podem fazer logon no superlocatário com ambos nome de usuário de e-mail ( alex@gmal.com ) ou nomes de usuário que não sejam de e-mail (larry). Mas para nomes de usuário de email somente para locatários permitido (tod@ gmail.com @ wso2.com ).
+- Você pode configurar o nome de usuário de e-mail sem habilitar a propriedade **EnableEmailUserName** em seguida, os usuários podem fazer login no superlocatário e no locatário usando email e nomes de usuário que não são de e-mail. Mas os usuários super locatários devem sempre usar @carbon.super no final dos nomes de usuário.
+
+6. Reinicie o WSO2 Identity Server.
+
+#### Configurando o Salesforce
+
+1. Inscreva-se como desenvolvedor do Salesforce se você não tiver uma conta. Se você já tem uma conta, passe para a etapa 2 e faça login em Salesforce.
+   1. Preencha as informações relevantes encontradas no seguinte URL: https://developer.salesforce.com/signup
+   2. Clique em **Sign me Up**.
+   3. Você receberá um token de segurança por e-mail para confirmar seu novo conta. Se você não recebeu o e-mail com sucesso, você vai ser capaz de redefini-lo seguindo os passos dados aqui.
+2. Faça login com suas novas credenciais como desenvolvedor do Salesforce. Faça isso clicando no link **Login** no canto superior direito do https://login.salesforce.com/
+3. Clique em **Allow** para permitir que o Salesforce acesse sua informação básica.
+4. Depois de fazer login, crie um novo domínio e acesse-o.
+- Esta etapa é necessária somente se a solicitação de validação for enviado pelo prestador de serviços. Para provedor de identidade iniciado solicitações de validação, isso não é necessário.
+
+Para fazer isso, execute as etapas a seguir.
+
+1. Procurar **My Domain** na barra de pesquisa que está à esquerda painel de navegação.
+2. Clique em **My Domain**.
+3. Na página exibida, crie um nome para o seu domínio. Você pode verificar se o domínio está disponível clicando no botão **Check Availability**.
+4. Para que a página abaixo seja carregada no seu navegador, certifique-se de que os cookies do Salesforce não são bloqueados.
+5. Se o domínio estiver disponível, selecione **I agree to Terms and Conditions** e clique em **Register Domain** para registrar seu novo domínio.
+6. Depois que o domínio for registrado em sua conta, clique no botão **Click here to login** para testá-lo.
+7. No menu de navegação esquerdo, vá para **Security Controls** e clique em **Single Sign-On Settings**.
+8. Na página exibida, clique em **Edit** e selecione a caixa de diálogo **SAML Enabled** para habilitar o logon único federado usando SAML.
+9. Clique em **Save** para salvar essa alteração de configuração.
+10. Clique em **New** em **SAML Single Sign-On Settings**. Certifique-se de que você configura as seguintes propriedades.
+
+Campo | Valor
+:-: | :-:| 
+Name | SSO
+API Name | SSO
+Issuer | localhost
+Entity ID | http://saml.salesforce.com
+Identity Provider Certificate | wso2.crt
+Request Signing Certificate | Na lista suspensa, você deve selecionar o certificado público do Salesforce. Se você ainda não tiver criado isso, verifique a etapa 15 desta seção para obter detalhes sobre como criar o certificado.
+Request Signature Method | RSA-SHA1
+Assertion Decryption Certificate | Assertion not encrypted
+SAML Identity Type | A declaração contém o nome de usuário salesforce.com do usuário
+SAML Identity Location | Identity está no elemento NameIdentifier da instrução Subject
+Identity Provider Login URL | https://localhost:9443/samlsso
+Identity Provider Logout URL | https://localhost:9443/samlsso
+Custom Error URL | Deixar em branco
+Service Provider Initiated Request Binding | HTTP POST
+User Provisioning Enabled | Deixar em branco
+
+9. Clique em **Save** para salvar suas configurações.
+10. Vá para **Domain Management** no painel de navegação esquerdo e clique em **My Domain**.
+11. Clique em **Deploy To Users** para Usuários. Clique em **Ok** para a mensagem de confirmação que aparece.
+12. Na página exibida, você deve configurar a seção **Authentication Configuration**. Role para baixo até esta seção e clique em **Edit**.
+13. Em **Authentication Service**, selecione **SSO** em vez de **Login Page**.
+14. Clique em **Save**.
+15. Em seguida, você precisa obter o certificado do Salesforce e carregá-lo para o Identity Server.
+
+- A solicitação de validação enviada do Salesforce deve ser validada pelo Identity Server. Para isso, o certificado público do Salesforce deve ser carregado no Identity Server e será usado para validar a requisição.
+
+Execute as etapas a seguir para obter o certificado.
+
+1. No menu de navegação esquerdo, vá para **Security Controls** e clique em **Certificate and Key Management**.
+2. Se você ainda não tiver feito isso, você deve criar o certificado primeiro. Execute as etapas a seguir para criar isso.
+
+   1. Clique em **Create Self-Signed Certificate**.
+   2. Insira o **Label** e um **Unique Name** e clique em **Save**. O certificado é gerado.
+   3. Clique no botão **Download Certificate** para baixar o certificado.
+
+#### Configurando o provedor de serviços
+
+1. Acesse. Introduza o seu nome de utilizador e palavra-passe para iniciar sessão na consola de gestão.
+
+2. Navegue até o menu Principal para acessar o menu **Identity**. Clique em **Add** em **Service Providers**.
+
+3. Preencha o **Service Provider Name** e forneça uma breve **Description** do provedor de serviços. Somente **Service Provider Name** é um campo obrigatório e usamos Salesforce como o nome para este exemplo.
+4. Clique em **Register**.
+
+5. Expanda a **Inbound Authentication Configuration** e o **Inbound Authentication Configuration** e clique em **Configure**.
+
+6. No formulário exibido, preencha a seguinte configuração detalhes necessários para o logon único.
+
+Consulte a tabela a seguir para obter detalhes.
+
+Campo | Valor | Descrição
+:-:|:-:|:-:|
+Issuer | https://saml.salesforce.com/ | Esse é o elemento \<saml:Issuer> que contém o identificador exclusivo do provedor de serviços. Esse também é o valor do emissor especificado na Solicitação de Autenticação SAML emitida pelo provedor de serviços. Ao configurar o logon único em servidores Carbon, verifique se esse valor é igual ao valor **ServiceProviderID** mencionado no arquivo <IS_HOME>/repository/conf/security/authenticators.xml do servidor Carbon de terceira parte confiável.
+Assertion Consumer URL | https://identityprovisioning-dev-ed.my.salesforce.com?so=00D90000000ySEn | Essa é a URL para a qual o navegador deve ser redirecionado após a autenticação ser bem-sucedida. Esta é a URL do ACS (Assertion Consumer Service) do provedor de serviços. O provedor de identidade redireciona a resposta SAML2 para essa URL ACS. No entanto, se a solicitação SAML2 for assinada e a solicitação SAML2 contiver a URL ACS, o Servidor de Identidade honrará a URL ACS da solicitação SAML2. Nesse caso, você deve usar sua URL de login do Salesforce. No Salesforce, clique em **Security Controls** no menu esquerdo e, em seguida, clique em **Single Sing-On Settings** . Na página que aparece, clique nas configurações de SSO que você criou para exibir os detalhes. Use a **Salesforce Login URL** listada lá para esse valor.
+NameID Format | O valor padrão pode ser usado aqui| Isso define os formatos de identificador de nome suportados pelo provedor de identidade. O provedor de serviços e o provedor de identidade geralmente se comunicam entre si em relação a um assunto específico. Esse assunto deve ser identificado por meio de um Name-Identifier (NameID), que deve estar em algum formato para que seja fácil para a outra parte identificá-lo com base no formato. Os identificadores de nome são usados para fornecer informações sobre um usuário.
+Use fully qualified username in the NameID | Selecionado | Um nome de usuário totalmente qualificado é basicamente o nome de usuário com o domínio de armazenamento do usuário. Em suma, o nome de usuário deve estar no seguinte formato: {user store domain}{user name} .
+Enable Response Signing | Selecionado | Selecione **Enable Response Signing** para assinar as Respostas SAML2 retornadas após o processo de autenticação.
+Enable Assertion Signing | Selecionado | Selecione **Enable Assertion Signing** para assinar as Asserções SAML2 retornadas após a autenticação. Os componentes de terceira parte confiável SAML2 esperam que essas asserções sejam assinadas pelo Servidor de Identidade.
+Enable Attribute Profile | Selecionado | Selecione **Enable Attribute Profile** para habilitá-lo e adicionar uma declaração inserindo o link de declaração e clicando no botão **Add Claim**. O Identity Server fornece suporte para um perfil de atributo básico em que o provedor de identidade pode incluir os atributos do usuário nas Asserções SAML como parte da instrução de atributo. Depois de marcar a caixa de seleção para **Include Attributes in the Response Always**, o provedor de identidade sempre inclui os valores de atributo relacionados às declarações selecionadas na instrução de atributo SAML.
+
+7. Clique em **Register** para salvar suas configurações.
+
+### Office 365
+Este tópico fornece instruções sobre como configurar e integrar Office365 com WSO2 Identity Server (WSO2 IS) para autenticação e provisionamento.
+
+O Microsoft Office 365 exige que os usuários em repositórios de usuários locais sejam sincronizados com o Microsoft Azure Active Directory (Azure AD) na nuvem. A integração do WSO2 IS Office365 permite que os usuários sejam provisionados para o Azure AD sem usar ferramentas externas ou esforço adicional. O WSO2 IS é integrado ao Office365 usando identidade federada, o que significa que a senha ou o hash de senha não está sincronizado com o AD do Azure porque a autenticação do usuário é fornecida pelo WSO2 local IS.
+
+#### Gerenciamento de licenças baseado em grupo
+
+No Azure AD, os administradores podem definir licenças para grupos de segurança. As licenças são atribuídas ou removidas no momento em que um usuário entra ou sai do grupo de usuários. O uso do WSO2 IS para sincronização de usuários permite que os usuários tenham um atributo especial que os qualifica para ingressar em um grupo de usuários específico no Azure AD no momento do provisionamento por meio do IS. Assim, os usuários são adicionados dinamicamente a grupos e atribuídos com licenças sem quaisquer despesas gerais de administração.
+
+#### Provisionamento baseado em Role
+
+O provisionamento baseado em função para o Microsoft Office365 pode ser feito configurando o Conector de Provisionamento de Saída do Office365 no WSO2 IS. O WSO2 IS Office 365 Outbound Provisioning Connector oferece suporte às duas maneiras de provisionamento de usuários com base na função:
+
+- Atribuir manualmente usuários a uma função chamada "Office365" no WSO2 IS 
+  
+  Um administrador de identidade atribui um usuário à função "Office365" e o WSO2 IS provisiona o usuário para o Azure AD.
+
+- Provisionamento sob demanda 
+  
+  Quando um usuário tenta fazer logon pela primeira vez no Microsoft Office365 Online, WSO2 IS atribui o usuário à função "Office365" usando um script de autenticação adaptável pré-configurado e, em seguida, provisionando o usuário para o Azure AD. O usuário é autenticado usando WSO2 IS e conectado ao Microsoft Office365 Online.
+
+### Office365 SAML2
+Página fora do ar.
+
+### Office365 SAML2 para Múltiplos Domains
+Página fora do ar.
+
+### Office365 WS Federation
+Página fora do ar.
+
+## Aplicações PaaS
+### Drupal
+Drupal é um software de gerenciamento de conteúdo de código aberto distribuído sob os termos da GNU General Public License (GPL). Este tópico fornece instruções sobre como fazer logon no Drupal usando suas credenciais do WSO2 Identity Server. Neste tutorial, o Drupal atua como o provedor de serviços e o WSO2 Identity Server atua como o provedor de identidade.
+
+#### Configurar o SimpleSAMLphp como um provedor de serviços
+
+1. Navegue até o diretório da Web em uma janela de terminal e execute o seguinte comando para criar um link simbólico para a pasta *vendor/simplesamlphp/simplesamlphp/www*.
+
+        ln -s https://is.docs.wso2.com/en/6.1.0/vendor/simplesamlphp/simplesamlphp/www simplesaml
+
+2. Crie um arquivo *.htaccess* dentro da pasta simpleaml symlink e adicione as seguintes configurações. 
+3. Faça as seguintes alterações no arquivo.
+
+        RewriteCond %{REQUEST_URI} !/core/[^/]*\.php$
+        RewriteCond %{REQUEST_URI} !/core/modules/system/tests/https?.php
+        RewriteCond %{REQUEST_URI} !/core/modules/statistics/statistics.php$
+        RewriteCond %{REQUEST_URI} !/simplesaml/[^/]*\.php$
+        RewriteCond %{REQUEST_URI} !/simplesaml/admin/[^/]*\.php$
+        RewriteCond %{REQUEST_URI} !/simplesaml/[^/]*\.php/sanitycheck/[^/]*\.php$
+        RewriteCond %{REQUEST_URI} !/simplesaml/[^/]*\.php/saml/[^/]*\.php$
+        RewriteCond %{REQUEST_URI} !/simplesaml/[^/]*\.php/saml/sp/[^/]*\.php/default-sp$
+        RewriteRule "^(.+/.*|autoload)\.php($|/)" - [F]\
+
+4. Faça as seguintes mudanças para o arquivo *<PROJECT_NAME>/vendor/simplephp/simplephp/config/config.php* .
+
+- store.type: **sql**
+- store.sql.dsn: **mysql:host=localhost;dbname=db_name** (mude o host & db_name de acordo com seus valores)
+- store.sql.username: insira o  **Drupal database user_name**
+- store.sql.password: insira o **Drupal database password**
+- auth.adminpassword: Mude o admin password of the simplesaml setup
+- enable.saml20-idp: **true**
+- technicalcontact_name: insira o nome do técnico da instalação (opcional).
+- technicalcontact_email: insira o email do técnico da instalação (opcional).
+- Adicione essa linha ao fim do arquivo config.php.
+  
+        $config['baseurlpath'] = 'http://'. $_SERVER[‘HTTP_HOST’].'/simplesaml/';
+
+5. Atualize o arquivo config/authsources.php do provedor de serviços fornecendo os seguintes detalhes em default-sp.
+
+Campo | Valor | Descrição |
+:-: | :-: | :-: |
+EntityID | SimpleSAML | ID da entidade do provedor de serviços que o WSO2 IS está esperando no formato legível para humanos. Esse campo pode ser NULL/unset, caso em que uma ID de entidade é gerada com base na URL de metadados.
+idp | https://localhost:9443/samlsso | ID da entidade do IdP.
+
+1. Copie os metadados do IdP para o arquivo *metadata/saml20-idp-remote.php* do Provedor de Serviços. A impressão digital de certificado do WSO2 IS deve ser definida como **certFingerprint** e o domínio locatário devem ser definidos como domínio de locatário Idp.
+
+        $metadata['https://localhost:9443/samlsso'] = array(
+            'name' => array(
+                 'en' => 'WSO2 IS',
+                 'no' => 'WSO2 IS',
+            ),
+            'description' => 'Login with WSO2 IS SAML2 IdP.',
+            'SingleSignOnService'  => 'https://localhost:9443/samlsso?tenantDomain=carbon.super',
+            'SingleLogoutService'  => 'https://localhost:9443/samlsso?tenantDomain=carbon.super',
+            'certFingerprint'  => '57ff38d97664c792ff8801171f04191ded88778d'
+            );
+
+#### Configurar o WSO2 Identity Server como o provedor de identidade
+
+1. Clique em **Identity Providers > Resident** e expanda **SAML2 Web SSO Configuration**.
+
+2. Use https://localhost:9443/samlsso como a **Entity Id** do Provedor de Identidade e clique em **Update** para salvar a configuração.
+
+3. Clique em **Service Providers > Add** e insira um nome exclusivo como **Service Provider name** (por exemplo, "Drupal_SP").
+
+4. Expanda **Inbound Authentication Configuration** e, em seguida, expanda **SAML2 Web SSO Configuration**.
+
+5. Insira o valor que você configurou como a **Entity ID** no arquivo config/authsources.php como o **Issuer**.
+
+6. Insira *http://$host/simplesaml/module.php/saml/sp/metadata.php/default-sp* como a **Assertion Consumer URL**.
+
+7. Habilite **Enable IdP Initiated SSO**.
+
+8. Habilite o **Attribute Profile** e **Include Attributes in the Response Always**.
+
+9. Clique em **Register** para salvar os detalhes.
+
+10. Expanda **Claim Configuration**. Selecione **Define Custom Claim Dialect** e adicione o seguinte URI de declaração.
+
+- Service Provider Claim: Mail Local Claim: https://wso2.com/claims/emailaddress 
+- Requested Claim: Yes.
+
+- Service Provider Claim: fname Local Claim: https://wso2.org/claims/givenname 
+- Requested Claim: Yes.
+
+11. Clique em **Update** para salvar.
+
+#### Teste Autenticação SAML2.0
+
+1. Em uma janela do navegador, navegue até: http://'. $_SERVER['HTTP_HOST'] .' /simplesaml/.
+
+2. Clique em **Authentication > Test configured authentication sources**.
+
+3. Clique em **default-sp**. Você será redirecionado para a página de autenticação do WSO2 Identity Server.
+
+4. Faça login como o usuário recém-criado e você verá os atributos do usuário, Assunto SAML e Dados de autenticação.
+
+#### Configure Drupal
+
+1. Vá para a página inicial do Drupal e faça login como administrador.
+
+2. Clique na guia **Extend** e instale os seguintes módulos.
+
+   - SimpleSAMLphp Authentication
+
+   - External Authentication
+
+3. Clique em **Configuration > People > SimpleSAMLphpAuthSettings.**
+
+4. Ative **Activate authentication via SimpleSAMLphp.**
+
+5. Habilitar o **User provisioning > Register users** para criar ou registrar usuários usando este módulo.
+
+6. Clique em **Save Configuration**.
+
+7. Clique na guia **User info and syncing**.
+
+8. Insira *mail* como o **SimpleSAMLphp attribute to be used as a unique identifier for the user**.
+
+9. Digite *fname* como o **SimpleSAMLphp attribute to be used as a username for the user**.
+
+10. Digite *mail* como o **SimpleSAMLphp attribute to be used as an email address for the user**.
+
+11. Clique em **Save Configuration**.
+
+#### Teste
+1. Crie um usuário no WSO2 IS. Edite o perfil de usuário e atualize os campos **First Name** e **email address**.
+
+2. Faça login no Drupal como o usuário administrador e crie um usuário com o mesmo endereço de e-mail.
+
+3. Logout do Drupal. Você será redirecionado para a página de Login do Drupal.
+
+4. Clique em **Federated Login**. Você será direcionado para a Página de Login do WSO2.
+
+5. Forneça credenciais de usuário do usuário que você criou na etapa 2 e clique em **Continue**.
+
+6. Habilite **Select All**.
+
+7. Clique em **Continue**. Você será redirecionado para a página inicial do Drupal.
+
+8. Clique em **edit**. Os atributos de perfil de usuário configurados no WSO2 Identity Server serão preenchidos na seção **Personal Details** da sua conta.
